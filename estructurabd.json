@@ -1,0 +1,77 @@
+{
+	"name" : "Numero Conexions",
+	"keywords" : "conexions",
+	"description" : "Obten o numero de conexions dos usuarios",
+	"time" : 10,
+	"representation" : [
+		{	
+			"type": "line",
+			"xAxis": "",
+			"yAxis":,
+		},
+		{	
+			"type": "bar",
+			"xAxis": "",
+			"yAxis":,
+		},
+		{	
+			"type": "pie",
+			"xAxis": "",
+			"yAxis": "",
+		},
+	],
+	"code" : null,
+}
+
+
+
+
+
+
+
+
+
+{
+	"name" : "Numero Conexions",
+	"keywords" : "conexions",
+	"description" : "Obten o numero de conexions dos usuarios",
+	"time" : 50,
+	"representation" : [
+		{	
+			"type": "line",
+			"xAxis": "",
+			"yAxis": "",
+		},
+		{	
+			"type": "bar",
+			"xAxis": "",
+			"yAxis": "",
+		},
+		{	
+			"type": "pie",
+			"xAxis": "",
+			"yAxis": "",
+		}
+	],
+	"code" : null
+}
+
+
+{ 
+	"name" : "Numero Actualizacions",
+	"keywords" : "actualizacions",
+	"description" : "Obten o numero de actualizacions",
+	"time" : 10,
+	"representation" : [
+		{	
+			"type": "bar",
+			"xAxis": "",
+			"yAxis": "",
+		},
+	],
+	"code" : null,
+}
+
+{
+	"properties" : ["usuario", "conexions", "tempo", "probas", "datos", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1",]
+}
