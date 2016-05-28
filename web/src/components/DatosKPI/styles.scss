@@ -1,0 +1,123 @@
+.datos {
+	display: flex;
+
+	div {
+		flex: 5;
+	}
+
+	.variables {
+		margin-left: 10px;
+		flex: 1;
+	}
+}
+
+.textField {
+	width: 100%!important;
+}
+
+.scalakata {
+	display: flex;
+	.iframe {
+		flex: 6;
+		width: 100%!important;
+		height: 350px!important;
+	}
+
+	.list{
+		flex: 1;
+		margin-left: 10px;
+		height: 350px;
+		overflow-y: scroll;
+	}
+}
+
+
+.selectField {
+	width: 100%;
+}
+
+.graphicsGroupKPI{
+	overflow-x: scroll;
+	white-space:nowrap;
+
+	div {
+		display: inline-flex;
+		align-items: center;
+		flex-flow: column;
+
+		img {
+			width: 250px;
+			height: 250px;
+		}
+
+		div {
+			flex-flow:row;
+		}
+	}
+
+	.controls {
+		margin-top: -40px
+	}
+}
+
+.graphicAddFloatingButton {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+.representationAdd {
+	.center {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.selectFieldImg {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			
+			img {
+				width: 250px;
+				height: 250px;
+				margin-bottom: -10px;
+				margin-left: 20px;
+			}
+		}
+	}
+
+	.inputs {
+		margin-top: -50px;
+	}
+}
+
+.representationData {
+	.mappingVariables {
+		display: flex;
+
+		.variables {
+			flex: 1;
+			margin-right: 10px;
+		}
+
+	}
+
+	.textFieldsFlex{
+		display: flex;
+
+		div {
+			margin-top: -10px;
+			margin-right: 10px;
+
+			flex: 1;
+		}
+	}
+}
+
+.stepperControls {
+	.raisedButton {
+		margin-top: 10px;
+		margin-right: 10px;
+	}
+}

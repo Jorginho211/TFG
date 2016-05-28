@@ -1,0 +1,20 @@
+// The content should be consistent with the content defined in MaterialUITheme.js
+
+@import '../../../node_modules/sass-material-colors/sass/sass-material-colors';
+
+$primary1Color: material-color('blue-grey', '500');
+$primary2Color: material-color('blue-grey', '700');
+$primary3Color: material-color('blue-grey', '100');
+$accent1Color: material-color('amber', 'a400');
+$accent2Color: material-color('amber', 'a200');
+$accent3Color: material-color('grey', '700');
+$textColor: rgba(0, 0, 0, 0.87);
+$alternateTextColor: rgba(255, 255, 255, 1);
+$canvasColor: rgba(255, 255, 255, 1);
+$borderColor: material-color('grey', '300');
+$disabledColor: rgba(rgba(0, 0, 0, 0.87) , 0.3);
+$pickerHeaderColor: material-color('cyan', '500');
+
+$errorColor: material-color('red', '500');
+$warningColor: material-color('orange', '500');
+$okColor: material-color('light-green', '500');

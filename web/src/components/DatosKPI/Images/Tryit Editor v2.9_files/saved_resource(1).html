@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_regexp_test2 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body contenteditable="false">
+
+<p>The test() method returns true if it finds a match, otherwise it returns false.</p>
+<p>Click the button to search a string for the character "e".</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    alert(isNumeric("dsads"))
+    var str = "The best things in life are free";
+    var patt = new RegExp("e");
+    var res = patt.test(str);
+    document.getElementById("demo").innerHTML = res;
+}
+</script>
+
+
+
+</body></html>
