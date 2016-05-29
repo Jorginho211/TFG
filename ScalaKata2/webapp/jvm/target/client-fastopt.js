@@ -7339,19 +7339,19 @@ $c_Lcom_scalakata_Main$.prototype.main__V = (function() {
       })
     })(editor$10));
     var qual$2 = $g.window;
-    var x$12 = (function(doc$1) {
+    var x$14 = (function(doc$1) {
       return (function(evt$2) {
         return $m_Lcom_scalakata_Main$().com$scalakata$Main$$apply$body$4__Lorg_scalajs_dom_raw_MessageEvent__Lorg_denigma_codemirror_Doc__O(evt$2, doc$1)
       })
     })(doc);
-    qual$2.addEventListener("message", x$12);
+    qual$2.addEventListener("message", x$14);
     var qual$6 = $g.document.getElementById("help");
-    var x$15 = (function(editor$1$2) {
+    var x$17 = (function(editor$1$2) {
       return (function(e$2$3) {
         return $m_Lcom_scalakata_Main$().com$scalakata$Main$$apply$body$5__Lorg_scalajs_dom_raw_Event__Lorg_denigma_codemirror_Editor__O(e$2$3, editor$1$2)
       })
     })(editor$10);
-    qual$6.addEventListener("click", x$15);
+    qual$6.addEventListener("click", x$17);
     stateButton.setAttribute("title", new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["run (", " + Enter)"])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([ctrlS])));
     stateButton.addEventListener("click", (function(editor$1$3, doc$1$1) {
       return (function(e$2$4) {
@@ -7408,8 +7408,8 @@ $c_Lcom_scalakata_Main$.prototype.com$scalakata$Main$$apply$body$4__Lorg_scalajs
     if (($objectToString(evt.data) === "requestData")) {
       $g.console.log("Scalakata: RequestData");
       var qual$3 = $g.top;
-      var x$2 = $as_T(doc$1.getValue());
-      qual$3.postMessage(x$2, "http://localhost:3000");
+      var x$4 = $as_T(doc$1.getValue());
+      qual$3.postMessage(x$4, "http://localhost:3000");
       return (void 0)
     } else if (($objectToString(evt.data) === "removeData")) {
       $g.console.log("Scalakata: RemoveData");

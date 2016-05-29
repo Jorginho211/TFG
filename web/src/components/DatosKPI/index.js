@@ -214,6 +214,7 @@ class DatosKPI extends Component {
     getGraphicData(type){
       switch(type){
         case "line":
+        case "bar":
           return(
             <div className={styles.representationData}>
               {this.props.kpi.datoskpi.kpi.variables ? (
@@ -250,8 +251,36 @@ class DatosKPI extends Component {
               </div>
             </div>
           )
-        case "bar":
+
         case "pie":
+          return (
+            <div className={styles.representationData}>
+              {this.props.kpi.datoskpi.kpi.variables ? (
+                <div className={styles.mappingVariables}>
+                  <div className={styles.variables}>
+                    <SelectField style={{width: '100%'}} value={this.props.kpi.datoskpi.representation.mapXAxis} onChange={this.mapXAxisChange} floatingLabelText="Mapeo Nome do Sectores">    
+                      {this.props.kpi.datoskpi.kpi.variables.map((variable,index) => {
+                        return (
+                          <MenuItem key={index} value={variable} primaryText={variable} />
+                        )
+                      })}
+                    </SelectField>
+                  </div>
+                  <div className={styles.variables}>
+                    <SelectField style={{width: '100%'}} value={this.props.kpi.datoskpi.representation.mapYAxis} onChange={this.mapYAxisChange} floatingLabelText="Mapeo Porcentaxe">
+                      {this.props.kpi.datoskpi.kpi.variables.map((variable,index) => {
+                        return (
+                          <MenuItem key={index} value={variable} primaryText={variable} />
+                        )
+                      })}
+                    </SelectField>
+                  </div>
+                </div>
+                ): (
+                  null
+                )}
+            </div>
+          )
       }
     }
 
@@ -389,7 +418,7 @@ class DatosKPI extends Component {
           autoScrollBodyContent={true}
           contentStyle={{width:'68%', maxWidth: 'none'}}
           >
-
+          
             {this.getStepper(kpi.isNew)}
         
             <div>
@@ -424,7 +453,6 @@ class DatosKPI extends Component {
                   ):(
                     <RaisedButton label="Seguinte" primary={true} onTouchTap={() => {this.continueSteper();}} />
                   )}
-
                 </div>
               </div>
             </div>
