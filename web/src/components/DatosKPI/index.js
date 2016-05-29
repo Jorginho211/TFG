@@ -22,9 +22,9 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 
 import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
 
-import {List, ListItem} from 'material-ui/List';
+import Menu from 'material-ui/Menu';
+import MenuItem from 'material-ui/MenuItem';
 import Subheader from 'material-ui/Subheader';
 
 import { autobind } from 'core-decorators';
@@ -177,9 +177,13 @@ class DatosKPI extends Component {
       if(!this.props.kpi.datoskpi.iframeOnceLoad){
         this.props.KPIActions.DatosKPIActions.iframeOnceLoad(true)
         if(this.props.kpi.datoskpi.kpi.code !== undefined && this.props.kpi.datoskpi.kpi.code !== null){
-          setTimeout(() => { this.refs.iframe.contentWindow.postMessage(this.props.kpi.datoskpi.kpi.code, "http://localhost:7331"); }, 300)
+          setTimeout(() => { this.refs.iframe.contentWindow.postMessage("code/;/" + this.props.kpi.datoskpi.kpi.code, "http://localhost:7331"); }, 300)
         }
       }
+    }
+
+    @autobind addPropertyCode(evt, menuItem, index){
+      this.refs.iframe.contentWindow.postMessage("property/;/" + menuItem.props.value, "http://localhost:7331")
     }
 
     componentDidMount(){
@@ -310,14 +314,13 @@ class DatosKPI extends Component {
                     <div className={styles.scalakata}>
                       <iframe ref="iframe" src="http://localhost:7331" className={styles.iframe} onLoad={this.loadDataIframe}></iframe>
                       <div className={styles.list}>
-                        <List>
-                          <Subheader>Propiedades</Subheader>
-                          {this.props.kpi.datoskpi.properties.map( (propertie, index) => {
+                        <Menu onItemTouchTap={this.addPropertyCode}>
+                          {this.props.kpi.datoskpi.properties.map( (property, index) => {
                             return (
-                              <ListItem key={index} primaryText={propertie} />
+                              <MenuItem key={index} value={property} primaryText={property} />
                             )
                           })}
-                        </List>
+                        </Menu>
                       </div>
                     </div>
                 );

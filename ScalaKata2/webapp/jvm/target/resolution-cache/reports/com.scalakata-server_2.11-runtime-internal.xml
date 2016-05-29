@@ -7,7 +7,7 @@
 		revision="1.1.3"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160529162407"/>
+		date="20160529170113"/>
 	<dependencies>
 		<module organisation="org.webjars.bower" name="iframe-resizer">
 			<revision name="2.8.10" status="release" pubdate="20150724043332" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="31">
@@ -236,7 +236,7 @@
 			</revision>
 		</module>
 		<module organisation="com.scalakata" name="evaluation_2.11">
-			<revision name="1.1.3" status="integration" pubdate="20160529162407" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
+			<revision name="1.1.3" status="integration" pubdate="20160529170113" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
 				<license name="MIT" url="http://www.opensource.org/licenses/mit-license.html"/>
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="com.scalakata" name="server_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="1.1.3"/>
@@ -245,7 +245,7 @@
 			</revision>
 		</module>
 		<module organisation="com.scalakata" name="annotation_2.11">
-			<revision name="1.1.3" status="integration" pubdate="20160529162407" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="2">
+			<revision name="1.1.3" status="integration" pubdate="20160529170113" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="2">
 				<license name="MIT" url="http://www.opensource.org/licenses/mit-license.html"/>
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="com.scalakata" name="evaluation_2.11" conf="compile" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="1.1.3"/>
@@ -254,7 +254,7 @@
 			</revision>
 		</module>
 		<module organisation="com.scalakata" name="model_sjs0.6_2.11">
-			<revision name="1.1.3" status="integration" pubdate="20160529162406" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="7">
+			<revision name="1.1.3" status="integration" pubdate="20160529170113" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="7">
 				<license name="MIT" url="http://www.opensource.org/licenses/mit-license.html"/>
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="com.scalakata" name="annotation_2.11" conf="compile" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="1.1.3"/>

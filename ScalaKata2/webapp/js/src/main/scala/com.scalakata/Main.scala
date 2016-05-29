@@ -60,29 +60,7 @@ object Main {
 
     val themeButton = dom.document.getElementById("theme")
     val stateButton = dom.document.getElementById("state")
-    val shareButton = dom.document.getElementById("share")
-
-    /*//---------------------------------------------Modificaciones------------------------------------------
-    dom.window.addEventListener("message", (evt: dom.MessageEvent ) => {
-      if(evt.origin == "http://localhost:3000"){
-        if(evt.data.toString == "requestData"){
-          dom.console.log("Scalakata: RequestData")
-          dom.top.postMessage(dom.localStorage.getItem(Rendering.localStorageKey), "http://localhost:3000")
-        }
-        else if(evt.data.toString == "removeData"){
-          dom.console.log("Scalakata: RemoveData")
-          dom.localStorage.removeItem(Rendering.localStorageKey)
-          dom.top.postMessage("removeOK", "http://localhost:3000")
-        }
-        else {          
-          dom.console.log("Scalakata: SaveData")
-          dom.localStorage.setItem(Rendering.localStorageKey, evt.data.toString)
-          dom.top.postMessage("saveOK", "http://localhost:3000")  
-        }
-      }
-    })
-    //----------------------------------------------------------------------------*/
-    
+    val shareButton = dom.document.getElementById("share")    
 
     CodeMirror.commands.run = Rendering.run _
     CodeMirror.commands.typeAt = Hint.typeAt _
@@ -144,6 +122,8 @@ object Main {
         themeButton.addEventListener("click", (e: dom.Event) ⇒ CodeMirror.commands.solarizedToggle(editor))
         shareButton.addEventListener("click", (e: dom.Event) ⇒ CodeMirror.commands.share(editor))
 
+
+        //---------------------------------------------Modificaciones------------------------------------------
         dom.window.addEventListener("message", (evt: dom.MessageEvent ) => {
           if(evt.origin == "http://localhost:3000"){
             if(evt.data.toString == "requestData"){
@@ -155,13 +135,23 @@ object Main {
               doc.setValue("")
               dom.top.postMessage("removeOK", "http://localhost:3000")
             }
-            else {          
-              dom.console.log("Scalakata: SaveData")
-              doc.setValue(evt.data.toString)
-              dom.top.postMessage("saveOK", "http://localhost:3000")  
+            else {
+              var operationData = evt.data.toString.split("/;/");
+
+              if(operationData(0).toString == "code"){
+                dom.console.log("Scalakata: SaveData")
+                doc.setValue(operationData(1).toString)
+                dom.top.postMessage("saveOK", "http://localhost:3000") 
+              }
+              else if(operationData(0).toString == "property"){
+                dom.console.log("Add property to code: " + operationData(1).toString)
+
+                doc.replaceRange(operationData(1).toString, doc.getCursor())
+              }           
             }
           }
         })
+        //----------------------------------------------------------------------------------------------
 
         dom.document.getElementById("help").addEventListener("click", (e: dom.Event) ⇒ CodeMirror.commands.help(editor))
         stateButton.setAttribute("title", s"run ($ctrlS + Enter)")
