@@ -58,13 +58,15 @@ class DatosKPI extends Component {
             this.props.KPIActions.DatosKPIActions.modifyErrors(errors)
 
             if(!errors.nameInput && !errors.descriptionInput && !errors.keywordsInput && !errors.timeInput){
-              this.props.KPIActions.DatosKPIActions.continueSteper()
+              window.addEventListener("message", this.iframeManage)
+              if(kpi.code === undefined)
+                this.props.KPIActions.DatosKPIActions.continueSteper()
+              else
+                this.selectStepSteper(2)
             }
-
-            window.addEventListener("message", this.iframeManage)
             break;
 
-          case 1:
+          case 2:
             this.refs.iframe.contentWindow.postMessage("requestData", "http://localhost:7331")
             break;
 
@@ -309,7 +311,12 @@ class DatosKPI extends Component {
                       </div>
                     </div>
                 );
+            
             case 1:
+                return (
+                  <div></div>
+                )
+            case 2:
                 return (
                     <div className={styles.scalakata}>
                       <iframe ref="iframe" src="http://localhost:7331" className={styles.iframe} onLoad={this.loadDataIframe}></iframe>
@@ -325,7 +332,7 @@ class DatosKPI extends Component {
                     </div>
                 );
 
-            case 2:
+            case 3:
                 return (
                   <div>
                     {this.props.kpi.datoskpi.isNewOrEditRepresentation ? (
@@ -391,20 +398,78 @@ class DatosKPI extends Component {
         }
     }
 
+    getStepControls(isNewKPI){
+      let {datoskpi} = this.props.kpi;
+
+      let startStep = 0; 
+      if(isNewKPI){
+        startStep = 1;
+      }
+
+
+      if(datoskpi.stepIndex > startStep){
+        if(datoskpi.stepIndex === 2){
+          if(datoskpi.kpi.representation === undefined && !datoskpi.isNewOrEditRepresentation){
+            return ( <RaisedButton label="Seguinte" primary={true} onTouchTap={() => {this.toggleRepresentationNewOrEdit(); this.continueSteper()}} /> )
+          }
+          return ( <RaisedButton label="Seguinte" primary={true} onTouchTap={() => {this.continueSteper();}} /> )
+        }
+        else {
+          if(datoskpi.isNewOrEditRepresentation){
+            return (
+              <div>
+                <RaisedButton label="Aceptar" primary={true} className={styles.raisedButton} onTouchTap={() => {this.addRepresentationToKPI()} }/>
+                {datoskpi.kpi.representation !== undefined ? (
+                  <RaisedButton label="Cancelar" primary={true} className={styles.raisedButton} onTouchTap={() => this.toggleRepresentationNewOrEdit()} />
+                ):(
+                  null
+                )}
+              </div>
+            )
+          }
+
+          return ( <RaisedButton label="Confirmar" primary={true} onTouchTap={this.storeKPIBD}/> )
+        }
+      }
+
+      return ( <RaisedButton label="Seguinte" primary={true} onTouchTap={() => {this.continueSteper();}} /> )
+    }
+
     getStepper(linear){
-      return (
+      if(linear){
+        return (
           <Stepper linear={linear} activeStep={ this.props.kpi.datoskpi.stepIndex }>
             <Step active={ this.props.kpi.datoskpi.stepIndex === 0 }>
               <StepButton onTouchTap={ () => this.selectStepSteper(0) }>Datos</StepButton>
             </Step>
-            <Step active={ this.props.kpi.datoskpi.stepIndex === 1 }>
-              <StepButton onTouchTap={ () => { this.selectStepSteper(1); } }>Formulación</StepButton>
+            <Step active={ this.props.kpi.datoskpi.stepIndex === 1 } >
+              <StepButton>Wizard Código</StepButton>
             </Step>
-            <Step active={ this.props.kpi.datoskpi.stepIndex === 2 } >
-              <StepButton onTouchTap={ () => this.selectStepSteper(2) }>Representación</StepButton>
+            <Step active={ this.props.kpi.datoskpi.stepIndex === 2 }>
+              <StepButton onTouchTap={ () => { this.selectStepSteper(2); } }>Formulación</StepButton>
+            </Step>
+            <Step active={ this.props.kpi.datoskpi.stepIndex === 3 } >
+              <StepButton onTouchTap={ () => this.selectStepSteper(3) }>Representación</StepButton>
             </Step>
           </Stepper>
-      )
+        )
+      }
+      else {
+        return (
+          <Stepper linear={linear} activeStep={ this.props.kpi.datoskpi.stepIndex }>
+            <Step active={ this.props.kpi.datoskpi.stepIndex === 0 }>
+              <StepButton onTouchTap={ () => this.selectStepSteper(0) }>Datos</StepButton>
+            </Step>
+            <Step active={ this.props.kpi.datoskpi.stepIndex === 2 }>
+              <StepButton onTouchTap={ () => { this.selectStepSteper(2); } }>Formulación</StepButton>
+            </Step>
+            <Step active={ this.props.kpi.datoskpi.stepIndex === 3 } >
+              <StepButton onTouchTap={ () => this.selectStepSteper(3) }>Representación</StepButton>
+            </Step>
+          </Stepper>
+        )
+      }
+      
     }
 
     render() {
@@ -429,33 +494,7 @@ class DatosKPI extends Component {
 
               <div className={styles.stepperControls}>
                 <div className={styles.raisedButton}>
-                  
-                  {datoskpi.stepIndex > 0 ? (
-                    datoskpi.stepIndex === 1 ? (
-                      (datoskpi.kpi.representation === undefined && !datoskpi.isNewOrEditRepresentation )? (
-                        <RaisedButton label="Seguinte" primary={true} onTouchTap={() => {this.toggleRepresentationNewOrEdit(); this.continueSteper()}} />
-                      ):(
-                        <div>
-                          <RaisedButton label="Seguinte" primary={true} onTouchTap={() => {this.continueSteper();}} />
-                        </div>
-                      )
-                    ):(
-                      datoskpi.isNewOrEditRepresentation ? (
-                        <div>
-                          <RaisedButton label="Aceptar" primary={true} className={styles.raisedButton} onTouchTap={() => {this.addRepresentationToKPI()} }/>
-                          {datoskpi.kpi.representation !== undefined ? (
-                            <RaisedButton label="Cancelar" primary={true} className={styles.raisedButton} onTouchTap={() => this.toggleRepresentationNewOrEdit()} />
-                          ):(
-                            null
-                          )}
-                        </div>
-                      ) : (
-                        <RaisedButton label="Confirmar" primary={true} onTouchTap={this.storeKPIBD}/>
-                      )
-                    )
-                  ):(
-                    <RaisedButton label="Seguinte" primary={true} onTouchTap={() => {this.continueSteper();}} />
-                  )}
+                  {this.getStepControls(kpi.isNew)}
                 </div>
               </div>
             </div>
