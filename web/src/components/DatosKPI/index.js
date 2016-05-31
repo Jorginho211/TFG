@@ -31,6 +31,8 @@ import { autobind } from 'core-decorators';
 import CSSModules from 'react-css-modules';
 import styles from './styles.scss';
 
+import CodeWizard from '../CodeWizard/'
+
 @CSSModules(styles)
 class DatosKPI extends Component {
     constructor() {
@@ -314,7 +316,7 @@ class DatosKPI extends Component {
             
             case 1:
                 return (
-                  <div></div>
+                  <CodeWizard kpi={this.props.kpi} />
                 )
             case 2:
                 return (

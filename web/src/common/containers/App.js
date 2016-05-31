@@ -28,6 +28,7 @@ import * as UIActions from '../store/actions/UIActions'
 //      import * as XXActions from '../../XX/Actions'
 import * as KPIActions from '../../components/KPI/Actions'
 import * as DatosKPIActions from '../../components/DatosKPI/Actions'
+import * as CodeWizardActions from '../../components/CodeWizard/Actions'
 
 
 import { Breakpoints } from '../styles/Breakpoints'
@@ -108,7 +109,10 @@ function mapStateToProps(state) {
         isMenuOpened: state.UIState.isMenuOpened,
         kpi: {
                 ...state.KPIState,
-                datoskpi: state.DatosKPIState,
+                datoskpi: {
+                    ...state.DatosKPIState,
+                    codewizard: state.codewizard,
+                },
         },
     };
 }
@@ -120,7 +124,10 @@ function mapDispatchToProps(dispatch) {
         //      XXActions: bindActionCreators(XXActions, dispatch)
         KPIActions: {
             ...bindActionCreators(KPIActions, dispatch),
-            DatosKPIActions : bindActionCreators(DatosKPIActions, dispatch),
+            DatosKPIActions : {
+                ...bindActionCreators(DatosKPIActions, dispatch),
+                CodeWizardActions : bindActionCreators(CodeWizardActions, dispatch),
+            },
         }
     };
 }
