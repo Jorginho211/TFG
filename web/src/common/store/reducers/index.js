@@ -4,6 +4,7 @@ import UIReducer from './UIReducer'
 
 import KPIReducer from '../../../components/KPI/Reducer'
 import DatosKPIReducer from '../../../components/DatosKPI/Reducer'
+import CodeWizardReducer from '../../../components/CodeWizard/Reducer'
 
 const reducers = {
     UIState: UIReducer,
@@ -11,6 +12,7 @@ const reducers = {
     //      XXState : XXReducer
     KPIState: KPIReducer,
     DatosKPIState: DatosKPIReducer,
+    CodeWizardState: CodeWizardReducer,
 };
 
 export default reducers;

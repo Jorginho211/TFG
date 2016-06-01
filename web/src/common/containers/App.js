@@ -111,7 +111,7 @@ function mapStateToProps(state) {
                 ...state.KPIState,
                 datoskpi: {
                     ...state.DatosKPIState,
-                    codewizard: state.codewizard,
+                    codewizard: state.CodeWizardState,
                 },
         },
     };

@@ -403,13 +403,10 @@ class DatosKPI extends Component {
     getStepControls(isNewKPI){
       let {datoskpi} = this.props.kpi;
 
-      let startStep = 0; 
-      if(isNewKPI){
-        startStep = 1;
-      }
-
-
-      if(datoskpi.stepIndex > startStep){
+      if(datoskpi.stepIndex > 0){
+        if(isNewKPI){
+          return
+        }
         if(datoskpi.stepIndex === 2){
           if(datoskpi.kpi.representation === undefined && !datoskpi.isNewOrEditRepresentation){
             return ( <RaisedButton label="Seguinte" primary={true} onTouchTap={() => {this.toggleRepresentationNewOrEdit(); this.continueSteper()}} /> )

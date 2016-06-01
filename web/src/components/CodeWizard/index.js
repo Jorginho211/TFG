@@ -6,11 +6,29 @@ class CodeWizard extends Component {
     }
 
     render() {
-    	return (
-    		<div>
-    			<p>Hola Mundo</p>
-    		</div>
-    	)
+        const {codewizard} = this.props.kpi.datoskpi
+
+        switch(codewizard.typeTemplate){
+            case 0:
+                return (
+                    <div>{codewizard.typeTemplate}</div>
+                )
+
+            case 1:
+                return (
+                    <div>{codewizard.typeTemplate}</div>
+                )
+
+            case 2:
+                return (
+                    <div>{codewizard.typeTemplate}</div>
+                )
+
+            case 3:
+                return (
+                    <div>{codewizard.typeTemplate}</div>
+                )
+        }
     }
 }
 
