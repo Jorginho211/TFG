@@ -3,7 +3,7 @@
  */
 
 export const TYPES = {
-	
+	TEMPLATE_TYPE : Symbol('TEMPLATE_TYPE'),
 }
 
 export default TYPES;

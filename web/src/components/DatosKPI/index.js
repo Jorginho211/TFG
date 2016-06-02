@@ -316,7 +316,7 @@ class DatosKPI extends Component {
             
             case 1:
                 return (
-                  <CodeWizard kpi={this.props.kpi} />
+                  <CodeWizard kpi={this.props.kpi} KPIActions={this.props.KPIActions} />
                 )
             case 2:
                 return (
