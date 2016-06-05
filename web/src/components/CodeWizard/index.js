@@ -10,6 +10,9 @@ import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
+import Menu from 'material-ui/Menu';
+
+import DeleteIcon from 'material-ui/svg-icons/action/delete';
 
 import { autobind } from 'core-decorators';
 import CSSModules from 'react-css-modules';
@@ -27,6 +30,53 @@ class CodeWizard extends Component {
 
     @autobind selectStepSteper(step){
         this.props.KPIActions.DatosKPIActions.selectStepSteper(step)
+    }
+
+    @autobind setWorkflowSugestion(state){
+        if(!this.props.kpi.datoskpi.codewizard.workflowSugestion)
+            this.props.KPIActions.DatosKPIActions.CodeWizardActions.setWorkflowSugestion(state)
+    }
+
+    @autobind changeWorkflowVisibility(evt){
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeWorkflowVisibility(this.props.kpi.datoskpi.codewizard.workflows, evt.target.value)
+    }
+
+    @autobind changeWorkflowState(evt, index, value){
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeWorkflowState(value)
+    }
+
+    @autobind addWorkflowToWorkflowTemplate(){
+        let exist = false
+        
+        let workflow = {
+            name: this.workflowTemplateInput.getValue(),
+            state: this.props.kpi.datoskpi.codewizard.workflowState,
+        }
+
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.addWorkflowToWorkflowTemplate(workflow, this.props.kpi.datoskpi.codewizard.workflowTemplate)
+
+        this.workflowTemplateInput.input.value=""
+    }
+
+    @autobind deleteWorkflowToWorkflowTemplate(index){
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.deleteWorkflowToWorkflowTemplate(this.props.kpi.datoskpi.codewizard.workflowTemplate, index)
+    }
+
+    @autobind changeTimeWindow(evt){
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeTimeWindow(parseFloat(evt.target.value))
+    }
+
+    getWorkflowStateGalego(state){
+        switch(state){
+            case "started":
+                return "Comezado"
+
+            case "stopped":
+                return "Parado"
+
+            case "finished":
+                return "Acabado"
+        }
     }
 
     render() {
@@ -71,21 +121,67 @@ class CodeWizard extends Component {
             case 1:
                 return (
                     <div className={styles.workflows}>
-                        <div className={styles.inputs}>
-                            <TextField hintText="Workflow" className={styles.textField} />
+                        {codewizard.workflowTemplate !== undefined && codewizard.workflowTemplate.length > 0 ? (
+                            <div className={styles.table}>
+                                {codewizard.workflowTemplate.map((workflow, index) => {
+                                    return (
+                                        <div key={index} className={styles.workflowLine}>
+                                            <div className={styles.workflow}>{workflow.name}</div>
+                                            <div className={styles.state}>{this.getWorkflowStateGalego(workflow.state)}</div>
+                                            <div className={styles.actions}>
+                                                <IconButton onTouchTap={() => {this.deleteWorkflowToWorkflowTemplate(index)}}>
+                                                    <DeleteIcon />
+                                                </IconButton>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        ): (
+                            null
+                        )}
 
-                            <SelectField value={1}>
-                                <MenuItem value={1} primaryText="Comezado" />
-                                <MenuItem value={2} primaryText="Acabado" />
-                                <MenuItem value={3} primaryText="Parado" />
+                        <div className={styles.inputs}>
+                            {/*<TextField hintText="Workflow" className={styles.textField} onFocus={() => this.setWorkflowSugestion(true)} onChange={this.changeWorkflowVisibility}/>*/}
+                            <TextField hintText="Workflow" ref={element => this.workflowTemplateInput = element } className={styles.textField}/>
+
+                            <SelectField style={{flex: 1}} value={codewizard.workflowState} onChange={this.changeWorkflowState}>
+                                <MenuItem value="started" primaryText="Comezado" />
+                                <MenuItem value="finished" primaryText="Acabado" />
+                                <MenuItem value="stopped" primaryText="Parado" />
                             </SelectField>
 
-                            <IconButton>
+                            <IconButton className={styles.actions} onTouchTap={this.addWorkflowToWorkflowTemplate}>
                                 <ContentAdd />
                             </IconButton>
                         </div>
 
-                        <FlatButton label="Seguinte" onTouchTap={() => { this.templateType(2) }}/>
+                        {codewizard.workflowSugestion ? (
+                            <div className={styles.sugestions}>
+                                <Paper className={styles.paper}>
+                                    <Menu className={styles.menu}>
+                                        {codewizard.workflows.map( (workflow, index) => {
+                                            if(workflow.visibility){
+                                                return(
+                                                    <MenuItem key={index} value={workflow.name} primaryText={workflow.name} />
+                                                )
+                                            }
+                                        })}
+                                    </Menu>
+                                </Paper>
+                            </div>
+                        ):(
+                            null
+                        )}
+                        
+
+                        <div>
+                            <TextField hintText="Ventá Temporal" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow}/>
+                        </div>
+
+                        <div>
+                            <FlatButton label="Xerar Código" onTouchTap={() => { this.templateType(2) }}/>
+                        </div>
                     </div>
                 )
 
@@ -94,7 +190,7 @@ class CodeWizard extends Component {
                     <div>
                         Que tal
                         {codewizard.typeTemplate}
-                        <FlatButton label="Seguinte" onTouchTap={() => { this.templateType(3) }}/>
+                        <FlatButton label="Xerar Código" onTouchTap={() => { this.templateType(3) }}/>
                     </div>
                 )
 

@@ -37,16 +37,64 @@
 }
 
 .workflows {
+	.table {
+		margin-top: 10px;
+		overflow-y: auto;
+		max-height: 200px;
+
+		.workflowLine {
+			margin-top: -10px;
+			display: flex;
+			align-items: center;
+
+			.workflow {
+				flex: 2;
+			}
+
+			.state {
+				margin-left: 20px;
+				flex: 1;
+			}
+
+			.actions {
+				flex: 0;
+			}
+		}
+
+		margin-bottom: 5px;
+	}
 
 	.inputs {
 		display: flex;
 		align-items: center;
 
 		.textField {
-			flex: 1;
+			flex: 2;
 			width: 100%;
 			margin-right: 10px;
 		}
+
+		.actions {
+			flex:0;
+			width: 10px;
+			height: 10px;
+		}
 	}
 
+	.sugestions {
+		position: absolute;
+		z-index: 1;
+
+		.paper {
+			width:250px;
+
+			.menu {
+				width: 250px!important;
+			}
+		}
+	}
+}
+
+.textFieldwidthAll {
+	width: 100%!important;
 }
