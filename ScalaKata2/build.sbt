@@ -58,7 +58,8 @@ lazy val model = project
     resolvers += "masseguillaume" at "http://dl.bintray.com/content/masseguillaume/maven",
     libraryDependencies ++= Seq(
       "com.lihaoyi"           %% "pprint"     % "0.4.0",
-      "com.dallaway.richard" %%% "woot-model" % "0.1.1"
+      "com.dallaway.richard" %%% "woot-model" % "0.1.1",
+      "com.twitter"           %% "scalding-core" % "0.16.0"
     )
   )
   .enablePlugins(ScalaJSPlugin)

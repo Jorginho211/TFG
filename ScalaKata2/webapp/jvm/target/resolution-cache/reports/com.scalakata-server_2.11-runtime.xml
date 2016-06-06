@@ -7,10 +7,10 @@
 		revision="1.1.3"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160529170113"/>
+		date="20160606141504"/>
 	<dependencies>
 		<module organisation="org.webjars.bower" name="iframe-resizer">
-			<revision name="2.8.10" status="release" pubdate="20150724043332" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="31">
+			<revision name="2.8.10" status="release" pubdate="20150724043332" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="59">
 				<license name="MIT" url="https://spdx.org/licenses/MIT#licenseText"/>
 				<metadata-artifact status="no" details="" size="2564" time="0" location="/home/xurxo/.ivy2/cache/org.webjars.bower/iframe-resizer/ivy-2.8.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/webjars/bower/iframe-resizer/2.8.10/iframe-resizer-2.8.10.pom"/>
 				<caller organisation="com.scalakata" name="server_2.11" conf="compile, runtime" rev="2.8.10" rev-constraint-default="2.8.10" rev-constraint-dynamic="2.8.10" callerrev="1.1.3"/>
@@ -22,7 +22,7 @@
 			</revision>
 		</module>
 		<module organisation="org.webjars.bower" name="pagedown">
-			<revision name="1.1.0" status="release" pubdate="20150724133547" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="30">
+			<revision name="1.1.0" status="release" pubdate="20150724133547" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="58">
 				<license name="MIT" url="https://spdx.org/licenses/MIT#licenseText"/>
 				<metadata-artifact status="no" details="" size="2545" time="0" location="/home/xurxo/.ivy2/cache/org.webjars.bower/pagedown/ivy-1.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/webjars/bower/pagedown/1.1.0/pagedown-1.1.0.pom"/>
 				<caller organisation="com.scalakata" name="server_2.11" conf="compile, runtime" rev="1.1.0" rev-constraint-default="1.1.0" rev-constraint-dynamic="1.1.0" callerrev="1.1.3"/>
@@ -34,7 +34,7 @@
 			</revision>
 		</module>
 		<module organisation="org.webjars.bower" name="open-iconic">
-			<revision name="1.1.1" status="release" pubdate="20150726032728" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="29">
+			<revision name="1.1.1" status="release" pubdate="20150726032728" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="57">
 				<license name="MIT" url="https://spdx.org/licenses/MIT#licenseText"/>
 				<license name="OFL-1.1" url="https://spdx.org/licenses/OFL-1.1#licenseText"/>
 				<metadata-artifact status="no" details="" size="2635" time="0" location="/home/xurxo/.ivy2/cache/org.webjars.bower/open-iconic/ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/webjars/bower/open-iconic/1.1.1/open-iconic-1.1.1.pom"/>
@@ -47,7 +47,7 @@
 			</revision>
 		</module>
 		<module organisation="org.webjars.bower" name="codemirror">
-			<revision name="5.14.2" status="release" pubdate="20160509075936" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="28">
+			<revision name="5.14.2" status="release" pubdate="20160509075936" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="56">
 				<license name="MIT" url="https://spdx.org/licenses/MIT#licenseText"/>
 				<metadata-artifact status="no" details="" size="2552" time="0" location="/home/xurxo/.ivy2/cache/org.webjars.bower/codemirror/ivy-5.14.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/webjars/bower/codemirror/5.14.2/codemirror-5.14.2.pom"/>
 				<caller organisation="com.scalakata" name="server_2.11" conf="compile, runtime" rev="5.14.2" rev-constraint-default="5.14.2" rev-constraint-dynamic="5.14.2" callerrev="1.1.3"/>
@@ -59,7 +59,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-http-experimental_2.11">
-			<revision name="2.4.4" status="release" pubdate="20160413060214" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="18">
+			<revision name="2.4.4" status="release" pubdate="20160413060214" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="46">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3458" time="0" location="/home/xurxo/.ivy2/cache/com.typesafe.akka/akka-http-experimental_2.11/ivy-2.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-experimental_2.11/2.4.4/akka-http-experimental_2.11-2.4.4.pom"/>
 				<caller organisation="com.scalakata" name="server_2.11" conf="compile, runtime" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="1.1.3"/>
@@ -71,7 +71,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-http-core_2.11">
-			<revision name="2.4.4" status="release" pubdate="20160413060116" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="19">
+			<revision name="2.4.4" status="release" pubdate="20160413060116" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="47">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3742" time="0" location="/home/xurxo/.ivy2/cache/com.typesafe.akka/akka-http-core_2.11/ivy-2.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-core_2.11/2.4.4/akka-http-core_2.11-2.4.4.pom"/>
 				<caller organisation="com.typesafe.akka" name="akka-http-experimental_2.11" conf="default, compile, runtime, master" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="2.4.4"/>
@@ -83,7 +83,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-parsing_2.11">
-			<revision name="2.4.4" status="release" pubdate="20160413055818" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="27">
+			<revision name="2.4.4" status="release" pubdate="20160413055818" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="55">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="2812" time="0" location="/home/xurxo/.ivy2/cache/com.typesafe.akka/akka-parsing_2.11/ivy-2.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-parsing_2.11/2.4.4/akka-parsing_2.11-2.4.4.pom"/>
 				<caller organisation="com.typesafe.akka" name="akka-http-core_2.11" conf="compile, runtime" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="2.4.4"/>
@@ -95,7 +95,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-stream_2.11">
-			<revision name="2.4.4" status="release" pubdate="20160413055935" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="20">
+			<revision name="2.4.4" status="release" pubdate="20160413055935" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="48">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3359" time="0" location="/home/xurxo/.ivy2/cache/com.typesafe.akka/akka-stream_2.11/ivy-2.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream_2.11/2.4.4/akka-stream_2.11-2.4.4.pom"/>
 				<caller organisation="com.typesafe.akka" name="akka-http-core_2.11" conf="compile, runtime" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="2.4.4"/>
@@ -107,7 +107,7 @@
 			</revision>
 		</module>
 		<module organisation="org.reactivestreams" name="reactive-streams">
-			<revision name="1.0.0" status="release" pubdate="20150429161454" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.reactive-streams.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="26">
+			<revision name="1.0.0" status="release" pubdate="20150429161454" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.reactive-streams.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="54">
 				<license name="CC0" url="http://creativecommons.org/publicdomain/zero/1.0/"/>
 				<metadata-artifact status="no" details="" size="2523" time="0" location="/home/xurxo/.ivy2/cache/org.reactivestreams/reactive-streams/ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.0/reactive-streams-1.0.0.pom"/>
 				<caller organisation="com.typesafe.akka" name="akka-stream_2.11" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="2.4.4"/>
@@ -119,7 +119,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe" name="ssl-config-akka_2.11">
-			<revision name="0.2.1" status="release" pubdate="20160408123502" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/ssl-config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="24">
+			<revision name="0.2.1" status="release" pubdate="20160408123502" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/ssl-config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="52">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3000" time="0" location="/home/xurxo/.ivy2/cache/com.typesafe/ssl-config-akka_2.11/ivy-0.2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/ssl-config-akka_2.11/0.2.1/ssl-config-akka_2.11-0.2.1.pom"/>
 				<caller organisation="com.typesafe.akka" name="akka-stream_2.11" conf="compile, runtime" rev="0.2.1" rev-constraint-default="0.2.1" rev-constraint-dynamic="0.2.1" callerrev="2.4.4"/>
@@ -131,7 +131,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe" name="ssl-config-core_2.11">
-			<revision name="0.2.1" status="release" pubdate="20160408123507" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/ssl-config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="25">
+			<revision name="0.2.1" status="release" pubdate="20160408123507" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/ssl-config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="53">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3001" time="0" location="/home/xurxo/.ivy2/cache/com.typesafe/ssl-config-core_2.11/ivy-0.2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.11/0.2.1/ssl-config-core_2.11-0.2.1.pom"/>
 				<caller organisation="com.typesafe" name="ssl-config-akka_2.11" conf="compile, runtime" rev="0.2.1" rev-constraint-default="0.2.1" rev-constraint-dynamic="0.2.1" callerrev="0.2.1"/>
@@ -143,7 +143,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-actor_2.11">
-			<revision name="2.4.4" status="release" pubdate="20160413055803" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="21">
+			<revision name="2.4.4" status="release" pubdate="20160413055803" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="49">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="2956" time="0" location="/home/xurxo/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/ivy-2.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.11/2.4.4/akka-actor_2.11-2.4.4.pom"/>
 				<caller organisation="com.typesafe.akka" name="akka-stream_2.11" conf="compile, runtime" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="2.4.4"/>
@@ -155,7 +155,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang.modules" name="scala-java8-compat_2.11">
-			<revision name="0.7.0" status="release" pubdate="20150831110233" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="23">
+			<revision name="0.7.0" status="release" pubdate="20150831110233" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="51">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
 				<metadata-artifact status="no" details="" size="3036" time="0" location="/home/xurxo/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/ivy-0.7.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.11/0.7.0/scala-java8-compat_2.11-0.7.0.pom"/>
 				<caller organisation="com.typesafe.akka" name="akka-http-experimental_2.11" conf="default, compile, runtime, master" rev="0.7.0" rev-constraint-default="0.7.0" rev-constraint-dynamic="0.7.0" callerrev="2.4.4"/>
@@ -169,7 +169,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe" name="config">
-			<revision name="1.3.0" status="release" pubdate="20150508154611" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="22">
+			<revision name="1.3.0" status="release" pubdate="20150508154611" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="50">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="2875" time="0" location="/home/xurxo/.ivy2/cache/com.typesafe/config/ivy-1.3.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/config/1.3.0/config-1.3.0.pom"/>
 				<caller organisation="com.typesafe" name="ssl-config-core_2.11" conf="compile, runtime" rev="1.2.0" rev-constraint-default="1.2.0" rev-constraint-dynamic="1.2.0" callerrev="0.2.1"/>
@@ -188,7 +188,7 @@
 			</revision>
 		</module>
 		<module organisation="com.lihaoyi" name="autowire_2.11">
-			<revision name="0.2.5" status="release" pubdate="20150309015703" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lihaoyi/ajax" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="17">
+			<revision name="0.2.5" status="release" pubdate="20150309015703" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lihaoyi/ajax" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="45">
 				<license name="MIT license" url="http://www.opensource.org/licenses/mit-license.php"/>
 				<metadata-artifact status="no" details="" size="3562" time="0" location="/home/xurxo/.ivy2/cache/com.lihaoyi/autowire_2.11/ivy-0.2.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/lihaoyi/autowire_2.11/0.2.5/autowire_2.11-0.2.5.pom"/>
 				<caller organisation="com.scalakata" name="server_2.11" conf="compile, runtime" rev="0.2.5" rev-constraint-default="0.2.5" rev-constraint-dynamic="0.2.5" callerrev="1.1.3"/>
@@ -200,7 +200,7 @@
 			</revision>
 		</module>
 		<module organisation="com.lihaoyi" name="upickle_2.11">
-			<revision name="0.4.0" status="release" pubdate="20160424085121" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lihaoyi/upickle" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="15">
+			<revision name="0.4.0" status="release" pubdate="20160424085121" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lihaoyi/upickle" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="43">
 				<license name="MIT license" url="http://www.opensource.org/licenses/mit-license.php"/>
 				<metadata-artifact status="no" details="" size="3652" time="0" location="/home/xurxo/.ivy2/cache/com.lihaoyi/upickle_2.11/ivy-0.4.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/lihaoyi/upickle_2.11/0.4.0/upickle_2.11-0.4.0.pom"/>
 				<caller organisation="com.scalakata" name="server_2.11" conf="compile, runtime" rev="0.4.0" rev-constraint-default="0.4.0" rev-constraint-dynamic="0.4.0" callerrev="1.1.3"/>
@@ -212,7 +212,7 @@
 			</revision>
 		</module>
 		<module organisation="org.spire-math" name="jawn-parser_2.11">
-			<revision name="0.8.3" status="release" pubdate="20150728163405" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/non/jawn" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
+			<revision name="0.8.3" status="release" pubdate="20150728163405" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/non/jawn" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="44">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
 				<metadata-artifact status="no" details="" size="2883" time="0" location="/home/xurxo/.ivy2/cache/org.spire-math/jawn-parser_2.11/ivy-0.8.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.11/0.8.3/jawn-parser_2.11-0.8.3.pom"/>
 				<caller organisation="com.lihaoyi" name="upickle_2.11" conf="default, compile, runtime, master" rev="0.8.3" rev-constraint-default="0.8.3" rev-constraint-dynamic="0.8.3" callerrev="0.4.0"/>
@@ -224,7 +224,7 @@
 			</revision>
 		</module>
 		<module organisation="com.lihaoyi" name="scalatags_2.11">
-			<revision name="0.5.2" status="release" pubdate="20150510160208" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lihaoyi/scalatags" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="14">
+			<revision name="0.5.2" status="release" pubdate="20150510160208" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lihaoyi/scalatags" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="42">
 				<license name="MIT license" url="http://www.opensource.org/licenses/mit-license.php"/>
 				<metadata-artifact status="no" details="" size="3205" time="0" location="/home/xurxo/.ivy2/cache/com.lihaoyi/scalatags_2.11/ivy-0.5.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/lihaoyi/scalatags_2.11/0.5.2/scalatags_2.11-0.5.2.pom"/>
 				<caller organisation="com.scalakata" name="server_2.11" conf="compile, runtime" rev="0.5.2" rev-constraint-default="0.5.2" rev-constraint-dynamic="0.5.2" callerrev="1.1.3"/>
@@ -236,7 +236,7 @@
 			</revision>
 		</module>
 		<module organisation="com.scalakata" name="evaluation_2.11">
-			<revision name="1.1.3" status="integration" pubdate="20160529170113" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
+			<revision name="1.1.3" status="integration" pubdate="20160606141502" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
 				<license name="MIT" url="http://www.opensource.org/licenses/mit-license.html"/>
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="com.scalakata" name="server_2.11" conf="compile, runtime" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="1.1.3"/>
@@ -245,7 +245,7 @@
 			</revision>
 		</module>
 		<module organisation="com.scalakata" name="annotation_2.11">
-			<revision name="1.1.3" status="integration" pubdate="20160529170113" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="2">
+			<revision name="1.1.3" status="integration" pubdate="20160606141502" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="2">
 				<license name="MIT" url="http://www.opensource.org/licenses/mit-license.html"/>
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="com.scalakata" name="evaluation_2.11" conf="compile" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="1.1.3"/>
@@ -254,11 +254,373 @@
 			</revision>
 		</module>
 		<module organisation="com.scalakata" name="model_sjs0.6_2.11">
-			<revision name="1.1.3" status="integration" pubdate="20160529170113" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="7">
+			<revision name="1.1.3" status="integration" pubdate="20160606141459" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="7">
 				<license name="MIT" url="http://www.opensource.org/licenses/mit-license.html"/>
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="com.scalakata" name="annotation_2.11" conf="compile" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="1.1.3"/>
 				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.twitter" name="scalding-core_2.11">
+			<revision name="0.16.0" status="release" pubdate="20160503201842" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/scalding" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="14">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="6354" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/scalding-core_2.11/ivy-0.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/scalding-core_2.11/0.16.0/scalding-core_2.11-0.16.0.pom"/>
+				<caller organisation="com.scalakata" name="model_sjs0.6_2.11" conf="compile" rev="0.16.0" rev-constraint-default="0.16.0" rev-constraint-dynamic="0.16.0" callerrev="1.1.3"/>
+				<artifacts>
+					<artifact name="scalding-core_2.11" type="jar" ext="jar" status="no" details="" size="4205467" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/scalding-core_2.11/jars/scalding-core_2.11-0.16.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/scalding-core_2.11/0.16.0/scalding-core_2.11-0.16.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.twitter" name="chill-algebird_2.11">
+			<revision name="0.7.3" status="release" pubdate="20160202185849" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/chill" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="41">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3222" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/chill-algebird_2.11/ivy-0.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/chill-algebird_2.11/0.7.3/chill-algebird_2.11-0.7.3.pom"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="0.7.3" rev-constraint-default="0.7.3" rev-constraint-dynamic="0.7.3" callerrev="0.16.0"/>
+				<artifacts>
+					<artifact name="chill-algebird_2.11" type="jar" ext="jar" status="no" details="" size="10994" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/chill-algebird_2.11/jars/chill-algebird_2.11-0.7.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/chill-algebird_2.11/0.7.3/chill-algebird_2.11-0.7.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.twitter" name="bijection-macros_2.11">
+			<revision name="0.9.1" status="release" pubdate="20160203203430" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/bijection" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="40">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3218" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/bijection-macros_2.11/ivy-0.9.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/bijection-macros_2.11/0.9.1/bijection-macros_2.11-0.9.1.pom"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="0.9.1" rev-constraint-default="0.9.1" rev-constraint-dynamic="0.9.1" callerrev="0.16.0"/>
+				<artifacts>
+					<artifact name="bijection-macros_2.11" type="bundle" ext="jar" status="no" details="" size="74565" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/bijection-macros_2.11/bundles/bijection-macros_2.11-0.9.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/bijection-macros_2.11/0.9.1/bijection-macros_2.11-0.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.twitter" name="bijection-core_2.11">
+			<revision name="0.9.1" status="release" pubdate="20160203203429" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/bijection" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="37">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3041" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/bijection-core_2.11/ivy-0.9.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/bijection-core_2.11/0.9.1/bijection-core_2.11-0.9.1.pom"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="0.9.1" rev-constraint-default="0.9.1" rev-constraint-dynamic="0.9.1" callerrev="0.16.0"/>
+				<caller organisation="com.twitter" name="chill-bijection_2.11" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.7.3"/>
+				<caller organisation="com.twitter" name="bijection-macros_2.11" conf="compile, runtime" rev="0.9.1" rev-constraint-default="0.9.1" rev-constraint-dynamic="0.9.1" callerrev="0.9.1"/>
+				<artifacts>
+					<artifact name="bijection-core_2.11" type="bundle" ext="jar" status="no" details="" size="1803323" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/bijection-core_2.11/bundles/bijection-core_2.11-0.9.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/bijection-core_2.11/0.9.1/bijection-core_2.11-0.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="0.9.0" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<evicted-by rev="0.9.1"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="0.9.1" rev-constraint-default="0.9.1" rev-constraint-dynamic="0.9.1" callerrev="0.16.0"/>
+				<caller organisation="com.twitter" name="chill-bijection_2.11" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.7.3"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.twitter" name="algebird-core_2.11">
+			<revision name="0.12.0" status="release" pubdate="20160202025041" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/algebird" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="38">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3269" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/algebird-core_2.11/ivy-0.12.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/algebird-core_2.11/0.12.0/algebird-core_2.11-0.12.0.pom"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="0.12.0" rev-constraint-default="0.12.0" rev-constraint-dynamic="0.12.0" callerrev="0.16.0"/>
+				<caller organisation="com.twitter" name="chill-algebird_2.11" conf="compile, runtime" rev="0.12.0" rev-constraint-default="0.12.0" rev-constraint-dynamic="0.12.0" callerrev="0.7.3"/>
+				<artifacts>
+					<artifact name="algebird-core_2.11" type="jar" ext="jar" status="no" details="" size="3263557" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/algebird-core_2.11/jars/algebird-core_2.11-0.12.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/algebird-core_2.11/0.12.0/algebird-core_2.11-0.12.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.googlecode.javaewah" name="JavaEWAH">
+			<revision name="0.6.6" status="release" pubdate="20121212140200" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/javaewah/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="39">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4053" time="0" location="/home/xurxo/.ivy2/cache/com.googlecode.javaewah/JavaEWAH/ivy-0.6.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/googlecode/javaewah/JavaEWAH/0.6.6/JavaEWAH-0.6.6.pom"/>
+				<caller organisation="com.twitter" name="algebird-core_2.11" conf="compile, runtime" rev="0.6.6" rev-constraint-default="0.6.6" rev-constraint-dynamic="0.6.6" callerrev="0.12.0"/>
+				<artifacts>
+					<artifact name="JavaEWAH" type="jar" ext="jar" status="no" details="" size="56982" time="0" location="/home/xurxo/.ivy2/cache/com.googlecode.javaewah/JavaEWAH/jars/JavaEWAH-0.6.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/googlecode/javaewah/JavaEWAH/0.6.6/JavaEWAH-0.6.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.twitter" name="chill-bijection_2.11">
+			<revision name="0.7.3" status="release" pubdate="20160202185845" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/chill" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="35">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3225" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/chill-bijection_2.11/ivy-0.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/chill-bijection_2.11/0.7.3/chill-bijection_2.11-0.7.3.pom"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="0.7.3" rev-constraint-default="0.7.3" rev-constraint-dynamic="0.7.3" callerrev="0.16.0"/>
+				<artifacts>
+					<artifact name="chill-bijection_2.11" type="jar" ext="jar" status="no" details="" size="28417" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/chill-bijection_2.11/jars/chill-bijection_2.11-0.7.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/chill-bijection_2.11/0.7.3/chill-bijection_2.11-0.7.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.twitter" name="chill_2.11">
+			<revision name="0.7.3" status="release" pubdate="20160202185836" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/chill" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="36">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3046" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/chill_2.11/ivy-0.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/chill_2.11/0.7.3/chill_2.11-0.7.3.pom"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="0.7.3" rev-constraint-default="0.7.3" rev-constraint-dynamic="0.7.3" callerrev="0.16.0"/>
+				<caller organisation="com.twitter" name="chill-algebird_2.11" conf="compile, runtime" rev="0.7.3" rev-constraint-default="0.7.3" rev-constraint-dynamic="0.7.3" callerrev="0.7.3"/>
+				<caller organisation="com.twitter" name="chill-bijection_2.11" conf="compile, runtime" rev="0.7.3" rev-constraint-default="0.7.3" rev-constraint-dynamic="0.7.3" callerrev="0.7.3"/>
+				<artifacts>
+					<artifact name="chill_2.11" type="jar" ext="jar" status="no" details="" size="224509" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/chill_2.11/jars/chill_2.11-0.7.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/chill_2.11/0.7.3/chill_2.11-0.7.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.twitter" name="chill-hadoop">
+			<revision name="0.7.3" status="release" pubdate="20160202185748" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/chill" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="28">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3344" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/chill-hadoop/ivy-0.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/chill-hadoop/0.7.3/chill-hadoop-0.7.3.pom"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="0.7.3" rev-constraint-default="0.7.3" rev-constraint-dynamic="0.7.3" callerrev="0.16.0"/>
+				<artifacts>
+					<artifact name="chill-hadoop" type="jar" ext="jar" status="no" details="" size="4435" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/chill-hadoop/jars/chill-hadoop-0.7.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/chill-hadoop/0.7.3/chill-hadoop-0.7.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.6.6" status="release" pubdate="20120611144148" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="26">
+				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="4323" time="0" location="/home/xurxo/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.6.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.6.6/slf4j-api-1.6.6.pom"/>
+				<caller organisation="com.twitter" name="chill-hadoop" conf="compile, runtime" rev="1.6.6" rev-constraint-default="1.6.6" rev-constraint-dynamic="1.6.6" callerrev="0.7.3"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="1.6.6" rev-constraint-default="1.6.6" rev-constraint-dynamic="1.6.6" callerrev="0.16.0"/>
+				<caller organisation="cascading" name="cascading-local" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="2.6.1"/>
+				<artifacts>
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="26176" time="0" location="/home/xurxo/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.6.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.6.6/slf4j-api-1.6.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="1.7.2" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<evicted-by rev="1.6.6"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="1.6.6" rev-constraint-default="1.6.6" rev-constraint-dynamic="1.6.6" callerrev="0.16.0"/>
+				<caller organisation="cascading" name="cascading-local" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="2.6.1"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.twitter" name="chill-java">
+			<revision name="0.7.3" status="release" pubdate="20160202204024" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/chill" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="29">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2764" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/chill-java/ivy-0.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/chill-java/0.7.3/chill-java-0.7.3.pom"/>
+				<caller organisation="com.twitter" name="chill-hadoop" conf="compile, runtime" rev="0.7.3" rev-constraint-default="0.7.3" rev-constraint-dynamic="0.7.3" callerrev="0.7.3"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="0.7.3" rev-constraint-default="0.7.3" rev-constraint-dynamic="0.7.3" callerrev="0.16.0"/>
+				<caller organisation="com.twitter" name="chill_2.11" conf="compile, runtime" rev="0.7.3" rev-constraint-default="0.7.3" rev-constraint-dynamic="0.7.3" callerrev="0.7.3"/>
+				<artifacts>
+					<artifact name="chill-java" type="jar" ext="jar" status="no" details="" size="50185" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/chill-java/jars/chill-java-0.7.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/chill-java/0.7.3/chill-java-0.7.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.esotericsoftware.kryo" name="kryo">
+			<revision name="2.21" status="release" pubdate="20130227204753" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/kryo/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="30">
+				<license name="New BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="3754" time="0" location="/home/xurxo/.ivy2/cache/com.esotericsoftware.kryo/kryo/ivy-2.21.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/esotericsoftware/kryo/kryo/2.21/kryo-2.21.pom"/>
+				<caller organisation="com.twitter" name="chill-hadoop" conf="compile, runtime" rev="2.21" rev-constraint-default="2.21" rev-constraint-dynamic="2.21" callerrev="0.7.3"/>
+				<caller organisation="com.twitter" name="chill-algebird_2.11" conf="compile, runtime" rev="2.21" rev-constraint-default="2.21" rev-constraint-dynamic="2.21" callerrev="0.7.3"/>
+				<caller organisation="com.twitter" name="chill-bijection_2.11" conf="compile, runtime" rev="2.21" rev-constraint-default="2.21" rev-constraint-dynamic="2.21" callerrev="0.7.3"/>
+				<caller organisation="com.twitter" name="chill_2.11" conf="compile, runtime" rev="2.21" rev-constraint-default="2.21" rev-constraint-dynamic="2.21" callerrev="0.7.3"/>
+				<caller organisation="com.twitter" name="chill-java" conf="compile, runtime" rev="2.21" rev-constraint-default="2.21" rev-constraint-dynamic="2.21" callerrev="0.7.3"/>
+				<artifacts>
+					<artifact name="kryo" type="bundle" ext="jar" status="no" details="" size="363460" time="0" location="/home/xurxo/.ivy2/cache/com.esotericsoftware.kryo/kryo/bundles/kryo-2.21.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/esotericsoftware/kryo/kryo/2.21/kryo-2.21.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.objenesis" name="objenesis">
+			<revision name="1.2" status="release" pubdate="20090826225019" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://objenesis.googlecode.com/svn/docs/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="34">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3372" time="0" location="/home/xurxo/.ivy2/cache/org.objenesis/objenesis/ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/objenesis/objenesis/1.2/objenesis-1.2.pom"/>
+				<caller organisation="com.esotericsoftware.kryo" name="kryo" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="2.21"/>
+				<artifacts>
+					<artifact name="objenesis" type="jar" ext="jar" status="no" details="" size="36046" time="0" location="/home/xurxo/.ivy2/cache/org.objenesis/objenesis/jars/objenesis-1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/objenesis/objenesis/1.2/objenesis-1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.esotericsoftware.minlog" name="minlog">
+			<revision name="1.2" status="release" pubdate="20120531122649" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/minlog/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="33">
+				<license name="New BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="2665" time="0" location="/home/xurxo/.ivy2/cache/com.esotericsoftware.minlog/minlog/ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/esotericsoftware/minlog/minlog/1.2/minlog-1.2.pom"/>
+				<caller organisation="com.esotericsoftware.kryo" name="kryo" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="2.21"/>
+				<artifacts>
+					<artifact name="minlog" type="jar" ext="jar" status="no" details="" size="4965" time="0" location="/home/xurxo/.ivy2/cache/com.esotericsoftware.minlog/minlog/jars/minlog-1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/esotericsoftware/minlog/minlog/1.2/minlog-1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.esotericsoftware.reflectasm" name="reflectasm">
+			<revision name="1.07" status="release" pubdate="20120619082452" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/reflectasm/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="31">
+				<license name="New BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="3075" time="0" location="/home/xurxo/.ivy2/cache/com.esotericsoftware.reflectasm/reflectasm/ivy-1.07.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/esotericsoftware/reflectasm/reflectasm/1.07/reflectasm-1.07.pom"/>
+				<caller organisation="com.esotericsoftware.kryo" name="kryo" conf="compile, runtime" rev="1.07" rev-constraint-default="1.07" rev-constraint-dynamic="1.07" callerrev="2.21"/>
+				<artifacts>
+					<artifact name="reflectasm" type="jar" ext="jar" extra-classifier="shaded" status="no" details="" size="65612" time="0" location="/home/xurxo/.ivy2/cache/com.esotericsoftware.reflectasm/reflectasm/jars/reflectasm-1.07-shaded.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/esotericsoftware/reflectasm/reflectasm/1.07/reflectasm-1.07-shaded.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.ow2.asm" name="asm">
+			<revision name="4.0" status="release" pubdate="20111206192219" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="32">
+				<license name="BSD" url="http://asm.objectweb.org/license.html"/>
+				<metadata-artifact status="no" details="" size="3939" time="0" location="/home/xurxo/.ivy2/cache/org.ow2.asm/asm/ivy-4.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/ow2/asm/asm/4.0/asm-4.0.pom"/>
+				<caller organisation="com.esotericsoftware.reflectasm" name="reflectasm" conf="compile, runtime" rev="4.0" rev-constraint-default="4.0" rev-constraint-dynamic="4.0" callerrev="1.07"/>
+				<artifacts>
+					<artifact name="asm" type="jar" ext="jar" status="no" details="" size="46022" time="0" location="/home/xurxo/.ivy2/cache/org.ow2.asm/asm/jars/asm-4.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/ow2/asm/asm/4.0/asm-4.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="cascading" name="cascading-local">
+			<revision name="2.6.1" status="release" pubdate="20141101003205" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://cascading.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="25">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3240" time="0" location="/home/xurxo/.ivy2/cache/cascading/cascading-local/ivy-2.6.1.xml" searched="false" origin-is-local="false" origin-location="http://conjars.org/repo/cascading/cascading-local/2.6.1/cascading-local-2.6.1.pom"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="2.6.1" rev-constraint-default="2.6.1" rev-constraint-dynamic="2.6.1" callerrev="0.16.0"/>
+				<artifacts>
+					<artifact name="cascading-local" type="jar" ext="jar" status="no" details="" size="43050" time="0" location="/home/xurxo/.ivy2/cache/cascading/cascading-local/jars/cascading-local-2.6.1.jar">
+						<origin-location is-local="false" location="http://conjars.org/repo/cascading/cascading-local/2.6.1/cascading-local-2.6.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.guava" name="guava">
+			<revision name="14.0.1" status="release" pubdate="20130314235719" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="27">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3904" time="0" location="/home/xurxo/.ivy2/cache/com.google.guava/guava/ivy-14.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/guava/guava/14.0.1/guava-14.0.1.pom"/>
+				<caller organisation="cascading" name="cascading-local" conf="compile, runtime" rev="14.0.1" rev-constraint-default="14.0.1" rev-constraint-dynamic="14.0.1" callerrev="2.6.1"/>
+				<artifacts>
+					<artifact name="guava" type="bundle" ext="jar" status="no" details="" size="2189117" time="0" location="/home/xurxo/.ivy2/cache/com.google.guava/guava/bundles/guava-14.0.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/guava/guava/14.0.1/guava-14.0.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.twitter" name="maple">
+			<revision name="0.16.0" status="release" pubdate="20160503201649" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/scalding" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="18">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3862" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/maple/ivy-0.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/maple/0.16.0/maple-0.16.0.pom"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="0.16.0" rev-constraint-default="0.16.0" rev-constraint-dynamic="0.16.0" callerrev="0.16.0"/>
+				<artifacts>
+					<artifact name="maple" type="jar" ext="jar" status="no" details="" size="27745" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/maple/jars/maple-0.16.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/maple/0.16.0/maple-0.16.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="cascading" name="cascading-hadoop">
+			<revision name="2.6.1" status="release" pubdate="20141101003119" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://cascading.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="19">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3425" time="0" location="/home/xurxo/.ivy2/cache/cascading/cascading-hadoop/ivy-2.6.1.xml" searched="false" origin-is-local="false" origin-location="http://conjars.org/repo/cascading/cascading-hadoop/2.6.1/cascading-hadoop-2.6.1.pom"/>
+				<caller organisation="com.twitter" name="maple" conf="compile, runtime" rev="2.6.1" rev-constraint-default="2.6.1" rev-constraint-dynamic="2.6.1" callerrev="0.16.0"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="2.6.1" rev-constraint-default="2.6.1" rev-constraint-dynamic="2.6.1" callerrev="0.16.0"/>
+				<artifacts>
+					<artifact name="cascading-hadoop" type="jar" ext="jar" status="no" details="" size="251670" time="0" location="/home/xurxo/.ivy2/cache/cascading/cascading-hadoop/jars/cascading-hadoop-2.6.1.jar">
+						<origin-location is-local="false" location="http://conjars.org/repo/cascading/cascading-hadoop/2.6.1/cascading-hadoop-2.6.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="cascading" name="cascading-core">
+			<revision name="2.6.1" status="release" pubdate="20141101003051" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://cascading.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="20">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3367" time="0" location="/home/xurxo/.ivy2/cache/cascading/cascading-core/ivy-2.6.1.xml" searched="false" origin-is-local="false" origin-location="http://conjars.org/repo/cascading/cascading-core/2.6.1/cascading-core-2.6.1.pom"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="2.6.1" rev-constraint-default="2.6.1" rev-constraint-dynamic="2.6.1" callerrev="0.16.0"/>
+				<caller organisation="cascading" name="cascading-local" conf="compile, runtime" rev="2.6.1" rev-constraint-default="2.6.1" rev-constraint-dynamic="2.6.1" callerrev="2.6.1"/>
+				<caller organisation="cascading" name="cascading-hadoop" conf="compile, runtime" rev="2.6.1" rev-constraint-default="2.6.1" rev-constraint-dynamic="2.6.1" callerrev="2.6.1"/>
+				<artifacts>
+					<artifact name="cascading-core" type="jar" ext="jar" status="no" details="" size="694882" time="0" location="/home/xurxo/.ivy2/cache/cascading/cascading-core/jars/cascading-core-2.6.1.jar">
+						<origin-location is-local="false" location="http://conjars.org/repo/cascading/cascading-core/2.6.1/cascading-core-2.6.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.janino" name="janino">
+			<revision name="2.7.5" status="release" pubdate="20140713154748" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="23">
+				<metadata-artifact status="no" details="" size="5149" time="0" location="/home/xurxo/.ivy2/cache/org.codehaus.janino/janino/ivy-2.7.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/codehaus/janino/janino/2.7.5/janino-2.7.5.pom"/>
+				<caller organisation="cascading" name="cascading-core" conf="compile, runtime" rev="2.7.5" rev-constraint-default="2.7.5" rev-constraint-dynamic="2.7.5" callerrev="2.6.1"/>
+				<artifacts>
+					<artifact name="janino" type="jar" ext="jar" status="no" details="" size="611410" time="0" location="/home/xurxo/.ivy2/cache/org.codehaus.janino/janino/jars/janino-2.7.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/codehaus/janino/janino/2.7.5/janino-2.7.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.janino" name="commons-compiler">
+			<revision name="2.7.5" status="release" pubdate="20140713154541" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="24">
+				<metadata-artifact status="no" details="" size="4891" time="0" location="/home/xurxo/.ivy2/cache/org.codehaus.janino/commons-compiler/ivy-2.7.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/2.7.5/commons-compiler-2.7.5.pom"/>
+				<caller organisation="org.codehaus.janino" name="janino" conf="compile, runtime" rev="2.7.5" rev-constraint-default="2.7.5" rev-constraint-dynamic="2.7.5" callerrev="2.7.5"/>
+				<artifacts>
+					<artifact name="commons-compiler" type="jar" ext="jar" status="no" details="" size="30364" time="0" location="/home/xurxo/.ivy2/cache/org.codehaus.janino/commons-compiler/jars/commons-compiler-2.7.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/2.7.5/commons-compiler-2.7.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="thirdparty" name="jgrapht-jdk1.6">
+			<revision name="0.8.1" status="release" pubdate="20101020201818" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="22">
+				<metadata-artifact status="no" details="" size="2199" time="0" location="/home/xurxo/.ivy2/cache/thirdparty/jgrapht-jdk1.6/ivy-0.8.1.xml" searched="false" origin-is-local="false" origin-location="http://conjars.org/repo/thirdparty/jgrapht-jdk1.6/0.8.1/jgrapht-jdk1.6-0.8.1.pom"/>
+				<caller organisation="cascading" name="cascading-core" conf="compile, runtime" rev="0.8.1" rev-constraint-default="0.8.1" rev-constraint-dynamic="0.8.1" callerrev="2.6.1"/>
+				<artifacts>
+					<artifact name="jgrapht-jdk1.6" type="jar" ext="jar" status="no" details="" size="234759" time="0" location="/home/xurxo/.ivy2/cache/thirdparty/jgrapht-jdk1.6/jars/jgrapht-jdk1.6-0.8.1.jar">
+						<origin-location is-local="false" location="http://conjars.org/repo/thirdparty/jgrapht-jdk1.6/0.8.1/jgrapht-jdk1.6-0.8.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="riffle" name="riffle">
+			<revision name="0.1-dev" status="release" pubdate="20101021020155" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/cwensel/riffle" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="21">
+				<metadata-artifact status="no" details="" size="2350" time="0" location="/home/xurxo/.ivy2/cache/riffle/riffle/ivy-0.1-dev.xml" searched="false" origin-is-local="false" origin-location="http://conjars.org/repo/riffle/riffle/0.1-dev/riffle-0.1-dev.pom"/>
+				<caller organisation="cascading" name="cascading-core" conf="compile, runtime" rev="0.1-dev" rev-constraint-default="0.1-dev" rev-constraint-dynamic="0.1-dev" callerrev="2.6.1"/>
+				<artifacts>
+					<artifact name="riffle" type="jar" ext="jar" status="no" details="" size="11351" time="0" location="/home/xurxo/.ivy2/cache/riffle/riffle/jars/riffle-0.1-dev.jar">
+						<origin-location is-local="false" location="http://conjars.org/repo/riffle/riffle/0.1-dev/riffle-0.1-dev.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.twitter" name="scalding-serialization_2.11">
+			<revision name="0.16.0" status="release" pubdate="20160503201638" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/scalding" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3774" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/scalding-serialization_2.11/ivy-0.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/scalding-serialization_2.11/0.16.0/scalding-serialization_2.11-0.16.0.pom"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="0.16.0" rev-constraint-default="0.16.0" rev-constraint-dynamic="0.16.0" callerrev="0.16.0"/>
+				<artifacts>
+					<artifact name="scalding-serialization_2.11" type="jar" ext="jar" status="no" details="" size="1088179" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/scalding-serialization_2.11/jars/scalding-serialization_2.11-0.16.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/scalding-serialization_2.11/0.16.0/scalding-serialization_2.11-0.16.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.twitter" name="scalding-date_2.11">
+			<revision name="0.16.0" status="release" pubdate="20160503201641" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/scalding" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3600" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/scalding-date_2.11/ivy-0.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/scalding-date_2.11/0.16.0/scalding-date_2.11-0.16.0.pom"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="0.16.0" rev-constraint-default="0.16.0" rev-constraint-dynamic="0.16.0" callerrev="0.16.0"/>
+				<artifacts>
+					<artifact name="scalding-date_2.11" type="jar" ext="jar" status="no" details="" size="134885" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/scalding-date_2.11/jars/scalding-date_2.11-0.16.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/scalding-date_2.11/0.16.0/scalding-date_2.11-0.16.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.twitter" name="scalding-args_2.11">
+			<revision name="0.16.0" status="release" pubdate="20160503201644" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/scalding" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3600" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/scalding-args_2.11/ivy-0.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/scalding-args_2.11/0.16.0/scalding-args_2.11-0.16.0.pom"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="0.16.0" rev-constraint-default="0.16.0" rev-constraint-dynamic="0.16.0" callerrev="0.16.0"/>
+				<artifacts>
+					<artifact name="scalding-args_2.11" type="jar" ext="jar" status="no" details="" size="39253" time="0" location="/home/xurxo/.ivy2/cache/com.twitter/scalding-args_2.11/jars/scalding-args_2.11-0.16.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/scalding-args_2.11/0.16.0/scalding-args_2.11-0.16.0.jar"/>
+					</artifact>
 				</artifacts>
 			</revision>
 		</module>
@@ -393,9 +755,13 @@
 			<revision name="2.11.8" status="release" pubdate="20160304152641" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="4">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
 				<metadata-artifact status="no" details="" size="2825" time="0" location="/home/xurxo/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.11.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.pom"/>
+				<caller organisation="com.twitter" name="scalding-serialization_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
 				<caller organisation="com.scalakata" name="annotation_2.11" conf="compile" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="1.1.3"/>
 				<caller organisation="org.scala-lang" name="scala-compiler" conf="default, compile, runtime, master" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="2.11.8"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
 				<caller organisation="com.lihaoyi" name="autowire_2.11" conf="default, compile, runtime, master" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.2.5"/>
+				<caller organisation="com.twitter" name="algebird-core_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.12.0"/>
+				<caller organisation="com.twitter" name="bijection-macros_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.9.1"/>
 				<artifacts>
 					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="4573750" time="0" location="/home/xurxo/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.8.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.jar"/>
@@ -408,6 +774,15 @@
 				<artifacts>
 				</artifacts>
 			</revision>
+			<revision name="2.11.7" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<evicted-by rev="2.11.8"/>
+				<caller organisation="com.twitter" name="scalding-serialization_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
+				<caller organisation="com.twitter" name="algebird-core_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.12.0"/>
+				<caller organisation="com.twitter" name="bijection-macros_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.9.1"/>
+				<artifacts>
+				</artifacts>
+			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-library">
 			<revision name="2.11.8" status="release" pubdate="20160304152633" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="0">
@@ -416,17 +791,25 @@
 				<caller organisation="com.lihaoyi" name="derive_2.11" conf="compile, runtime" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.4.0"/>
 				<caller organisation="org.scala-lang" name="scala-compiler" conf="default, compile, runtime, master" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="2.11.8"/>
 				<caller organisation="com.lihaoyi" name="scalatags_2.11" conf="default, compile, runtime, master" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.5.2"/>
+				<caller organisation="com.twitter" name="chill-bijection_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.7.3"/>
+				<caller organisation="com.twitter" name="bijection-macros_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.9.1"/>
+				<caller organisation="com.twitter" name="scalding-date_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
+				<caller organisation="com.twitter" name="chill_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.7.3"/>
 				<caller organisation="com.typesafe" name="ssl-config-core_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="0.2.1"/>
 				<caller organisation="com.scalakata" name="annotation_2.11" conf="compile" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="1.1.3"/>
 				<caller organisation="com.typesafe.akka" name="akka-http-core_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.4.4"/>
+				<caller organisation="com.twitter" name="algebird-core_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.12.0"/>
 				<caller organisation="com.lihaoyi" name="pprint_2.11" conf="default, compile, runtime, master" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.4.0"/>
 				<caller organisation="com.scalakata" name="server_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="1.1.3"/>
 				<caller organisation="com.lihaoyi" name="sourcecode_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.1.1"/>
+				<caller organisation="com.twitter" name="scalding-serialization_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
 				<caller organisation="com.dallaway.richard" name="woot-model_sjs0.6_2.11" conf="default, compile, runtime, master" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.1.1"/>
 				<caller organisation="com.lihaoyi" name="autowire_2.11" conf="default, compile, runtime, master" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.2.5"/>
 				<caller organisation="org.scala-js" name="scalajs-dom_sjs0.6_2.11" conf="compile, runtime" rev="2.11.5" rev-constraint-default="2.11.5" rev-constraint-dynamic="2.11.5" callerrev="0.8.0"/>
 				<caller organisation="com.typesafe" name="ssl-config-akka_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="0.2.1"/>
 				<caller organisation="org.scala-js" name="scalajs-library_2.11" conf="default, compile, runtime, master" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="0.6.8"/>
+				<caller organisation="com.twitter" name="scalding-args_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
 				<caller organisation="org.scala-lang.modules" name="scala-java8-compat_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.7.0"/>
 				<caller organisation="com.typesafe.akka" name="akka-parsing_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.4.4"/>
 				<caller organisation="org.scala-lang.modules" name="scala-xml_2.11" conf="compile, runtime" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="1.0.4"/>
@@ -435,6 +818,8 @@
 				<caller organisation="com.typesafe.akka" name="akka-http-experimental_2.11" conf="default, compile, runtime, master" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.4.4"/>
 				<caller organisation="com.scalakata" name="evaluation_2.11" conf="compile" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="1.1.3"/>
 				<caller organisation="org.spire-math" name="jawn-parser_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.8.3"/>
+				<caller organisation="com.twitter" name="bijection-core_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.9.1"/>
+				<caller organisation="com.twitter" name="chill-algebird_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.7.3"/>
 				<caller organisation="org.scala-lang.modules" name="scala-parser-combinators_2.11" conf="compile, runtime" rev="2.11.6" rev-constraint-default="2.11.6" rev-constraint-dynamic="2.11.6" callerrev="1.0.4"/>
 				<caller organisation="com.typesafe.akka" name="akka-stream_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.4.4"/>
 				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="2.11.8"/>
@@ -456,16 +841,24 @@
 				<caller organisation="com.lihaoyi" name="derive_2.11" conf="compile, runtime" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.4.0"/>
 				<caller organisation="org.scala-lang" name="scala-compiler" conf="default, compile, runtime, master" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="2.11.8"/>
 				<caller organisation="com.lihaoyi" name="scalatags_2.11" conf="default, compile, runtime, master" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.5.2"/>
+				<caller organisation="com.twitter" name="chill-bijection_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.7.3"/>
+				<caller organisation="com.twitter" name="bijection-macros_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.9.1"/>
+				<caller organisation="com.twitter" name="scalding-date_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
+				<caller organisation="com.twitter" name="chill_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.7.3"/>
 				<caller organisation="com.scalakata" name="annotation_2.11" conf="compile" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="1.1.3"/>
 				<caller organisation="com.typesafe.akka" name="akka-http-core_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.4.4"/>
+				<caller organisation="com.twitter" name="algebird-core_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.12.0"/>
 				<caller organisation="com.lihaoyi" name="pprint_2.11" conf="default, compile, runtime, master" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.4.0"/>
 				<caller organisation="com.scalakata" name="server_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="1.1.3"/>
 				<caller organisation="com.lihaoyi" name="sourcecode_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.1.1"/>
+				<caller organisation="com.twitter" name="scalding-serialization_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
 				<caller organisation="com.dallaway.richard" name="woot-model_sjs0.6_2.11" conf="default, compile, runtime, master" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.1.1"/>
 				<caller organisation="com.lihaoyi" name="autowire_2.11" conf="default, compile, runtime, master" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.2.5"/>
 				<caller organisation="org.scala-js" name="scalajs-dom_sjs0.6_2.11" conf="compile, runtime" rev="2.11.5" rev-constraint-default="2.11.5" rev-constraint-dynamic="2.11.5" callerrev="0.8.0"/>
 				<caller organisation="com.typesafe" name="ssl-config-akka_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="0.2.1"/>
 				<caller organisation="org.scala-js" name="scalajs-library_2.11" conf="default, compile, runtime, master" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="0.6.8"/>
+				<caller organisation="com.twitter" name="scalding-args_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
 				<caller organisation="org.scala-lang.modules" name="scala-java8-compat_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.7.0"/>
 				<caller organisation="com.typesafe.akka" name="akka-parsing_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.4.4"/>
 				<caller organisation="org.scala-lang.modules" name="scala-xml_2.11" conf="compile, runtime" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="1.0.4"/>
@@ -474,6 +867,8 @@
 				<caller organisation="com.typesafe.akka" name="akka-http-experimental_2.11" conf="default, compile, runtime, master" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.4.4"/>
 				<caller organisation="com.scalakata" name="evaluation_2.11" conf="compile" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="1.1.3"/>
 				<caller organisation="org.spire-math" name="jawn-parser_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.8.3"/>
+				<caller organisation="com.twitter" name="bijection-core_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.9.1"/>
+				<caller organisation="com.twitter" name="chill-algebird_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.7.3"/>
 				<caller organisation="org.scala-lang.modules" name="scala-parser-combinators_2.11" conf="compile, runtime" rev="2.11.6" rev-constraint-default="2.11.6" rev-constraint-dynamic="2.11.6" callerrev="1.0.4"/>
 				<caller organisation="com.typesafe.akka" name="akka-stream_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.4.4"/>
 				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="2.11.8"/>
@@ -491,14 +886,24 @@
 				<evicted-by rev="2.11.8"/>
 				<caller organisation="com.lihaoyi" name="derive_2.11" conf="compile, runtime" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.4.0"/>
 				<caller organisation="com.lihaoyi" name="sourcecode_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.1.1"/>
-				<caller organisation="org.spire-math" name="jawn-parser_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.8.3"/>
+				<caller organisation="com.twitter" name="scalding-serialization_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
+				<caller organisation="com.twitter" name="scalding-core_2.11" conf="default, compile, runtime, master" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
 				<caller organisation="com.lihaoyi" name="scalatags_2.11" conf="default, compile, runtime, master" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.5.2"/>
 				<caller organisation="com.dallaway.richard" name="woot-model_sjs0.6_2.11" conf="default, compile, runtime, master" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.1.1"/>
 				<caller organisation="com.lihaoyi" name="autowire_2.11" conf="default, compile, runtime, master" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.2.5"/>
 				<caller organisation="org.scala-js" name="scalajs-dom_sjs0.6_2.11" conf="compile, runtime" rev="2.11.5" rev-constraint-default="2.11.5" rev-constraint-dynamic="2.11.5" callerrev="0.8.0"/>
-				<caller organisation="com.lihaoyi" name="pprint_2.11" conf="default, compile, runtime, master" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.4.0"/>
+				<caller organisation="com.twitter" name="chill-bijection_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.7.3"/>
+				<caller organisation="com.twitter" name="scalding-args_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
+				<caller organisation="com.twitter" name="bijection-macros_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.9.1"/>
+				<caller organisation="com.twitter" name="scalding-date_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.16.0"/>
 				<caller organisation="org.scala-lang.modules" name="scala-xml_2.11" conf="compile, runtime" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="1.0.4"/>
+				<caller organisation="com.twitter" name="chill_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.7.3"/>
 				<caller organisation="com.lihaoyi" name="upickle_2.11" conf="default, compile, runtime, master" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.4.0"/>
+				<caller organisation="org.spire-math" name="jawn-parser_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.8.3"/>
+				<caller organisation="com.twitter" name="bijection-core_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.9.1"/>
+				<caller organisation="com.twitter" name="chill-algebird_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.7.3"/>
+				<caller organisation="com.twitter" name="algebird-core_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.12.0"/>
+				<caller organisation="com.lihaoyi" name="pprint_2.11" conf="default, compile, runtime, master" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="0.4.0"/>
 				<artifacts>
 				</artifacts>
 			</revision>
