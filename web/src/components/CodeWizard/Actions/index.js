@@ -8,8 +8,20 @@ export function templateType(templateType){
 	return {type: CODEWIZARD_ACTION_TYPES.TEMPLATE_TYPE, payload: {templateType}}
 }
 
-export function setWorkflowSugestion(state){
-	return {type: CODEWIZARD_ACTION_TYPES.SET_WORKFLOW_SUGESTION, payload: {state}}
+export function updateSugestionListWorkflows(value, workflows){
+	let sugestionList = [];
+
+	workflows.map(workflow => {
+		if(workflow.name.toLowerCase().match(value.toLowerCase())){
+			sugestionList.push(workflow.name)
+		}
+	})
+
+	return {type: CODEWIZARD_ACTION_TYPES.ÛPDATE_SUGESTION_LIST, payload: {sugestionList}}
+}
+
+export function changeWorkflowState(state){
+	return {type: CODEWIZARD_ACTION_TYPES.CHANGE_WORKFLOW_STATE, payload: {state}}
 }
 
 export function addWorkflowToWorkflowTemplate(workflow, workflowTemplate){
@@ -50,4 +62,12 @@ export function deleteWorkflowToWorkflowTemplate(workflowTemplate,index){
 
 export function changeTimeWindow(timeWindow){
 	return {type: CODEWIZARD_ACTION_TYPES.CHANGE_TIME_WINDOW, payload: {timeWindow}}
+}
+
+export function deleteData(){
+	return {type: CODEWIZARD_ACTION_TYPES.DELETE_DATA, payload: {}}
+}
+
+export function modifyErrors(errors){
+	return {type: CODEWIZARD_ACTION_TYPES.MODIFY_ERRORS, payload: {errors}}
 }

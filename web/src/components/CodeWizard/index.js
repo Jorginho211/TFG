@@ -33,21 +33,50 @@ class CodeWizard extends Component {
         this.props.KPIActions.DatosKPIActions.selectStepSteper(step)
     }
 
+    @autobind updateSugestionListWorkflows(value){
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.updateSugestionListWorkflows(value, this.props.kpi.datoskpi.codewizard.workflows)
+    }
+
     @autobind changeWorkflowState(evt, index, value){
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeWorkflowState(value)
     }
 
     @autobind addWorkflowToWorkflowTemplate(){
-        let exist = false
-        
-        let workflow = {
-            name: this.workflowTemplateInput.getValue(),
-            state: this.props.kpi.datoskpi.codewizard.workflowState,
+        let workflow = undefined
+        let errors = this.props.kpi.datoskpi.codewizard.errors
+
+        console.log(this.workflowTemplateInput)
+        this.props.kpi.datoskpi.codewizard.workflows.map( item => {
+            if(item.name === this.workflowTemplateInput.state.searchText){
+                workflow = {
+                    ...item,
+                }
+            }
+        })
+
+        if(workflow !== undefined){
+            workflow = {
+                ...workflow,
+                state: this.props.kpi.datoskpi.codewizard.workflowState,
+            }
+
+            this.props.KPIActions.DatosKPIActions.CodeWizardActions.addWorkflowToWorkflowTemplate(workflow, this.props.kpi.datoskpi.codewizard.workflowTemplate)
+
+            errors = {
+                ...errors,
+                workflowTemplateInput: false,
+            }           
+
+            this.workflowTemplateInput.state.searchText = "" 
+        }
+        else {
+            errors = {
+                ...errors,
+                workflowTemplateInput: true,
+            }
         }
 
-        this.props.KPIActions.DatosKPIActions.CodeWizardActions.addWorkflowToWorkflowTemplate(workflow, this.props.kpi.datoskpi.codewizard.workflowTemplate)
-
-        this.workflowTemplateInput.input.value=""
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
     }
 
     @autobind deleteWorkflowToWorkflowTemplate(index){
@@ -134,8 +163,7 @@ class CodeWizard extends Component {
                         )}
 
                         <div className={styles.inputs}>
-                            {/*<TextField hintText="Workflow" ref={element => this.workflowTemplateInput = element } className={styles.textField}/>*/}
-                            <AutoComplete hintText="Workflow" className={styles.textField} /> 
+                            <AutoComplete hintText="Workflow" ref={element => this.workflowTemplateInput = element } fullWidth={true} dataSource={codewizard.sugestionList} onUpdateInput={this.updateSugestionListWorkflows} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
 
                             <SelectField style={{flex: 1}} value={codewizard.workflowState} onChange={this.changeWorkflowState}>
                                 <MenuItem value="started" primaryText="Comezado" />

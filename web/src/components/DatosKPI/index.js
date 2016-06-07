@@ -89,6 +89,7 @@ class DatosKPI extends Component {
             window.removeEventListener("message", this.iframeManage)
             this.props.KPIActions.DatosKPIActions.deleteData()
             this.props.KPIActions.toggleDialog()
+            this.props.KPIActions.DatosKPIActions.CodeWizardActions.deleteData()
         }
     }
 
@@ -175,6 +176,7 @@ class DatosKPI extends Component {
       this.props.KPIActions.toggleLoading()
       this.props.KPIActions.DatosKPIActions.storeKPIBD(this.props.kpi.datoskpi.kpi)
       this.props.KPIActions.DatosKPIActions.deleteData()
+      this.props.KPIActions.DatosKPIActions.CodeWizardActions.deleteData()
     }
 
     @autobind loadDataIframe() {

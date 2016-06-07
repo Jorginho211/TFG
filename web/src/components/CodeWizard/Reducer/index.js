@@ -6,6 +6,7 @@ import TYPES from '../Actions/types/'
 
 const InitialState = {
 	typeTemplate: 0,
+    sugestionList: [],
     workflowState: "started",
     workflows : [
         {
@@ -35,6 +36,10 @@ const InitialState = {
             ],
         }
     ],
+    errors : {
+        workflowTemplateInput : false,
+        tempWindowInput : false,
+    },
 }
 
 export default function CodeWizardReducer(state = InitialState, {type = '', payload = {}} = {type : '', payload : { }}){
@@ -44,6 +49,12 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
     			...state,
     			typeTemplate: payload.templateType,
     		}
+
+        case TYPES.ÛPDATE_SUGESTION_LIST:
+            return {
+                ...state,
+                sugestionList: payload.sugestionList,
+            }
 
         case TYPES.CHANGE_WORKFLOW_STATE:
             return {
@@ -62,6 +73,25 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
             return {
                 ...state,
                 timeWindow: payload.timeWindow,
+            }
+
+        case TYPES.DELETE_DATA:
+            return {
+                ...state,
+                typeTemplate: 0,
+                sugestionList: [],
+                workflowState: "started",
+                workflowTemplate: undefined,
+                errors : {
+                    workflowTemplateInput : false,
+                    tempWindowInput : false,
+                },                
+            }
+
+        case TYPES.MODIFY_ERRORS :
+            return {
+                ...state,
+                errors : payload.errors,
             }
 
         default:
