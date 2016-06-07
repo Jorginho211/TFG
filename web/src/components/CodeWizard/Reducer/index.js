@@ -6,7 +6,6 @@ import TYPES from '../Actions/types/'
 
 const InitialState = {
 	typeTemplate: 0,
-    workflowSugestion: false,
     workflowState: "started",
     workflows : [
         {
@@ -21,7 +20,6 @@ const InitialState = {
                     name: "Proba2",
                 },
             ],
-            visibility: true,
         },
         {
             name: "Conexions",
@@ -35,7 +33,6 @@ const InitialState = {
                     name: "Proba4",
                 },
             ],
-            visibility: true,
         }
     ],
 }
@@ -47,18 +44,6 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
     			...state,
     			typeTemplate: payload.templateType,
     		}
-
-        case TYPES.SET_WORKFLOW_SUGESTION:
-            return {
-                ...state,
-                workflowSugestion: payload.state,
-            }
-
-        case TYPES.CHANGE_WORKFLOW_VISIBILITY:
-            return {
-                ...state,
-                workflows: payload.workflows,
-            }
 
         case TYPES.CHANGE_WORKFLOW_STATE:
             return {

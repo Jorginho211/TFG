@@ -6,6 +6,7 @@ import Paper from 'material-ui/Paper';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 
+import AutoComplete from 'material-ui/AutoComplete';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
@@ -30,15 +31,6 @@ class CodeWizard extends Component {
 
     @autobind selectStepSteper(step){
         this.props.KPIActions.DatosKPIActions.selectStepSteper(step)
-    }
-
-    @autobind setWorkflowSugestion(state){
-        if(!this.props.kpi.datoskpi.codewizard.workflowSugestion)
-            this.props.KPIActions.DatosKPIActions.CodeWizardActions.setWorkflowSugestion(state)
-    }
-
-    @autobind changeWorkflowVisibility(evt){
-        this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeWorkflowVisibility(this.props.kpi.datoskpi.codewizard.workflows, evt.target.value)
     }
 
     @autobind changeWorkflowState(evt, index, value){
@@ -142,8 +134,8 @@ class CodeWizard extends Component {
                         )}
 
                         <div className={styles.inputs}>
-                            {/*<TextField hintText="Workflow" className={styles.textField} onFocus={() => this.setWorkflowSugestion(true)} onChange={this.changeWorkflowVisibility}/>*/}
-                            <TextField hintText="Workflow" ref={element => this.workflowTemplateInput = element } className={styles.textField}/>
+                            {/*<TextField hintText="Workflow" ref={element => this.workflowTemplateInput = element } className={styles.textField}/>*/}
+                            <AutoComplete hintText="Workflow" className={styles.textField} /> 
 
                             <SelectField style={{flex: 1}} value={codewizard.workflowState} onChange={this.changeWorkflowState}>
                                 <MenuItem value="started" primaryText="Comezado" />
@@ -154,26 +146,7 @@ class CodeWizard extends Component {
                             <IconButton className={styles.actions} onTouchTap={this.addWorkflowToWorkflowTemplate}>
                                 <ContentAdd />
                             </IconButton>
-                        </div>
-
-                        {codewizard.workflowSugestion ? (
-                            <div className={styles.sugestions}>
-                                <Paper className={styles.paper}>
-                                    <Menu className={styles.menu}>
-                                        {codewizard.workflows.map( (workflow, index) => {
-                                            if(workflow.visibility){
-                                                return(
-                                                    <MenuItem key={index} value={workflow.name} primaryText={workflow.name} />
-                                                )
-                                            }
-                                        })}
-                                    </Menu>
-                                </Paper>
-                            </div>
-                        ):(
-                            null
-                        )}
-                        
+                        </div>                        
 
                         <div>
                             <TextField hintText="Ventá Temporal" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow}/>

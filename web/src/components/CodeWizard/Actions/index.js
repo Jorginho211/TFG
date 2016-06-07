@@ -12,23 +12,6 @@ export function setWorkflowSugestion(state){
 	return {type: CODEWIZARD_ACTION_TYPES.SET_WORKFLOW_SUGESTION, payload: {state}}
 }
 
-export function changeWorkflowVisibility(workflows, filter){
-	workflows.map(workflow => {
-		if(workflow.name.toLowerCase().match(filter.toLowerCase())){
-			workflow.visibility = true
-		}
-		else {
-			workflow.visibility = false
-		}
-	})
-
-	return {type: CODEWIZARD_ACTION_TYPES.CHANGE_WORKFLOW_VISIBILITY, payload: {workflows}}
-}
-
-export function changeWorkflowState(state){
-	return {type: CODEWIZARD_ACTION_TYPES.CHANGE_WORKFLOW_STATE, payload: {state}}
-}
-
 export function addWorkflowToWorkflowTemplate(workflow, workflowTemplate){
 	let exist = false
 	if(workflowTemplate === undefined){
