@@ -8,6 +8,7 @@ const InitialState = {
 	typeTemplate: 0,
     sugestionList: [],
     workflowState: "started",
+    sugestionList: ["Usuarios", "Conexions"],
     workflows : [
         {
             name: "Usuarios",
@@ -49,12 +50,6 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
     			...state,
     			typeTemplate: payload.templateType,
     		}
-
-        case TYPES.ÛPDATE_SUGESTION_LIST:
-            return {
-                ...state,
-                sugestionList: payload.sugestionList,
-            }
 
         case TYPES.CHANGE_WORKFLOW_STATE:
             return {
