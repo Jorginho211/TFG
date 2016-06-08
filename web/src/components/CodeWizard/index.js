@@ -33,15 +33,14 @@ class CodeWizard extends Component {
         this.props.KPIActions.DatosKPIActions.selectStepSteper(step)
     }
 
-    @autobind changeWorkflowState(evt, index, value){
-        this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeWorkflowState(value)
+    @autobind changeTaskWorkflowState(evt, index, value){
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeTaskWorkflowState(value)
     }
 
     @autobind addWorkflowToWorkflowTemplate(){
         let workflow = undefined
         let errors = this.props.kpi.datoskpi.codewizard.errors
 
-        console.log(this.workflowTemplateInput)
         this.props.kpi.datoskpi.codewizard.workflows.map( item => {
             if(item.name === this.workflowTemplateInput.state.searchText){
                 workflow = {
@@ -53,7 +52,7 @@ class CodeWizard extends Component {
         if(workflow !== undefined){
             workflow = {
                 ...workflow,
-                state: this.props.kpi.datoskpi.codewizard.workflowState,
+                state: this.props.kpi.datoskpi.codewizard.taskWorkflowState,
             }
 
             this.props.KPIActions.DatosKPIActions.CodeWizardActions.addWorkflowToWorkflowTemplate(workflow, this.props.kpi.datoskpi.codewizard.workflowTemplate)
@@ -75,6 +74,10 @@ class CodeWizard extends Component {
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
     }
 
+    @autobind addWorkFlowTasksToTasksTemplate(){
+
+    }
+
     @autobind deleteWorkflowToWorkflowTemplate(index){
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.deleteWorkflowToWorkflowTemplate(this.props.kpi.datoskpi.codewizard.workflowTemplate, index)
     }
@@ -83,7 +86,81 @@ class CodeWizard extends Component {
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeTimeWindow(parseFloat(evt.target.value))
     }
 
-    getWorkflowStateGalego(state){
+    @autobind changeTaskTemplateWorkflowTaskSugestions(evt){
+        if(evt.keyCode === 13){
+            let workflow = undefined
+            let errors = this.props.kpi.datoskpi.codewizard.errors
+            let sugestionList = []
+
+            this.props.kpi.datoskpi.codewizard.workflows.map( item => {
+                if(item.name === evt.target.value){
+                    workflow = {
+                        ...item,
+                    }
+                }
+            })
+
+            if(workflow !== undefined){
+                evt.target.disabled = true
+
+                workflow.tasks.map( task => {
+                    sugestionList.push(task.name)
+                })
+
+                this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeSugestionList(sugestionList)
+
+                this.taskTemplateInputsElement.style.visibility = "visible"
+
+                errors = {
+                    ...errors,
+                    workflowTemplateInput: false,
+                }
+            }
+            else {
+                errors = {
+                    ...errors,
+                    workflowTemplateInput: true,
+                }
+            }
+
+            this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
+        }
+    }
+
+    @autobind addTaskToTaskTemplate(){
+        let workflow = undefined
+        let task = undefined
+
+        this.props.kpi.datoskpi.codewizard.workflows.map(item => {
+            if(item.name === this.taskTemplateWorkflowInput.state.searchText) {
+                workflow = {
+                    ...item,
+                }
+            }
+        })
+
+        workflow.tasks.map( item => {
+            if(item.name === this.taskTemplateTaskInput.state.searchText){
+                task = {
+                    ...item,
+                    state: this.props.kpi.datoskpi.codewizard.taskWorkflowState,
+                }
+            }
+        })
+
+        if( task !== undefined ){
+            this.props.KPIActions.DatosKPIActions.CodeWizardActions.addTaskToTaskTemplate(workflow, task, this.props.kpi.datoskpi.codewizard.taskTemplate)
+        }
+        else {
+
+        }
+    }
+
+    @autobind deleteTaskToTaskTemplate(index){
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.deleteTaskToTaskTemplate(this.props.kpi.datoskpi.codewizard.taskTemplate, index)
+    }
+
+    getStateGalego(state){
         switch(state){
             case "started":
                 return "Comezado"
@@ -137,14 +214,14 @@ class CodeWizard extends Component {
 
             case 1:
                 return (
-                    <div className={styles.workflows}>
+                    <div className={styles.workflowTemplate}>
                         {codewizard.workflowTemplate !== undefined && codewizard.workflowTemplate.length > 0 ? (
                             <div className={styles.table}>
                                 {codewizard.workflowTemplate.map((workflow, index) => {
                                     return (
                                         <div key={index} className={styles.workflowLine}>
                                             <div className={styles.workflow}>{workflow.name}</div>
-                                            <div className={styles.state}>{this.getWorkflowStateGalego(workflow.state)}</div>
+                                            <div className={styles.state}>{this.getStateGalego(workflow.state)}</div>
                                             <div className={styles.actions}>
                                                 <IconButton onTouchTap={() => {this.deleteWorkflowToWorkflowTemplate(index)}}>
                                                     <DeleteIcon />
@@ -161,7 +238,7 @@ class CodeWizard extends Component {
                         <div className={styles.inputs}>
                             <AutoComplete hintText="Workflow" ref={element => this.workflowTemplateInput = element } fullWidth={true} dataSource={codewizard.sugestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
 
-                            <SelectField style={{flex: 1}} value={codewizard.workflowState} onChange={this.changeWorkflowState}>
+                            <SelectField style={{flex: 1}} value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
                                 <MenuItem value="started" primaryText="Comezado" />
                                 <MenuItem value="finished" primaryText="Acabado" />
                                 <MenuItem value="stopped" primaryText="Parado" />
@@ -184,10 +261,52 @@ class CodeWizard extends Component {
 
             case 2:
                 return (
-                    <div>
-                        Que tal
-                        {codewizard.typeTemplate}
-                        <FlatButton label="Xerar Código" onTouchTap={() => { this.templateType(3) }}/>
+                    <div className={styles.taskTemplate}>
+                        <div>
+                            <AutoComplete hintText="Workflow" ref={element => this.taskTemplateWorkflowInput = element } onKeyDown={this.changeTaskTemplateWorkflowTaskSugestions} ref={element => this.taskTemplateWorkflowInput = element } fullWidth={true} dataSource={codewizard.sugestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
+                        </div>
+
+                        {codewizard.taskTemplate !== undefined && codewizard.taskTemplate.tasks !== undefined && codewizard.taskTemplate.tasks.length > 0 ? (
+                            <div className={styles.table}>
+                                {codewizard.taskTemplate.tasks.map((task, index) => {
+                                    return (
+                                        <div key={index} className={styles.taskLine}>
+                                            <div className={styles.task}>{task.name}</div>
+                                            <div className={styles.state}>{this.getStateGalego(task.state)}</div>
+                                            <div className={styles.actions}>
+                                                <IconButton onTouchTap={() => this.deleteTaskToTaskTemplate(index)}> 
+                                                    <DeleteIcon />
+                                                </IconButton>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        ): (
+                            null
+                        )}
+
+                        <div ref={element => this.taskTemplateInputsElement = element } className={styles.inputs}>
+                            <AutoComplete hintText="Tarefa do Workflow" ref={element => this.taskTemplateTaskInput = element } fullWidth={true} dataSource={codewizard.sugestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
+
+                            <SelectField style={{flex: 1}} value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
+                                <MenuItem value="started" primaryText="Comezado" />
+                                <MenuItem value="finished" primaryText="Acabado" />
+                                <MenuItem value="stopped" primaryText="Parado" />
+                            </SelectField>
+
+                            <IconButton className={styles.actions} onTouchTap={() => this.addTaskToTaskTemplate()}>
+                                <ContentAdd />
+                            </IconButton>
+                        </div>
+
+                        <div>
+                            <TextField hintText="Ventá Temporal" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow}/>
+                        </div>
+
+                        <div>
+                            <FlatButton label="Xerar Código" onTouchTap={() => { this.templateType(3) }}/>
+                        </div>
                     </div>
                 )
 

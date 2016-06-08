@@ -8,8 +8,8 @@ export function templateType(templateType){
 	return {type: CODEWIZARD_ACTION_TYPES.TEMPLATE_TYPE, payload: {templateType}}
 }
 
-export function changeWorkflowState(state){
-	return {type: CODEWIZARD_ACTION_TYPES.CHANGE_WORKFLOW_STATE, payload: {state}}
+export function changeTaskWorkflowState(state){
+	return {type: CODEWIZARD_ACTION_TYPES.CHANGE_TASK_WORKFLOW_STATE, payload: {state}}
 }
 
 export function addWorkflowToWorkflowTemplate(workflow, workflowTemplate){
@@ -58,4 +58,48 @@ export function deleteData(){
 
 export function modifyErrors(errors){
 	return {type: CODEWIZARD_ACTION_TYPES.MODIFY_ERRORS, payload: {errors}}
+}
+
+export function changeSugestionList(sugestionList){
+	return {type: CODEWIZARD_ACTION_TYPES.CHANGE_SUGESTION_LIST, payload: {sugestionList}}
+}
+
+export function addTaskToTaskTemplate(workflow, task, taskTemplate){
+	let exist = false
+
+	if(taskTemplate === undefined){
+		taskTemplate = {
+			name: workflow.name,
+			tasks: [
+				{
+					...task,
+				},
+			],
+		}
+	}
+	else {
+		taskTemplate.tasks.map(item => {
+			if(item.name === task.name){
+				exist = true
+			}
+		})
+
+		if(!exist){
+			taskTemplate.tasks[taskTemplate.tasks.length] = {
+				...task,
+			}
+		}		
+	}
+
+	return {type: CODEWIZARD_ACTION_TYPES.ADD_DELETE_TASK_TO_TASK_TEMPLATE, payload: {taskTemplate}}
+}
+
+export function deleteTaskToTaskTemplate(taskTemplate, index) {
+	taskTemplate.tasks.pop(index)
+
+	if(taskTemplate.tasks.length === 0){
+		taskTemplate.tasks = undefined
+	}
+
+	return {type: CODEWIZARD_ACTION_TYPES.ADD_DELETE_TASK_TO_TASK_TEMPLATE, payload: {taskTemplate}}
 }

@@ -36,7 +36,7 @@
 	}		
 }
 
-.workflows {
+.workflowTemplate {
 	.table {
 		margin-top: 10px;
 		overflow-y: auto;
@@ -68,11 +68,47 @@
 		display: flex;
 		align-items: center;
 
-		.textField {
-			flex: 2;
-			width: 100%;
-			margin-right: 10px;
+		.actions {
+			flex:0;
+			width: 10px;
+			height: 10px;
 		}
+	}
+}
+
+.taskTemplate {
+
+	.table {
+		margin-top: 10px;
+		overflow-y: auto;
+		max-height: 200px;
+
+		.taskLine {
+			margin-top: -10px;
+			display: flex;
+			align-items: center;
+
+			.task {
+				flex: 2;
+			}
+
+			.state {
+				margin-left: 20px;
+				flex: 1;
+			}
+
+			.actions {
+				flex: 0;
+			}
+		}
+
+		margin-bottom: 5px;
+	}
+
+	.inputs {
+		display: flex;
+		align-items: center;
+		visibility: hidden;
 
 		.actions {
 			flex:0;

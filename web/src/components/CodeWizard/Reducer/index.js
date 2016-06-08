@@ -6,8 +6,7 @@ import TYPES from '../Actions/types/'
 
 const InitialState = {
 	typeTemplate: 0,
-    sugestionList: [],
-    workflowState: "started",
+    taskWorkflowState: "started",
     sugestionList: ["Usuarios", "Conexions"],
     workflows : [
         {
@@ -51,17 +50,17 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
     			typeTemplate: payload.templateType,
     		}
 
-        case TYPES.CHANGE_WORKFLOW_STATE:
+        case TYPES.CHANGE_TASK_WORKFLOW_STATE:
             return {
                 ...state,
-                workflowState: payload.state,
+                taskWorkflowState: payload.state,
             }
 
         case TYPES.ADD_DELETE_WORKFLOW_TO_WORKFLOW_TEMPLATE:
             return {
                 ...state,
                 workflowTemplate: payload.workflowTemplate,
-                workflowState: "started",
+                taskWorkflowState: "started",
             }
 
         case TYPES.CHANGE_TIME_WINDOW:
@@ -75,8 +74,9 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
                 ...state,
                 typeTemplate: 0,
                 sugestionList: [],
-                workflowState: "started",
+                taskWorkflowState: "started",
                 workflowTemplate: undefined,
+                taskTemplate: undefined,
                 errors : {
                     workflowTemplateInput : false,
                     tempWindowInput : false,
@@ -87,6 +87,18 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
             return {
                 ...state,
                 errors : payload.errors,
+            }
+
+        case TYPES.CHANGE_SUGESTION_LIST:
+            return {
+                ...state,
+                sugestionList: payload.sugestionList,
+            }
+
+        case TYPES.ADD_DELETE_TASK_TO_TASK_TEMPLATE:
+            return {
+                ...state,
+                taskTemplate: payload.taskTemplate,
             }
 
         default:
