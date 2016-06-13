@@ -160,6 +160,15 @@ class CodeWizard extends Component {
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.deleteTaskToTaskTemplate(this.props.kpi.datoskpi.codewizard.taskTemplate, index)
     }
 
+    @autobind cleanTaskTemplate(){
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.cleanTaskTemplate()
+
+        this.taskTemplateInputsElement.style.visibility = "hidden"
+        this.taskTemplateWorkflowInput.refs.searchTextField.input.disabled = false
+        this.taskTemplateWorkflowInput.setValue("")
+        this.taskTemplateTaskInput.setValue("")
+    }
+
     getStateGalego(state){
         switch(state){
             case "started":
@@ -305,6 +314,7 @@ class CodeWizard extends Component {
                         </div>
 
                         <div>
+                            <FlatButton label="Limpar" onTouchTap={this.cleanTaskTemplate}/>
                             <FlatButton label="Xerar Código" onTouchTap={() => { this.templateType(3) }}/>
                         </div>
                     </div>

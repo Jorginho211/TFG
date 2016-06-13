@@ -101,6 +101,13 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
                 taskTemplate: payload.taskTemplate,
             }
 
+        case TYPES.CLEAN_TASK_TEMPLATE:
+            return {
+                ...state,
+                taskTemplate: undefined,
+                sugestionList: payload.sugestionList,
+            }
+
         default:
             return state
     }

@@ -1,16 +1,16 @@
 [0m[[0minfo[0m] [0mFast optimizing /home/xurxo/Documentos/TFG/Repo/ScalaKata2/webapp/js/target/scala-2.11/client-fastopt.js[0m
-[0m[[0mdebug[0m] [0mLinker: Compute reachability: 179704 us[0m
-[0m[[0mdebug[0m] [0mLinker: Assemble LinkedClasses: 260549 us[0m
-[0m[[0mdebug[0m] [0mBasic Linking: 477334 us[0m
+[0m[[0mdebug[0m] [0mLinker: Compute reachability: 189244 us[0m
+[0m[[0mdebug[0m] [0mLinker: Assemble LinkedClasses: 313174 us[0m
+[0m[[0mdebug[0m] [0mBasic Linking: 509431 us[0m
 [0m[[0mdebug[0m] [0mInc. optimizer: Batch mode: true[0m
-[0m[[0mdebug[0m] [0mInc. optimizer: Incremental part: 231295 us[0m
+[0m[[0mdebug[0m] [0mInc. optimizer: Incremental part: 261810 us[0m
 [0m[[0mdebug[0m] [0mInc. optimizer: Optimizing 6474 methods.[0m
-[0m[[0mdebug[0m] [0mInc. optimizer: Optimizer part: 1520317 us[0m
-[0m[[0mdebug[0m] [0mInc. optimizer: 1785635 us[0m
-[0m[[0mdebug[0m] [0mRefiner: Compute reachability: 79085 us[0m
-[0m[[0mdebug[0m] [0mRefiner: Assemble LinkedClasses: 17549 us[0m
-[0m[[0mdebug[0m] [0mRefiner: 98395 us[0m
+[0m[[0mdebug[0m] [0mInc. optimizer: Optimizer part: 1412377 us[0m
+[0m[[0mdebug[0m] [0mInc. optimizer: 1727916 us[0m
+[0m[[0mdebug[0m] [0mRefiner: Compute reachability: 79055 us[0m
+[0m[[0mdebug[0m] [0mRefiner: Assemble LinkedClasses: 18265 us[0m
+[0m[[0mdebug[0m] [0mRefiner: 99119 us[0m
 [0m[[0mdebug[0m] [0mEmitter: Class tree cache stats: reused: 0 -- invalidated: 706[0m
 [0m[[0mdebug[0m] [0mEmitter: Method tree cache stats: resued: 0 -- invalidated: 3584[0m
-[0m[[0mdebug[0m] [0mEmitter (write output): 662112 us[0m
-[0m[[0mdebug[0m] [0mGlobal IR cache stats: reused: 0 -- invalidated: 134 -- trees read: 859[0m
+[0m[[0mdebug[0m] [0mEmitter (write output): 583390 us[0m
+[0m[[0mdebug[0m] [0mGlobal IR cache stats: reused: 0 -- invalidated: 162 -- trees read: 859[0m

@@ -103,3 +103,9 @@ export function deleteTaskToTaskTemplate(taskTemplate, index) {
 
 	return {type: CODEWIZARD_ACTION_TYPES.ADD_DELETE_TASK_TO_TASK_TEMPLATE, payload: {taskTemplate}}
 }
+
+export function cleanTaskTemplate() {
+	let sugestionList = ["Usuarios", "Conexions"]
+	
+	return {type: CODEWIZARD_ACTION_TYPES.CLEAN_TASK_TEMPLATE, payload: {sugestionList}}
+}

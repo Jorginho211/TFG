@@ -10636,7 +10636,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.11!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1976ms :: artifacts dl 24ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 9922ms :: artifacts dl 203ms[0m
 [0m[[0mdebug[0m] [0m	report for default#scalakata2-build;0.1-SNAPSHOT compile produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/project/target/resolution-cache/reports/default-scalakata2-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#scalakata2-build;0.1-SNAPSHOT runtime produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/project/target/resolution-cache/reports/default-scalakata2-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#scalakata2-build;0.1-SNAPSHOT test produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/project/target/resolution-cache/reports/default-scalakata2-build-test.xml[0m
@@ -10650,5 +10650,5 @@
 [0m[[0mdebug[0m] [0m	report for default#scalakata2-build;0.1-SNAPSHOT docs produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/project/target/resolution-cache/reports/default-scalakata2-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#scalakata2-build;0.1-SNAPSHOT pom produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/project/target/resolution-cache/reports/default-scalakata2-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#scalakata2-build;0.1-SNAPSHOT scala-tool produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/project/target/resolution-cache/reports/default-scalakata2-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1976ms resolve - 24ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (9922ms resolve - 203ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
