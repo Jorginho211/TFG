@@ -48,6 +48,7 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
     		return {
     			...state,
     			typeTemplate: payload.templateType,
+                codeTemplate: payload.codeTemplate,
     		}
 
         case TYPES.CHANGE_TASK_WORKFLOW_STATE:
@@ -80,7 +81,8 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
                 errors : {
                     workflowTemplateInput : false,
                     tempWindowInput : false,
-                },                
+                },
+                codeTemplate: undefined,                
             }
 
         case TYPES.MODIFY_ERRORS :
@@ -106,6 +108,12 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
                 ...state,
                 taskTemplate: undefined,
                 sugestionList: payload.sugestionList,
+            }
+
+        case TYPES.SET_CODE_TEMPLATES:
+            return {
+                ...state,
+                codeTemplates: payload.codeTemplates,
             }
 
         default:

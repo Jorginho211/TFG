@@ -75,3 +75,20 @@
 {
 	"properties" : ["usuario", "conexions", "tempo", "probas", "datos", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1",]
 }
+
+
+{
+	templates: [
+		workflowTemplate: {
+			name: "Estado del Workflow",
+			description: "Fitra se un Workflow determinado esta ou estivo iniciado/parado/finalizado",
+			code: "import com.twitter.scalding._\nimport com.scalakata._\n\nclass WorkflowTemplate {\nTsv( %%FILENAME%% ,(_, 'IdWorkflow , 'IdTaskState, _, _))\n.filter('IdWorkflow == %%IDWORKFLOW%%)\n.filter('IdTaskState == %%IDTASKWORKFLOWSTATE%%)\n}"
+		},
+
+		taskTemplate: {
+			name: "Estado de tarefas",
+			description: "Filtra dentro dun Workflow determinado, se unhas tarefas concretas estan ou estiveron iniciadas/paradas/finalizadas",
+			code: ""
+		}
+	],
+}

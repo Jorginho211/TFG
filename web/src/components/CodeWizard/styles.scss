@@ -25,6 +25,14 @@
 				.text {
 					padding: 15px;
 					font-size: 14px;
+
+					p {
+						margin-top: 0;
+					}
+
+					h4 {
+						margin-bottom: 0;
+					}
 				}
 			}
 		}
@@ -115,6 +123,17 @@
 			width: 10px;
 			height: 10px;
 		}
+	}
+}
+
+.propertyTemplate{
+	.operatorSelect{
+		text-align: center;
+	}
+
+	.divider {
+		margin-top: 10px!important;
+		margin-bottom: 15px!important;
 	}
 }
 

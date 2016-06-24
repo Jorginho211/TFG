@@ -12,17 +12,17 @@ import java.util.ArrayList;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
-@Path("/properties")
-public class Properties {
+@Path("/codetemplates")
+public class CodeTemplates {
     
     private MongoClient mongoClient;
     private MongoDatabase db;
     private String collection;
     private String dbName;
 
-    public Properties() {
+    public CodeTemplates() {
         dbName = "kpis";
-        collection = "properties";
+        collection = "codeTemplates";
         
         this.mongoClient = new MongoClient();
         this.db = mongoClient.getDatabase(dbName);
@@ -30,13 +30,13 @@ public class Properties {
     
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Document getProperties() {
-        ArrayList<Document> properties = db.getCollection(collection).find().into(new ArrayList<Document>());
+    public ArrayList<Document> codeTemplates() {
+        ArrayList<Document> codeTemplates = db.getCollection(collection).find().into(new ArrayList<Document>());
         
-        for(Document document : properties){
+        for(Document document : codeTemplates){
             document.remove("_id");
         }
         
-        return properties.get(0);
+        return codeTemplates;
     }
 }

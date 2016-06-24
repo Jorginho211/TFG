@@ -15,6 +15,8 @@ import Menu from 'material-ui/Menu';
 
 import DeleteIcon from 'material-ui/svg-icons/action/delete';
 
+import Divider from 'material-ui/Divider';
+
 import { autobind } from 'core-decorators';
 import CSSModules from 'react-css-modules';
 import styles from './styles.scss';
@@ -25,8 +27,24 @@ class CodeWizard extends Component {
         super();
     }
 
-    @autobind templateType(templateType){
-        this.props.KPIActions.DatosKPIActions.CodeWizardActions.templateType(templateType)
+    @autobind templateType(codeTemplate){
+        let type = 0
+
+        switch(codeTemplate.type){
+            case "workflowTemplate":
+                type = 1
+                break
+            case "taskTemplate":
+                type = 2
+                break
+
+            case "propertyTemplate":
+                type = 3
+                break
+        }
+
+
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.templateType(type, codeTemplate.code)
     }
 
     @autobind selectStepSteper(step){
@@ -182,6 +200,20 @@ class CodeWizard extends Component {
         }
     }
 
+    getTypeTemplateGalego(typeTemplate){
+        switch(typeTemplate){
+            case "workflowTemplate":
+                return "Plantilla de Workflow"
+                
+            case "taskTemplate":
+                return "Plantilla de tarefas"
+
+            case "propertyTemplate":
+                return "Plantilla de propiedes"
+        }
+
+    }
+
     render() {
         const {codewizard} = this.props.kpi.datoskpi
 
@@ -192,24 +224,21 @@ class CodeWizard extends Component {
                         <h1>Seleccionar plantilla</h1>
                         <div className={styles.scroll}>
                             <div className={styles.templates}>
-                                <div className={styles.template} onTouchTap={() => { this.templateType(1) }}>
-                                    <div className={styles.name}>Hola</div>
-                                    <Paper style={{width: '100%', height: '100%'}} zDepth={2}>
-                                        <div className={styles.text}>Proba</div>
-                                    </Paper>
-                                </div>
-                                <div className={styles.template} onTouchTap={() => { this.templateType(2) }}>
-                                    <div className={styles.name}>Hola</div>
-                                    <Paper style={{width: '100%', height: '100%'}} zDepth={2}>
-                                        <div className={styles.text}>Proba</div>
-                                    </Paper>
-                                </div>
-                                <div className={styles.template} onTouchTap={() => { this.templateType(3) }}>
-                                    <div className={styles.name}>Hola</div>
-                                    <Paper style={{width: '100%', height: '100%'}} zDepth={2}>
-                                        <div className={styles.text}>Proba</div>
-                                    </Paper>
-                                </div>
+                                {codewizard.codeTemplates.map((codeTemplate, index) => {
+                                    return (
+                                        <div className={styles.template} onTouchTap={() => { this.templateType(codeTemplate) }}>
+                                            <div className={styles.name}>{codeTemplate.name}</div>
+                                            <Paper style={{width: '100%', height: '100%'}} zDepth={2}>
+                                                <div className={styles.text}>
+                                                    <h4>Tipo:</h4>
+                                                    <p>{this.getTypeTemplateGalego(codeTemplate.type)}</p>
+                                                    <h4>Descripción:</h4>
+                                                    <p>{codeTemplate.description}</p>
+                                                </div>
+                                            </Paper>
+                                        </div>
+                                    )
+                                })}
                             </div>
                         </div>
 
@@ -250,7 +279,6 @@ class CodeWizard extends Component {
                             <SelectField style={{flex: 1}} value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
                                 <MenuItem value="started" primaryText="Comezado" />
                                 <MenuItem value="finished" primaryText="Acabado" />
-                                <MenuItem value="stopped" primaryText="Parado" />
                             </SelectField>
 
                             <IconButton className={styles.actions} onTouchTap={this.addWorkflowToWorkflowTemplate}>
@@ -298,10 +326,9 @@ class CodeWizard extends Component {
                         <div ref={element => this.taskTemplateInputsElement = element } className={styles.inputs}>
                             <AutoComplete hintText="Tarefa do Workflow" ref={element => this.taskTemplateTaskInput = element } fullWidth={true} dataSource={codewizard.sugestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
 
-                            <SelectField style={{flex: 1}} value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
+                            <SelectField style={{flex: 1}}  value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
                                 <MenuItem value="started" primaryText="Comezado" />
                                 <MenuItem value="finished" primaryText="Acabado" />
-                                <MenuItem value="stopped" primaryText="Parado" />
                             </SelectField>
 
                             <IconButton className={styles.actions} onTouchTap={() => this.addTaskToTaskTemplate()}>
@@ -322,7 +349,30 @@ class CodeWizard extends Component {
 
             case 3:
                 return (
-                    <div>{codewizard.typeTemplate}</div>
+                    <div className={styles.propertyTemplate}>
+                        <div className={styles.operatorSelect}>
+                            <SelectField hintText="Operador">
+                                <MenuItem value="max" primaryText="Maximo" />
+                                <MenuItem value="min" primaryText="Minimo" />
+                                <MenuItem value="count" primaryText="Contar" />
+                            </SelectField>
+                        </div>
+
+                        <div>
+                            <AutoComplete hintText="Propiedade" ref={element => this.propertyTemplatePropInput = element} fullWidth={true} dataSource={codewizard.sugestionList} filter={AutoComplete.caseInsensitiveFilter} />
+                        </div>
+
+                        <Divider className={styles.divider}/> 
+
+                        <div>
+                            <TextField hintText="Ventá Temporal" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow}/>
+                        </div>
+
+                        <div>
+                            <FlatButton label="Limpar"/>
+                            <FlatButton label="Xerar Código" />
+                        </div>
+                    </div>
                 )
         }
     }

@@ -4,8 +4,8 @@
 
 import CODEWIZARD_ACTION_TYPES from './types/'
 
-export function templateType(templateType){
-	return {type: CODEWIZARD_ACTION_TYPES.TEMPLATE_TYPE, payload: {templateType}}
+export function templateType(templateType, codeTemplate){
+	return {type: CODEWIZARD_ACTION_TYPES.TEMPLATE_TYPE, payload: {templateType, codeTemplate}}
 }
 
 export function changeTaskWorkflowState(state){
@@ -108,4 +108,26 @@ export function cleanTaskTemplate() {
 	let sugestionList = ["Usuarios", "Conexions"]
 	
 	return {type: CODEWIZARD_ACTION_TYPES.CLEAN_TASK_TEMPLATE, payload: {sugestionList}}
+}
+
+export function setCodeTemplates(codeTemplates){
+	console.log(codeTemplates)
+	return {type: CODEWIZARD_ACTION_TYPES.SET_CODE_TEMPLATES, payload: {codeTemplates} }
+}
+
+export function requestCodeTemplates(){
+	return dispatch => {
+		fetch('http://localhost:8080/MongoDBServices/api/v1/codetemplates',{
+			method: 'GET', 
+			mode: 'cors'
+		}).then(response => {
+			return response.ok ? 
+				response.json() :
+				Promise.reject("Erro")
+		}).then(json => {
+			dispatch(setCodeTemplates(json))
+		}).catch( msg => 
+			console.log(msg)
+		)
+	}
 }

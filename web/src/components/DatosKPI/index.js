@@ -194,6 +194,7 @@ class DatosKPI extends Component {
 
     componentDidMount(){
         this.props.KPIActions.DatosKPIActions.getPropertiesBD();
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.requestCodeTemplates();
     }
 
     getGrapthicImg(type){
