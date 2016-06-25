@@ -59,7 +59,8 @@ lazy val model = project
     libraryDependencies ++= Seq(
       "com.lihaoyi"           %% "pprint"     % "0.4.0",
       "com.dallaway.richard" %%% "woot-model" % "0.1.1",
-      "com.twitter"           %% "scalding-core" % "0.16.0"
+      "com.twitter"           %% "scalding-core" % "0.16.0",
+      "com.github.nscala-time" %% "nscala-time" % "2.12.0"
     )
   )
   .enablePlugins(ScalaJSPlugin)

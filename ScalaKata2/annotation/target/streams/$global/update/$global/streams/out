@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for com.scalakata#annotation_2.11;1.1.3 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-compiler;2.11.8 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.11.8 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@423bfcad[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4a5f4166[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.11.8[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.11.8 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-compiler;2.11.8 [compile->runtime][0m
@@ -618,6 +618,38 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.twitter#scalding-core_2.11;0.16.0->org.slf4j#slf4j-api;1.6.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.twitter#scalding-core_2.11;0.16.0->org.slf4j#slf4j-api;1.6.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.twitter#scalding-core_2.11;0.16.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.github.nscala-time#nscala-time_2.11;2.12.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.nscala-time#nscala-time_2.11;2.12.0 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.nscala-time#nscala-time_2.11;2.12.0[0m
+[0m[[0mdebug[0m] [0m	found com.github.nscala-time#nscala-time_2.11;2.12.0 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving joda-time#joda-time;2.9.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: joda-time#joda-time;2.9.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: joda-time#joda-time;2.9.3[0m
+[0m[[0mdebug[0m] [0m	found joda-time#joda-time;2.9.3 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.joda#joda-convert;1.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.joda#joda-convert;1.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.joda#joda-convert;1.2[0m
+[0m[[0mdebug[0m] [0m	found org.joda#joda-convert;1.2 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->compile][0m
@@ -1030,6 +1062,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.twitter#scalding-core_2.11;0.16.0->org.slf4j#slf4j-api;1.6.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.twitter#scalding-core_2.11;0.16.0->org.slf4j#slf4j-api;1.6.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.twitter#scalding-core_2.11;0.16.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->compile][0m
@@ -1443,6 +1491,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.twitter#scalding-core_2.11;0.16.0->org.slf4j#slf4j-api;1.6.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.twitter#scalding-core_2.11;0.16.0->org.slf4j#slf4j-api;1.6.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.twitter#scalding-core_2.11;0.16.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->compile][0m
@@ -2025,6 +2089,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.twitter#scalding-core_2.11;0.16.0->org.slf4j#slf4j-api;1.6.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.twitter#scalding-core_2.11;0.16.0->org.slf4j#slf4j-api;1.6.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.twitter#scalding-core_2.11;0.16.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->compile][0m
@@ -2440,6 +2520,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.twitter#scalding-core_2.11;0.16.0->org.slf4j#slf4j-api;1.6.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.twitter#scalding-core_2.11;0.16.0->org.slf4j#slf4j-api;1.6.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.twitter#scalding-core_2.11;0.16.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->compile][0m
@@ -2855,6 +2951,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.twitter#scalding-core_2.11;0.16.0->org.slf4j#slf4j-api;1.6.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.twitter#scalding-core_2.11;0.16.0->org.slf4j#slf4j-api;1.6.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.twitter#scalding-core_2.11;0.16.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.scala-lang#scala-library;2.11.8 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->joda-time#joda-time;2.9.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.github.nscala-time#nscala-time_2.11;2.12.0->org.joda#joda-convert;1.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#model_sjs0.6_2.11;1.1.3->com.github.nscala-time#nscala-time_2.11;2.12.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-reflect;2.11.8 [compile->compile][0m
@@ -3123,6 +3235,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.lihaoyi#pprint_2.11;0.4.0!pprint_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.dallaway.richard#woot-model_sjs0.6_2.11;0.1.1!woot-model_sjs0.6_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.twitter#scalding-core_2.11;0.16.0!scalding-core_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.github.nscala-time#nscala-time_2.11;2.12.0!nscala-time_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.lihaoyi#derive_2.11;0.4.0!derive_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.lihaoyi#sourcecode_2.11;0.1.1!sourcecode_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-js#scalajs-dom_sjs0.6_2.11;0.8.0!scalajs-dom_sjs0.6_2.11.jar[0m
@@ -3153,6 +3266,8 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.objenesis#objenesis;1.2!objenesis.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.ow2.asm#asm;4.0!asm.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.googlecode.javaewah#JavaEWAH;0.6.6!JavaEWAH.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] joda-time#joda-time;2.9.3!joda-time.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.joda#joda-convert;1.2!joda-convert.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.specs2#specs2-core_2.11;3.6.4!specs2-core_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.specs2#specs2-matcher_2.11;3.6.4!specs2-matcher_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.specs2#specs2-common_2.11;3.6.4!specs2-common_2.11.jar[0m
@@ -3163,7 +3278,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scodec#scodec-bits_2.11;1.0.9!scodec-bits_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalamacros#paradise_2.11.8;2.1.0!paradise_2.11.8.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 478ms :: artifacts dl 26ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 529ms :: artifacts dl 10ms[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#annotation_2.11;1.1.3 compile produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/annotation/target/resolution-cache/reports/com.scalakata-annotation_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#annotation_2.11;1.1.3 runtime produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/annotation/target/resolution-cache/reports/com.scalakata-annotation_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#annotation_2.11;1.1.3 test produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/annotation/target/resolution-cache/reports/com.scalakata-annotation_2.11-test.xml[0m
@@ -3177,5 +3292,5 @@
 [0m[[0mdebug[0m] [0m	report for com.scalakata#annotation_2.11;1.1.3 docs produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/annotation/target/resolution-cache/reports/com.scalakata-annotation_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#annotation_2.11;1.1.3 pom produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/annotation/target/resolution-cache/reports/com.scalakata-annotation_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#annotation_2.11;1.1.3 scala-tool produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/annotation/target/resolution-cache/reports/com.scalakata-annotation_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (478ms resolve - 26ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (529ms resolve - 10ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
