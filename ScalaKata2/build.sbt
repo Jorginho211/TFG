@@ -60,7 +60,8 @@ lazy val model = project
       "com.lihaoyi"           %% "pprint"     % "0.4.0",
       "com.dallaway.richard" %%% "woot-model" % "0.1.1",
       "com.twitter"           %% "scalding-core" % "0.16.0",
-      "com.github.nscala-time" %% "nscala-time" % "2.12.0"
+      "com.github.nscala-time" %% "nscala-time" % "2.12.0",
+      "org.mongodb.scala" % "mongo-scala-driver_2.11" % "1.1.1"
     )
   )
   .enablePlugins(ScalaJSPlugin)

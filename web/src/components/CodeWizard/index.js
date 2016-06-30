@@ -108,7 +108,7 @@ class CodeWizard extends Component {
         if(evt.keyCode === 13){
             let workflow = undefined
             let errors = this.props.kpi.datoskpi.codewizard.errors
-            let sugestionList = []
+            let suggestionList = []
 
             this.props.kpi.datoskpi.codewizard.workflows.map( item => {
                 if(item.name === evt.target.value){
@@ -122,10 +122,10 @@ class CodeWizard extends Component {
                 evt.target.disabled = true
 
                 workflow.tasks.map( task => {
-                    sugestionList.push(task.name)
+                    suggestionList.push(task.name)
                 })
 
-                this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeSugestionList(sugestionList)
+                this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeSuggestionList(suggestionList)
 
                 this.taskTemplateInputsElement.style.visibility = "visible"
 
@@ -169,9 +169,6 @@ class CodeWizard extends Component {
         if( task !== undefined ){
             this.props.KPIActions.DatosKPIActions.CodeWizardActions.addTaskToTaskTemplate(workflow, task, this.props.kpi.datoskpi.codewizard.taskTemplate)
         }
-        else {
-
-        }
     }
 
     @autobind deleteTaskToTaskTemplate(index){
@@ -181,10 +178,24 @@ class CodeWizard extends Component {
     @autobind cleanTaskTemplate(){
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.cleanTaskTemplate()
 
+        let suggestionList = [];
+
+        this.props.kpi.datoskpi.codewizard.workflows.map( workflow => {
+            suggestionList.push(workflow.name)
+        })
+
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeSuggestionList(suggestionList)
+
         this.taskTemplateInputsElement.style.visibility = "hidden"
         this.taskTemplateWorkflowInput.refs.searchTextField.input.disabled = false
         this.taskTemplateWorkflowInput.setValue("")
         this.taskTemplateTaskInput.setValue("")
+    }
+
+    componentWillMount(){
+        if(this.props.kpi.datoskpi.codewizard.token === undefined){
+            this.props.KPIActions.DatosKPIActions.CodeWizardActions.authenticationCITIUS();
+        }
     }
 
     getStateGalego(state){
@@ -226,7 +237,7 @@ class CodeWizard extends Component {
                             <div className={styles.templates}>
                                 {codewizard.codeTemplates.map((codeTemplate, index) => {
                                     return (
-                                        <div className={styles.template} onTouchTap={() => { this.templateType(codeTemplate) }}>
+                                        <div key={index} className={styles.template} onTouchTap={() => { this.templateType(codeTemplate) }}>
                                             <div className={styles.name}>{codeTemplate.name}</div>
                                             <Paper style={{width: '100%', height: '100%'}} zDepth={2}>
                                                 <div className={styles.text}>
@@ -274,7 +285,7 @@ class CodeWizard extends Component {
                         )}
 
                         <div className={styles.inputs}>
-                            <AutoComplete hintText="Workflow" ref={element => this.workflowTemplateInput = element } fullWidth={true} dataSource={codewizard.sugestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
+                            <AutoComplete hintText="Workflow" ref={element => this.workflowTemplateInput = element } fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
 
                             <SelectField style={{flex: 1}} value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
                                 <MenuItem value="started" primaryText="Comezado" />
@@ -300,7 +311,7 @@ class CodeWizard extends Component {
                 return (
                     <div className={styles.taskTemplate}>
                         <div>
-                            <AutoComplete hintText="Workflow" ref={element => this.taskTemplateWorkflowInput = element } onKeyDown={this.changeTaskTemplateWorkflowTaskSugestions} ref={element => this.taskTemplateWorkflowInput = element } fullWidth={true} dataSource={codewizard.sugestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
+                            <AutoComplete hintText="Workflow" ref={element => this.taskTemplateWorkflowInput = element } onKeyDown={this.changeTaskTemplateWorkflowTaskSugestions} ref={element => this.taskTemplateWorkflowInput = element } fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
                         </div>
 
                         {codewizard.taskTemplate !== undefined && codewizard.taskTemplate.tasks !== undefined && codewizard.taskTemplate.tasks.length > 0 ? (
@@ -324,7 +335,7 @@ class CodeWizard extends Component {
                         )}
 
                         <div ref={element => this.taskTemplateInputsElement = element } className={styles.inputs}>
-                            <AutoComplete hintText="Tarefa do Workflow" ref={element => this.taskTemplateTaskInput = element } fullWidth={true} dataSource={codewizard.sugestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
+                            <AutoComplete hintText="Tarefa do Workflow" ref={element => this.taskTemplateTaskInput = element } fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
 
                             <SelectField style={{flex: 1}}  value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
                                 <MenuItem value="started" primaryText="Comezado" />
@@ -359,7 +370,7 @@ class CodeWizard extends Component {
                         </div>
 
                         <div>
-                            <AutoComplete hintText="Propiedade" ref={element => this.propertyTemplatePropInput = element} fullWidth={true} dataSource={codewizard.sugestionList} filter={AutoComplete.caseInsensitiveFilter} />
+                            <AutoComplete hintText="Propiedade" ref={element => this.propertyTemplatePropInput = element} fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} />
                         </div>
 
                         <Divider className={styles.divider}/> 

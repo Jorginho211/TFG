@@ -60,8 +60,16 @@ export function modifyErrors(errors){
 	return {type: CODEWIZARD_ACTION_TYPES.MODIFY_ERRORS, payload: {errors}}
 }
 
-export function changeSugestionList(sugestionList){
-	return {type: CODEWIZARD_ACTION_TYPES.CHANGE_SUGESTION_LIST, payload: {sugestionList}}
+export function changeSuggestionList(suggestionList){
+	return {type: CODEWIZARD_ACTION_TYPES.CHANGE_SUGGESTION_LIST, payload: {suggestionList}}
+}
+
+export function cleanTaskTemplate() {	
+	return {type: CODEWIZARD_ACTION_TYPES.CLEAN_TASK_TEMPLATE, payload: {}}
+}
+
+export function setWorkflows(workflows){
+	return {type: CODEWIZARD_ACTION_TYPES.SET_WORKFLOWS, payload: {workflows} }
 }
 
 export function addTaskToTaskTemplate(workflow, task, taskTemplate){
@@ -104,14 +112,7 @@ export function deleteTaskToTaskTemplate(taskTemplate, index) {
 	return {type: CODEWIZARD_ACTION_TYPES.ADD_DELETE_TASK_TO_TASK_TEMPLATE, payload: {taskTemplate}}
 }
 
-export function cleanTaskTemplate() {
-	let sugestionList = ["Usuarios", "Conexions"]
-	
-	return {type: CODEWIZARD_ACTION_TYPES.CLEAN_TASK_TEMPLATE, payload: {sugestionList}}
-}
-
 export function setCodeTemplates(codeTemplates){
-	console.log(codeTemplates)
 	return {type: CODEWIZARD_ACTION_TYPES.SET_CODE_TEMPLATES, payload: {codeTemplates} }
 }
 
@@ -129,5 +130,97 @@ export function requestCodeTemplates(){
 		}).catch( msg => 
 			console.log(msg)
 		)
+	}
+}
+
+
+//Servizos externos CITIUS
+export function authenticationCITIUS(){
+	return dispatch => {
+		fetch('https://tec.citius.usc.es/cuestionarios/backend/HMBAuthenticationRESTAPI/auth/login?username=manuel&password=pass',{
+			method: 'GET', 
+			mode: 'cors'
+		}).then(response => {
+			return response.ok ? 
+				response.json() :
+				Promise.reject("Erro")
+		}).then(json => {
+			dispatch(tokenAutentication(json.content))
+			dispatch(requestListWorkflows(json.content))
+		}).catch( msg => 
+			console.log(msg)
+		)
+	}
+}
+
+export function tokenAutentication(token){
+	return {type: CODEWIZARD_ACTION_TYPES.TOKEN_AUTHENTICATION, payload: {token} }
+}
+
+export function requestListWorkflows(token){
+	return dispatch => {
+		fetch('https://tec.citius.usc.es/cuestionarios/backend/HMBOntologyRESTAPI/api/admin/v3/workflows/page/0/size/1000?provider=es.usc.citius.hmb.questionnaires',{
+			method: 'GET', 
+			mode: 'cors',
+    		headers: { 
+    			'X-Auth-Token': token 
+    		}
+		}).then(response => {
+			return response.ok ? 
+				response.json() :
+				Promise.reject("Erro")
+		}).then(json => {
+			dispatch(requestTaskWorkflows(json.content.result, token))
+		}).catch( msg => 
+			console.log(msg)
+		)
+	}
+}
+
+export function requestTaskWorkflows(workflows, token){
+	let workflowsState = []
+	let suggestionList = []
+
+	workflows.map( wf => {
+		workflowsState.push({
+			name: wf.name,
+			URI: wf.URI
+		})
+
+		suggestionList.push(wf.name)
+	})
+
+	workflowsState.map( wf => {
+		fetch('https://tec.citius.usc.es/cuestionarios/backend/HMBOntologyRESTAPI/api/admin/v3/workflow/' + wf.URI,{
+			method: 'GET', 
+			mode: 'cors',
+			async: false,
+			headers: { 
+    			'X-Auth-Token': token 
+    		}
+		}).then(response => {
+			return response.ok ? 
+				response.json() :
+				Promise.reject("Erro")
+		}).then(json => {
+			let tasks = []
+
+			json.content.element.map ( task => {
+				tasks.push({
+					name: task.wfontology_Name,
+					URI: task.uri,
+				})
+			})
+
+			wf.tasks = tasks;
+		}).catch( msg => 
+			console.log(msg)
+		)
+	})
+
+	console.log(workflowsState)
+	return dispatch => {
+		dispatch(setWorkflows(workflowsState)),
+		dispatch(changeSuggestionList(suggestionList))
 	}
 }
