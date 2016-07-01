@@ -22,17 +22,9 @@ export function addWorkflowToWorkflowTemplate(workflow, workflowTemplate){
 		]
 	}
 	else {
-		workflowTemplate.map(item => {
-			if(item.name === workflow.name){
-				exist = true
-			}
-		})
-
-		if(!exist){
-			workflowTemplate[workflowTemplate.length] = {
-				...workflow,
-			}
-		}		
+		workflowTemplate[workflowTemplate.length] = {
+			...workflow,
+		}	
 	}
 
 	return {type: CODEWIZARD_ACTION_TYPES.ADD_DELETE_WORKFLOW_TO_WORKFLOW_TEMPLATE, payload: {workflowTemplate}}
@@ -206,10 +198,18 @@ export function requestTaskWorkflows(workflows, token){
 			let tasks = []
 
 			json.content.element.map ( task => {
-				tasks.push({
-					name: task.wfontology_Name,
-					URI: task.uri,
-				})
+				if(task.wfontology_Name === null){
+					tasks.push({
+						name: "null",
+						URI: task.uri,
+					})
+				}
+				else {
+					tasks.push({
+						name: task.wfontology_Name,
+						URI: task.uri,
+					})
+				}
 			})
 
 			wf.tasks = tasks;
@@ -218,7 +218,6 @@ export function requestTaskWorkflows(workflows, token){
 		)
 	})
 
-	console.log(workflowsState)
 	return dispatch => {
 		dispatch(setWorkflows(workflowsState)),
 		dispatch(changeSuggestionList(suggestionList))

@@ -6,7 +6,6 @@ import TYPES from '../Actions/types/'
 
 const InitialState = {
 	typeTemplate: 0,
-    taskWorkflowState: "started",
     suggestionList: [],
     errors : {
         workflowTemplateInput : false,
@@ -33,7 +32,7 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
             return {
                 ...state,
                 workflowTemplate: payload.workflowTemplate,
-                taskWorkflowState: "started",
+                taskWorkflowState: undefined,
             }
 
         case TYPES.CHANGE_TIME_WINDOW:
@@ -46,7 +45,7 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
             return {
                 ...state,
                 typeTemplate: 0,
-                taskWorkflowState: "started",
+                taskWorkflowState: undefined,
                 workflowTemplate: undefined,
                 taskTemplate: undefined,
                 errors : {

@@ -200,11 +200,17 @@ class CodeWizard extends Component {
 
     getStateGalego(state){
         switch(state){
-            case "started":
-                return "Comezado"
+            case "active":
+                return "Activo"
 
-            case "stopped":
+            case "stalled":
                 return "Parado"
+
+            case "running":
+                return "Correndo"
+
+            case "executing":
+                return "Executando"
 
             case "finished":
                 return "Acabado"
@@ -287,8 +293,11 @@ class CodeWizard extends Component {
                         <div className={styles.inputs}>
                             <AutoComplete hintText="Workflow" ref={element => this.workflowTemplateInput = element } fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
 
-                            <SelectField style={{flex: 1}} value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
-                                <MenuItem value="started" primaryText="Comezado" />
+                            <SelectField style={{flex: 1}} hintText="Estado" value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
+                                <MenuItem value="active" primaryText="Activo" />
+                                <MenuItem value="stalled" primaryText="Parado" />
+                                <MenuItem value="running" primaryText="Correndo" />
+                                <MenuItem value="executing" primaryText="Executando" />
                                 <MenuItem value="finished" primaryText="Acabado" />
                             </SelectField>
 
@@ -337,8 +346,11 @@ class CodeWizard extends Component {
                         <div ref={element => this.taskTemplateInputsElement = element } className={styles.inputs}>
                             <AutoComplete hintText="Tarefa do Workflow" ref={element => this.taskTemplateTaskInput = element } fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
 
-                            <SelectField style={{flex: 1}}  value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
-                                <MenuItem value="started" primaryText="Comezado" />
+                            <SelectField style={{flex: 1}} hintText="Estado"  value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
+                                <MenuItem value="active" primaryText="Activo" />
+                                <MenuItem value="stalled" primaryText="Parado" />
+                                <MenuItem value="running" primaryText="Correndo" />
+                                <MenuItem value="executing" primaryText="Executando" />
                                 <MenuItem value="finished" primaryText="Acabado" />
                             </SelectField>
 
