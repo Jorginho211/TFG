@@ -12,6 +12,7 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
 import Menu from 'material-ui/Menu';
+import RefreshIndicator from 'material-ui/RefreshIndicator';
 
 import DeleteIcon from 'material-ui/svg-icons/action/delete';
 
@@ -168,6 +169,8 @@ class CodeWizard extends Component {
 
         if( task !== undefined ){
             this.props.KPIActions.DatosKPIActions.CodeWizardActions.addTaskToTaskTemplate(workflow, task, this.props.kpi.datoskpi.codewizard.taskTemplate)
+            
+            this.taskTemplateTaskInput.state.searchText = ""
         }
     }
 
@@ -239,25 +242,37 @@ class CodeWizard extends Component {
                 return (
                     <div className={styles.selectTemplate}>
                         <h1>Seleccionar plantilla</h1>
-                        <div className={styles.scroll}>
-                            <div className={styles.templates}>
-                                {codewizard.codeTemplates.map((codeTemplate, index) => {
-                                    return (
-                                        <div key={index} className={styles.template} onTouchTap={() => { this.templateType(codeTemplate) }}>
-                                            <div className={styles.name}>{codeTemplate.name}</div>
-                                            <Paper style={{width: '100%', height: '100%'}} zDepth={2}>
-                                                <div className={styles.text}>
-                                                    <h4>Tipo:</h4>
-                                                    <p>{this.getTypeTemplateGalego(codeTemplate.type)}</p>
-                                                    <h4>Descripción:</h4>
-                                                    <p>{codeTemplate.description}</p>
-                                                </div>
-                                            </Paper>
-                                        </div>
-                                    )
-                                })}
+                        { codewizard.isLoading ? (
+                            <div className={styles.refreshIndicator}>
+                                <RefreshIndicator
+                                    size={70}
+                                    left={0}
+                                    top={0}
+                                    loadingColor={"#FF0000"}
+                                    status="loading"
+                                    style={{diplay:'block', position:'relative', margin: 'auto'}}/>
                             </div>
-                        </div>
+                        ) : (
+                            <div className={styles.scroll}>
+                                <div className={styles.templates}>
+                                    {codewizard.codeTemplates.map((codeTemplate, index) => {
+                                        return (
+                                            <div key={index} className={styles.template} onTouchTap={() => { this.templateType(codeTemplate) }}>
+                                                <div className={styles.name}>{codeTemplate.name}</div>
+                                                <Paper style={{width: '100%', height: '100%'}} zDepth={2}>
+                                                    <div className={styles.text}>
+                                                        <h4>Tipo:</h4>
+                                                        <p>{this.getTypeTemplateGalego(codeTemplate.type)}</p>
+                                                        <h4>Descripción:</h4>
+                                                        <p>{codeTemplate.description}</p>
+                                                    </div>
+                                                </Paper>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </div>
+                        )}
 
                         <div className={styles.addCode}>
                             <FloatingActionButton onTouchTap={() => this.selectStepSteper(2)}>
@@ -291,7 +306,7 @@ class CodeWizard extends Component {
                         )}
 
                         <div className={styles.inputs}>
-                            <AutoComplete hintText="Workflow" ref={element => this.workflowTemplateInput = element } fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
+                            <AutoComplete openOnFocus={true} hintText="Workflow" ref={element => this.workflowTemplateInput = element } fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
 
                             <SelectField style={{flex: 1}} hintText="Estado" value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
                                 <MenuItem value="active" primaryText="Activo" />
@@ -320,7 +335,7 @@ class CodeWizard extends Component {
                 return (
                     <div className={styles.taskTemplate}>
                         <div>
-                            <AutoComplete hintText="Workflow" ref={element => this.taskTemplateWorkflowInput = element } onKeyDown={this.changeTaskTemplateWorkflowTaskSugestions} ref={element => this.taskTemplateWorkflowInput = element } fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
+                            <AutoComplete openOnFocus={true} hintText="Workflow" ref={element => this.taskTemplateWorkflowInput = element } onKeyDown={this.changeTaskTemplateWorkflowTaskSugestions} ref={element => this.taskTemplateWorkflowInput = element } fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
                         </div>
 
                         {codewizard.taskTemplate !== undefined && codewizard.taskTemplate.tasks !== undefined && codewizard.taskTemplate.tasks.length > 0 ? (
@@ -344,7 +359,7 @@ class CodeWizard extends Component {
                         )}
 
                         <div ref={element => this.taskTemplateInputsElement = element } className={styles.inputs}>
-                            <AutoComplete hintText="Tarefa do Workflow" ref={element => this.taskTemplateTaskInput = element } fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
+                            <AutoComplete openOnFocus={true} hintText="Tarefa do Workflow" ref={element => this.taskTemplateTaskInput = element } fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
 
                             <SelectField style={{flex: 1}} hintText="Estado"  value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
                                 <MenuItem value="active" primaryText="Activo" />
@@ -382,7 +397,7 @@ class CodeWizard extends Component {
                         </div>
 
                         <div>
-                            <AutoComplete hintText="Propiedade" ref={element => this.propertyTemplatePropInput = element} fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} />
+                            <AutoComplete openOnFocus={true} hintText="Propiedade" ref={element => this.propertyTemplatePropInput = element} fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} />
                         </div>
 
                         <Divider className={styles.divider}/> 

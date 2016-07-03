@@ -69,7 +69,7 @@ export function addTaskToTaskTemplate(workflow, task, taskTemplate){
 
 	if(taskTemplate === undefined){
 		taskTemplate = {
-			name: workflow.name,
+			...workflow,
 			tasks: [
 				{
 					...task,
@@ -78,16 +78,8 @@ export function addTaskToTaskTemplate(workflow, task, taskTemplate){
 		}
 	}
 	else {
-		taskTemplate.tasks.map(item => {
-			if(item.name === task.name){
-				exist = true
-			}
-		})
-
-		if(!exist){
-			taskTemplate.tasks[taskTemplate.tasks.length] = {
-				...task,
-			}
+		taskTemplate.tasks[taskTemplate.tasks.length] = {
+			...task,
 		}		
 	}
 
@@ -125,10 +117,16 @@ export function requestCodeTemplates(){
 	}
 }
 
+export function toggleLoading(){
+	return {type: CODEWIZARD_ACTION_TYPES.TOGGLE_LOADING, payload: {} }
+}
+
 
 //Servizos externos CITIUS
 export function authenticationCITIUS(){
 	return dispatch => {
+		dispatch(toggleLoading())
+
 		fetch('https://tec.citius.usc.es/cuestionarios/backend/HMBAuthenticationRESTAPI/auth/login?username=manuel&password=pass',{
 			method: 'GET', 
 			mode: 'cors'
@@ -198,15 +196,17 @@ export function requestTaskWorkflows(workflows, token){
 			let tasks = []
 
 			json.content.element.map ( task => {
-				if(task.wfontology_Name === null){
+
+				if(task.operator !== null && (task.operator.wfontology_Name === "start" || task.operator.wfontology_Name === "finish")){
 					tasks.push({
-						name: "null",
+						name: ( task.wfontology_Name ? task.wfontology_Name : "null" ),
 						URI: task.uri,
+						dummyTaskType: task.operator.wfontology_Name,
 					})
 				}
-				else {
+				else{
 					tasks.push({
-						name: task.wfontology_Name,
+						name: ( task.wfontology_Name ? task.wfontology_Name : "null" ),
 						URI: task.uri,
 					})
 				}
@@ -221,5 +221,6 @@ export function requestTaskWorkflows(workflows, token){
 	return dispatch => {
 		dispatch(setWorkflows(workflowsState)),
 		dispatch(changeSuggestionList(suggestionList))
+		dispatch(toggleLoading())
 	}
 }

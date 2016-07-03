@@ -7,10 +7,12 @@ import TYPES from '../Actions/types/'
 const InitialState = {
 	typeTemplate: 0,
     suggestionList: [],
+    taskWorkflowState: "active",
     errors : {
         workflowTemplateInput : false,
         tempWindowInput : false,
     },
+    isLoading: false,
 }
 
 export default function CodeWizardReducer(state = InitialState, {type = '', payload = {}} = {type : '', payload : { }}){
@@ -32,7 +34,7 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
             return {
                 ...state,
                 workflowTemplate: payload.workflowTemplate,
-                taskWorkflowState: undefined,
+                taskWorkflowState: "active",
             }
 
         case TYPES.CHANGE_TIME_WINDOW:
@@ -45,7 +47,7 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
             return {
                 ...state,
                 typeTemplate: 0,
-                taskWorkflowState: undefined,
+                taskWorkflowState: "active",
                 workflowTemplate: undefined,
                 taskTemplate: undefined,
                 errors : {
@@ -71,12 +73,14 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
             return {
                 ...state,
                 taskTemplate: payload.taskTemplate,
+                taskWorkflowState: "active",
             }
 
         case TYPES.CLEAN_TASK_TEMPLATE:
             return {
                 ...state,
                 taskTemplate: undefined,
+                taskWorkflowState: "active",
             }
 
         case TYPES.SET_CODE_TEMPLATES:
@@ -95,6 +99,12 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
             return {
                 ...state,
                 workflows: payload.workflows,
+            }
+
+        case TYPES.TOGGLE_LOADING:
+            return {
+                ...state,
+                isLoading: !state.isLoading,
             }
 
         default:
