@@ -83,9 +83,9 @@ class App extends Component {
                             Administración
                         </MenuItem>
                     </ Link>
-                    <Link to='/' onClick={ this.toggleMenu }>
+                    <Link to='/dashboard' onClick={ this.toggleMenu }>
                         <MenuItem>
-                            AJAX example
+                            Dashboard
                         </MenuItem>
                     </Link>
                 </LeftNav>

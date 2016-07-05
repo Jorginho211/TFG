@@ -6,6 +6,7 @@ import About from '../../components/About'
 import Home from '../../components/Home'
 import NotFound from '../../components/NotFound'
 import KPI from '../../components/KPI'
+import Dashboard from '../../components/Dashboard'
 //Import here the different components
 
 export default (
@@ -13,6 +14,7 @@ export default (
     <Route path='/' component={App}>
         <IndexRoute component={Home}/>
         <Route path='kpi' component={KPI} />
+        <Route path='dashboard' component={Dashboard} />
         <Route path='about' component={About} />
         <Route path='about/:id/' component={About} />
         <Route path='404' component={NotFound} />
