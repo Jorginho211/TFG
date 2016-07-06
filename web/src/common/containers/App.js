@@ -29,7 +29,7 @@ import * as UIActions from '../store/actions/UIActions'
 import * as KPIActions from '../../components/KPI/Actions'
 import * as DatosKPIActions from '../../components/DatosKPI/Actions'
 import * as CodeWizardActions from '../../components/CodeWizard/Actions'
-
+import * as DashboardActions from '../../components/Dashboard/Actions'
 
 import { Breakpoints } from '../styles/Breakpoints'
 
@@ -114,6 +114,9 @@ function mapStateToProps(state) {
                     codewizard: state.CodeWizardState,
                 },
         },
+        dashboard: {
+            ...state.DashboardState,
+        }
     };
 }
 
@@ -128,7 +131,8 @@ function mapDispatchToProps(dispatch) {
                 ...bindActionCreators(DatosKPIActions, dispatch),
                 CodeWizardActions : bindActionCreators(CodeWizardActions, dispatch),
             },
-        }
+        },
+        DashboardActions: bindActionCreators(DashboardActions, dispatch),
     };
 }
 
