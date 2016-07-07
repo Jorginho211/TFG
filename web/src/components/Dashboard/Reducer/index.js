@@ -10,9 +10,9 @@ import TYPES from '../Actions/types/'
 
 const InitialState = {
 	layout:[
-		{i: 'a', x: 0, y: 0, w: 1, h: 2},
-      	{i: 'b', x: 1, y: 0, w: 3, h: 2},
-      	{i: 'c', x: 4, y: 0, w: 1, h: 2},
+		{x: 2, y: 0, w: 2, h: 3},
+      	{x: 4, y: 3, w: 3, h: 5},
+      	{x: 1, y: 4, w: 2, h: 2},
 	],
 }
 
