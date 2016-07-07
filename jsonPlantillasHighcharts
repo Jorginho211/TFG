@@ -1,0 +1,115 @@
+Plantillas highcharts configuracón:
+
+//-----------------------------------------LINEAS-------------------------------------------------------------
+chart: {
+    type: 'line',
+},
+title: {
+    text: 'Proba Titulo',
+},
+subtitle: {
+    text: 'Proba substitulo',
+},
+xAxis: {
+    title: {
+        text : "Titulo Eje X"
+    }
+},
+yAxis: {
+    title: {
+        text: 'Titulo Eje Y'
+    },
+},
+legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'middle',
+    borderWidth: 0
+},
+series: [{
+    name: 'Nome Serie 1',
+    data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+}, {
+    name: 'Nome Serie 2',
+    data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+}, {
+    name: 'Nome Serie 3',
+    data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+}, {
+    name: 'Nome Serie 4',
+    data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+}]
+
+
+//-----------------------------------------Barras-------------------------------------------------------------
+chart: {
+    type: 'bar'
+},
+title: {
+    text: 'Titulo'
+},
+subtitle: {
+    text: 'Subitulo'
+},
+xAxis: {
+    title: {
+        text: 'Titulo Eje X'
+    }
+},
+yAxis: {
+    title: {
+        text: 'titulo Eje Y',
+    },
+},
+plotOptions: {
+    bar: {
+        dataLabels: {
+            enabled: true
+        }
+    }
+},
+legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'top',
+    x: -40,
+    y: 80,
+    floating: true,
+    borderWidth: 1,
+    backgroundColor: '#FFFFFF',
+    shadow: true
+},
+series: [{
+    name: 'Nome Serie 1',
+    data: [107, 31, 635, 203, 2]
+}, {
+    name: 'Nome Serie 2',
+    data: [133, 156, 947, 408, 6]
+}, {
+    name: 'Nome Serie 3',
+    data: [1052, 954, 4250, 740, 38]
+}]
+
+//--------------------------------------------------------SECTORES------------------------------------------------------------
+chart: {
+    type: 'pie'
+},
+title: {
+    text: 'Title'
+},
+
+series: [{
+    data: [{
+        name: 'Name 1',
+        y: 56.33
+    }, {
+        name: 'Name 2',
+        y: 24.03,
+    }, {
+        name: 'Name 3',
+        y: 10.38
+    }, {
+        name: 'Name 4',
+        y: 4.77
+    }]
+}]
