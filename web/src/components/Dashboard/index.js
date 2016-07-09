@@ -7,6 +7,12 @@ import styles from './styles.scss';
 import 'style!css!react-grid-layout/css/styles.css'
 import RaisedButton from 'material-ui/RaisedButton';
 
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
+
+import IconButton from 'material-ui/IconButton';
+import DeleteIcon from 'material-ui/svg-icons/action/delete';
+
 var WidthProvider = require('react-grid-layout').WidthProvider;
 var ReactGridLayout = require('react-grid-layout');
 ReactGridLayout = WidthProvider(ReactGridLayout);
@@ -19,6 +25,15 @@ class Dashboard extends Component {
     }
 
     @autobind changeLayout(layout){
+        this.props.DashboardActions.changeLayout(layout)
+    }
+
+    @autobind addLayout(){
+        let layout = this.props.dashboard.layout
+        layout.push(
+            {x: 0, y: 0, w: 2, h: 3},
+        )
+
         this.props.DashboardActions.changeLayout(layout)
     }
 
@@ -61,6 +76,10 @@ class Dashboard extends Component {
                         )
                     })}
           		</ReactGridLayout>
+
+                <FloatingActionButton onTouchTap={() => this.addLayout()} className={styles.floatingButton}>
+                    <ContentAdd />
+                </FloatingActionButton>
             </div>
     	)
     }

@@ -5,4 +5,15 @@
     width: 100%;
     height: 100%;
   }
+
+  .actionButtons {
+    position:fixed!important;
+    bottom: -10px!important;
+  }
+}
+
+.floatingButton {
+  position: fixed;
+  top: 90%;
+  left: 95%;
 }
