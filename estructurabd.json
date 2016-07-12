@@ -23,14 +23,6 @@
 	"code" : null,
 }
 
-
-
-
-
-
-
-
-
 {
 	"name" : "Numero Conexions",
 	"keywords" : "conexions",
@@ -77,18 +69,21 @@
 }
 
 
-{
-	templates: [
-		workflowTemplate: {
-			name: "Estado del Workflow",
-			description: "Fitra se un Workflow determinado esta ou estivo iniciado/parado/finalizado",
-			code: "import com.twitter.scalding._\nimport com.scalakata._\n\nclass WorkflowTemplate {\nTsv( %%FILENAME%% ,(_, 'IdWorkflow , 'IdTaskState, _, _))\n.filter('IdWorkflow == %%IDWORKFLOW%%)\n.filter('IdTaskState == %%IDTASKWORKFLOWSTATE%%)\n}"
+//PLANTILLAS
+[
+		{
+			"type": "workflowTemplate",
+			"name": "Contar Workflows",
+			"description": "Conta o numero de workflows que posuan un estado estado determinado",
+			"codeBase": "MultipleTsvFiles( files, ('ExecutionID, 'CaseID, 'TaskID, 'NuevoEstado, 'Timestamp))\r\n    .filter( 'TaskID ) {\r\n      fields : (String, String) => {\r\n        val (taskID, nuevoEstado) = fields\r\n        %%REPEAT%%\r\n      }\r\n    }\r\n    .groupBy( 'TaskID ){ _.size }\r\n    .write(Tsv(\"output.tsv\"))",
+			"codeRepeat": "taskID == %%TASKID%% && nuevoEstado == %%STATE%%"
 		},
 
-		taskTemplate: {
-			name: "Estado de tarefas",
-			description: "Filtra dentro dun Workflow determinado, se unhas tarefas concretas estan ou estiveron iniciadas/paradas/finalizadas",
-			code: ""
+		{
+			"type": "taskTemplate",
+			"name": "Estado de tarefas",
+			"description": "Filtra dentro dun Workflow determinado, se unhas tarefas concretas estan ou estiveron iniciadas/paradas/finalizadas",
+			"codeBase": "",
+			"codeRepeat": ""
 		}
-	],
-}
+]

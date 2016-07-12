@@ -43,9 +43,8 @@ class CodeWizard extends Component {
                 type = 3
                 break
         }
-
-
-        this.props.KPIActions.DatosKPIActions.CodeWizardActions.templateType(type, codeTemplate.code)
+        
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.templateType(type, codeTemplate)
     }
 
     @autobind selectStepSteper(step){

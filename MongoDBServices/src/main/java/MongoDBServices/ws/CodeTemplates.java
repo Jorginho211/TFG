@@ -7,6 +7,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
 import com.mongodb.MongoClient;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoDatabase;
 import java.util.ArrayList;
 import org.bson.Document;
@@ -33,6 +34,7 @@ public class CodeTemplates {
     public ArrayList<Document> codeTemplates() {
         ArrayList<Document> codeTemplates = db.getCollection(collection).find().into(new ArrayList<Document>());
         
+        System.out.println(codeTemplates);
         for(Document document : codeTemplates){
             document.remove("_id");
         }

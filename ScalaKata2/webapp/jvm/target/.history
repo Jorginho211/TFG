@@ -1,1 +1,3 @@
 reStart
+sbt update
+reStart
