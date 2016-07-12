@@ -92,12 +92,57 @@ class CodeWizard extends Component {
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
     }
 
-    @autobind addWorkFlowTasksToTasksTemplate(){
-
-    }
-
     @autobind deleteWorkflowToWorkflowTemplate(index){
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.deleteWorkflowToWorkflowTemplate(this.props.kpi.datoskpi.codewizard.workflowTemplate, index)
+    }
+
+    @autobind workflowTemplateCodeGenerate() {
+        let errors = {
+            ...this.props.kpi.datoskpi.codewizard.errors,
+            workflowTemplateInput: false,
+            timeWindowInput: false,
+        }
+
+        let timeWindow = this.props.kpi.datoskpi.codewizard.timeWindow
+
+        if(this.props.kpi.datoskpi.codewizard.workflowTemplate === undefined || this.props.kpi.datoskpi.codewizard.workflowTemplate.length === 0) { errors.workflowTemplateInput = true }
+        if(timeWindow === undefined || isNaN(parseInt(timeWindow))) { errors.timeWindowInput = true}
+
+        console.log(timeWindow)
+        console.log(isNaN(parseInt(timeWindow)))
+        if(!errors.workflowTemplateInput && !errors.timeWindowInput){
+            let code = this.props.kpi.datoskpi.codewizard.code
+            let codeBaseTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codeBase
+            let codeRepeatTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codeRepeat
+            let kpiName = this.props.kpi.datoskpi.kpi.name
+
+            kpiName = kpiName.replace(/\s+/g, "")
+
+            code = code.replace("%%KPINAME%%", kpiName)
+            code = code.replace("%%TIMEWINDOW%%", timeWindow)
+            code = code.replace("%%TYPEFILE%%", "\"tscev\"")
+            code = code.replace("%%CODEBASE%%", codeBaseTemplate)
+
+            let codeRepeat = codeRepeatTemplate
+            this.props.kpi.datoskpi.codewizard.workflowTemplate.map( (workflow, index) => {
+                if(index > 0){
+                    codeRepeat = codeRepeat.replace("%%ADDOTHER%%", codeRepeatTemplate)
+                }
+
+                codeRepeat = codeRepeat.replace("%%TASKID%%", "\"" + workflow.URI + "\"")
+                codeRepeat = codeRepeat.replace("%%STATE%%", "\"" + workflow.state + "\"")
+            })
+
+            codeRepeat = codeRepeat.replace("%%ADDOTHER%%", "true")
+
+            code = code.replace("%%REPEAT%%", codeRepeat)
+
+            this.props.KPIActions.DatosKPIActions.codeChange(code)
+            this.props.KPIActions.DatosKPIActions.continueSteper()
+        }
+        else {
+            this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
+        }
     }
 
     @autobind changeTimeWindow(evt){
@@ -321,11 +366,11 @@ class CodeWizard extends Component {
                         </div>                        
 
                         <div>
-                            <TextField hintText="Ventá Temporal" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow}/>
+                            <TextField hintText="Ventá Temporal" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow} errorText={codewizard.errors.timeWindowInput && "Valor Incorrecto, debe ser enteiro en segundos"}/>
                         </div>
 
                         <div>
-                            <FlatButton label="Xerar Código" onTouchTap={() => { this.templateType(2) }}/>
+                            <FlatButton label="Xerar Código" onTouchTap={() => { this.workflowTemplateCodeGenerate() }}/>
                         </div>
                     </div>
                 )
@@ -374,7 +419,7 @@ class CodeWizard extends Component {
                         </div>
 
                         <div>
-                            <TextField hintText="Ventá Temporal" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow}/>
+                            <TextField hintText="Ventá Temporal" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow} errorText={codewizard.errors.timeWindowInput && "Valor Incorrecto, debe ser enteiro en segundos"}/>
                         </div>
 
                         <div>

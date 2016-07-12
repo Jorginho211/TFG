@@ -34,7 +34,6 @@ public class CodeTemplates {
     public ArrayList<Document> codeTemplates() {
         ArrayList<Document> codeTemplates = db.getCollection(collection).find().into(new ArrayList<Document>());
         
-        System.out.println(codeTemplates);
         for(Document document : codeTemplates){
             document.remove("_id");
         }

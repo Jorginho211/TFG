@@ -407,7 +407,7 @@ class DatosKPI extends Component {
       let {datoskpi} = this.props.kpi;
 
       if(datoskpi.stepIndex > 0){
-        if(isNewKPI){
+        if(isNewKPI && datoskpi.stepIndex === 1){
           return
         }
         if(datoskpi.stepIndex === 2){
