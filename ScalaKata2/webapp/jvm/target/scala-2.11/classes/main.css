@@ -190,7 +190,7 @@ body.pc kbd.mac {
 }
 .CodeMirror-code > pre {
   font-size: 0;
-  font-size: 16px;
+  font-size: 12px;
 }
 .CodeMirror-lines {
   padding: 24px;
