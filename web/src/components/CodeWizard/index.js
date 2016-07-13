@@ -129,13 +129,22 @@ class CodeWizard extends Component {
                     codeRepeat = codeRepeat.replace("%%ADDOTHER%%", codeRepeatTemplate)
                 }
 
-                codeRepeat = codeRepeat.replace("%%TASKID%%", "\"" + workflow.URI + "\"")
-                codeRepeat = codeRepeat.replace("%%STATE%%", "\"" + workflow.state + "\"")
+                workflow.tasks.map((task) => {
+                    if(task.dummyTaskType === "start" && workflow.state === "active"){
+                        codeRepeat = codeRepeat.replace("%%TASKID%%", "\"" + task.URI + "\"")
+                    }
+                    
+                    if(task.dummyTaskType === "finish" && workflow.state === "finished"){
+                        codeRepeat = codeRepeat.replace("%%TASKID%%", "\"" + task.URI + "\"")
+                    }
+                })                
             })
 
             codeRepeat = codeRepeat.replace("%%ADDOTHER%%", "true")
 
             code = code.replace("%%REPEAT%%", codeRepeat)
+
+            console.log(code)
 
             this.props.KPIActions.DatosKPIActions.codeChange(code)
             this.props.KPIActions.DatosKPIActions.continueSteper()
@@ -354,9 +363,6 @@ class CodeWizard extends Component {
 
                             <SelectField style={{flex: 1}} hintText="Estado" value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
                                 <MenuItem value="active" primaryText="Activo" />
-                                <MenuItem value="stalled" primaryText="Parado" />
-                                <MenuItem value="running" primaryText="Correndo" />
-                                <MenuItem value="executing" primaryText="Executando" />
                                 <MenuItem value="finished" primaryText="Acabado" />
                             </SelectField>
 

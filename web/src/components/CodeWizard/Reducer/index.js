@@ -3,6 +3,7 @@
  */
 
 import TYPES from '../Actions/types/'
+import propertiesFile from '../../../../strings/src/components/CodeWizard/index.json'
 
 const InitialState = {
 	typeTemplate: 0,
@@ -13,7 +14,7 @@ const InitialState = {
         timeWindowInput : false,
     },
     isLoading: false,
-    code: "import com.twitter.scalding._\r\nimport java.io.File\r\nimport com.github.nscala_time.time.Imports._\r\n \r\nclass %%KPINAME%%(args : Args) extends Job(args) {\r\n  def getLogFiles(dir: String): List[File] = {\r\n    val files = new File(dir)\r\n    files.listFiles.toList\r\n  }\r\n  \r\n  def getFilesTypeFilesTimeWindow(timestamp: Long, typeFile: String):List[String] = {\r\n    getLogFiles(\"/home/xurxo/logs\").filter( (file: File) => {\r\n      (file.getName.split(\"\\\\.\")(1).toLong >= DateTime.now.getMillis - timestamp && file.getName.split(\"\\\\.\")(1).toLong <= DateTime.now.getMillis && file.getName.split(\"\\\\.\")(0).contains(typeFile))\r\n    })\r\n    .map((file: File) => file.getCanonicalPath)\r\n  }\r\n  \r\n  val files = getFilesTypeFilesTimeWindow(%%TIMEWINDOW%%L, %%TYPEFILE%%)\r\n  \r\n  %%CODEBASE%%\r\n}"
+    code: propertiesFile.code,
 }
 
 export default function CodeWizardReducer(state = InitialState, {type = '', payload = {}} = {type : '', payload : { }}){
