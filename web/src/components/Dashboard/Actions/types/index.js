@@ -3,7 +3,8 @@
  */
 
 export const TYPES = {
-	CHANGE_LAYOUT : Symbol('CHANGE_LAYOUT'),
+	ADD_REMOVE_ELEMENT_LAYOUT : Symbol('ADD_REMOVE_ELEMENT_LAYOUT'),
+	SAVE_LAYOUT : Symbol('SAVE_LAYOUT'),
 }
 
 export default TYPES;

@@ -13,6 +13,8 @@ import ContentAdd from 'material-ui/svg-icons/content/add';
 import IconButton from 'material-ui/IconButton';
 import DeleteIcon from 'material-ui/svg-icons/action/delete';
 
+import representations from '../../../strings/src/components/Dashboard/representations.json';
+
 var WidthProvider = require('react-grid-layout').WidthProvider;
 var ReactGridLayout = require('react-grid-layout');
 ReactGridLayout = WidthProvider(ReactGridLayout);
@@ -25,53 +27,59 @@ class Dashboard extends Component {
     }
 
     @autobind changeLayout(layout){
-        this.props.DashboardActions.changeLayout(layout)
+        this.props.DashboardActions.saveLayout(layout)
+        this.forceUpdate()
     }
 
     @autobind addLayout(){
         let layout = this.props.dashboard.layout
         layout.push(
-            {x: 0, y: 0, w: 2, h: 3},
+            {i: (layout.length + 1).toString(), x: 0, y: 0, w: 4, h: 8},
         )
 
-        this.props.DashboardActions.changeLayout(layout)
+        this.props.DashboardActions.addRemoveElement(layout)
+    }
+
+    @autobind deleteLayout(layout){
+        let layout2 = []
+
+        this.props.dashboard.layout.map(l => {
+            if( l !== layout){
+                layout2.push(l)
+            }
+        })
+
+        this.props.DashboardActions.addRemoveElement(layout2)
+    }
+
+    componentWillUnmount() {
+        let layout = []
+        let j = 1
+        this.props.dashboard.layoutSave.map(l => {
+            layout.push({
+                ...l,
+                i : j.toString(),
+            })
+
+            j++
+        })
+
+        this.props.DashboardActions.addRemoveElement(layout)
     }
 
     render() {
 		const {dashboard} = this.props;
 
-        var config = {
-            chart: {
-                type: 'pie'
-            },
-            title: {
-                text: 'Title'
-            },
-
-            series: [{
-                data: [{
-                    name: 'Name 1',
-                    y: 56.33
-                }, {
-                    name: 'Name 2',
-                    y: 24.03,
-                }, {
-                    name: 'Name 3',
-                    y: 10.38
-                }, {
-                    name: 'Name 4',
-                    y: 4.77
-                }]
-            }]
-        }
-
     	return (
             <div>
-        		<ReactGridLayout onLayoutChange={this.changeLayout} items={3} rowHeight={30} cols={12} autoSize={true} className="layout">
+        		<ReactGridLayout onLayoutChange={(layout) => this.changeLayout(layout)} items={3} rowHeight={30} cols={12} className="layout">
                     {dashboard.layout.map((l, index) => {
                         return (
-                            <div key={index} _grid={l} className={styles.cell}>
-                                <ReactHighcharts className={styles.container} config={config} ref="chart"></ReactHighcharts>
+                            <div key={l.i} _grid={l} className={styles.cell}>
+                                <ReactHighcharts className={styles.container} config={ representations[0] }></ReactHighcharts>
+                                <IconButton onTouchTap={() => this.deleteLayout(l)} className={styles.actionButtons}>
+                                    <DeleteIcon />
+                                </IconButton>
                             </div>
                         )
                     })}
