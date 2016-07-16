@@ -9,12 +9,25 @@
 import TYPES from '../Actions/types/'
 
 const InitialState = {
-	layout:[
-        {h: 3, w: 2, x: 2, y: 0, i: "1"},
-        {h: 5, w: 3, x: 4, y: 3, i: "2"},
-	],
-
-    layoutSave: []
+    layoutSave: [],
+    /*dashboard: [
+        {
+            idkpi: "1",
+            chartType: "line",
+            layout: { h: 9, w: 5, x: 3, y: 8, i: "1||line" }
+        },
+        {
+            idkpi: "1",
+            chartType: "bar",
+            layout: { h: 8, w: 6, x: 4, y: 0, i: "1||bar" }
+        },
+        {
+            idkpi: "2",
+            chartType: "pie",
+            layout: { h: 8, w: 4, x: 0, y: 0, i: "2||pie" }
+        }
+    ]*/
+    dashboard: [],
 }
 
 export default function DashboardReducer(state = InitialState, {type = '', payload = {}} = {type : '', payload : { }}){
@@ -22,16 +35,10 @@ export default function DashboardReducer(state = InitialState, {type = '', paylo
     	case TYPES.ADD_REMOVE_ELEMENT_LAYOUT:
     		return {
     			...state,
-    			layout: payload.layout,
+    			dashboard : payload.dashboard
     		}
 
         case TYPES.SAVE_LAYOUT:
-            return {
-                ...state,
-                layoutSave: payload.layout,
-            }
-
-        case TYPES.CHANGE_ADD_REMOVE_ELEMENT:
             return {
                 ...state,
                 layoutSave: payload.layout,

@@ -32,39 +32,66 @@ class Dashboard extends Component {
     }
 
     @autobind addLayout(){
-        let layout = this.props.dashboard.layout
-        layout.push(
-            {i: (layout.length + 1).toString(), x: 0, y: 0, w: 4, h: 8},
-        )
+        let dashboard = [
+            ...this.props.dashboard.dashboard
+        ]
 
-        this.props.DashboardActions.addRemoveElement(layout)
+        dashboard.push({
+            idkpi: dashboard.length.toString(),
+            chartType: "line",
+            layout: {h: 8, w: 4, x: 0, y: 0, i: dashboard.length.toString() + "||line"},
+        })
+
+        console.log(dashboard)
+
+        this.props.DashboardActions.addRemoveElement(dashboard)
     }
 
     @autobind deleteLayout(layout){
-        let layout2 = []
+        let dashboard = []
 
-        this.props.dashboard.layout.map(l => {
-            if( l !== layout){
-                layout2.push(l)
+        this.props.dashboard.dashboard.map( d => {
+            if(d.layout.i !== layout.i){
+                dashboard.push({
+                    ...d,
+                })
             }
         })
 
-        this.props.DashboardActions.addRemoveElement(layout2)
+        this.props.DashboardActions.addRemoveElement(dashboard)
+    }
+
+    componentWillMount(){
+        this.props.DashboardActions.requestDashboard("LmXvJXuTSESoyMrTVCRK8f3fxvfgAvclJWWoqBiP")
     }
 
     componentWillUnmount() {
-        let layout = []
-        let j = 1
-        this.props.dashboard.layoutSave.map(l => {
-            layout.push({
-                ...l,
-                i : j.toString(),
-            })
+        let chartType
+        let idkpi
+        let dashboard = []
+        let layoutAux
 
-            j++
+        this.props.dashboard.layoutSave.map(l => {
+            layoutAux = {
+                ...l
+            }
+            layoutAux.i = layoutAux.i.replace(".$", "")
+
+            idkpi = layoutAux.i.split("||")[0]
+            chartType = layoutAux.i.split("||")[1]
+
+            this.props.dashboard.dashboard.map(d => {
+                if(d.idkpi === idkpi && d.chartType === chartType){
+                    dashboard.push({
+                        ...d,
+                        layout: layoutAux
+                    })
+                }
+            })
         })
 
-        this.props.DashboardActions.addRemoveElement(layout)
+        this.props.DashboardActions.addRemoveElement(dashboard)
+        this.props.DashboardActions.putDashboard("LmXvJXuTSESoyMrTVCRK8f3fxvfgAvclJWWoqBiP", dashboard)
     }
 
     render() {
@@ -73,16 +100,23 @@ class Dashboard extends Component {
     	return (
             <div>
         		<ReactGridLayout onLayoutChange={(layout) => this.changeLayout(layout)} items={3} rowHeight={30} cols={12} className="layout">
-                    {dashboard.layout.map((l, index) => {
-                        return (
-                            <div key={l.i} _grid={l} className={styles.cell}>
-                                <ReactHighcharts className={styles.container} config={ representations[0] }></ReactHighcharts>
-                                <IconButton onTouchTap={() => this.deleteLayout(l)} className={styles.actionButtons}>
-                                    <DeleteIcon />
-                                </IconButton>
-                            </div>
-                        )
-                    })}
+                    {dashboard.dashboard.map( (d, index) => {
+                            return (
+                               <div key={d.layout.i} _grid={d.layout} className={styles.cell}>
+                                    {representations.map ( (r,index) => {
+                                        if(r.chart.type === d.chartType){
+                                            return (
+                                                <ReactHighcharts key={index} className={styles.container} config={ r }></ReactHighcharts>
+                                            )
+                                        }
+                                    })}
+                                    <IconButton onTouchTap={() => this.deleteLayout(d.layout)} className={styles.actionButtons}>
+                                        <DeleteIcon />
+                                    </IconButton>
+                                </div> 
+                            )
+                        })
+                    }
           		</ReactGridLayout>
 
                 <FloatingActionButton onTouchTap={() => this.addLayout()} className={styles.floatingButton}>

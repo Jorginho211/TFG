@@ -1,5 +1,6 @@
 package MongoDBServices.ws;
 
+import com.google.gson.Gson;
 import com.mongodb.Block;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
@@ -20,6 +21,7 @@ import java.util.logging.Logger;
 import org.bson.BSON;
 import org.bson.Document;
 import org.bson.types.ObjectId;
+import org.codehaus.jettison.json.JSONArray;
 import sun.security.util.Password;
 
 @Path("/dashboards/")
@@ -43,9 +45,8 @@ public class Dashboard {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public ArrayList<Document> Dasboard(@HeaderParam("X-Auth-Token") String token) {
+    public ArrayList<Document> Dashboard(@HeaderParam("X-Auth-Token") String token) {
         ArrayList<Document> users = db.getCollection(cUsuarios).find(new Document("token", token)).into(new ArrayList<Document>());
-        System.out.println(users);
         if(users.isEmpty()){
             throw new WebApplicationException(Response.Status.UNAUTHORIZED);
         }
@@ -54,5 +55,21 @@ public class Dashboard {
         ArrayList<Document> dashboards = db.getCollection(cDashboards).find(new Document("idUser", idUser)).into(new ArrayList<Document>());
         
         return (ArrayList<Document>) dashboards.get(0).get("dashboard");        
+    }
+    
+    @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response Dashboard(@HeaderParam("X-Auth-Token") String token, String dashboardJson){
+        ArrayList<Document> users = db.getCollection(cUsuarios).find(new Document("token", token)).into(new ArrayList<Document>());
+        if(users.isEmpty()){
+            throw new WebApplicationException(Response.Status.UNAUTHORIZED);
+        }
+        
+        ObjectId idUser = users.get(0).getObjectId("_id");
+        Document dashboard = Document.parse(dashboardJson);
+        
+        db.getCollection(cDashboards).updateOne(new Document("_id", idUser), new Document("$set", new Document("dashboard", dashboard)));        
+        
+        return Response.ok().build();
     }
 }
