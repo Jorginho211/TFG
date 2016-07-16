@@ -1,0 +1,26 @@
+{
+	"user": "jorge",
+	"pass": "jorge",
+	"token": null
+}
+
+{
+	"idUser": ObjectId("57891c86a973bce8a0b7f355"),
+	"dashboard": [
+		{
+			"idkpi": "1",
+			"chartType": "line",
+			"layout": { "h": 9, "w": 5, "x": 3, "y": 8, "i": "1||line" }
+		},
+		{
+			"idkpi": "1",
+			"chartType": "bar",
+			"layout": { "h": 8, "w": 6, "x": 4, "y": 0, "i": "1||bar" }
+		},
+		{
+			"idkpi": "2",
+			"chartType": "pie",
+			"layout": { "h": 8, "w": 4, "x": 0, "y": 0, "i": "2||pie" }
+		}
+	]
+}
