@@ -40,7 +40,7 @@ export function putDashboard(token, dashboard){
     			'X-Auth-Token': token,
     			'Content-Type': 'application/json',
     		},
-    		body: JSON.stringify(dashboard),
+    		body: JSON.stringify({ dashboard: dashboard }),
 		}).then(response => {
 			return response.ok ? 
 				response.json() :

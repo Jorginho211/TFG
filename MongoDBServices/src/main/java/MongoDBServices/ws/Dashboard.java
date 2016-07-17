@@ -65,10 +65,11 @@ public class Dashboard {
             throw new WebApplicationException(Response.Status.UNAUTHORIZED);
         }
         
+        
         ObjectId idUser = users.get(0).getObjectId("_id");
         Document dashboard = Document.parse(dashboardJson);
         
-        db.getCollection(cDashboards).updateOne(new Document("_id", idUser), new Document("$set", new Document("dashboard", dashboard)));        
+        db.getCollection(cDashboards).updateOne(new Document("idUser", idUser), new Document("$set", dashboard));        
         
         return Response.ok().build();
     }
