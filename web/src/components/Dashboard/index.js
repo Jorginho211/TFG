@@ -12,6 +12,7 @@ import ContentAdd from 'material-ui/svg-icons/content/add';
 
 import IconButton from 'material-ui/IconButton';
 import DeleteIcon from 'material-ui/svg-icons/action/delete';
+import SaveIcon from 'material-ui/svg-icons/content/save';
 
 import representations from '../../../strings/src/components/Dashboard/representations.json';
 
@@ -42,8 +43,6 @@ class Dashboard extends Component {
             layout: {h: 8, w: 4, x: 0, y: 0, i: dashboard.length.toString() + "||line"},
         })
 
-        console.log(dashboard)
-
         this.props.DashboardActions.addRemoveElement(dashboard)
     }
 
@@ -61,11 +60,7 @@ class Dashboard extends Component {
         this.props.DashboardActions.addRemoveElement(dashboard)
     }
 
-    componentWillMount(){
-        this.props.DashboardActions.requestDashboard("LmXvJXuTSESoyMrTVCRK8f3fxvfgAvclJWWoqBiP")
-    }
-
-    componentWillUnmount() {
+    @autobind saveDashboard(){
         let chartType
         let idkpi
         let dashboard = []
@@ -91,7 +86,14 @@ class Dashboard extends Component {
         })
 
         this.props.DashboardActions.addRemoveElement(dashboard)
-        this.props.DashboardActions.putDashboard("LmXvJXuTSESoyMrTVCRK8f3fxvfgAvclJWWoqBiP", dashboard)
+        this.props.DashboardActions.putDashboard("aKxOyCoyl7ENwD8ipdRhOUo82WO50UZYdKdyelZi", dashboard)
+    }
+
+    componentWillMount(){
+        this.props.DashboardActions.requestDashboard("aKxOyCoyl7ENwD8ipdRhOUo82WO50UZYdKdyelZi")
+    }
+
+    componentWillUnmount() {
     }
 
     render() {
@@ -119,7 +121,9 @@ class Dashboard extends Component {
                     }
           		</ReactGridLayout>
 
-                <FloatingActionButton onTouchTap={() => this.addLayout()} className={styles.floatingButton}>
+                <RaisedButton label="Gardar" labelPosition="before" primary={true} onTouchTap={() => this.saveDashboard()} icon={<SaveIcon />} className={styles.btnGardar} />
+
+                <FloatingActionButton onTouchTap={() => this.addLayout()} className={styles.floatingButton} mini={true}>
                     <ContentAdd />
                 </FloatingActionButton>
             </div>

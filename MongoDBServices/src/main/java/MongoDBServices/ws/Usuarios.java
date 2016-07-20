@@ -36,6 +36,19 @@ public class Usuarios {
         this.mongoClient = new MongoClient();
         this.db = mongoClient.getDatabase(dbName);
     }
+    
+    public String generateToken() {
+
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+        StringBuilder tokenGenerate = new StringBuilder();
+
+        for (int i = 0; i < 40; i++) {
+            int random = (int) (Math.random() * characters.length());
+            tokenGenerate.append(characters.charAt(random));
+        }
+
+        return tokenGenerate.toString();
+    }
 
     @GET
     @Path("/login")
@@ -44,7 +57,7 @@ public class Usuarios {
         Document document = new Document();
         document.append("user", user);
         document.append("password", password);
-        ArrayList<Document> users = db.getCollection(collection).find(document).into(new ArrayList<Document>());
+        ArrayList<Document> users = db.getCollection(collection).find().into(new ArrayList<Document>());
 
         if (!users.isEmpty()) {
             String token = generateToken();
@@ -63,17 +76,34 @@ public class Usuarios {
         
         return Response.ok().build();
     }
-
-    public String generateToken() {
-
-        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
-        StringBuilder tokenGenerate = new StringBuilder();
-
-        for (int i = 0; i < 40; i++) {
-            int random = (int) (Math.random() * characters.length());
-            tokenGenerate.append(characters.charAt(random));
+    
+    @GET
+    @Path("/dashboard")
+    @Produces(MediaType.APPLICATION_JSON)
+    public ArrayList<Document> Dashboard(@HeaderParam("X-Auth-Token") String token) {
+        ArrayList<Document> users = db.getCollection(collection).find(new Document("token", token)).into(new ArrayList<Document>());
+        
+        if(users.isEmpty()){
+            throw new WebApplicationException(Response.Status.UNAUTHORIZED);
         }
-
-        return tokenGenerate.toString();
+        
+        return (ArrayList<Document>) users.get(0).get("dashboard");        
+    }
+    
+    @PUT
+    @Path("/dashboard")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response Dashboard(@HeaderParam("X-Auth-Token") String token, String dashboardJson){
+        ArrayList<Document> users = db.getCollection(collection).find(new Document("token", token)).into(new ArrayList<Document>());
+        
+        if(users.isEmpty()){
+            throw new WebApplicationException(Response.Status.UNAUTHORIZED);
+        }
+        
+        Document dashboard = Document.parse(dashboardJson);
+        
+        db.getCollection(collection).updateOne(new Document("token", token), new Document("$set", dashboard));        
+        
+        return Response.ok().build();
     }
 }

@@ -13,7 +13,7 @@ export function saveLayout(layout){
 
 export function requestDashboard(token){
 	return dispatch => {
-		fetch('http://localhost:8080/MongoDBServices/api/v1/dashboards/',{
+		fetch('http://localhost:8080/MongoDBServices/api/v1/usuarios/dashboard/',{
 			method: 'GET', 
 			mode: 'cors',
     		headers: { 
@@ -33,7 +33,7 @@ export function requestDashboard(token){
 
 export function putDashboard(token, dashboard){
 	return dispatch => {
-		fetch('http://localhost:8080/MongoDBServices/api/v1/dashboards/',{
+		fetch('http://localhost:8080/MongoDBServices/api/v1/usuarios/dashboard/',{
 			method: 'PUT', 
 			mode: 'cors',
     		headers: { 

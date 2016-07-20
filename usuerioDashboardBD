@@ -1,11 +1,7 @@
 {
 	"user": "jorge",
-	"pass": "jorge",
-	"token": null
-}
-
-{
-	"idUser": ObjectId("57891c86a973bce8a0b7f355"),
+	"password": "jorge",
+	"token": null,
 	"dashboard": [
 		{
 			"idkpi": "1",
