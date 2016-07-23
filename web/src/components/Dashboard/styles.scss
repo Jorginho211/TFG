@@ -24,3 +24,31 @@
   top: 10%;
   left: 97%;
 }
+
+.refreshIndicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.graphicsGroupKPI{
+  overflow-x: scroll;
+  white-space:nowrap;
+
+  div {
+    display: inline-flex;
+    align-items: center;
+    flex-flow: column;
+
+    img {
+      border: 1px solid black;
+      margin: 10px;
+      width: 250px;
+      height: 250px;
+    }
+
+    div {
+      flex-flow:row;
+    }
+  }
+}

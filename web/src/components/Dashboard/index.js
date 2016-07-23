@@ -16,6 +16,14 @@ import SaveIcon from 'material-ui/svg-icons/content/save';
 
 import representations from '../../../strings/src/components/Dashboard/representations.json';
 
+import RefreshIndicator from 'material-ui/RefreshIndicator';
+import Dialog from 'material-ui/Dialog';
+import AutoComplete from 'material-ui/AutoComplete';
+
+import LineGraphImg from '../DatosKPI/Images/line.svg'
+import PieGraphImg from '../DatosKPI/Images/pie.svg'
+import BarGraphImg from '../DatosKPI/Images/bar.svg'
+
 var WidthProvider = require('react-grid-layout').WidthProvider;
 var ReactGridLayout = require('react-grid-layout');
 ReactGridLayout = WidthProvider(ReactGridLayout);
@@ -32,18 +40,21 @@ class Dashboard extends Component {
         this.forceUpdate()
     }
 
-    @autobind addLayout(){
+    @autobind addLayout(idKpiAux, chartTypeAux){
+        console.log("AQUI")
         let dashboard = [
             ...this.props.dashboard.dashboard
         ]
 
         dashboard.push({
-            idkpi: dashboard.length.toString(),
-            chartType: "line",
-            layout: {h: 8, w: 4, x: 0, y: 0, i: dashboard.length.toString() + "||line"},
+            idkpi: idKpiAux,
+            chartType: chartTypeAux,
+            layout: {h: 8, w: 4, x: 0, y: 0, i: idKpiAux + "||" + chartTypeAux},
         })
 
         this.props.DashboardActions.addRemoveElement(dashboard)
+
+        this.toggleDialog()
     }
 
     @autobind deleteLayout(layout){
@@ -58,6 +69,10 @@ class Dashboard extends Component {
         })
 
         this.props.DashboardActions.addRemoveElement(dashboard)
+    }
+
+    @autobind toggleDialog(){
+        this.props.DashboardActions.toggleDialog()
     }
 
     @autobind saveDashboard(){
@@ -89,43 +104,149 @@ class Dashboard extends Component {
         this.props.DashboardActions.putDashboard("aKxOyCoyl7ENwD8ipdRhOUo82WO50UZYdKdyelZi", dashboard)
     }
 
+    @autobind suggestionListKPIName(){
+        let suggestionList = []
+
+        this.props.kpi.kpis.map( kpi => {
+            suggestionList.push(kpi.name)
+        })
+
+        this.props.DashboardActions.updateSuggestionList(suggestionList)
+    }
+
+    @autobind searchKPI(kpiName){
+        let kpiAux
+        this.props.kpi.kpis.map( kpi => {
+            if(kpi.name === kpiName ){
+                kpiAux = kpi
+            }
+        })
+
+        if(kpiAux !== undefined){
+            this.props.DashboardActions.setKPI(kpiAux)
+        }
+        else {
+            this.props.DashboardActions.setKPI(undefined)
+        }
+    }
+
     componentWillMount(){
         this.props.DashboardActions.requestDashboard("aKxOyCoyl7ENwD8ipdRhOUo82WO50UZYdKdyelZi")
+        this.props.KPIActions.requestKpis();
     }
 
     componentWillUnmount() {
     }
 
+    getGrapthicImg(type, idKPI){
+      switch(type){
+        case "line":
+          return (
+            <div>
+              <img src={LineGraphImg} onTouchTap={() => {this.addLayout(idKPI, type)}}/>
+            </div>
+          )
+
+        case "bar":
+          return (
+            <div>
+              <img src={BarGraphImg} onTouchTap={() => {this.addLayout(idKPI, type)}}/>
+            </div>
+          )
+
+        case "pie":
+          return (
+            <div>
+              <img src={PieGraphImg} onTouchTap={() => {this.addLayout(idKPI, type)}}/>
+            </div>
+          )
+      }
+    }
+
+    dialogContent(){
+        const {dashboard} = this.props;
+
+        return (
+            <div>
+                <div>
+                    <AutoComplete openOnFocus={true} floatingLabelText="Introduce unha KPI" dataSource={ dashboard.suggestionList } filter={AutoComplete.caseInsensitiveFilter} fullWidth={true} onNewRequest={(kpiName) => this.searchKPI(kpiName)}/>
+                </div>
+
+                {dashboard.kpi ? (
+                    <div>
+                        <p>Seleccionar representatión</p>
+                        <div className={styles.graphicsGroupKPI}>
+                          {dashboard.kpi.representation.map((representation, index) => {
+                            return (
+                              <div key={index}>
+                                {this.getGrapthicImg(representation.type, dashboard.kpi.id)}
+                              </div>
+                            )
+                          })}                          
+                        </div>
+                    </div>
+                ) : (
+                    null
+                )}
+            </div>
+        )
+    }
+
     render() {
 		const {dashboard} = this.props;
+        const {kpi} = this.props;
 
     	return (
             <div>
-        		<ReactGridLayout onLayoutChange={(layout) => this.changeLayout(layout)} items={3} rowHeight={30} cols={12} className="layout">
-                    {dashboard.dashboard.map( (d, index) => {
-                            return (
-                               <div key={d.layout.i} _grid={d.layout} className={styles.cell}>
-                                    {representations.map ( (r,index) => {
-                                        if(r.chart.type === d.chartType){
-                                            return (
-                                                <ReactHighcharts key={index} className={styles.container} config={ r }></ReactHighcharts>
-                                            )
-                                        }
-                                    })}
-                                    <IconButton onTouchTap={() => this.deleteLayout(d.layout)} className={styles.actionButtons}>
-                                        <DeleteIcon />
-                                    </IconButton>
-                                </div> 
-                            )
-                        })
-                    }
-          		</ReactGridLayout>
+                {kpi.isLoading ? (
+                    <div className={styles.refreshIndicator}>
+                        <RefreshIndicator
+                            size={100}
+                            left={0}
+                            top={0}
+                            loadingColor={"#FF0000"}
+                            status="loading"
+                            style={{diplay:'block', position:'relative'}}/>
+                    </div>
 
-                <RaisedButton label="Gardar" labelPosition="before" primary={true} onTouchTap={() => this.saveDashboard()} icon={<SaveIcon />} className={styles.btnGardar} />
+                ) : (
+                    <div>
+                        <ReactGridLayout onLayoutChange={(layout) => this.changeLayout(layout)} items={3} rowHeight={30} cols={12} className="layout">
+                            {dashboard.dashboard.map( (d, index) => {
+                                    return (
+                                       <div key={d.layout.i} _grid={d.layout} className={styles.cell}>
+                                            {representations.map ( (r,index) => {
+                                                if(r.chart.type === d.chartType){
+                                                    return (
+                                                        <ReactHighcharts key={index} className={styles.container} config={ r }></ReactHighcharts>
+                                                    )
+                                                }
+                                            })}
+                                            <IconButton onTouchTap={() => this.deleteLayout(d.layout)} className={styles.actionButtons}>
+                                                <DeleteIcon />
+                                            </IconButton>
+                                        </div> 
+                                    )
+                                })
+                            }
+                        </ReactGridLayout>
 
-                <FloatingActionButton onTouchTap={() => this.addLayout()} className={styles.floatingButton} mini={true}>
-                    <ContentAdd />
-                </FloatingActionButton>
+                        <RaisedButton label="Gardar" labelPosition="before" primary={true} onTouchTap={() => this.saveDashboard()} icon={<SaveIcon />} className={styles.btnGardar} />
+
+                        <FloatingActionButton onTouchTap={() =>  { this.suggestionListKPIName(); this.toggleDialog() }} className={styles.floatingButton} mini={true}>
+                            <ContentAdd />
+                        </FloatingActionButton>
+
+                        <Dialog
+                            title="Engadir KPI para mostrar"
+                            modal={false}
+                            open={dashboard.isDialogOpened}
+                            onRequestClose={() => this.toggleDialog()}
+                        >
+                            {this.dialogContent()}
+                        </Dialog>
+                    </div>
+                )}
             </div>
     	)
     }

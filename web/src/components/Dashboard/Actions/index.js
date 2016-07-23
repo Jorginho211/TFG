@@ -11,6 +11,18 @@ export function saveLayout(layout){
     return {type: DASHBOARD_ACTION_TYPES.SAVE_LAYOUT, payload: { layout }}
 }
 
+export function toggleDialog(){
+	return {type: DASHBOARD_ACTION_TYPES.TOGGLE_DIALOG, payload: { }}
+}
+
+export function updateSuggestionList(suggestionList){
+	return {type: DASHBOARD_ACTION_TYPES.UPDATE_SUGGESTION_LIST, payload: { suggestionList }}
+}
+
+export function setKPI(kpi){
+	return {type: DASHBOARD_ACTION_TYPES.SET_KPI, payload: { kpi }}
+}
+
 export function requestDashboard(token){
 	return dispatch => {
 		fetch('http://localhost:8080/MongoDBServices/api/v1/usuarios/dashboard/',{
@@ -42,9 +54,7 @@ export function putDashboard(token, dashboard){
     		},
     		body: JSON.stringify({ dashboard: dashboard }),
 		}).then(response => {
-			return response.ok ? 
-				response.json() :
-				Promise.reject("Erro")
+			return response.ok
 		}).catch( msg => 
 			console.log(msg)
 		)

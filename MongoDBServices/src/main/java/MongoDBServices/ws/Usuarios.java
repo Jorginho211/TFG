@@ -94,6 +94,7 @@ public class Usuarios {
     @Path("/dashboard")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response Dashboard(@HeaderParam("X-Auth-Token") String token, String dashboardJson){
+        System.out.println(dashboardJson);
         ArrayList<Document> users = db.getCollection(collection).find(new Document("token", token)).into(new ArrayList<Document>());
         
         if(users.isEmpty()){

@@ -7,12 +7,12 @@
 		revision="1.1.3"
 		conf="scala-tool"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, phantom-js-jetty"
-		date="20160713162512"/>
+		date="20160723093013"/>
 	<dependencies>
 		<module organisation="org.scala-lang" name="scala-compiler">
 			<revision name="2.11.8" status="release" pubdate="20160304152647" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, optional, optional(default), master" position="0">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
-				<metadata-artifact status="no" details="" size="3259" time="0" location="/home/xurxo/.ivy2/cache/org.scala-lang/scala-compiler/ivy-2.11.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.8/scala-compiler-2.11.8.pom"/>
+				<metadata-artifact status="no" details="" size="3133" time="0" location="/home/xurxo/.ivy2/cache/org.scala-lang/scala-compiler/ivy-2.11.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.8/scala-compiler-2.11.8.pom"/>
 				<caller organisation="com.scalakata" name="codemirror_sjs0.6_2.11" conf="scala-tool" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="1.1.3"/>
 				<artifacts>
 					<artifact name="scala-compiler" type="jar" ext="jar" status="no" details="" size="15487351" time="0" location="/home/xurxo/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.11.8.jar">
@@ -36,7 +36,7 @@
 		<module organisation="org.scala-lang.modules" name="scala-parser-combinators_2.11">
 			<revision name="1.0.4" status="release" pubdate="20150430140747" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
-				<metadata-artifact status="no" details="" size="2929" time="0" location="/home/xurxo/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/ivy-1.0.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.pom"/>
+				<metadata-artifact status="no" details="" size="2803" time="0" location="/home/xurxo/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/ivy-1.0.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.pom"/>
 				<caller organisation="org.scala-lang" name="scala-compiler" conf="default, compile, runtime, optional, master" rev="1.0.4" rev-constraint-default="1.0.4" rev-constraint-dynamic="1.0.4" callerrev="2.11.8"/>
 				<artifacts>
 					<artifact name="scala-parser-combinators_2.11" type="bundle" ext="jar" status="no" details="" size="423753" time="0" location="/home/xurxo/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar">
@@ -48,7 +48,7 @@
 		<module organisation="org.scala-lang.modules" name="scala-xml_2.11">
 			<revision name="1.0.4" status="release" pubdate="20150430135302" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
-				<metadata-artifact status="no" details="" size="3137" time="0" location="/home/xurxo/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/ivy-1.0.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.4/scala-xml_2.11-1.0.4.pom"/>
+				<metadata-artifact status="no" details="" size="3011" time="0" location="/home/xurxo/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/ivy-1.0.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.4/scala-xml_2.11-1.0.4.pom"/>
 				<caller organisation="org.scala-lang" name="scala-compiler" conf="default, compile, runtime, optional, master" rev="1.0.4" rev-constraint-default="1.0.4" rev-constraint-dynamic="1.0.4" callerrev="2.11.8"/>
 				<artifacts>
 					<artifact name="scala-xml_2.11" type="bundle" ext="jar" status="no" details="" size="647891" time="0" location="/home/xurxo/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.4.jar">

@@ -6,8 +6,9 @@ import TYPES from '../Actions/types/'
 
 const InitialState = {
     isDialogOpened: false,
-    isLoading: true,
+    isLoading: false,
     isNew: true,
+    kpis: [],
 }
 
 export default function KPIReducer(state = InitialState, {type = '', payload = {}} = {type : '', payload : { }}){

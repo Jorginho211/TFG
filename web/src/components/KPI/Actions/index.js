@@ -33,7 +33,9 @@ export function setKpis(kpis){
 }
 
 export function requestKpis(){
-	return dispatch =>
+	return dispatch => {
+		dispatch(toggleLoading())
+
 		fetch('http://localhost:8080/MongoDBServices/api/v1/kpis/',{
 			method: 'GET', 
 			mode: 'cors'
@@ -47,6 +49,7 @@ export function requestKpis(){
 		}).catch( msg => 
 			console.log(msg)
 		)
+	}
 }
 
 export function deleteKPI(id){
@@ -62,6 +65,7 @@ export function deleteKPI(id){
 				Promise.reject("Erro")
 		}).then(response => {
 			dispatch(requestKpis())
+			dispatch(toggleLoading())
 		}).catch( msg => 
 			console.log(msg)
 		)

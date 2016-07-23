@@ -155,7 +155,6 @@ export function storeKPIBD(kpi){
 	}
 
 	return dispatch => {
-
 		fetch('http://localhost:8080/MongoDBServices/api/v1/kpis/',{
 			method: methodType, 
 			mode: 'cors',

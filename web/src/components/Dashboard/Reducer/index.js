@@ -10,24 +10,9 @@ import TYPES from '../Actions/types/'
 
 const InitialState = {
     layoutSave: [],
-    /*dashboard: [
-        {
-            idkpi: "1",
-            chartType: "line",
-            layout: { h: 9, w: 5, x: 3, y: 8, i: "1||line" }
-        },
-        {
-            idkpi: "1",
-            chartType: "bar",
-            layout: { h: 8, w: 6, x: 4, y: 0, i: "1||bar" }
-        },
-        {
-            idkpi: "2",
-            chartType: "pie",
-            layout: { h: 8, w: 4, x: 0, y: 0, i: "2||pie" }
-        }
-    ]*/
     dashboard: [],
+    isDialogOpened: false,
+    suggestionList: [],
 }
 
 export default function DashboardReducer(state = InitialState, {type = '', payload = {}} = {type : '', payload : { }}){
@@ -42,6 +27,25 @@ export default function DashboardReducer(state = InitialState, {type = '', paylo
             return {
                 ...state,
                 layoutSave: payload.layout,
+            }
+
+        case TYPES.TOGGLE_DIALOG:
+            return {
+                ...state,
+                isDialogOpened: !state.isDialogOpened,
+                kpi: undefined,
+            }
+
+        case TYPES.UPDATE_SUGGESTION_LIST:
+            return {
+                ...state,
+                suggestionList: payload.suggestionList,
+            }
+
+        case TYPES.SET_KPI:
+            return {
+                ...state,
+                kpi: payload.kpi
             }
     		
         default:

@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for com.scalakata#annotation_2.11;1.1.3 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-compiler;2.11.8 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.11.8 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@78dc396a[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@631ff4f6[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.11.8[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.11.8 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scala-lang#scala-compiler;2.11.8 [compile->runtime][0m
@@ -3468,8 +3468,21 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scalamacros#paradise_2.11.8;2.1.0 [plugin->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalamacros#paradise_2.11.8;2.1.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalamacros#paradise_2.11.8;2.1.0 {plugin=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scalamacros#paradise_2.11.8;2.1.0[0m
-[0m[[0mdebug[0m] [0m	found org.scalamacros#paradise_2.11.8;2.1.0 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving org.scalamacros#paradise_2.11.8;2.1.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scalamacros#paradise_2.11.8;2.1.0 {plugin=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried /home/xurxo/.ivy2/local/org.scalamacros/paradise_2.11.8/2.1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scalamacros#paradise_2.11.8;2.1.0[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalamacros/paradise_2.11.8/2.1.0/paradise_2.11.8-2.1.0.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.scalamacros#paradise_2.11.8;2.1.0[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scalamacros/paradise_2.11.8/2.1.0/paradise_2.11.8-2.1.0.pom (2.1.0)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalamacros/paradise_2.11.8/2.1.0/paradise_2.11.8-2.1.0.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalamacros/paradise_2.11.8/2.1.0/paradise_2.11.8-2.1.0.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalamacros/paradise_2.11.8/2.1.0/paradise_2.11.8-2.1.0.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalamacros/paradise_2.11.8/2.1.0/paradise_2.11.8-2.1.0.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalamacros#paradise_2.11.8;2.1.0!paradise_2.11.8.pom(pom.original) (356ms)[0m
+[0m[[0mdebug[0m] [0m		tried /home/xurxo/.ivy2/local/org.scalamacros/paradise_2.11.8/2.1.0/jars/paradise_2.11.8.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalamacros/paradise_2.11.8/2.1.0/paradise_2.11.8-2.1.0.jar[0m
+[0m[[0mdebug[0m] [0m	found org.scalamacros#paradise_2.11.8;2.1.0 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scalamacros#paradise_2.11.8;2.1.0 [plugin->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#annotation_2.11;1.1.3->org.scalamacros#paradise_2.11.8;2.1.0 [plugin->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.11.8;2.1.0->org.scala-lang#scala-compiler;2.11.8 [compile->master(compile)][0m
@@ -3641,9 +3654,14 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalaz.stream#scalaz-stream_2.11;0.7.2a!scalaz-stream_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalaz#scalaz-effect_2.11;7.1.3!scalaz-effect_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scodec#scodec-bits_2.11;1.0.9!scodec-bits_2.11.jar(bundle)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalamacros#paradise_2.11.8;2.1.0!paradise_2.11.8.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalamacros/paradise_2.11.8/2.1.0/paradise_2.11.8-2.1.0.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalamacros/paradise_2.11.8/2.1.0/paradise_2.11.8-2.1.0.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalamacros/paradise_2.11.8/2.1.0/paradise_2.11.8-2.1.0.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalamacros/paradise_2.11.8/2.1.0/paradise_2.11.8-2.1.0.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalamacros/paradise_2.11.8/2.1.0/paradise_2.11.8-2.1.0.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalamacros#paradise_2.11.8;2.1.0!paradise_2.11.8.jar (1547ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 634ms :: artifacts dl 50ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 900ms :: artifacts dl 1558ms[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#annotation_2.11;1.1.3 compile produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/annotation/target/resolution-cache/reports/com.scalakata-annotation_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#annotation_2.11;1.1.3 runtime produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/annotation/target/resolution-cache/reports/com.scalakata-annotation_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#annotation_2.11;1.1.3 test produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/annotation/target/resolution-cache/reports/com.scalakata-annotation_2.11-test.xml[0m
@@ -3657,5 +3675,5 @@
 [0m[[0mdebug[0m] [0m	report for com.scalakata#annotation_2.11;1.1.3 docs produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/annotation/target/resolution-cache/reports/com.scalakata-annotation_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#annotation_2.11;1.1.3 pom produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/annotation/target/resolution-cache/reports/com.scalakata-annotation_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#annotation_2.11;1.1.3 scala-tool produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/annotation/target/resolution-cache/reports/com.scalakata-annotation_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (634ms resolve - 50ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (900ms resolve - 1558ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
