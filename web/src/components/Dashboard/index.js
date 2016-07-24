@@ -100,6 +100,16 @@ class Dashboard extends Component {
             })
         })
 
+
+        dashboard.sort((a, b) => {
+            if( a.layout.y < b.layout.y)
+                return -1
+            else if (a.layout.y > b.layout.y)
+                return 1
+
+            return 0
+        })
+        
         this.props.DashboardActions.addRemoveElement(dashboard)
         this.props.DashboardActions.putDashboard("aKxOyCoyl7ENwD8ipdRhOUo82WO50UZYdKdyelZi", dashboard)
     }

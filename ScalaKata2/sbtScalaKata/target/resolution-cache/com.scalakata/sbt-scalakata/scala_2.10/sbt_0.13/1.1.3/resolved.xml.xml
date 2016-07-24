@@ -4,7 +4,7 @@
 		module="sbt-scalakata"
 		revision="1.1.3"
 		status="integration"
-		publication="20160711141626"
+		publication="20160724164645"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<license name="MIT" url="http://www.opensource.org/licenses/mit-license.html" />

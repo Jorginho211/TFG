@@ -7,15 +7,15 @@
 		revision="1.1.3"
 		conf="plugin"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, phantom-js-jetty"
-		date="20160723092712"/>
+		date="20160724164641"/>
 	<dependencies>
 		<module organisation="org.scala-js" name="scalajs-compiler_2.11.8">
-			<revision name="0.6.8" status="release" pubdate="20160317222749" resolver="public" artresolver="public" homepage="http://scala-js.org/" extra-info.apiURL="http://www.scala-js.org/api/scalajs-compiler/0.6.8/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+			<revision name="0.6.8" status="release" pubdate="20160317222749" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scala-js.org/" extra-info.apiURL="http://www.scala-js.org/api/scalajs-compiler/0.6.8/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
 				<license name="BSD New" url="https://github.com/scala-js/scala-js/blob/master/LICENSE"/>
-				<metadata-artifact status="successful" details="" size="2581" time="431" location="/home/xurxo/.ivy2/cache/org.scala-js/scalajs-compiler_2.11.8/ivy-0.6.8.xml" searched="true" original-local-location="/home/xurxo/.ivy2/cache/org.scala-js/scalajs-compiler_2.11.8/ivy-0.6.8.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-js/scalajs-compiler_2.11.8/0.6.8/scalajs-compiler_2.11.8-0.6.8.pom"/>
+				<metadata-artifact status="no" details="" size="3267" time="0" location="/home/xurxo/.ivy2/cache/org.scala-js/scalajs-compiler_2.11.8/ivy-0.6.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-js/scalajs-compiler_2.11.8/0.6.8/scalajs-compiler_2.11.8-0.6.8.pom"/>
 				<caller organisation="com.scalakata" name="model_sjs0.6_2.11" conf="plugin" rev="0.6.8" rev-constraint-default="0.6.8" rev-constraint-dynamic="0.6.8" callerrev="1.1.3"/>
 				<artifacts>
-					<artifact name="scalajs-compiler_2.11.8" type="jar" ext="jar" status="successful" details="" size="1557736" time="4125" location="/home/xurxo/.ivy2/cache/org.scala-js/scalajs-compiler_2.11.8/jars/scalajs-compiler_2.11.8-0.6.8.jar">
+					<artifact name="scalajs-compiler_2.11.8" type="jar" ext="jar" status="no" details="" size="1557736" time="0" location="/home/xurxo/.ivy2/cache/org.scala-js/scalajs-compiler_2.11.8/jars/scalajs-compiler_2.11.8-0.6.8.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-js/scalajs-compiler_2.11.8/0.6.8/scalajs-compiler_2.11.8-0.6.8.jar"/>
 					</artifact>
 				</artifacts>

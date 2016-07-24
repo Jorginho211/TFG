@@ -9,7 +9,7 @@
 		extra-sbtVersion="0.13"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160711141626"/>
+		date="20160724164645"/>
 	<dependencies>
 		<module organisation="se.marcuslonnberg" name="sbt-docker">
 			<revision name="1.3.0" status="release" pubdate="20160207192323" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/marcuslonnberg/sbt-docker" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">

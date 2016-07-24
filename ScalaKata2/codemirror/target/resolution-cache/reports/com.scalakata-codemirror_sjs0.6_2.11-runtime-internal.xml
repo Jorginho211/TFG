@@ -7,27 +7,27 @@
 		revision="1.1.3"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, phantom-js-jetty"
-		date="20160723093013"/>
+		date="20160724164641"/>
 	<dependencies>
 		<module organisation="org.querki" name="querki-jsext_sjs0.6_2.11">
-			<revision name="0.5" status="release" pubdate="20150423174922" resolver="public" artresolver="public" homepage="http://www.querki.net/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="3">
+			<revision name="0.5" status="release" pubdate="20150423174922" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.querki.net/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="3">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="successful" details="" size="1925" time="433" location="/home/xurxo/.ivy2/cache/org.querki/querki-jsext_sjs0.6_2.11/ivy-0.5.xml" searched="true" original-local-location="/home/xurxo/.ivy2/cache/org.querki/querki-jsext_sjs0.6_2.11/ivy-0.5.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/querki/querki-jsext_sjs0.6_2.11/0.5/querki-jsext_sjs0.6_2.11-0.5.pom"/>
+				<metadata-artifact status="no" details="" size="2830" time="0" location="/home/xurxo/.ivy2/cache/org.querki/querki-jsext_sjs0.6_2.11/ivy-0.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/querki/querki-jsext_sjs0.6_2.11/0.5/querki-jsext_sjs0.6_2.11-0.5.pom"/>
 				<caller organisation="com.scalakata" name="codemirror_sjs0.6_2.11" conf="compile, runtime-internal, runtime, optional" rev="0.5" rev-constraint-default="0.5" rev-constraint-dynamic="0.5" callerrev="1.1.3"/>
 				<artifacts>
-					<artifact name="querki-jsext_sjs0.6_2.11" type="jar" ext="jar" status="successful" details="" size="17397" time="835" location="/home/xurxo/.ivy2/cache/org.querki/querki-jsext_sjs0.6_2.11/jars/querki-jsext_sjs0.6_2.11-0.5.jar">
+					<artifact name="querki-jsext_sjs0.6_2.11" type="jar" ext="jar" status="no" details="" size="17397" time="0" location="/home/xurxo/.ivy2/cache/org.querki/querki-jsext_sjs0.6_2.11/jars/querki-jsext_sjs0.6_2.11-0.5.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/querki/querki-jsext_sjs0.6_2.11/0.5/querki-jsext_sjs0.6_2.11-0.5.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.scala-js" name="scalajs-dom_sjs0.6_2.11">
-			<revision name="0.8.1" status="release" pubdate="20150602135422" resolver="public" artresolver="public" homepage="http://scala-js.org/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="2">
+			<revision name="0.8.1" status="release" pubdate="20150602135422" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scala-js.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="2">
 				<license name="MIT" url="http://opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="successful" details="" size="2047" time="356" location="/home/xurxo/.ivy2/cache/org.scala-js/scalajs-dom_sjs0.6_2.11/ivy-0.8.1.xml" searched="true" original-local-location="/home/xurxo/.ivy2/cache/org.scala-js/scalajs-dom_sjs0.6_2.11/ivy-0.8.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-js/scalajs-dom_sjs0.6_2.11/0.8.1/scalajs-dom_sjs0.6_2.11-0.8.1.pom"/>
+				<metadata-artifact status="no" details="" size="2804" time="0" location="/home/xurxo/.ivy2/cache/org.scala-js/scalajs-dom_sjs0.6_2.11/ivy-0.8.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-js/scalajs-dom_sjs0.6_2.11/0.8.1/scalajs-dom_sjs0.6_2.11-0.8.1.pom"/>
 				<caller organisation="com.scalakata" name="codemirror_sjs0.6_2.11" conf="compile, runtime-internal, runtime, optional" rev="0.8.1" rev-constraint-default="0.8.1" rev-constraint-dynamic="0.8.1" callerrev="1.1.3"/>
 				<artifacts>
-					<artifact name="scalajs-dom_sjs0.6_2.11" type="jar" ext="jar" status="successful" details="" size="1226701" time="3644" location="/home/xurxo/.ivy2/cache/org.scala-js/scalajs-dom_sjs0.6_2.11/jars/scalajs-dom_sjs0.6_2.11-0.8.1.jar">
+					<artifact name="scalajs-dom_sjs0.6_2.11" type="jar" ext="jar" status="no" details="" size="1226701" time="0" location="/home/xurxo/.ivy2/cache/org.scala-js/scalajs-dom_sjs0.6_2.11/jars/scalajs-dom_sjs0.6_2.11-0.8.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-js/scalajs-dom_sjs0.6_2.11/0.8.1/scalajs-dom_sjs0.6_2.11-0.8.1.jar"/>
 					</artifact>
 				</artifacts>

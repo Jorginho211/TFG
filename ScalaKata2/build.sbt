@@ -61,8 +61,15 @@ lazy val model = project
       "com.dallaway.richard" %%% "woot-model" % "0.1.1",
       "com.twitter"           %% "scalding-core" % "0.16.0",
       "com.github.nscala-time" %% "nscala-time" % "2.12.0",
-      "org.mongodb.scala" % "mongo-scala-driver_2.11" % "1.1.1"
-    )
+      "org.apache.hadoop" % "hadoop-common" % "2.0.0-cdh4.3.1",
+      "org.apache.hadoop" % "hadoop-core" % "2.0.0-mr1-cdh4.3.1",
+      "cascading" % "cascading-core" % "2.5.4",
+      "cascading" % "cascading-platform" % "2.5.4",
+      "cascading" % "cascading-hadoop" % "2.5.4",
+      "cascading" % "cascading-local" % "2.5.4",
+      "org.mongodb" % "mongo-java-driver" % "3.0.4"
+    ),
+    unmanagedJars in Compile += file("/home/xurxo/Documentos/TFG/Repositorio/TFG/datos/proba/target/scala-2.11/scalding2mongo_2.11-0.1-SNAPSHOT.jar")
   )
   .enablePlugins(ScalaJSPlugin)
 
