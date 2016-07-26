@@ -41,7 +41,6 @@ class Dashboard extends Component {
     }
 
     @autobind addLayout(idKpiAux, chartTypeAux){
-        console.log("AQUI")
         let dashboard = [
             ...this.props.dashboard.dashboard
         ]
@@ -109,6 +108,8 @@ class Dashboard extends Component {
 
             return 0
         })
+
+        console.log(dashboard)
         
         this.props.DashboardActions.addRemoveElement(dashboard)
         this.props.DashboardActions.putDashboard("aKxOyCoyl7ENwD8ipdRhOUo82WO50UZYdKdyelZi", dashboard)
@@ -141,11 +142,22 @@ class Dashboard extends Component {
     }
 
     componentWillMount(){
+        window.addEventListener('beforeunload', () => {
+            this.saveDashboard()
+        })
+
         this.props.DashboardActions.requestDashboard("aKxOyCoyl7ENwD8ipdRhOUo82WO50UZYdKdyelZi")
         this.props.KPIActions.requestKpis();
     }
 
+    componentDidMount(){
+        window.addEventListener('beforeunload', () => {
+            this.saveDashboard()
+        })
+    }
+
     componentWillUnmount() {
+        this.saveDashboard()
     }
 
     getGrapthicImg(type, idKPI){
@@ -207,7 +219,7 @@ class Dashboard extends Component {
         const {kpi} = this.props;
 
     	return (
-            <div>
+            <div ref="dashboard">
                 {kpi.isLoading ? (
                     <div className={styles.refreshIndicator}>
                         <RefreshIndicator
