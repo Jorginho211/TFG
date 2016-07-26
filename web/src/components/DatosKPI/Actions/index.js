@@ -145,14 +145,8 @@ export function addData(kpi){
 }
 
 //DATABASE
-export function storeKPIBD(kpi){
+export function storeKPIBD(kpi, methodType){
 	kpi.visibility = undefined;
-
-	let methodType = "POST";
-
-	if(kpi.id !== undefined){
-		methodType = "PUT"
-	}
 
 	return dispatch => {
 		fetch('http://localhost:8080/MongoDBServices/api/v1/kpis/',{

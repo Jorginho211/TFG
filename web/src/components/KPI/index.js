@@ -132,7 +132,7 @@ class KPI extends Component {
                                                             <DeleteIcon />
                                                         </IconButton>
 
-                                                        <IconButton onTouchTap={ () => {this.newKPI(false); this.toggleDialogKPIEspecified(true, JSON.parse(JSON.stringify(kpi)), 2)} }>
+                                                        <IconButton onTouchTap={ () => {this.newKPI(false); this.toggleDialogKPIEspecified(true, JSON.parse(JSON.stringify(kpi)), 3)} }>
                                                             <Equalizer />
                                                         </IconButton>
                                                     </TableRowColumn>

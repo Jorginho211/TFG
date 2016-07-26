@@ -34,7 +34,7 @@ public class CRUDKPI {
         ArrayList<Document> listKPIs = db.getCollection(collection).find().into(new ArrayList<Document>());
         
         for(Document d : listKPIs){
-            String id = d.getObjectId("_id").toHexString();
+            String id = d.getString("_id");
             d.append("id", id);
             d.remove("_id");
         }
@@ -46,7 +46,7 @@ public class CRUDKPI {
     @Path("/kpi/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response removeKPI(@PathParam("id") String id){
-        db.getCollection(collection).deleteOne(new Document("_id", new ObjectId(id)));
+        db.getCollection(collection).deleteOne(new Document("_id", id));
         
         return Response.noContent().build();
     }
@@ -55,6 +55,10 @@ public class CRUDKPI {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response insertKPI(@Context UriInfo uriInfo, String jsonKpi){       
         Document documentKPI = Document.parse(jsonKpi);
+        
+        String id = documentKPI.getString("id");
+        documentKPI.remove("id");
+        documentKPI.append("_id", id);
         
         db.getCollection(collection).insertOne(documentKPI);
         
@@ -69,7 +73,7 @@ public class CRUDKPI {
         String id = documentKPI.getString("id");
         documentKPI.remove("id");
         
-        db.getCollection(collection).replaceOne(new Document("_id", new ObjectId(id)), documentKPI); 
+        db.getCollection(collection).replaceOne(new Document("_id", id), documentKPI); 
         
         return Response.ok().build();
     }

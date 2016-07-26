@@ -39,6 +39,14 @@ class DatosKPI extends Component {
         super();
     }
 
+    generateUUID(){
+      function s4(){
+        return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+      }
+
+      return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();  
+    }
+
     @autobind continueSteper(){
         switch(this.props.kpi.datoskpi.stepIndex){
           case 0:
@@ -52,6 +60,7 @@ class DatosKPI extends Component {
 
             let {kpi} = this.props.kpi.datoskpi
 
+            if(kpi.id === undefined) { kpi.id = this.generateUUID() }
             if(kpi.name !== undefined && kpi.name.length > 0) { errors.nameInput = false }
             if(kpi.description !== undefined && kpi.description.length > 0) { errors.descriptionInput = false }
             if(kpi.keywords !== undefined && kpi.keywords.length > 0) { errors.keywordsInput = false }
@@ -173,8 +182,15 @@ class DatosKPI extends Component {
     }
 
     @autobind storeKPIBD(){
-      //this.props.KPIActions.toggleLoading()
-      this.props.KPIActions.DatosKPIActions.storeKPIBD(this.props.kpi.datoskpi.kpi)
+      let methodType = "POST"
+
+      this.props.kpi.kpis.map( kpi => {
+        if(this.props.kpi.datoskpi.kpi.id === kpi.id){
+          methodType = "PUT"
+        }
+      })
+
+      this.props.KPIActions.DatosKPIActions.storeKPIBD(this.props.kpi.datoskpi.kpi, methodType)
       this.props.KPIActions.DatosKPIActions.deleteData()
       this.props.KPIActions.DatosKPIActions.CodeWizardActions.deleteData()
     }
