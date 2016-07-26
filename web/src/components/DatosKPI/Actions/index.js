@@ -122,7 +122,15 @@ export function addRepresentationToKPI(kpi, representation){
 }
 
 export function deleteRepresentation(kpi,index){
-	kpi.representation.pop(index)
+	let representations = []
+
+	kpi.representation.map( (repr, i) => {
+		if(i !== index){
+			representations.push(repr)
+		}
+	})
+
+	kpi.representation = representations
 
 	if(kpi.representation.length === 0){
 		kpi.representation = undefined

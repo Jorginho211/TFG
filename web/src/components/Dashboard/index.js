@@ -108,8 +108,6 @@ class Dashboard extends Component {
 
             return 0
         })
-
-        console.log(dashboard)
         
         this.props.DashboardActions.addRemoveElement(dashboard)
         this.props.DashboardActions.putDashboard("aKxOyCoyl7ENwD8ipdRhOUo82WO50UZYdKdyelZi", dashboard)
