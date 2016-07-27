@@ -1,16 +1,16 @@
 [0m[[0minfo[0m] [0mFast optimizing /home/xurxo/Documentos/TFG/Repo/ScalaKata2/webapp/js/target/scala-2.11/client-fastopt.js[0m
-[0m[[0mdebug[0m] [0mLinker: Compute reachability: 184848 us[0m
-[0m[[0mdebug[0m] [0mLinker: Assemble LinkedClasses: 335113 us[0m
-[0m[[0mdebug[0m] [0mBasic Linking: 530708 us[0m
-[0m[[0mdebug[0m] [0mInc. optimizer: Batch mode: true[0m
-[0m[[0mdebug[0m] [0mInc. optimizer: Incremental part: 263289 us[0m
-[0m[[0mdebug[0m] [0mInc. optimizer: Optimizing 6474 methods.[0m
-[0m[[0mdebug[0m] [0mInc. optimizer: Optimizer part: 1637574 us[0m
-[0m[[0mdebug[0m] [0mInc. optimizer: 1958367 us[0m
-[0m[[0mdebug[0m] [0mRefiner: Compute reachability: 83429 us[0m
-[0m[[0mdebug[0m] [0mRefiner: Assemble LinkedClasses: 14735 us[0m
-[0m[[0mdebug[0m] [0mRefiner: 99886 us[0m
-[0m[[0mdebug[0m] [0mEmitter: Class tree cache stats: reused: 0 -- invalidated: 706[0m
-[0m[[0mdebug[0m] [0mEmitter: Method tree cache stats: resued: 0 -- invalidated: 3584[0m
-[0m[[0mdebug[0m] [0mEmitter (write output): 814048 us[0m
-[0m[[0mdebug[0m] [0mGlobal IR cache stats: reused: 0 -- invalidated: 223 -- trees read: 859[0m
+[0m[[0mdebug[0m] [0mLinker: Compute reachability: 108124 us[0m
+[0m[[0mdebug[0m] [0mLinker: Assemble LinkedClasses: 43113 us[0m
+[0m[[0mdebug[0m] [0mBasic Linking: 152802 us[0m
+[0m[[0mdebug[0m] [0mInc. optimizer: Batch mode: false[0m
+[0m[[0mdebug[0m] [0mInc. optimizer: Incremental part: 51095 us[0m
+[0m[[0mdebug[0m] [0mInc. optimizer: Optimizing 2 methods.[0m
+[0m[[0mdebug[0m] [0mInc. optimizer: Optimizer part: 1028 us[0m
+[0m[[0mdebug[0m] [0mInc. optimizer: 59346 us[0m
+[0m[[0mdebug[0m] [0mRefiner: Compute reachability: 69249 us[0m
+[0m[[0mdebug[0m] [0mRefiner: Assemble LinkedClasses: 37043 us[0m
+[0m[[0mdebug[0m] [0mRefiner: 106471 us[0m
+[0m[[0mdebug[0m] [0mEmitter: Class tree cache stats: reused: 58 -- invalidated: 648[0m
+[0m[[0mdebug[0m] [0mEmitter: Method tree cache stats: resued: 3582 -- invalidated: 2[0m
+[0m[[0mdebug[0m] [0mEmitter (write output): 163086 us[0m
+[0m[[0mdebug[0m] [0mGlobal IR cache stats: reused: 205 -- invalidated: 18 -- trees read: 13[0m

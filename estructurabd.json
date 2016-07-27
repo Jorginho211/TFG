@@ -7,7 +7,7 @@
 		{	
 			"type": "line",
 			"xAxis": "",
-			"yAxis":,
+			"yAxis": "",
 		},
 		{	
 			"type": "bar",
@@ -75,8 +75,8 @@
 			"type": "workflowTemplate",
 			"name": "Contar Workflows",
 			"description": "Conta o numero de workflows que posuan un estado estado determinado",
-			"codeBase": "MultipleTsvFiles( files, ('ExecutionID, 'CaseID, 'TaskID, 'NuevoEstado, 'Timestamp))\r\n    .filter( 'TaskID ) {\r\n      fields : (String, String) => {\r\n        val (taskID, nuevoEstado) = fields\r\n        %%REPEAT%%\r\n      }\r\n    }\r\n    .groupBy( 'TaskID ){ _.size }\r\n    .write(Tsv(\"output.tsv\"))",
-			"codeRepeat": "'TaskID == %%TASKID%% || %%ADDOTHER%%"
+			"codeBase": "MultipleTsvFiles( files, ('ExecutionID, 'CaseID, 'TaskID, 'NuevoEstado, 'Timestamp))\r\n    .filter( 'TaskID ) {\r\n      fields : (String) => {\r\n        val (taskID) = fields\r\n        %%REPEAT%%\r\n      }\r\n    }\r\n    .groupBy( 'TaskID ){ _.size }\r\n    .write(Tsv(\"output.tsv\"))",
+			"codeRepeat": "taskID == %%TASKID%% && %%ADDOTHER%%"
 		},
 
 		{

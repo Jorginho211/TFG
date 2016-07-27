@@ -107,19 +107,13 @@ class CodeWizard extends Component {
 
         if(this.props.kpi.datoskpi.codewizard.workflowTemplate === undefined || this.props.kpi.datoskpi.codewizard.workflowTemplate.length === 0) { errors.workflowTemplateInput = true }
         if(timeWindow === undefined || isNaN(parseInt(timeWindow))) { errors.timeWindowInput = true}
-
-        console.log(timeWindow)
-        console.log(isNaN(parseInt(timeWindow)))
+            
         if(!errors.workflowTemplateInput && !errors.timeWindowInput){
             let code = this.props.kpi.datoskpi.codewizard.code
             let codeBaseTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codeBase
             let codeRepeatTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codeRepeat
-            let kpiName = this.props.kpi.datoskpi.kpi.name
 
-            kpiName = kpiName.replace(/\s+/g, "")
-
-            code = code.replace("%%KPINAME%%", kpiName)
-            code = code.replace("%%TIMEWINDOW%%", timeWindow)
+            code = code.replace("%%TIMEWINDOW%%", timeWindow * 3600)
             code = code.replace("%%TYPEFILE%%", "\"tscev\"")
             code = code.replace("%%CODEBASE%%", codeBaseTemplate)
 
@@ -140,11 +134,14 @@ class CodeWizard extends Component {
                 })                
             })
 
-            codeRepeat = codeRepeat.replace("%%ADDOTHER%%", "true")
+            if(codeRepeatTemplate.indexOf("&&") > -1){
+                codeRepeat = codeRepeat.replace("%%ADDOTHER%%", "true")
+            }
+            else if (codeRepeatTemplate.indexOf("||") > -1){
+                codeRepeat = codeRepeat.replace("%%ADDOTHER%%", "false")
+            }
 
             code = code.replace("%%REPEAT%%", codeRepeat)
-
-            console.log(code)
 
             this.props.KPIActions.DatosKPIActions.codeChange(code)
             this.props.KPIActions.DatosKPIActions.continueSteper()
@@ -372,7 +369,7 @@ class CodeWizard extends Component {
                         </div>                        
 
                         <div>
-                            <TextField hintText="Ventá Temporal" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow} errorText={codewizard.errors.timeWindowInput && "Valor Incorrecto, debe ser enteiro en segundos"}/>
+                            <TextField hintText="Ventá Temporal (horas)" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow} errorText={codewizard.errors.timeWindowInput && "Valor Incorrecto, debe ser enteiro en horas"}/>
                         </div>
 
                         <div>
@@ -425,7 +422,7 @@ class CodeWizard extends Component {
                         </div>
 
                         <div>
-                            <TextField hintText="Ventá Temporal" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow} errorText={codewizard.errors.timeWindowInput && "Valor Incorrecto, debe ser enteiro en segundos"}/>
+                            <TextField hintText="Ventá Temporal (horas)" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow} errorText={codewizard.errors.timeWindowInput && "Valor Incorrecto, debe ser enteiro en horas"}/>
                         </div>
 
                         <div>
@@ -453,7 +450,7 @@ class CodeWizard extends Component {
                         <Divider className={styles.divider}/> 
 
                         <div>
-                            <TextField hintText="Ventá Temporal" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow}/>
+                            <TextField hintText="Ventá Temporal (horas)" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow}/>
                         </div>
 
                         <div>

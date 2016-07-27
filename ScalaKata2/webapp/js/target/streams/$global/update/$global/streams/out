@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for com.scalakata#client_sjs0.6_2.11;1.1.3 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.scalakata#client_sjs0.6_2.11;1.1.3->org.scala-lang#scala-library;2.11.8 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.8 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@184f5141[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@354ec7b[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.8[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.8 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.8] org.scala-lang#scala-library;2.11.8[0m
@@ -287,7 +287,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.janino#janino;2.7.5->org.codehaus.janino#commons-compiler;2.7.5 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.codehaus.janino#commons-compiler;2.7.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.codehaus.janino#commons-compiler;2.7.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mno default cache defined: set to /home/xurxo/.ivy2/cache[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.codehaus.janino#commons-compiler;2.7.5[0m
 [0m[[0mdebug[0m] [0m	found org.codehaus.janino#commons-compiler;2.7.5 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.janino#janino;2.7.5->org.codehaus.janino#commons-compiler;2.7.5 [compile->compile(*)][0m
@@ -7521,7 +7520,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.eclipse.jetty#jetty-http;8.1.16.v20140903!jetty-http.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.eclipse.jetty.orbit#javax.servlet;3.0.0.v201112011016!javax.servlet.jar(orbit)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.eclipse.jetty#jetty-continuation;8.1.16.v20140903!jetty-continuation.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 694ms :: artifacts dl 19ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 871ms :: artifacts dl 18ms[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#client_sjs0.6_2.11;1.1.3 compile produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/webapp/js/target/resolution-cache/reports/com.scalakata-client_sjs0.6_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#client_sjs0.6_2.11;1.1.3 runtime produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/webapp/js/target/resolution-cache/reports/com.scalakata-client_sjs0.6_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#client_sjs0.6_2.11;1.1.3 test produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/webapp/js/target/resolution-cache/reports/com.scalakata-client_sjs0.6_2.11-test.xml[0m
@@ -7536,5 +7535,5 @@
 [0m[[0mdebug[0m] [0m	report for com.scalakata#client_sjs0.6_2.11;1.1.3 pom produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/webapp/js/target/resolution-cache/reports/com.scalakata-client_sjs0.6_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#client_sjs0.6_2.11;1.1.3 scala-tool produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/webapp/js/target/resolution-cache/reports/com.scalakata-client_sjs0.6_2.11-scala-tool.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.scalakata#client_sjs0.6_2.11;1.1.3 phantom-js-jetty produced in /home/xurxo/Documentos/TFG/Repo/ScalaKata2/webapp/js/target/resolution-cache/reports/com.scalakata-client_sjs0.6_2.11-phantom-js-jetty.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (694ms resolve - 19ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (871ms resolve - 18ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

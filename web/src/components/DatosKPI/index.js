@@ -327,7 +327,7 @@ class DatosKPI extends Component {
                             <TextField floatingLabelText="Descrición" ref={element => this.descriptionInput = element } defaultValue={this.props.kpi.datoskpi.kpi.description} onBlur={this.descriptionChange} className={styles.textField} errorText={this.props.kpi.datoskpi.errors.descriptionInput && "Campo Vacio"} multiLine={true}/>
                         </div>
                         <div>
-                          <TextField floatingLabelText="Tempo Refresco" ref={element => this.timeInput = element } defaultValue={this.props.kpi.datoskpi.kpi.time} onBlur={this.timeChange} errorText={this.props.kpi.datoskpi.errors.timeInput && "Valor Incorrecto, debe ser enteiro en segundos"} className={styles.textField} />
+                          <TextField floatingLabelText="Tempo Refresco (horas)" ref={element => this.timeInput = element } defaultValue={this.props.kpi.datoskpi.kpi.time} onBlur={this.timeChange} errorText={this.props.kpi.datoskpi.errors.timeInput && "Valor Incorrecto, debe ser enteiro en horas"} className={styles.textField} />
                         </div>
                       </div>
                     </div>

@@ -7339,19 +7339,19 @@ $c_Lcom_scalakata_Main$.prototype.main__V = (function() {
       })
     })(editor$10));
     var qual$2 = $g.window;
-    var x$12 = (function(doc$1) {
+    var x$14 = (function(doc$1) {
       return (function(evt$2) {
         return $m_Lcom_scalakata_Main$().com$scalakata$Main$$apply$body$4__Lorg_scalajs_dom_raw_MessageEvent__Lorg_denigma_codemirror_Doc__O(evt$2, doc$1)
       })
     })(doc);
-    qual$2.addEventListener("message", x$12);
+    qual$2.addEventListener("message", x$14);
     var qual$6 = $g.document.getElementById("help");
-    var x$15 = (function(editor$1$2) {
+    var x$17 = (function(editor$1$2) {
       return (function(e$2$3) {
         return $m_Lcom_scalakata_Main$().com$scalakata$Main$$apply$body$5__Lorg_scalajs_dom_raw_Event__Lorg_denigma_codemirror_Editor__O(e$2$3, editor$1$2)
       })
     })(editor$10);
-    qual$6.addEventListener("click", x$15);
+    qual$6.addEventListener("click", x$17);
     stateButton.setAttribute("title", new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["run (", " + Enter)"])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([ctrlS])));
     stateButton.addEventListener("click", (function(editor$1$3, doc$1$1) {
       return (function(e$2$4) {
@@ -7408,8 +7408,8 @@ $c_Lcom_scalakata_Main$.prototype.com$scalakata$Main$$apply$body$4__Lorg_scalajs
     if (($objectToString(evt.data) === "requestData")) {
       $g.console.log("Scalakata: RequestData");
       var qual$3 = $g.top;
-      var x$2 = $as_T(doc$1.getValue());
-      qual$3.postMessage(x$2, "http://localhost:3000");
+      var x$4 = $as_T(doc$1.getValue());
+      qual$3.postMessage(x$4, "http://localhost:3000");
       return (void 0)
     } else if (($objectToString(evt.data) === "removeData")) {
       $g.console.log("Scalakata: RemoveData");
@@ -7718,7 +7718,7 @@ $c_Lcom_scalakata_Rendering$.prototype.run__Lorg_denigma_codemirror_Editor__V = 
   new $c_Lautowire_ClientProxy().init___Lautowire_Client(this$3);
   var r = new $c_Lcom_scalakata_EvalRequest().init___T($as_T(doc.getValue()));
   var this$4 = new $c_Lcom_scalakata_Rendering$$anon$1().init___();
-  var evidence$2 = this$4.derive$macro$287__Lupickle_Types$Writer();
+  var evidence$2 = this$4.derive$macro$1__Lupickle_Types$Writer();
   var this$7 = $m_Lupickle_default$();
   $m_Lupickle_default$();
   var indent = 0;
@@ -7735,20 +7735,20 @@ $c_Lcom_scalakata_Rendering$.prototype.run__Lorg_denigma_codemirror_Editor__V = 
   };
   var this$16 = jsx$2.doCall__Lautowire_Core$Request__s_concurrent_Future(new $c_Lautowire_Core$Request().init___sc_Seq__sci_Map(jsx$1, $as_sci_Map(this$10.elems$1)));
   var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this) {
-    return (function(x$1$2) {
-      var x$1 = $as_T(x$1$2);
+    return (function(x$11$2) {
+      var x$11 = $as_T(x$11$2);
       var this$11 = $m_Lcom_scalakata_Client$();
       new $c_Lautowire_ClientProxy().init___Lautowire_Client(this$11);
       var this$13 = $m_Lupickle_default$().Internal__Lupickle_Implicits$Internal$();
       var r$1 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this$1) {
         return (function() {
           var this$12 = new $c_Lcom_scalakata_Rendering$$anon$2().init___();
-          return this$12.derive$macro$294__Lupickle_Types$Reader()
+          return this$12.derive$macro$8__Lupickle_Types$Reader()
         })
       })($this));
       var evidence$1 = new $c_Lupickle_Implicits$Internal$$anon$3().init___Lupickle_Implicits$Internal$__T__F0(this$13, "Tagged Object com.scalakata.EvalResponse", r$1);
       var this$15 = $m_Lupickle_default$();
-      return $as_Lcom_scalakata_EvalResponse($s_Lupickle_Types$class__read__Lupickle_Types__T__Lupickle_Types$Reader__O(this$15, x$1, evidence$1))
+      return $as_Lcom_scalakata_EvalResponse($s_Lupickle_Types$class__read__Lupickle_Types__T__Lupickle_Types$Reader__O(this$15, x$11, evidence$1))
     })
   })(this));
   var executor = $m_sjs_concurrent_JSExecutionContext$Implicits$().queue$1;
@@ -7872,7 +7872,7 @@ function $m_Lcom_scalakata_Rendering$() {
 /** @constructor */
 function $c_Lcom_scalakata_Rendering$$anon$1() {
   $c_O.call(this);
-  this.derive$macro$287$1 = null;
+  this.derive$macro$1$1 = null;
   this.bitmap$0$1 = false
 }
 $c_Lcom_scalakata_Rendering$$anon$1.prototype = new $h_O();
@@ -7885,15 +7885,15 @@ $h_Lcom_scalakata_Rendering$$anon$1.prototype = $c_Lcom_scalakata_Rendering$$ano
 $c_Lcom_scalakata_Rendering$$anon$1.prototype.init___ = (function() {
   return this
 });
-$c_Lcom_scalakata_Rendering$$anon$1.prototype.derive$macro$287$lzycompute__p1__Lupickle_Types$Writer = (function() {
+$c_Lcom_scalakata_Rendering$$anon$1.prototype.derive$macro$1$lzycompute__p1__Lupickle_Types$Writer = (function() {
   if ((!this.bitmap$0$1)) {
-    this.derive$macro$287$1 = new $c_Lupickle_Types$Knot$Writer().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+    this.derive$macro$1$1 = new $c_Lupickle_Types$Knot$Writer().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
       return (function() {
         var this$11 = $m_Lupickle_default$();
         var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1) {
-          return (function(x$2$2) {
-            var x$2 = $as_Lcom_scalakata_EvalRequest(x$2$2);
-            var this$1 = $m_Lcom_scalakata_EvalRequest$().unapply__Lcom_scalakata_EvalRequest__s_Option(x$2);
+          return (function(x$12$2) {
+            var x$12 = $as_Lcom_scalakata_EvalRequest(x$12$2);
+            var this$1 = $m_Lcom_scalakata_EvalRequest$().unapply__Lcom_scalakata_EvalRequest__s_Option(x$12);
             if (this$1.isEmpty__Z()) {
               return $m_s_None$()
             } else {
@@ -7933,10 +7933,10 @@ $c_Lcom_scalakata_Rendering$$anon$1.prototype.derive$macro$287$lzycompute__p1__L
     })(this)));
     this.bitmap$0$1 = true
   };
-  return this.derive$macro$287$1
+  return this.derive$macro$1$1
 });
-$c_Lcom_scalakata_Rendering$$anon$1.prototype.derive$macro$287__Lupickle_Types$Writer = (function() {
-  return ((!this.bitmap$0$1) ? this.derive$macro$287$lzycompute__p1__Lupickle_Types$Writer() : this.derive$macro$287$1)
+$c_Lcom_scalakata_Rendering$$anon$1.prototype.derive$macro$1__Lupickle_Types$Writer = (function() {
+  return ((!this.bitmap$0$1) ? this.derive$macro$1$lzycompute__p1__Lupickle_Types$Writer() : this.derive$macro$1$1)
 });
 var $d_Lcom_scalakata_Rendering$$anon$1 = new $TypeData().initClass({
   Lcom_scalakata_Rendering$$anon$1: 0
@@ -7948,7 +7948,7 @@ $c_Lcom_scalakata_Rendering$$anon$1.prototype.$classData = $d_Lcom_scalakata_Ren
 /** @constructor */
 function $c_Lcom_scalakata_Rendering$$anon$2() {
   $c_O.call(this);
-  this.derive$macro$294$1 = null;
+  this.derive$macro$8$1 = null;
   this.bitmap$0$1 = false
 }
 $c_Lcom_scalakata_Rendering$$anon$2.prototype = new $h_O();
@@ -7961,21 +7961,18 @@ $h_Lcom_scalakata_Rendering$$anon$2.prototype = $c_Lcom_scalakata_Rendering$$ano
 $c_Lcom_scalakata_Rendering$$anon$2.prototype.init___ = (function() {
   return this
 });
-$c_Lcom_scalakata_Rendering$$anon$2.prototype.derive$macro$294__Lupickle_Types$Reader = (function() {
-  return ((!this.bitmap$0$1) ? this.derive$macro$294$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$294$1)
-});
-$c_Lcom_scalakata_Rendering$$anon$2.prototype.derive$macro$294$lzycompute__p1__Lupickle_Types$Reader = (function() {
+$c_Lcom_scalakata_Rendering$$anon$2.prototype.derive$macro$8$lzycompute__p1__Lupickle_Types$Reader = (function() {
   if ((!this.bitmap$0$1)) {
-    this.derive$macro$294$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+    this.derive$macro$8$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
       return (function() {
         var this$27 = $m_Lupickle_default$();
         var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1) {
-          return (function(derive$macro$313$2) {
-            var derive$macro$313 = $as_T4(derive$macro$313$2);
-            var arg1 = derive$macro$313.$$und1$1;
-            var arg2 = derive$macro$313.$$und2$1;
-            var arg3 = derive$macro$313.$$und3$1;
-            var arg4 = derive$macro$313.$$und4$1;
+          return (function(derive$macro$27$2) {
+            var derive$macro$27 = $as_T4(derive$macro$27$2);
+            var arg1 = derive$macro$27.$$und1$1;
+            var arg2 = derive$macro$27.$$und2$1;
+            var arg3 = derive$macro$27.$$und3$1;
+            var arg4 = derive$macro$27.$$und4$1;
             var complilationInfos = $as_sci_Map(arg1);
             var timeout = $uZ(arg2);
             var runtimeError = $as_s_Option(arg3);
@@ -8011,7 +8008,7 @@ $c_Lcom_scalakata_Rendering$$anon$2.prototype.derive$macro$294$lzycompute__p1__L
         var r = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$2$1) {
           return (function() {
             var this$9 = new $c_Lcom_scalakata_Rendering$$anon$2$$anon$5().init___Lcom_scalakata_Rendering$$anon$2(this$2$1);
-            return this$9.derive$macro$337__Lupickle_Types$Reader()
+            return this$9.derive$macro$51__Lupickle_Types$Reader()
           })
         })($this));
         var evidence$23 = new $c_Lupickle_Implicits$Internal$$anon$3().init___Lupickle_Implicits$Internal$__T__F0(this$10, "Tagged Object com.scalakata.Severity", r);
@@ -8022,7 +8019,7 @@ $c_Lcom_scalakata_Rendering$$anon$2.prototype.derive$macro$294$lzycompute__p1__L
         var r$1 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$3$1) {
           return (function() {
             var this$12 = new $c_Lcom_scalakata_Rendering$$anon$2$$anon$3().init___Lcom_scalakata_Rendering$$anon$2(this$3$1);
-            return this$12.derive$macro$315__Lupickle_Types$Reader()
+            return this$12.derive$macro$29__Lupickle_Types$Reader()
           })
         })($this));
         var r$2 = new $c_Lupickle_Implicits$Internal$$anon$3().init___Lupickle_Implicits$Internal$__T__F0(this$13, "Tagged Object com.scalakata.CompilationInfo", r$1);
@@ -8034,7 +8031,7 @@ $c_Lcom_scalakata_Rendering$$anon$2.prototype.derive$macro$294$lzycompute__p1__L
         var r$3 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$4$1) {
           return (function() {
             var this$16 = new $c_Lcom_scalakata_Rendering$$anon$2$$anon$6().init___Lcom_scalakata_Rendering$$anon$2(this$4$1);
-            return this$16.derive$macro$350__Lupickle_Types$Reader()
+            return this$16.derive$macro$64__Lupickle_Types$Reader()
           })
         })($this));
         var evidence$16 = new $c_Lupickle_Implicits$Internal$$anon$3().init___Lupickle_Implicits$Internal$__T__F0(this$17, "Tagged Object com.scalakata.RuntimeError", r$3);
@@ -8047,7 +8044,7 @@ $c_Lcom_scalakata_Rendering$$anon$2.prototype.derive$macro$294$lzycompute__p1__L
         var r$4 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$5$1) {
           return (function() {
             var this$20 = new $c_Lcom_scalakata_Rendering$$anon$2$$anon$7().init___Lcom_scalakata_Rendering$$anon$2(this$5$1);
-            return this$20.derive$macro$361__Lupickle_Types$Reader()
+            return this$20.derive$macro$75__Lupickle_Types$Reader()
           })
         })($this));
         var evidence$5 = new $c_Lupickle_Implicits$Internal$$anon$3().init___Lupickle_Implicits$Internal$__T__F0(this$21, "Tagged Object com.scalakata.RangePosition", r$4);
@@ -8055,7 +8052,7 @@ $c_Lcom_scalakata_Rendering$$anon$2.prototype.derive$macro$294$lzycompute__p1__L
         var r$5 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$6$1) {
           return (function() {
             var this$22 = new $c_Lcom_scalakata_Rendering$$anon$2$$anon$8().init___Lcom_scalakata_Rendering$$anon$2(this$6$1);
-            return this$22.derive$macro$371__Lupickle_Types$Reader()
+            return this$22.derive$macro$85__Lupickle_Types$Reader()
           })
         })($this));
         var evidence$6 = new $c_Lupickle_Implicits$Internal$$anon$3().init___Lupickle_Implicits$Internal$__T__F0(this$23, "Tagged Object com.scalakata.Render", r$5);
@@ -8067,7 +8064,10 @@ $c_Lcom_scalakata_Rendering$$anon$2.prototype.derive$macro$294$lzycompute__p1__L
     })(this)));
     this.bitmap$0$1 = true
   };
-  return this.derive$macro$294$1
+  return this.derive$macro$8$1
+});
+$c_Lcom_scalakata_Rendering$$anon$2.prototype.derive$macro$8__Lupickle_Types$Reader = (function() {
+  return ((!this.bitmap$0$1) ? this.derive$macro$8$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$8$1)
 });
 var $d_Lcom_scalakata_Rendering$$anon$2 = new $TypeData().initClass({
   Lcom_scalakata_Rendering$$anon$2: 0
@@ -8079,7 +8079,7 @@ $c_Lcom_scalakata_Rendering$$anon$2.prototype.$classData = $d_Lcom_scalakata_Ren
 /** @constructor */
 function $c_Lcom_scalakata_Rendering$$anon$2$$anon$3() {
   $c_O.call(this);
-  this.derive$macro$315$1 = null;
+  this.derive$macro$29$1 = null;
   this.bitmap$0$1 = false
 }
 $c_Lcom_scalakata_Rendering$$anon$2$$anon$3.prototype = new $h_O();
@@ -8089,16 +8089,22 @@ function $h_Lcom_scalakata_Rendering$$anon$2$$anon$3() {
   /*<skip>*/
 }
 $h_Lcom_scalakata_Rendering$$anon$2$$anon$3.prototype = $c_Lcom_scalakata_Rendering$$anon$2$$anon$3.prototype;
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$3.prototype.derive$macro$315$lzycompute__p1__Lupickle_Types$Reader = (function() {
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$3.prototype.derive$macro$29__Lupickle_Types$Reader = (function() {
+  return ((!this.bitmap$0$1) ? this.derive$macro$29$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$29$1)
+});
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$3.prototype.init___Lcom_scalakata_Rendering$$anon$2 = (function($$outer) {
+  return this
+});
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$3.prototype.derive$macro$29$lzycompute__p1__Lupickle_Types$Reader = (function() {
   if ((!this.bitmap$0$1)) {
-    this.derive$macro$315$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+    this.derive$macro$29$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
       return (function() {
         var this$13 = $m_Lupickle_default$();
         var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1) {
-          return (function(derive$macro$325$2) {
-            var derive$macro$325 = $as_T2(derive$macro$325$2);
-            var arg1 = derive$macro$325.$$und1__O();
-            var arg2 = derive$macro$325.$$und2__O();
+          return (function(derive$macro$39$2) {
+            var derive$macro$39 = $as_T2(derive$macro$39$2);
+            var arg1 = derive$macro$39.$$und1__O();
+            var arg2 = derive$macro$39.$$und2__O();
             var message = $as_T(arg1);
             var pos = $as_s_Option(arg2);
             return new $c_Lcom_scalakata_CompilationInfo().init___T__s_Option(message, pos)
@@ -8133,7 +8139,7 @@ $c_Lcom_scalakata_Rendering$$anon$2$$anon$3.prototype.derive$macro$315$lzycomput
         var r = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$2$1) {
           return (function() {
             var this$9 = new $c_Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4().init___Lcom_scalakata_Rendering$$anon$2$$anon$3(this$2$1);
-            return this$9.derive$macro$327__Lupickle_Types$Reader()
+            return this$9.derive$macro$41__Lupickle_Types$Reader()
           })
         })($this));
         var evidence$16 = new $c_Lupickle_Implicits$Internal$$anon$3().init___Lupickle_Implicits$Internal$__T__F0(this$10, "Tagged Object com.scalakata.RangePosition", r);
@@ -8144,13 +8150,7 @@ $c_Lcom_scalakata_Rendering$$anon$2$$anon$3.prototype.derive$macro$315$lzycomput
     })(this)));
     this.bitmap$0$1 = true
   };
-  return this.derive$macro$315$1
-});
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$3.prototype.init___Lcom_scalakata_Rendering$$anon$2 = (function($$outer) {
-  return this
-});
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$3.prototype.derive$macro$315__Lupickle_Types$Reader = (function() {
-  return ((!this.bitmap$0$1) ? this.derive$macro$315$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$315$1)
+  return this.derive$macro$29$1
 });
 var $d_Lcom_scalakata_Rendering$$anon$2$$anon$3 = new $TypeData().initClass({
   Lcom_scalakata_Rendering$$anon$2$$anon$3: 0
@@ -8162,7 +8162,7 @@ $c_Lcom_scalakata_Rendering$$anon$2$$anon$3.prototype.$classData = $d_Lcom_scala
 /** @constructor */
 function $c_Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4() {
   $c_O.call(this);
-  this.derive$macro$327$1 = null;
+  this.derive$macro$41$1 = null;
   this.bitmap$0$1 = false
 }
 $c_Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4.prototype = new $h_O();
@@ -8172,23 +8172,23 @@ function $h_Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4() {
   /*<skip>*/
 }
 $h_Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4.prototype = $c_Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4.prototype;
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4.prototype.derive$macro$327__Lupickle_Types$Reader = (function() {
-  return ((!this.bitmap$0$1) ? this.derive$macro$327$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$327$1)
-});
 $c_Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4.prototype.init___Lcom_scalakata_Rendering$$anon$2$$anon$3 = (function($$outer) {
   return this
 });
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4.prototype.derive$macro$327$lzycompute__p1__Lupickle_Types$Reader = (function() {
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4.prototype.derive$macro$41__Lupickle_Types$Reader = (function() {
+  return ((!this.bitmap$0$1) ? this.derive$macro$41$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$41$1)
+});
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4.prototype.derive$macro$41$lzycompute__p1__Lupickle_Types$Reader = (function() {
   if ((!this.bitmap$0$1)) {
-    this.derive$macro$327$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+    this.derive$macro$41$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
       return (function() {
         var this$10 = $m_Lupickle_default$();
         var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1) {
-          return (function(derive$macro$335$2) {
-            var derive$macro$335 = $as_T3(derive$macro$335$2);
-            var arg1 = derive$macro$335.$$und1$1;
-            var arg2 = derive$macro$335.$$und2$1;
-            var arg3 = derive$macro$335.$$und3$1;
+          return (function(derive$macro$49$2) {
+            var derive$macro$49 = $as_T3(derive$macro$49$2);
+            var arg1 = derive$macro$49.$$und1$1;
+            var arg2 = derive$macro$49.$$und2$1;
+            var arg3 = derive$macro$49.$$und3$1;
             var start = $uI(arg1);
             var point = $uI(arg2);
             var end = $uI(arg3);
@@ -8227,7 +8227,7 @@ $c_Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4.prototype.derive$macro$327$l
     })(this)));
     this.bitmap$0$1 = true
   };
-  return this.derive$macro$327$1
+  return this.derive$macro$41$1
 });
 var $d_Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4 = new $TypeData().initClass({
   Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4: 0
@@ -8239,10 +8239,10 @@ $c_Lcom_scalakata_Rendering$$anon$2$$anon$3$$anon$4.prototype.$classData = $d_Lc
 /** @constructor */
 function $c_Lcom_scalakata_Rendering$$anon$2$$anon$5() {
   $c_O.call(this);
-  this.derive$macro$337$1 = null;
-  this.derive$macro$340$1 = null;
-  this.derive$macro$343$1 = null;
-  this.derive$macro$346$1 = null;
+  this.derive$macro$51$1 = null;
+  this.derive$macro$54$1 = null;
+  this.derive$macro$57$1 = null;
+  this.derive$macro$60$1 = null;
   this.bitmap$0$1 = 0
 }
 $c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype = new $h_O();
@@ -8252,68 +8252,35 @@ function $h_Lcom_scalakata_Rendering$$anon$2$$anon$5() {
   /*<skip>*/
 }
 $h_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype = $c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype;
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$343__Lupickle_Types$Reader = (function() {
-  return (((4 & this.bitmap$0$1) === 0) ? this.derive$macro$343$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$343$1)
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$51__Lupickle_Types$Reader = (function() {
+  return (((1 & this.bitmap$0$1) === 0) ? this.derive$macro$51$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$51$1)
 });
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$346__Lupickle_Types$Reader = (function() {
-  return (((8 & this.bitmap$0$1) === 0) ? this.derive$macro$346$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$346$1)
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$60__Lupickle_Types$Reader = (function() {
+  return (((8 & this.bitmap$0$1) === 0) ? this.derive$macro$60$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$60$1)
 });
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$337__Lupickle_Types$Reader = (function() {
-  return (((1 & this.bitmap$0$1) === 0) ? this.derive$macro$337$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$337$1)
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$54__Lupickle_Types$Reader = (function() {
+  return (((2 & this.bitmap$0$1) === 0) ? this.derive$macro$54$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$54$1)
 });
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$340$lzycompute__p1__Lupickle_Types$Reader = (function() {
-  if (((2 & this.bitmap$0$1) === 0)) {
-    this.derive$macro$340$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
-      return (function() {
-        var this$3 = $m_Lupickle_default$();
-        var this$1 = $m_Lupickle_default$();
-        var t = $m_Lcom_scalakata_Error$();
-        var rw = $s_Lupickle_Implicits$class__SingletonR__Lupickle_Implicits__O__Lupickle_Types$Reader(this$1, t);
-        var this$4 = this$3.Reader__Lupickle_Types$Reader$();
-        var _read = new $c_Lupickle_AttributeTagged$$anonfun$annotate$2().init___Lupickle_AttributeTagged__Lupickle_Types$Reader__T(this$3, rw, "com.scalakata.Error");
-        var src = new $c_Lsourcecode_Enclosing().init___T("upickle.AttributeTagged#annotate");
-        return new $c_Lupickle_Types$Reader$$anon$4().init___Lupickle_Types$Reader$__s_PartialFunction__Lsourcecode_Enclosing(this$4, _read, src)
-      })
-    })(this)));
-    this.bitmap$0$1 = (2 | this.bitmap$0$1)
-  };
-  return this.derive$macro$340$1
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$57__Lupickle_Types$Reader = (function() {
+  return (((4 & this.bitmap$0$1) === 0) ? this.derive$macro$57$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$57$1)
 });
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$343$lzycompute__p1__Lupickle_Types$Reader = (function() {
-  if (((4 & this.bitmap$0$1) === 0)) {
-    this.derive$macro$343$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
-      return (function() {
-        var this$3 = $m_Lupickle_default$();
-        var this$1 = $m_Lupickle_default$();
-        var t = $m_Lcom_scalakata_Info$();
-        var rw = $s_Lupickle_Implicits$class__SingletonR__Lupickle_Implicits__O__Lupickle_Types$Reader(this$1, t);
-        var this$4 = this$3.Reader__Lupickle_Types$Reader$();
-        var _read = new $c_Lupickle_AttributeTagged$$anonfun$annotate$2().init___Lupickle_AttributeTagged__Lupickle_Types$Reader__T(this$3, rw, "com.scalakata.Info");
-        var src = new $c_Lsourcecode_Enclosing().init___T("upickle.AttributeTagged#annotate");
-        return new $c_Lupickle_Types$Reader$$anon$4().init___Lupickle_Types$Reader$__s_PartialFunction__Lsourcecode_Enclosing(this$4, _read, src)
-      })
-    })(this)));
-    this.bitmap$0$1 = (4 | this.bitmap$0$1)
-  };
-  return this.derive$macro$343$1
-});
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$337$lzycompute__p1__Lupickle_Types$Reader = (function() {
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$51$lzycompute__p1__Lupickle_Types$Reader = (function() {
   if (((1 & this.bitmap$0$1) === 0)) {
-    this.derive$macro$337$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+    this.derive$macro$51$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
       return (function() {
         var this$4 = $m_Lupickle_default$().Reader__Lupickle_Types$Reader$();
-        var _read = $this.derive$macro$340__Lupickle_Types$Reader().read__s_PartialFunction().orElse__s_PartialFunction__s_PartialFunction($this.derive$macro$343__Lupickle_Types$Reader().read__s_PartialFunction()).orElse__s_PartialFunction__s_PartialFunction($this.derive$macro$346__Lupickle_Types$Reader().read__s_PartialFunction());
-        var src = new $c_Lsourcecode_Enclosing().init___T("com.scalakata.Rendering.run $anonfun $anon#derive$macro$294 $anonfun $anon#derive$macro$337 $anonfun");
+        var _read = $this.derive$macro$54__Lupickle_Types$Reader().read__s_PartialFunction().orElse__s_PartialFunction__s_PartialFunction($this.derive$macro$57__Lupickle_Types$Reader().read__s_PartialFunction()).orElse__s_PartialFunction__s_PartialFunction($this.derive$macro$60__Lupickle_Types$Reader().read__s_PartialFunction());
+        var src = new $c_Lsourcecode_Enclosing().init___T("com.scalakata.Rendering.run $anonfun $anon#derive$macro$8 $anonfun $anon#derive$macro$51 $anonfun");
         return new $c_Lupickle_Types$Reader$$anon$4().init___Lupickle_Types$Reader$__s_PartialFunction__Lsourcecode_Enclosing(this$4, _read, src)
       })
     })(this)));
     this.bitmap$0$1 = (1 | this.bitmap$0$1)
   };
-  return this.derive$macro$337$1
+  return this.derive$macro$51$1
 });
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$346$lzycompute__p1__Lupickle_Types$Reader = (function() {
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$60$lzycompute__p1__Lupickle_Types$Reader = (function() {
   if (((8 & this.bitmap$0$1) === 0)) {
-    this.derive$macro$346$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+    this.derive$macro$60$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
       return (function() {
         var this$3 = $m_Lupickle_default$();
         var this$1 = $m_Lupickle_default$();
@@ -8327,13 +8294,46 @@ $c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$346$lzycomput
     })(this)));
     this.bitmap$0$1 = (8 | this.bitmap$0$1)
   };
-  return this.derive$macro$346$1
+  return this.derive$macro$60$1
 });
 $c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.init___Lcom_scalakata_Rendering$$anon$2 = (function($$outer) {
   return this
 });
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$340__Lupickle_Types$Reader = (function() {
-  return (((2 & this.bitmap$0$1) === 0) ? this.derive$macro$340$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$340$1)
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$54$lzycompute__p1__Lupickle_Types$Reader = (function() {
+  if (((2 & this.bitmap$0$1) === 0)) {
+    this.derive$macro$54$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+      return (function() {
+        var this$3 = $m_Lupickle_default$();
+        var this$1 = $m_Lupickle_default$();
+        var t = $m_Lcom_scalakata_Error$();
+        var rw = $s_Lupickle_Implicits$class__SingletonR__Lupickle_Implicits__O__Lupickle_Types$Reader(this$1, t);
+        var this$4 = this$3.Reader__Lupickle_Types$Reader$();
+        var _read = new $c_Lupickle_AttributeTagged$$anonfun$annotate$2().init___Lupickle_AttributeTagged__Lupickle_Types$Reader__T(this$3, rw, "com.scalakata.Error");
+        var src = new $c_Lsourcecode_Enclosing().init___T("upickle.AttributeTagged#annotate");
+        return new $c_Lupickle_Types$Reader$$anon$4().init___Lupickle_Types$Reader$__s_PartialFunction__Lsourcecode_Enclosing(this$4, _read, src)
+      })
+    })(this)));
+    this.bitmap$0$1 = (2 | this.bitmap$0$1)
+  };
+  return this.derive$macro$54$1
+});
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.derive$macro$57$lzycompute__p1__Lupickle_Types$Reader = (function() {
+  if (((4 & this.bitmap$0$1) === 0)) {
+    this.derive$macro$57$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+      return (function() {
+        var this$3 = $m_Lupickle_default$();
+        var this$1 = $m_Lupickle_default$();
+        var t = $m_Lcom_scalakata_Info$();
+        var rw = $s_Lupickle_Implicits$class__SingletonR__Lupickle_Implicits__O__Lupickle_Types$Reader(this$1, t);
+        var this$4 = this$3.Reader__Lupickle_Types$Reader$();
+        var _read = new $c_Lupickle_AttributeTagged$$anonfun$annotate$2().init___Lupickle_AttributeTagged__Lupickle_Types$Reader__T(this$3, rw, "com.scalakata.Info");
+        var src = new $c_Lsourcecode_Enclosing().init___T("upickle.AttributeTagged#annotate");
+        return new $c_Lupickle_Types$Reader$$anon$4().init___Lupickle_Types$Reader$__s_PartialFunction__Lsourcecode_Enclosing(this$4, _read, src)
+      })
+    })(this)));
+    this.bitmap$0$1 = (4 | this.bitmap$0$1)
+  };
+  return this.derive$macro$57$1
 });
 var $d_Lcom_scalakata_Rendering$$anon$2$$anon$5 = new $TypeData().initClass({
   Lcom_scalakata_Rendering$$anon$2$$anon$5: 0
@@ -8345,7 +8345,7 @@ $c_Lcom_scalakata_Rendering$$anon$2$$anon$5.prototype.$classData = $d_Lcom_scala
 /** @constructor */
 function $c_Lcom_scalakata_Rendering$$anon$2$$anon$6() {
   $c_O.call(this);
-  this.derive$macro$350$1 = null;
+  this.derive$macro$64$1 = null;
   this.bitmap$0$1 = false
 }
 $c_Lcom_scalakata_Rendering$$anon$2$$anon$6.prototype = new $h_O();
@@ -8355,19 +8355,16 @@ function $h_Lcom_scalakata_Rendering$$anon$2$$anon$6() {
   /*<skip>*/
 }
 $h_Lcom_scalakata_Rendering$$anon$2$$anon$6.prototype = $c_Lcom_scalakata_Rendering$$anon$2$$anon$6.prototype;
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$6.prototype.derive$macro$350__Lupickle_Types$Reader = (function() {
-  return ((!this.bitmap$0$1) ? this.derive$macro$350$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$350$1)
-});
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$6.prototype.derive$macro$350$lzycompute__p1__Lupickle_Types$Reader = (function() {
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$6.prototype.derive$macro$64$lzycompute__p1__Lupickle_Types$Reader = (function() {
   if ((!this.bitmap$0$1)) {
-    this.derive$macro$350$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+    this.derive$macro$64$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
       return (function() {
         var this$11 = $m_Lupickle_default$();
         var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1) {
-          return (function(derive$macro$359$2) {
-            var derive$macro$359 = $as_T2(derive$macro$359$2);
-            var arg1 = derive$macro$359.$$und1__O();
-            var arg2 = derive$macro$359.$$und2__O();
+          return (function(derive$macro$73$2) {
+            var derive$macro$73 = $as_T2(derive$macro$73$2);
+            var arg1 = derive$macro$73.$$und1__O();
+            var arg2 = derive$macro$73.$$und2__O();
             var message = $as_T(arg1);
             var position = $as_s_Option(arg2);
             return new $c_Lcom_scalakata_RuntimeError().init___T__s_Option(message, position)
@@ -8406,7 +8403,10 @@ $c_Lcom_scalakata_Rendering$$anon$2$$anon$6.prototype.derive$macro$350$lzycomput
     })(this)));
     this.bitmap$0$1 = true
   };
-  return this.derive$macro$350$1
+  return this.derive$macro$64$1
+});
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$6.prototype.derive$macro$64__Lupickle_Types$Reader = (function() {
+  return ((!this.bitmap$0$1) ? this.derive$macro$64$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$64$1)
 });
 $c_Lcom_scalakata_Rendering$$anon$2$$anon$6.prototype.init___Lcom_scalakata_Rendering$$anon$2 = (function($$outer) {
   return this
@@ -8421,7 +8421,7 @@ $c_Lcom_scalakata_Rendering$$anon$2$$anon$6.prototype.$classData = $d_Lcom_scala
 /** @constructor */
 function $c_Lcom_scalakata_Rendering$$anon$2$$anon$7() {
   $c_O.call(this);
-  this.derive$macro$361$1 = null;
+  this.derive$macro$75$1 = null;
   this.bitmap$0$1 = false
 }
 $c_Lcom_scalakata_Rendering$$anon$2$$anon$7.prototype = new $h_O();
@@ -8431,17 +8431,23 @@ function $h_Lcom_scalakata_Rendering$$anon$2$$anon$7() {
   /*<skip>*/
 }
 $h_Lcom_scalakata_Rendering$$anon$2$$anon$7.prototype = $c_Lcom_scalakata_Rendering$$anon$2$$anon$7.prototype;
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$7.prototype.derive$macro$361$lzycompute__p1__Lupickle_Types$Reader = (function() {
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$7.prototype.derive$macro$75__Lupickle_Types$Reader = (function() {
+  return ((!this.bitmap$0$1) ? this.derive$macro$75$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$75$1)
+});
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$7.prototype.init___Lcom_scalakata_Rendering$$anon$2 = (function($$outer) {
+  return this
+});
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$7.prototype.derive$macro$75$lzycompute__p1__Lupickle_Types$Reader = (function() {
   if ((!this.bitmap$0$1)) {
-    this.derive$macro$361$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+    this.derive$macro$75$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
       return (function() {
         var this$10 = $m_Lupickle_default$();
         var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1) {
-          return (function(derive$macro$369$2) {
-            var derive$macro$369 = $as_T3(derive$macro$369$2);
-            var arg1 = derive$macro$369.$$und1$1;
-            var arg2 = derive$macro$369.$$und2$1;
-            var arg3 = derive$macro$369.$$und3$1;
+          return (function(derive$macro$83$2) {
+            var derive$macro$83 = $as_T3(derive$macro$83$2);
+            var arg1 = derive$macro$83.$$und1$1;
+            var arg2 = derive$macro$83.$$und2$1;
+            var arg3 = derive$macro$83.$$und3$1;
             var start = $uI(arg1);
             var point = $uI(arg2);
             var end = $uI(arg3);
@@ -8480,13 +8486,7 @@ $c_Lcom_scalakata_Rendering$$anon$2$$anon$7.prototype.derive$macro$361$lzycomput
     })(this)));
     this.bitmap$0$1 = true
   };
-  return this.derive$macro$361$1
-});
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$7.prototype.init___Lcom_scalakata_Rendering$$anon$2 = (function($$outer) {
-  return this
-});
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$7.prototype.derive$macro$361__Lupickle_Types$Reader = (function() {
-  return ((!this.bitmap$0$1) ? this.derive$macro$361$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$361$1)
+  return this.derive$macro$75$1
 });
 var $d_Lcom_scalakata_Rendering$$anon$2$$anon$7 = new $TypeData().initClass({
   Lcom_scalakata_Rendering$$anon$2$$anon$7: 0
@@ -8498,11 +8498,11 @@ $c_Lcom_scalakata_Rendering$$anon$2$$anon$7.prototype.$classData = $d_Lcom_scala
 /** @constructor */
 function $c_Lcom_scalakata_Rendering$$anon$2$$anon$8() {
   $c_O.call(this);
-  this.derive$macro$371$1 = null;
-  this.derive$macro$388$1 = null;
-  this.derive$macro$383$1 = null;
-  this.derive$macro$393$1 = null;
-  this.derive$macro$374$1 = null;
+  this.derive$macro$85$1 = null;
+  this.derive$macro$102$1 = null;
+  this.derive$macro$97$1 = null;
+  this.derive$macro$107$1 = null;
+  this.derive$macro$88$1 = null;
   this.bitmap$0$1 = 0
 }
 $c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype = new $h_O();
@@ -8512,17 +8512,70 @@ function $h_Lcom_scalakata_Rendering$$anon$2$$anon$8() {
   /*<skip>*/
 }
 $h_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype = $c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype;
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$388$lzycompute__p1__Lupickle_Types$Reader = (function() {
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$107$lzycompute__p1__Lupickle_Types$Reader = (function() {
+  if (((8 & this.bitmap$0$1) === 0)) {
+    this.derive$macro$107$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+      return (function() {
+        var this$12 = $m_Lupickle_default$();
+        var this$10 = $m_Lupickle_default$();
+        var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1) {
+          return (function(derive$macro$114$2) {
+            var derive$macro$114 = $as_T2(derive$macro$114$2);
+            var arg1 = derive$macro$114.$$und1__O();
+            var arg2 = derive$macro$114.$$und2__O();
+            var v = $as_T(arg1);
+            var className = $as_T(arg2);
+            return new $c_Lcom_scalakata_Value().init___T__T(v, className)
+          })
+        })($this));
+        var xs = new $c_sjs_js_WrappedArray().init___sjs_js_Array(["v", "className"]);
+        var len = $uI(xs.array$6.length);
+        var array = $newArrayObject($d_T.getArrayOf(), [len]);
+        var elem$1 = 0;
+        elem$1 = 0;
+        var this$4 = new $c_sc_IndexedSeqLike$Elements().init___sc_IndexedSeqLike__I__I(xs, 0, $uI(xs.array$6.length));
+        while (this$4.hasNext__Z()) {
+          var arg1$1 = this$4.next__O();
+          array.u[elem$1] = arg1$1;
+          elem$1 = ((1 + elem$1) | 0)
+        };
+        var xs$1 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([null, null]);
+        var len$1 = $uI(xs$1.array$6.length);
+        var array$1 = $newArrayObject($d_Lupickle_Js$Value.getArrayOf(), [len$1]);
+        var elem$1$1 = 0;
+        elem$1$1 = 0;
+        var this$8 = new $c_sc_IndexedSeqLike$Elements().init___sc_IndexedSeqLike__I__I(xs$1, 0, $uI(xs$1.array$6.length));
+        while (this$8.hasNext__Z()) {
+          var arg1$2 = this$8.next__O();
+          array$1.u[elem$1$1] = arg1$2;
+          elem$1$1 = ((1 + elem$1$1) | 0)
+        };
+        var this$9 = $m_Lupickle_default$();
+        var evidence$5 = $m_Lupickle_default$().StringRW$1;
+        var evidence$6 = $m_Lupickle_default$().StringRW$1;
+        var evidence$8 = $as_Lupickle_Types$Reader($s_Lupickle_Generated$class__Tuple2R__Lupickle_Generated__O__O__O(this$9, evidence$5, evidence$6));
+        var rw = $s_Lupickle_Implicits$class__CaseR__Lupickle_Implicits__F1__AT__ALupickle_Js$Value__Lupickle_Types$Reader__Lupickle_Types$Reader(this$10, f, array, array$1, evidence$8);
+        var this$13 = this$12.Reader__Lupickle_Types$Reader$();
+        var _read = new $c_Lupickle_AttributeTagged$$anonfun$annotate$2().init___Lupickle_AttributeTagged__Lupickle_Types$Reader__T(this$12, rw, "com.scalakata.Value");
+        var src = new $c_Lsourcecode_Enclosing().init___T("upickle.AttributeTagged#annotate");
+        return new $c_Lupickle_Types$Reader$$anon$4().init___Lupickle_Types$Reader$__s_PartialFunction__Lsourcecode_Enclosing(this$13, _read, src)
+      })
+    })(this)));
+    this.bitmap$0$1 = (8 | this.bitmap$0$1)
+  };
+  return this.derive$macro$107$1
+});
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$102$lzycompute__p1__Lupickle_Types$Reader = (function() {
   if (((2 & this.bitmap$0$1) === 0)) {
-    this.derive$macro$388$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+    this.derive$macro$102$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
       return (function() {
         var this$13 = $m_Lupickle_default$();
         var this$11 = $m_Lupickle_default$();
         var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1) {
-          return (function(derive$macro$398$2) {
-            var derive$macro$398 = $as_T2(derive$macro$398$2);
-            var arg1 = derive$macro$398.$$und1__O();
-            var arg2 = $uZ(derive$macro$398.$$und2__O());
+          return (function(derive$macro$112$2) {
+            var derive$macro$112 = $as_T2(derive$macro$112$2);
+            var arg1 = derive$macro$112.$$und1__O();
+            var arg2 = $uZ(derive$macro$112.$$und2__O());
             var a = $as_T(arg1);
             return new $c_Lcom_scalakata_Markdown().init___T__Z(a, arg2)
           })
@@ -8564,98 +8617,33 @@ $c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$388$lzycomput
     })(this)));
     this.bitmap$0$1 = (2 | this.bitmap$0$1)
   };
-  return this.derive$macro$388$1
+  return this.derive$macro$102$1
 });
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$371__Lupickle_Types$Reader = (function() {
-  return (((1 & this.bitmap$0$1) === 0) ? this.derive$macro$371$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$371$1)
-});
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$388__Lupickle_Types$Reader = (function() {
-  return (((2 & this.bitmap$0$1) === 0) ? this.derive$macro$388$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$388$1)
-});
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$393$lzycompute__p1__Lupickle_Types$Reader = (function() {
-  if (((8 & this.bitmap$0$1) === 0)) {
-    this.derive$macro$393$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
-      return (function() {
-        var this$12 = $m_Lupickle_default$();
-        var this$10 = $m_Lupickle_default$();
-        var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1) {
-          return (function(derive$macro$400$2) {
-            var derive$macro$400 = $as_T2(derive$macro$400$2);
-            var arg1 = derive$macro$400.$$und1__O();
-            var arg2 = derive$macro$400.$$und2__O();
-            var v = $as_T(arg1);
-            var className = $as_T(arg2);
-            return new $c_Lcom_scalakata_Value().init___T__T(v, className)
-          })
-        })($this));
-        var xs = new $c_sjs_js_WrappedArray().init___sjs_js_Array(["v", "className"]);
-        var len = $uI(xs.array$6.length);
-        var array = $newArrayObject($d_T.getArrayOf(), [len]);
-        var elem$1 = 0;
-        elem$1 = 0;
-        var this$4 = new $c_sc_IndexedSeqLike$Elements().init___sc_IndexedSeqLike__I__I(xs, 0, $uI(xs.array$6.length));
-        while (this$4.hasNext__Z()) {
-          var arg1$1 = this$4.next__O();
-          array.u[elem$1] = arg1$1;
-          elem$1 = ((1 + elem$1) | 0)
-        };
-        var xs$1 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([null, null]);
-        var len$1 = $uI(xs$1.array$6.length);
-        var array$1 = $newArrayObject($d_Lupickle_Js$Value.getArrayOf(), [len$1]);
-        var elem$1$1 = 0;
-        elem$1$1 = 0;
-        var this$8 = new $c_sc_IndexedSeqLike$Elements().init___sc_IndexedSeqLike__I__I(xs$1, 0, $uI(xs$1.array$6.length));
-        while (this$8.hasNext__Z()) {
-          var arg1$2 = this$8.next__O();
-          array$1.u[elem$1$1] = arg1$2;
-          elem$1$1 = ((1 + elem$1$1) | 0)
-        };
-        var this$9 = $m_Lupickle_default$();
-        var evidence$5 = $m_Lupickle_default$().StringRW$1;
-        var evidence$6 = $m_Lupickle_default$().StringRW$1;
-        var evidence$8 = $as_Lupickle_Types$Reader($s_Lupickle_Generated$class__Tuple2R__Lupickle_Generated__O__O__O(this$9, evidence$5, evidence$6));
-        var rw = $s_Lupickle_Implicits$class__CaseR__Lupickle_Implicits__F1__AT__ALupickle_Js$Value__Lupickle_Types$Reader__Lupickle_Types$Reader(this$10, f, array, array$1, evidence$8);
-        var this$13 = this$12.Reader__Lupickle_Types$Reader$();
-        var _read = new $c_Lupickle_AttributeTagged$$anonfun$annotate$2().init___Lupickle_AttributeTagged__Lupickle_Types$Reader__T(this$12, rw, "com.scalakata.Value");
-        var src = new $c_Lsourcecode_Enclosing().init___T("upickle.AttributeTagged#annotate");
-        return new $c_Lupickle_Types$Reader$$anon$4().init___Lupickle_Types$Reader$__s_PartialFunction__Lsourcecode_Enclosing(this$13, _read, src)
-      })
-    })(this)));
-    this.bitmap$0$1 = (8 | this.bitmap$0$1)
-  };
-  return this.derive$macro$393$1
-});
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$383__Lupickle_Types$Reader = (function() {
-  return (((4 & this.bitmap$0$1) === 0) ? this.derive$macro$383$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$383$1)
-});
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$371$lzycompute__p1__Lupickle_Types$Reader = (function() {
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$85$lzycompute__p1__Lupickle_Types$Reader = (function() {
   if (((1 & this.bitmap$0$1) === 0)) {
-    this.derive$macro$371$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+    this.derive$macro$85$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
       return (function() {
         var this$5 = $m_Lupickle_default$().Reader__Lupickle_Types$Reader$();
-        var _read = $this.derive$macro$374__Lupickle_Types$Reader().read__s_PartialFunction().orElse__s_PartialFunction__s_PartialFunction($this.derive$macro$383__Lupickle_Types$Reader().read__s_PartialFunction()).orElse__s_PartialFunction__s_PartialFunction($this.derive$macro$388__Lupickle_Types$Reader().read__s_PartialFunction()).orElse__s_PartialFunction__s_PartialFunction($this.derive$macro$393__Lupickle_Types$Reader().read__s_PartialFunction());
-        var src = new $c_Lsourcecode_Enclosing().init___T("com.scalakata.Rendering.run $anonfun $anon#derive$macro$294 $anonfun $anon#derive$macro$371 $anonfun");
+        var _read = $this.derive$macro$88__Lupickle_Types$Reader().read__s_PartialFunction().orElse__s_PartialFunction__s_PartialFunction($this.derive$macro$97__Lupickle_Types$Reader().read__s_PartialFunction()).orElse__s_PartialFunction__s_PartialFunction($this.derive$macro$102__Lupickle_Types$Reader().read__s_PartialFunction()).orElse__s_PartialFunction__s_PartialFunction($this.derive$macro$107__Lupickle_Types$Reader().read__s_PartialFunction());
+        var src = new $c_Lsourcecode_Enclosing().init___T("com.scalakata.Rendering.run $anonfun $anon#derive$macro$8 $anonfun $anon#derive$macro$85 $anonfun");
         return new $c_Lupickle_Types$Reader$$anon$4().init___Lupickle_Types$Reader$__s_PartialFunction__Lsourcecode_Enclosing(this$5, _read, src)
       })
     })(this)));
     this.bitmap$0$1 = (1 | this.bitmap$0$1)
   };
-  return this.derive$macro$371$1
+  return this.derive$macro$85$1
 });
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$374__Lupickle_Types$Reader = (function() {
-  return (((16 & this.bitmap$0$1) === 0) ? this.derive$macro$374$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$374$1)
-});
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$374$lzycompute__p1__Lupickle_Types$Reader = (function() {
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$88$lzycompute__p1__Lupickle_Types$Reader = (function() {
   if (((16 & this.bitmap$0$1) === 0)) {
-    this.derive$macro$374$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+    this.derive$macro$88$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
       return (function() {
         var this$13 = $m_Lupickle_default$();
         var this$11 = $m_Lupickle_default$();
         var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1) {
-          return (function(derive$macro$401$2) {
-            var derive$macro$401 = $as_T2(derive$macro$401$2);
-            var arg1 = derive$macro$401.$$und1__O();
-            var arg2 = $uZ(derive$macro$401.$$und2__O());
+          return (function(derive$macro$115$2) {
+            var derive$macro$115 = $as_T2(derive$macro$115$2);
+            var arg1 = derive$macro$115.$$und1__O();
+            var arg2 = $uZ(derive$macro$115.$$und2__O());
             var a = $as_T(arg1);
             return new $c_Lcom_scalakata_Html().init___T__Z(a, arg2)
           })
@@ -8697,19 +8685,34 @@ $c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$374$lzycomput
     })(this)));
     this.bitmap$0$1 = (16 | this.bitmap$0$1)
   };
-  return this.derive$macro$374$1
+  return this.derive$macro$88$1
 });
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$383$lzycompute__p1__Lupickle_Types$Reader = (function() {
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$85__Lupickle_Types$Reader = (function() {
+  return (((1 & this.bitmap$0$1) === 0) ? this.derive$macro$85$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$85$1)
+});
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.init___Lcom_scalakata_Rendering$$anon$2 = (function($$outer) {
+  return this
+});
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$107__Lupickle_Types$Reader = (function() {
+  return (((8 & this.bitmap$0$1) === 0) ? this.derive$macro$107$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$107$1)
+});
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$88__Lupickle_Types$Reader = (function() {
+  return (((16 & this.bitmap$0$1) === 0) ? this.derive$macro$88$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$88$1)
+});
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$97__Lupickle_Types$Reader = (function() {
+  return (((4 & this.bitmap$0$1) === 0) ? this.derive$macro$97$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$97$1)
+});
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$97$lzycompute__p1__Lupickle_Types$Reader = (function() {
   if (((4 & this.bitmap$0$1) === 0)) {
-    this.derive$macro$383$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+    this.derive$macro$97$1 = new $c_Lupickle_Types$Knot$Reader().init___Lupickle_Types$Knot$__F0($m_Lupickle_default$().Knot__Lupickle_Types$Knot$(), new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
       return (function() {
         var this$13 = $m_Lupickle_default$();
         var this$11 = $m_Lupickle_default$();
         var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1) {
-          return (function(derive$macro$399$2) {
-            var derive$macro$399 = $as_T2(derive$macro$399$2);
-            var arg1 = derive$macro$399.$$und1__O();
-            var arg2 = $uZ(derive$macro$399.$$und2__O());
+          return (function(derive$macro$113$2) {
+            var derive$macro$113 = $as_T2(derive$macro$113$2);
+            var arg1 = derive$macro$113.$$und1__O();
+            var arg2 = $uZ(derive$macro$113.$$und2__O());
             var a = $as_T(arg1);
             return new $c_Lcom_scalakata_Html2().init___T__Z(a, arg2)
           })
@@ -8751,13 +8754,10 @@ $c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$383$lzycomput
     })(this)));
     this.bitmap$0$1 = (4 | this.bitmap$0$1)
   };
-  return this.derive$macro$383$1
+  return this.derive$macro$97$1
 });
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$393__Lupickle_Types$Reader = (function() {
-  return (((8 & this.bitmap$0$1) === 0) ? this.derive$macro$393$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$393$1)
-});
-$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.init___Lcom_scalakata_Rendering$$anon$2 = (function($$outer) {
-  return this
+$c_Lcom_scalakata_Rendering$$anon$2$$anon$8.prototype.derive$macro$102__Lupickle_Types$Reader = (function() {
+  return (((2 & this.bitmap$0$1) === 0) ? this.derive$macro$102$lzycompute__p1__Lupickle_Types$Reader() : this.derive$macro$102$1)
 });
 var $d_Lcom_scalakata_Rendering$$anon$2$$anon$8 = new $TypeData().initClass({
   Lcom_scalakata_Rendering$$anon$2$$anon$8: 0
