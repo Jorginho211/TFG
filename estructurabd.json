@@ -75,7 +75,7 @@
 			"type": "workflowTemplate",
 			"name": "Contar Workflows",
 			"description": "Conta o numero de workflows que posuan un estado estado determinado",
-			"codeBase": "MultipleTsvFiles( files, ('ExecutionID, 'CaseID, 'TaskID, 'NuevoEstado, 'Timestamp))\r\n    .filter( 'TaskID ) {\r\n      fields : (String) => {\r\n        val (taskID) = fields\r\n        %%REPEAT%%\r\n      }\r\n    }\r\n    .groupBy( 'TaskID ){ _.size }\r\n    .write(Tsv(\"output.tsv\"))",
+			"codeBase": "MultipleTsvFiles( files, ('ExecutionID, 'CaseID, 'TaskID, 'NuevoEstado, 'Timestamp))\r\n      .filter( 'TaskID ) {\r\n        fields : (String) => {\r\n          val (taskID) = fields\r\n          \r\n          %%REPEAT%%\r\n        }\r\n      }\r\n      .groupBy( 'TaskID ){ _.size('Count)}\r\n      .rename(('TaskID, 'Count) -> (('TaskID, 'Count)))\r\n      .write(output)",
 			"codeRepeat": "taskID == %%TASKID%% && %%ADDOTHER%%"
 		},
 

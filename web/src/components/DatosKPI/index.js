@@ -266,7 +266,14 @@ class DatosKPI extends Component {
                   </div>
                 </div>
                 ): (
-                  null
+                  <div className={styles.mappingVariables}>
+                    <div className={styles.variables}>
+                      <TextField floatingLabelText="Variable Mapeo Eixo X" className={styles.textField} onBlur={(evt) => this.mapXAxisChange(null, null, evt.target.value)}/>
+                    </div>
+                    <div className={styles.variables}>
+                      <TextField floatingLabelText="Variable Mapeo Eixo Y" className={styles.textField} onBlur={(evt) => this.mapYAxisChange(null, null, evt.target.value)}/>
+                    </div>
+                  </div>                  
                 )}
               <div className={styles.textFieldsFlex}>
                 <div>
@@ -304,7 +311,14 @@ class DatosKPI extends Component {
                   </div>
                 </div>
                 ): (
-                  null
+                  <div className={styles.mappingVariables}>
+                    <div className={styles.variables}>
+                      <TextField floatingLabelText="Variable Mapeo Nome Sectores" className={styles.textField} onBlur={(evt) => this.mapXAxisChange(null, null, evt.target.value)}/>
+                    </div>
+                    <div className={styles.variables}>
+                      <TextField floatingLabelText="Variable Mapeo Porcentaxes" className={styles.textField} onBlur={(evt) => this.mapYAxisChange(null, null, evt.target.value)}/>
+                    </div>
+                  </div>   
                 )}
             </div>
           )

@@ -36,30 +36,20 @@ export function timeChange(time){
 }
 
 export function codeChange(code){
-	var reg = /\(\s*(('[a-zA-Z0-9]+|_),?\s*)+\)\)/;
-	var columns = reg.exec(code);
+	let reg = /.rename(\(|\s)+('[a-zA-Z0-9]+|\s*,\s*)+(\)|\s)+->(\s|\()+('[a-zA-Z0-9]+|\s*,\s*)+(\)|\s)+/;
+	let columns = reg.exec(code);
 
 	if(columns !== null){
-		var variables = [];
-		var aux = columns[0];
-	    aux = aux.replace(/[\(\s\)\)]/g, "");
-	    columns = aux.split(",");
+		let variables = []
+		let column = columns[0].split("->")[1].split(",");
 
-	    reg = /'[a-zA-Z0-9]+\s*==\s*[a-zA-Z0-9]+/g;
+		reg = reg = /[A-Za-z0-9]+/;
 
-	    var variable;
-	    while((variable = reg.exec(code))){
-	    	for(var i = 0; i < columns.length; i++){
-                if(variable[0].indexOf(columns[i]) > -1){
-                	variable = variable[0].replace(/\s+/g, "");
-                	variable = variable.split("==");
-                	variables.push(variable[1]);
-                	break;
-                }
-            }
-	    }
+		column.map(el => {
+			variables.push(reg.exec(el)[0])
+		})
 
-	    return {type: DATOSKPI_ACTION_TYPES.CODE_CHANGE, payload: {code, variables}}
+		return {type: DATOSKPI_ACTION_TYPES.CODE_CHANGE, payload: {code, variables}}
 	}
 
 	return {type: DATOSKPI_ACTION_TYPES.CODE_CHANGE, payload: {code}}

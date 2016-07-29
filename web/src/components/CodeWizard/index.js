@@ -116,6 +116,7 @@ class CodeWizard extends Component {
             code = code.replace("%%TIMEWINDOW%%", timeWindow * 3600)
             code = code.replace("%%TYPEFILE%%", "\"tscev\"")
             code = code.replace("%%CODEBASE%%", codeBaseTemplate)
+            code = code.replace(/%%IDKPI%%/g, this.props.kpi.datoskpi.kpi.id)
 
             let codeRepeat = codeRepeatTemplate
             this.props.kpi.datoskpi.codewizard.workflowTemplate.map( (workflow, index) => {

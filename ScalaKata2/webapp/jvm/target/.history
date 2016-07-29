@@ -1,6 +1,1 @@
 reStart
-sbt clean
-clean
-reStart
-compile
-reStart
