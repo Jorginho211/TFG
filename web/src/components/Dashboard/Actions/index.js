@@ -23,6 +23,37 @@ export function setKPI(kpi){
 	return {type: DASHBOARD_ACTION_TYPES.SET_KPI, payload: { kpi }}
 }
 
+export function requestDataKPI(idKPI, dashboard){
+	console.log("AQUI")
+	return dispatch => {
+		fetch('http://localhost:8080/MongoDBServices/api/v1/kpi/hadoopdata/' + idKPI,{
+			method: 'GET', 
+			mode: 'cors',
+		}).then(response => {
+			return response.ok ? 
+				response.json() :
+				Promise.reject("Erro")
+		}).then(json => {
+		 	let dashboardAux = []
+
+		 	dashboard.map( d => {
+		 		if(d.idkpi !== idKPI){
+		 			dashboardAux.push(d);
+		 		}else{
+		 			dashboardAux.push({
+		 				...d,
+		 				data: json,
+		 			})
+		 		}
+		 	})
+
+		 	dispatch(addRemoveElement(dashboardAux))
+		}).catch( msg => 
+			console.log(msg)
+		)
+	}
+}
+
 export function requestDashboard(token){
 	return dispatch => {
 		fetch('http://localhost:8080/MongoDBServices/api/v1/usuarios/dashboard/',{
@@ -36,7 +67,9 @@ export function requestDashboard(token){
 				response.json() :
 				Promise.reject("Erro")
 		}).then(json => {
-			dispatch(addRemoveElement(json))
+			json.map(l => {
+				dispatch(requestDataKPI(l.idkpi, json))
+			})
 		}).catch( msg => 
 			console.log(msg)
 		)

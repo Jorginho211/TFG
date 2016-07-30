@@ -45,6 +45,8 @@ class Dashboard extends Component {
         })
 
         this.props.DashboardActions.addRemoveElement(dashboard)
+        this.props.DashboardActions.requestDataKPI(idKpiAux, dashboard)
+        
 
         this.toggleDialog()
     }
@@ -86,6 +88,7 @@ class Dashboard extends Component {
                 if(d.idkpi === idkpi && d.chartType === chartType){
                     dashboard.push({
                         ...d,
+                        data: undefined,
                         layout: layoutAux
                     })
                 }

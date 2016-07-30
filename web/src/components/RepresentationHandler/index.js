@@ -40,7 +40,6 @@ class RepresentationHandler extends Component {
 
         this.props.DashboardActions.addRemoveElement(dashboard)
     }
-
     
 
     render() {
