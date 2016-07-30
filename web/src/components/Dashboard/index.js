@@ -4,17 +4,13 @@ import { autobind } from 'core-decorators';
 import CSSModules from 'react-css-modules';
 import styles from './styles.scss';
 
-import 'style!css!react-grid-layout/css/styles.css'
 import RaisedButton from 'material-ui/RaisedButton';
 
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 
 import IconButton from 'material-ui/IconButton';
-import DeleteIcon from 'material-ui/svg-icons/action/delete';
 import SaveIcon from 'material-ui/svg-icons/content/save';
-
-import representations from '../../../strings/src/components/Dashboard/representations.json';
 
 import RefreshIndicator from 'material-ui/RefreshIndicator';
 import Dialog from 'material-ui/Dialog';
@@ -24,10 +20,7 @@ import LineGraphImg from '../DatosKPI/Images/line.svg'
 import PieGraphImg from '../DatosKPI/Images/pie.svg'
 import BarGraphImg from '../DatosKPI/Images/bar.svg'
 
-var WidthProvider = require('react-grid-layout').WidthProvider;
-var ReactGridLayout = require('react-grid-layout');
-ReactGridLayout = WidthProvider(ReactGridLayout);
-const ReactHighcharts = require('react-highcharts');
+import RepresentationHandler from '../RepresentationHandler/'
 
 @CSSModules(styles)
 class Dashboard extends Component {
@@ -217,7 +210,7 @@ class Dashboard extends Component {
         const {kpi} = this.props;
 
     	return (
-            <div ref="dashboard">
+            <div>
                 {kpi.isLoading ? (
                     <div className={styles.refreshIndicator}>
                         <RefreshIndicator
@@ -231,25 +224,7 @@ class Dashboard extends Component {
 
                 ) : (
                     <div>
-                        <ReactGridLayout onLayoutChange={(layout) => this.changeLayout(layout)} items={3} rowHeight={30} cols={12} className="layout">
-                            {dashboard.dashboard.map( (d, index) => {
-                                    return (
-                                       <div key={d.layout.i} _grid={d.layout} className={styles.cell}>
-                                            {representations.map ( (r,index) => {
-                                                if(r.chart.type === d.chartType){
-                                                    return (
-                                                        <ReactHighcharts key={index} className={styles.container} config={ r }></ReactHighcharts>
-                                                    )
-                                                }
-                                            })}
-                                            <IconButton onTouchTap={() => this.deleteLayout(d.layout)} className={styles.actionButtons}>
-                                                <DeleteIcon />
-                                            </IconButton>
-                                        </div> 
-                                    )
-                                })
-                            }
-                        </ReactGridLayout>
+                        <RepresentationHandler kpi={this.props.kpi} dashboard={this.props.dashboard} DashboardActions={this.props.DashboardActions} /> 
 
                         <RaisedButton label="Gardar" labelPosition="before" primary={true} onTouchTap={() => this.saveDashboard()} icon={<SaveIcon />} className={styles.btnGardar} />
 
