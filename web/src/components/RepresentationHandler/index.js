@@ -40,6 +40,47 @@ class RepresentationHandler extends Component {
 
         this.props.DashboardActions.addRemoveElement(dashboard)
     }
+
+    getRepresentation(chart){
+        switch(chart.chartType){
+            case "line":
+                return (
+                    <div>                    
+                        {highChartsJSON.map ( (r,index) => {
+                            if(r.chart.type === chart.chartType){
+                                return (
+                                    <ReactHighcharts key={index} className={styles.container} config={ r }></ReactHighcharts>
+                                )
+                            }
+                        })}
+                    </div> 
+                )
+
+            case "bar":(
+                <div>
+                    {highChartsJSON.map ( (r,index) => {
+                        if(r.chart.type === chart.chartType){
+                            return (
+                                <ReactHighcharts key={index} className={styles.container} config={ r }></ReactHighcharts>
+                            )
+                        }
+                    })}
+                </div> 
+            )
+
+            case "pie":
+                let pieObject = highChartsJSON[2]
+
+                return (
+                    <ReactHighcharts className={styles.container} config={ pieObject }></ReactHighcharts>
+                )
+
+            default:
+                return null;
+
+
+        }
+    }
     
 
     render() {
@@ -50,18 +91,13 @@ class RepresentationHandler extends Component {
 	    		<ReactGridLayout onLayoutChange={(layout) => this.changeLayout(layout)} items={3} rowHeight={30} cols={12} className="layout">
 	                {dashboard.dashboard.map( (d, index) => {
 	                        return (
-	                           <div key={d.layout.i} _grid={d.layout} className={styles.cell}>
-	                                {highChartsJSON.map ( (r,index) => {
-	                                    if(r.chart.type === d.chartType){
-	                                        return (
-	                                            <ReactHighcharts key={index} className={styles.container} config={ r }></ReactHighcharts>
-	                                        )
-	                                    }
-	                                })}
-	                                <IconButton onTouchTap={() => this.deleteLayout(d.layout)} className={styles.actionButtons}>
-	                                    <DeleteIcon />
-	                                </IconButton>
-	                            </div> 
+                                <div key={d.layout.i} _grid={d.layout} className={styles.cell}>
+	                               {this.getRepresentation(d)}
+
+                                    <IconButton onTouchTap={() => this.deleteLayout(d.layout)} className={styles.actionButtons}>
+                                        <DeleteIcon />
+                                    </IconButton>
+                                </div>
 	                        )
 	                    })
 	                }

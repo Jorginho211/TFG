@@ -24,7 +24,6 @@ export function setKPI(kpi){
 }
 
 export function requestDataKPI(idKPI, dashboard){
-	console.log("AQUI")
 	return dispatch => {
 		fetch('http://localhost:8080/MongoDBServices/api/v1/kpi/hadoopdata/' + idKPI,{
 			method: 'GET', 
