@@ -70,7 +70,42 @@ class RepresentationHandler extends Component {
 
             case "pie":
                 let pieObject = highChartsJSON[2]
+                let series = [{ data: [] }]
+                let sumTotal = 0
+                let kpi
+                let pierepr
 
+                this.props.kpi.kpis.map( k => {
+                    if(k.id === chart.idkpi){
+                        kpi = k
+                    }
+                })
+
+                kpi.representation.map( repr => {
+                    if(repr.type === "pie"){
+                        pierepr = repr
+                    }
+                })
+
+                pieObject.title.text = kpi.name
+
+                if(chart.data !== undefined){
+                    chart.data.map( data => {
+                        sumTotal = sumTotal + Number(data[pierepr.mapYAxis])
+                    })
+
+                    console.log(sumTotal)
+                    chart.data.map( data => {
+                            series[0].data.push({
+                            name: data[pierepr.mapXAxis],
+                            y: Number(data[pierepr.mapYAxis])*100/sumTotal
+                        })
+                    })
+
+                    pieObject.series = series
+
+                }
+                
                 return (
                     <ReactHighcharts className={styles.container} config={ pieObject }></ReactHighcharts>
                 )
