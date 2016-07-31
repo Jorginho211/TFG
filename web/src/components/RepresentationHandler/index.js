@@ -42,10 +42,85 @@ class RepresentationHandler extends Component {
     }
 
     getRepresentation(chart){
+        let series
+        let serie
+        let kpi
+
         switch(chart.chartType){
             case "line":
+                let lineObject = highChartsJSON[0]
+                let lineRepr
+                series = []
+                let numberElementData = 0
+                let id
+                let dataAux = []
+
+                this.props.kpi.kpis.map( k => {
+                    if(k.id === chart.idkpi){
+                        kpi = k
+                    }
+                })
+
+                kpi.representation.map( repr => {
+                    if(repr.type === "line"){
+                        lineRepr = repr
+                    }
+                })
+
+                if(chart.data !== undefined){
+                    while(numberElementData < chart.data.length){
+                        id = undefined
+
+                        serie = {
+                            data:[],
+                        }
+
+                        chart.data.map(data => {
+                            let exist = false
+                            dataAux.map(dataAuxEl => {
+                                if(dataAuxEl === data){
+                                    exist = true
+                                }
+                            })
+
+                            if(exist === false){
+                                if(id === undefined){
+                                    id = data[lineRepr.mapXAxis]
+                                }
+
+                                if(id === data[lineRepr.mapXAxis]){
+                                    serie.data.push(Number(data[lineRepr.mapYAxis]))
+
+                                    dataAux.push(data)
+                                }
+                                
+                            }
+                        })
+
+                        serie.name = id
+
+                        if(serie.name !== undefined & serie.data.length > 0){
+                            series.push(serie)
+                        }
+                        
+                        numberElementData += 1
+                    }
+
+                    lineObject.series = series
+                    lineObject.title.text = kpi.name
+                    lineObject.xAxis.title.text = lineRepr.labelXAxis
+                    lineObject.yAxis.title.text = lineRepr.labelYAxis
+                }
+
                 return (
-                    <div>                    
+                    <div>
+                        <ReactHighcharts className={styles.container} config={ lineObject }></ReactHighcharts>
+                    </div>
+                )
+
+            case "bar":
+                return (
+                    <div>
                         {highChartsJSON.map ( (r,index) => {
                             if(r.chart.type === chart.chartType){
                                 return (
@@ -56,23 +131,10 @@ class RepresentationHandler extends Component {
                     </div> 
                 )
 
-            case "bar":(
-                <div>
-                    {highChartsJSON.map ( (r,index) => {
-                        if(r.chart.type === chart.chartType){
-                            return (
-                                <ReactHighcharts key={index} className={styles.container} config={ r }></ReactHighcharts>
-                            )
-                        }
-                    })}
-                </div> 
-            )
-
             case "pie":
                 let pieObject = highChartsJSON[2]
-                let series = [{ data: [] }]
+                series = [{ data: [] }]
                 let sumTotal = 0
-                let kpi
                 let pierepr
 
                 this.props.kpi.kpis.map( k => {
@@ -94,7 +156,6 @@ class RepresentationHandler extends Component {
                         sumTotal = sumTotal + Number(data[pierepr.mapYAxis])
                     })
 
-                    console.log(sumTotal)
                     chart.data.map( data => {
                             series[0].data.push({
                             name: data[pierepr.mapXAxis],
@@ -112,8 +173,6 @@ class RepresentationHandler extends Component {
 
             default:
                 return null;
-
-
         }
     }
     
