@@ -229,8 +229,6 @@ class Dashboard extends Component {
                     <div>
                         <RepresentationHandler kpi={this.props.kpi} dashboard={this.props.dashboard} DashboardActions={this.props.DashboardActions} /> 
 
-                        <RaisedButton label="Gardar" labelPosition="before" primary={true} onTouchTap={() => this.saveDashboard()} icon={<SaveIcon />} className={styles.btnGardar} />
-
                         <FloatingActionButton onTouchTap={() =>  { this.suggestionListKPIName(); this.toggleDialog() }} className={styles.floatingButton} mini={true}>
                             <ContentAdd />
                         </FloatingActionButton>

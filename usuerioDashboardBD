@@ -1,22 +1,6 @@
 {
 	"user": "jorge",
 	"password": "jorge",
-	"token": null,
-	"dashboard": [
-		{
-			"idkpi": "1",
-			"chartType": "line",
-			"layout": { "h": 9, "w": 5, "x": 3, "y": 8, "i": "1||line" }
-		},
-		{
-			"idkpi": "1",
-			"chartType": "bar",
-			"layout": { "h": 8, "w": 6, "x": 4, "y": 0, "i": "1||bar" }
-		},
-		{
-			"idkpi": "2",
-			"chartType": "pie",
-			"layout": { "h": 8, "w": 4, "x": 0, "y": 0, "i": "2||pie" }
-		}
-	]
+	"token": "aKxOyCoyl7ENwD8ipdRhOUo82WO50UZYdKdyelZi",
+	"dashboard": []
 }
