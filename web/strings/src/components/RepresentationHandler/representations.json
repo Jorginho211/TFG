@@ -42,9 +42,6 @@
   "title": {
       "text": "Titulo"
   },
-  "subtitle": {
-      "text": "Subitulo"
-  },
   "xAxis": {
       "title": {
           "text": "Titulo Eje X"

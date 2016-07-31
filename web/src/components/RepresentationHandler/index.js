@@ -41,134 +41,159 @@ class RepresentationHandler extends Component {
         this.props.DashboardActions.addRemoveElement(dashboard)
     }
 
-    getRepresentation(chart){
-        let series
-        let serie
+    getKPIAndRepresentation(idKPI, typeChart){
+        let kpi;
+        let representation;
+
+        this.props.kpi.kpis.map( k => {
+            if(k.id === idKPI){
+                kpi = k
+            }
+        })
+
+        kpi.representation.map( repr => {
+            if(repr.type === typeChart){
+                representation = repr
+            }
+        })
+
+        return [kpi, representation]
+    }
+
+    line(chart){
+        let series = []
+        let kpiAndRepr
         let kpi
+        let lineObject = highChartsJSON[0]
+        let lineRepr
 
-        switch(chart.chartType){
-            case "line":
-                let lineObject = highChartsJSON[0]
-                let lineRepr
-                series = []
-                let numberElementData = 0
-                let id
-                let dataAux = []
+        let elementsRepeats = {}
 
-                this.props.kpi.kpis.map( k => {
-                    if(k.id === chart.idkpi){
-                        kpi = k
-                    }
+        kpiAndRepr = this.getKPIAndRepresentation(chart.idkpi, chart.chartType)
+        kpi = kpiAndRepr[0]
+        lineRepr = kpiAndRepr[1]
+
+        if(chart.data !== undefined){
+            chart.data.map(data => {
+                if(elementsRepeats[data[lineRepr.mapXAxis]] === undefined){
+                    elementsRepeats[data[lineRepr.mapXAxis]] = [ Number(data[lineRepr.mapYAxis]) ]
+                }
+                else {
+                    elementsRepeats[data[lineRepr.mapXAxis]].push( Number(data[lineRepr.mapYAxis])) 
+                }
+            })
+
+            for(var key in elementsRepeats){
+                series.push({
+                    name: key,
+                    data: elementsRepeats[key]
                 })
+            }
 
-                kpi.representation.map( repr => {
-                    if(repr.type === "line"){
-                        lineRepr = repr
+            lineObject.series = series
+            lineObject.title.text = kpi.name
+            lineObject.xAxis.title.text = lineRepr.labelXAxis
+            lineObject.yAxis.title.text = lineRepr.labelYAxis
+        }
+
+        return lineObject
+    }
+
+    bar(chart){
+        let barObject = highChartsJSON[1]
+        let kpiAndRepr
+        let kpi
+        let barRepr
+        let elementsRepeats = {}
+        let series = []
+
+        kpiAndRepr = this.getKPIAndRepresentation(chart.idkpi, chart.chartType)
+        kpi = kpiAndRepr[0]
+        barRepr = kpiAndRepr[1]
+
+        if(chart.data !== undefined){
+            chart.data.map(data => {
+                if(elementsRepeats[data[barRepr.mapYAxis]] === undefined){
+                    elementsRepeats[data[barRepr.mapYAxis]] = [ Number(data[barRepr.mapXAxis]) ]
+                }
+                else {
+                    elementsRepeats[data[barRepr.mapYAxis]].push( Number(data[barRepr.mapXAxis])) 
+                }
+            })
+
+            for(var key in elementsRepeats){
+                series.push({ name: key, data: []})
+            }
+
+            let numberElements = 0
+            series.map( serie => {
+                for(var key in elementsRepeats){
+                    if(numberElements < elementsRepeats[key].length){
+                        serie.data.push(elementsRepeats[key][numberElements])
                     }
-                })
-
-                if(chart.data !== undefined){
-                    while(numberElementData < chart.data.length){
-                        id = undefined
-
-                        serie = {
-                            data:[],
-                        }
-
-                        chart.data.map(data => {
-                            let exist = false
-                            dataAux.map(dataAuxEl => {
-                                if(dataAuxEl === data){
-                                    exist = true
-                                }
-                            })
-
-                            if(exist === false){
-                                if(id === undefined){
-                                    id = data[lineRepr.mapXAxis]
-                                }
-
-                                if(id === data[lineRepr.mapXAxis]){
-                                    serie.data.push(Number(data[lineRepr.mapYAxis]))
-
-                                    dataAux.push(data)
-                                }
-                                
-                            }
-                        })
-
-                        serie.name = id
-
-                        if(serie.name !== undefined & serie.data.length > 0){
-                            series.push(serie)
-                        }
-                        
-                        numberElementData += 1
-                    }
-
-                    lineObject.series = series
-                    lineObject.title.text = kpi.name
-                    lineObject.xAxis.title.text = lineRepr.labelXAxis
-                    lineObject.yAxis.title.text = lineRepr.labelYAxis
                 }
 
+                numberElements += 1
+            })
+
+            barObject.series = series
+            barObject.title.text = kpi.name
+            barObject.xAxis.title.text = barRepr.labelXAxis
+            barObject.yAxis.title.text = barRepr.labelYAxis
+        }
+
+        return barObject
+    }
+
+    pie(chart){
+        let pieObject = highChartsJSON[2]
+        let series = [{ data: [] }]
+        let sumTotal = 0
+        let pieRepr
+        let kpiAndRepr
+        let kpi
+
+        kpiAndRepr = this.getKPIAndRepresentation(chart.idkpi, chart.chartType)
+        kpi = kpiAndRepr[0]
+        pieRepr = kpiAndRepr[1]
+
+        pieObject.title.text = kpi.name
+
+        if(chart.data !== undefined){
+            chart.data.map( data => {
+                sumTotal = sumTotal + Number(data[pieRepr.mapYAxis])
+            })
+
+            chart.data.map( data => {
+                    series[0].data.push({
+                    name: data[pieRepr.mapXAxis],
+                    y: Number(data[pieRepr.mapYAxis])*100/sumTotal
+                })
+            })
+
+            pieObject.series = series
+
+        }
+
+        return pieObject
+
+    }
+
+    getRepresentation(chart){
+        switch(chart.chartType){
+            case "line":
                 return (
-                    <div>
-                        <ReactHighcharts className={styles.container} config={ lineObject }></ReactHighcharts>
-                    </div>
+                    <ReactHighcharts className={styles.container} config={ this.line(chart) }></ReactHighcharts>
                 )
 
             case "bar":
                 return (
-                    <div>
-                        {highChartsJSON.map ( (r,index) => {
-                            if(r.chart.type === chart.chartType){
-                                return (
-                                    <ReactHighcharts key={index} className={styles.container} config={ r }></ReactHighcharts>
-                                )
-                            }
-                        })}
-                    </div> 
+                    <ReactHighcharts className={styles.container} config={ this.bar(chart) }></ReactHighcharts>
                 )
 
             case "pie":
-                let pieObject = highChartsJSON[2]
-                series = [{ data: [] }]
-                let sumTotal = 0
-                let pierepr
-
-                this.props.kpi.kpis.map( k => {
-                    if(k.id === chart.idkpi){
-                        kpi = k
-                    }
-                })
-
-                kpi.representation.map( repr => {
-                    if(repr.type === "pie"){
-                        pierepr = repr
-                    }
-                })
-
-                pieObject.title.text = kpi.name
-
-                if(chart.data !== undefined){
-                    chart.data.map( data => {
-                        sumTotal = sumTotal + Number(data[pierepr.mapYAxis])
-                    })
-
-                    chart.data.map( data => {
-                            series[0].data.push({
-                            name: data[pierepr.mapXAxis],
-                            y: Number(data[pierepr.mapYAxis])*100/sumTotal
-                        })
-                    })
-
-                    pieObject.series = series
-
-                }
-                
                 return (
-                    <ReactHighcharts className={styles.container} config={ pieObject }></ReactHighcharts>
+                    <ReactHighcharts className={styles.container} config={ this.pie(chart) }></ReactHighcharts>
                 )
 
             default:
