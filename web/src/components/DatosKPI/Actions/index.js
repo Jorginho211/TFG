@@ -90,15 +90,24 @@ export function addRepresentationToNew(){
 
 export function addRepresentationToKPI(kpi, representation){
 	if(kpi.representation !== undefined){
-		if(representation.index !== undefined){
-			kpi.representation[representation.index] = {
-				...representation,
-				index: undefined,
+		let exist = false
+		kpi.representation.map( repr => {
+			if(repr.type === representation.type){
+				exist=true
 			}
-		}
-		else {
-			kpi.representation[kpi.representation.length] = {
-				...representation
+		})
+
+		if(exist === false){
+			if(representation.index !== undefined){
+				kpi.representation[representation.index] = {
+					...representation,
+					index: undefined,
+				}
+			}
+			else {
+				kpi.representation[kpi.representation.length] = {
+					...representation
+				}
 			}
 		}
 	}

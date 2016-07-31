@@ -176,6 +176,17 @@ class Dashboard extends Component {
               <img src={PieGraphImg} onTouchTap={() => {this.addLayout(idKPI, type)}}/>
             </div>
           )
+
+        case "number":
+            return (
+                <div>
+                  <div className={styles.miniature} onTouchTap={() => {this.addLayout(idKPI, type)}}>
+                    <h2>Title</h2>
+                    <h4>Label</h4>
+                    <p>Result</p>
+                  </div>
+                </div>
+            )
       }
     }
 

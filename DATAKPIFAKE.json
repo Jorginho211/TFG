@@ -3,5 +3,6 @@
 	{"idKPI" : "9fff4cfd-e103-bb54-e05d-d49f4561aee3", "TaskID" : "da00da38-0c1f-42fd-8b27-1291b4bb1f39", "Count" : "2000" },
 	{"idKPI" : "9fff4cfd-e103-bb54-e05d-d49f4561aee3", "TaskID" : "89abcbd0-9a84-4b6a-a45f-3c97de13912f", "Count" : "3000" },
 	{"idKPI" : "9fff4cfd-e103-bb54-e05d-d49f4561aee3", "TaskID" : "bc00da38-0c1f-42fd-8b27-1291b4bb1f39", "Count" : "2500" },
-	{"idKPI" : "9fff4cfd-e103-bb54-e05d-d49f4561aee3", "TaskID" : "89abcbd0-9a84-4b6a-a45f-3c97de13912f", "Count" : "2000" }
+	{"idKPI" : "9fff4cfd-e103-bb54-e05d-d49f4561aee3", "TaskID" : "89abcbd0-9a84-4b6a-a45f-3c97de13912f", "Count" : "2000" },
+	{"idKPI" : "62541615-b2b4-27f3-131b-b49787292ed8", "TaskID" : "89abcbd0-9a84-4b6a-a45f-3c97de13912f", "Count" : "10000"}
 ]

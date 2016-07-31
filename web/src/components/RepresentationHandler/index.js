@@ -179,6 +179,23 @@ class RepresentationHandler extends Component {
 
     }
 
+    number(chart){
+        let kpiAndRepr
+        let kpi
+        let numberRepr
+        let data
+
+        kpiAndRepr = this.getKPIAndRepresentation(chart.idkpi, chart.chartType)
+        kpi = kpiAndRepr[0]
+        numberRepr = kpiAndRepr[1]
+
+        if(chart.data !== undefined){
+            data = chart.data[0][numberRepr.mapXAxis]
+        }
+
+        return [ kpi.name, numberRepr.labelXAxis, data ]
+    }
+
     getRepresentation(chart){
         switch(chart.chartType){
             case "line":
@@ -194,6 +211,19 @@ class RepresentationHandler extends Component {
             case "pie":
                 return (
                     <ReactHighcharts className={styles.container} config={ this.pie(chart) }></ReactHighcharts>
+                )
+
+            case "number":
+                let data = this.number(chart)
+
+                return (
+                    <div>
+                      <div className={styles.numberGraph}>
+                        <h3>{data[0]}</h3>
+                        <h4>{data[1]}</h4>
+                        <p>{data[2]}</p>
+                      </div>
+                    </div>
                 )
 
             default:
