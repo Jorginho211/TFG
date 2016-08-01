@@ -14,40 +14,31 @@
   overflow-x: scroll;
   white-space:nowrap;
 
-  div {
-    display: inline-flex;
-    align-items: center;
-    flex-flow: column;
+  .group {
+      display: inline-flex;
+      align-items: center;
+      flex-flow: row;
 
-    img {
-      border: 1px solid black;
-      margin: 10px;
-      width: 250px;
-      height: 250px;
-    }
-
-    .miniature {
-      width: 250px;
-      height: 250px;
-      margin-bottom: -170px;
-      margin-left: 10px;
-
-      border: 1px solid black;
-      display: block;
-      top: -209px;
-      position: relative;
-
-      h2, p {
-        text-align: center;
+      img {
+        width: 250px;
+        height: 250px;
       }
 
-      h4 {
-        padding-left: 5px;
-      }
-    }
+      .miniature {
+        width: 250px;
+        height: 250px;
+        margin-left: 10px;
 
-    div {
-      flex-flow:row;
-    }
+        border: 1px solid black;
+        display: block;
+
+        h2, p {
+          text-align: center;
+        }
+
+        h4 {
+          padding-left: 5px;
+        }
+      }
   }
 }

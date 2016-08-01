@@ -21,6 +21,7 @@ public class Hadoop {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response sendJob(String code) throws IOException { 
+        System.out.println(code);
         //Quitar partes innecesarias do codigo
         StringBuilder codeBuild = new StringBuilder(code);
         
@@ -45,9 +46,8 @@ public class Hadoop {
         
         //Executase
         Process p= Runtime.getRuntime().exec(command);
-        
-        System.out.println(code);
 
+        System.out.println(code);
         return Response.ok().build();
     }
 }

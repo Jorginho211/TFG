@@ -40,10 +40,10 @@
 	overflow-x: scroll;
 	white-space:nowrap;
 
-	div {
+	.group {
 		display: inline-flex;
 		align-items: center;
-		flex-flow: column;
+		flex-flow: row;
 
 		img {
 			width: 250px;
@@ -51,32 +51,26 @@
 		}
 
 		.miniature {
-				width: 200px;
-				height: 180px;
-				margin-bottom: -138px;
-				margin-left: 10px;
+			width: 250px;
+			height: 250px;
+			margin-left: 10px;
 
-				border: 1px solid black;
-				display: block;
-				top: -180px;
-				position: relative;
+			border: 1px solid black;
+			display: block;
 
-				h2, p {
-					text-align: center;
-				}
-
-				h4 {
-					padding-left: 5px;
-				}
+			h2, p {
+				text-align: center;
 			}
 
-		div {
-			flex-flow:row;
+			h4 {
+				padding-left: 5px;
+			}
 		}
 	}
 
 	.controls {
-		margin-top: -40px
+		margin-top: -40px;
+		text-align: center;
 	}
 }
 

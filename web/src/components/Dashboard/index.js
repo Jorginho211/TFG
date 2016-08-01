@@ -203,13 +203,15 @@ class Dashboard extends Component {
                     <div>
                         <p>Seleccionar representatión</p>
                         <div className={styles.graphicsGroupKPI}>
-                          {dashboard.kpi.representation.map((representation, index) => {
-                            return (
-                              <div key={index}>
-                                {this.getGrapthicImg(representation.type, dashboard.kpi.id)}
-                              </div>
-                            )
-                          })}                          
+                            <div className={styles.group}>
+                              {dashboard.kpi.representation.map((representation, index) => {
+                                return (
+                                  <div key={index}>
+                                    {this.getGrapthicImg(representation.type, dashboard.kpi.id)}
+                                  </div>
+                                )
+                              })}
+                            </div>                          
                         </div>
                     </div>
                 ) : (

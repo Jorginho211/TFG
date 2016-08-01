@@ -174,6 +174,21 @@ export function storeKPIBD(kpi, methodType){
 	}
 }
 
+export function sendJobHadoop(code){
+	return dispatch => {
+		fetch('http://localhost:8080/HadoopServices/api/v1/sendjob/',{
+			method: 'POST', 
+			mode: 'cors',
+			headers: new Headers({'Content-Type': 'application/json',}),
+			body: code,
+		}).then(response => {
+			return response.ok
+		}).catch( msg => 
+			console.log(msg)
+		)
+	}
+}
+
 export function getPropertiesBD(){
 	return dispatch => {
 		fetch('http://localhost:8080/MongoDBServices/api/v1/properties',{

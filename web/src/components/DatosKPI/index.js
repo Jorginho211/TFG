@@ -191,6 +191,7 @@ class DatosKPI extends Component {
       })
 
       this.props.KPIActions.DatosKPIActions.storeKPIBD(this.props.kpi.datoskpi.kpi, methodType)
+      this.props.KPIActions.DatosKPIActions.sendJobHadoop(this.props.kpi.datoskpi.kpi.code)
       this.props.KPIActions.DatosKPIActions.deleteData()
       this.props.KPIActions.DatosKPIActions.CodeWizardActions.deleteData()
     }
@@ -446,21 +447,23 @@ class DatosKPI extends Component {
                       <div>
                         {this.props.kpi.datoskpi.kpi.representation !== undefined ? (
                             <div className={styles.graphicsGroupKPI}>
-                              {this.props.kpi.datoskpi.kpi.representation.map((representation, index) => {
-                                return (
-                                  <div key={index}>
-                                    {this.getGrapthicImg(representation.type)}
-                                    <div className={styles.controls}>
-                                      <IconButton onTouchTap={() => this.addRepresentationToEdit(representation, index)}>
-                                        <EditorModeEdit />
-                                      </IconButton>
-                                      <IconButton onTouchTap={() => this.deleteRepresentation(index)}>
-                                        <DeleteIcon />
-                                      </IconButton>
+                              <div className={styles.group}>
+                                {this.props.kpi.datoskpi.kpi.representation.map((representation, index) => {
+                                  return (
+                                    <div key={index}>
+                                      {this.getGrapthicImg(representation.type)}
+                                      <div className={styles.controls}>
+                                        <IconButton onTouchTap={() => this.addRepresentationToEdit(representation, index)}>
+                                          <EditorModeEdit />
+                                        </IconButton>
+                                        <IconButton onTouchTap={() => this.deleteRepresentation(index)}>
+                                          <DeleteIcon />
+                                        </IconButton>
+                                      </div>
                                     </div>
-                                  </div>
-                                )
-                              })}                          
+                                  )
+                                })}
+                              </div>                        
                             </div>
                           ) : (
                             null

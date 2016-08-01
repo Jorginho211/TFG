@@ -113,7 +113,7 @@ class CodeWizard extends Component {
             let codeBaseTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codeBase
             let codeRepeatTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codeRepeat
 
-            code = code.replace("%%TIMEWINDOW%%", timeWindow * 3600)
+            code = code.replace("%%TIMEWINDOW%%", timeWindow * 3600000)
             code = code.replace("%%TYPEFILE%%", "\"tscev\"")
             code = code.replace("%%CODEBASE%%", codeBaseTemplate)
             code = code.replace(/%%IDKPI%%/g, this.props.kpi.datoskpi.kpi.id)
@@ -156,45 +156,43 @@ class CodeWizard extends Component {
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeTimeWindow(parseFloat(evt.target.value))
     }
 
-    @autobind changeTaskTemplateWorkflowTaskSugestions(evt){
-        if(evt.keyCode === 13){
-            let workflow = undefined
-            let errors = this.props.kpi.datoskpi.codewizard.errors
-            let suggestionList = []
+    @autobind changeTaskTemplateWorkflowTaskSugestions(value, index){
+        let workflow = undefined
+        let errors = this.props.kpi.datoskpi.codewizard.errors
+        let suggestionList = []
 
-            this.props.kpi.datoskpi.codewizard.workflows.map( item => {
-                if(item.name === evt.target.value){
-                    workflow = {
-                        ...item,
-                    }
+        this.props.kpi.datoskpi.codewizard.workflows.map( item => {
+            if(item.name === value){
+                workflow = {
+                    ...item,
                 }
+            }
+        })
+
+        if(workflow !== undefined){
+            this.taskTemplateWorkflowInput.refs.searchTextField.input.disabled = true
+
+            workflow.tasks.map( task => {
+                suggestionList.push(task.name)
             })
 
-            if(workflow !== undefined){
-                evt.target.disabled = true
+            this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeSuggestionList(suggestionList)
 
-                workflow.tasks.map( task => {
-                    suggestionList.push(task.name)
-                })
+            this.taskTemplateInputsElement.style.visibility = "visible"
 
-                this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeSuggestionList(suggestionList)
-
-                this.taskTemplateInputsElement.style.visibility = "visible"
-
-                errors = {
-                    ...errors,
-                    workflowTemplateInput: false,
-                }
+            errors = {
+                ...errors,
+                workflowTemplateInput: false,
             }
-            else {
-                errors = {
-                    ...errors,
-                    workflowTemplateInput: true,
-                }
-            }
-
-            this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
         }
+        else {
+            errors = {
+                ...errors,
+                workflowTemplateInput: true,
+            }
+        }
+
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
     }
 
     @autobind addTaskToTaskTemplate(){
@@ -383,7 +381,7 @@ class CodeWizard extends Component {
                 return (
                     <div className={styles.taskTemplate}>
                         <div>
-                            <AutoComplete openOnFocus={true} hintText="Workflow" ref={element => this.taskTemplateWorkflowInput = element } onKeyDown={this.changeTaskTemplateWorkflowTaskSugestions} ref={element => this.taskTemplateWorkflowInput = element } fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
+                            <AutoComplete openOnFocus={true} hintText="Workflow" ref={element => this.taskTemplateWorkflowInput = element } onNewRequest={this.changeTaskTemplateWorkflowTaskSugestions} fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
                         </div>
 
                         {codewizard.taskTemplate !== undefined && codewizard.taskTemplate.tasks !== undefined && codewizard.taskTemplate.tasks.length > 0 ? (
