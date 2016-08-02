@@ -112,5 +112,24 @@ MultipleTsvFiles( files, ('ExecutionID, 'CaseID, 'TaskID, 'NuevoEstado, 'Timesta
       .rename(('TaskID, 'Count) -> (('TaskID, 'Count)))
       .write(output)
 
-//REPEAT
-taskID == %%TASKID%% && %%ADDOTHER%%
+  //REPEAT WFTemplate
+  taskID == %%TASKID%% && %%ADDOTHER%%
+
+
+//TaskTemplate
+MultipleTsvFiles( files, ('ExecutionID, 'CaseID, 'TaskID, 'NuevoEstado, 'Timestamp))
+      .filter( 'TaskID, 'NuevoEstado ) {
+        fields : (String, String) => {
+          val (taskID, nuevoEstado) = fields
+          
+          %%REPEAT%%
+        }
+      }
+      .groupBy( 'TaskID ){ _.size('Count)}
+      .rename(('TaskID, 'Count) -> (('TaskID, 'Count)))
+      .write(output)
+
+  //REPEAT TKTEMPLATE
+  taskID == %%TASKID%% && nuevoEstado == %%STATE%% || %%ADDOTHER%%
+
+
