@@ -1,5 +1,6 @@
 package HadoopServices.ws;
 
+import com.sun.security.sasl.ClientFactoryImpl;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
@@ -7,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import javax.ws.rs.*;
+import javax.ws.rs.client.Client;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -20,7 +22,7 @@ public class Hadoop {
     
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response sendJob(String code) throws IOException { 
+    public Response sendJob(String code) throws IOException {
         System.out.println(code);
         //Quitar partes innecesarias do codigo
         StringBuilder codeBuild = new StringBuilder(code);
