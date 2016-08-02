@@ -46,7 +46,7 @@ public class Probas {
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public String GetTaskName(@PathParam("id") String uri) throws MalformedURLException, IOException, JSONException {        
-        URL url = new URL("https://tec.citius.usc.es/cuestionarios/backend/HMBAuthenticationRESTAPI/auth/login?username=manuel&password=pass");
+        URL url = new URL("https://tec.citius.usc.es/cuestionarios/backend/HMBAuthenticationRESTAPI/auth/login?username=root&password=rootcuestionarios");
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         
         JSONObject data = new JSONObject(data(conn));
@@ -63,6 +63,7 @@ public class Probas {
         JSONArray jArray = new JSONArray(data.getString("result"));
         
         JSONArray jArrayWf = null;
+        
         for(int i=0; i<jArray.length(); i++){
             data = jArray.getJSONObject(i);
             

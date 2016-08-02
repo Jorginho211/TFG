@@ -78,8 +78,15 @@ export function addTaskToTaskTemplate(workflow, task, taskTemplate){
 		}
 	}
 	else {
-		taskTemplate.tasks[taskTemplate.tasks.length] = {
-			...task,
+		if(taskTemplate.tasks !== undefined){
+			taskTemplate.tasks[taskTemplate.tasks.length] = {
+				...task,
+			}
+		}
+		else {
+			taskTemplate.tasks = [{
+				...task, 
+			}]
 		}		
 	}
 
@@ -127,7 +134,7 @@ export function authenticationCITIUS(){
 	return dispatch => {
 		dispatch(toggleLoading())
 
-		fetch('https://tec.citius.usc.es/cuestionarios/backend/HMBAuthenticationRESTAPI/auth/login?username=manuel&password=pass',{
+		fetch('https://tec.citius.usc.es/cuestionarios/backend/HMBAuthenticationRESTAPI/auth/login?username=root&password=rootcuestionarios',{
 			method: 'GET', 
 			mode: 'cors'
 		}).then(response => {

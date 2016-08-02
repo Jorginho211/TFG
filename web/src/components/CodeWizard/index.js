@@ -147,10 +147,10 @@ class CodeWizard extends Component {
             this.props.KPIActions.DatosKPIActions.codeChange(code)
             this.props.KPIActions.DatosKPIActions.continueSteper()
         }
-        else {
-            this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
-        }
+
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
     }
+
 
     @autobind changeTimeWindow(evt){
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeTimeWindow(parseFloat(evt.target.value))
@@ -182,13 +182,15 @@ class CodeWizard extends Component {
 
             errors = {
                 ...errors,
-                workflowTemplateInput: false,
+                taskTemplateWorkflowInput: false,
             }
+
+
         }
         else {
             errors = {
                 ...errors,
-                workflowTemplateInput: true,
+                taskTemplateWorkflowInput: true,
             }
         }
 
@@ -198,6 +200,7 @@ class CodeWizard extends Component {
     @autobind addTaskToTaskTemplate(){
         let workflow = undefined
         let task = undefined
+        let errors = this.props.kpi.datoskpi.codewizard.errors
 
         this.props.kpi.datoskpi.codewizard.workflows.map(item => {
             if(item.name === this.taskTemplateWorkflowInput.state.searchText) {
@@ -220,7 +223,20 @@ class CodeWizard extends Component {
             this.props.KPIActions.DatosKPIActions.CodeWizardActions.addTaskToTaskTemplate(workflow, task, this.props.kpi.datoskpi.codewizard.taskTemplate)
             
             this.taskTemplateTaskInput.state.searchText = ""
+
+            errors = {
+                ...errors,
+                taskTemplateTaskInput: false,
+            }
         }
+        else {
+            errors = {
+                ...errors,
+                taskTemplateTaskInput: true,
+            }
+        }
+
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
     }
 
     @autobind deleteTaskToTaskTemplate(index){
@@ -242,6 +258,57 @@ class CodeWizard extends Component {
         this.taskTemplateWorkflowInput.refs.searchTextField.input.disabled = false
         this.taskTemplateWorkflowInput.setValue("")
         this.taskTemplateTaskInput.setValue("")
+    }
+
+    @autobind taskTemplateCodeGenerate() {
+        let errors = {
+            ...this.props.kpi.datoskpi.codewizard.errors,
+            taskTemplateTaskInput: false,
+            taskTemplateWorkflowInput: false,
+            timeWindowInput: false,
+        }
+
+        let timeWindow = this.props.kpi.datoskpi.codewizard.timeWindow
+
+        if(this.taskTemplateWorkflowInput.refs.searchTextField.input.disabled === false) { errors.taskTemplateWorkflowInput = true }
+        if(this.props.kpi.datoskpi.codewizard.taskTemplate === undefined || this.props.kpi.datoskpi.codewizard.taskTemplate.tasks === undefined){ errors.taskTemplateTaskInput = true }
+        if(timeWindow === undefined || isNaN(parseInt(timeWindow))) { errors.timeWindowInput = true}
+            
+        if(!errors.taskTemplateTaskInput && !errors.taskTemplateWorkflowInput && !errors.timeWindowInput){
+            let code = this.props.kpi.datoskpi.codewizard.code
+            let codeBaseTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codeBase
+            let codeRepeatTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codeRepeat
+
+            code = code.replace("%%TIMEWINDOW%%", timeWindow * 3600000)
+            code = code.replace("%%TYPEFILE%%", "\"tscev\"")
+            code = code.replace("%%CODEBASE%%", codeBaseTemplate)
+            code = code.replace(/%%IDKPI%%/g, this.props.kpi.datoskpi.kpi.id)
+
+            let codeRepeat = codeRepeatTemplate
+
+            this.props.kpi.datoskpi.codewizard.taskTemplate.tasks.map( (task, index) => {
+                if(index > 0){
+                    codeRepeat = codeRepeat.replace("%%ADDOTHER%%", codeRepeatTemplate)
+                }
+
+                codeRepeat = codeRepeat.replace("%%TASKID%%", "\"" + task.URI + "\"")
+                codeRepeat = codeRepeat.replace("%%STATE%%", "\"" + task.state + "\"")
+            })
+
+            if(codeRepeatTemplate.indexOf("||") > -1){
+                codeRepeat = codeRepeat.replace("%%ADDOTHER%%", "false")
+            }
+            else if (codeRepeatTemplate.indexOf("&&") > -1){
+                codeRepeat = codeRepeat.replace("%%ADDOTHER%%", "true")
+            }
+
+            code = code.replace("%%REPEAT%%", codeRepeat)
+
+            this.props.KPIActions.DatosKPIActions.codeChange(code)
+            this.props.KPIActions.DatosKPIActions.continueSteper()
+        }
+
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
     }
 
     componentWillMount(){
@@ -381,7 +448,7 @@ class CodeWizard extends Component {
                 return (
                     <div className={styles.taskTemplate}>
                         <div>
-                            <AutoComplete openOnFocus={true} hintText="Workflow" ref={element => this.taskTemplateWorkflowInput = element } onNewRequest={this.changeTaskTemplateWorkflowTaskSugestions} fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
+                            <AutoComplete openOnFocus={true} hintText="Workflow" ref={element => this.taskTemplateWorkflowInput = element } onNewRequest={this.changeTaskTemplateWorkflowTaskSugestions} fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.taskTemplateWorkflowInput && "O workflow non existe"} />
                         </div>
 
                         {codewizard.taskTemplate !== undefined && codewizard.taskTemplate.tasks !== undefined && codewizard.taskTemplate.tasks.length > 0 ? (
@@ -405,7 +472,7 @@ class CodeWizard extends Component {
                         )}
 
                         <div ref={element => this.taskTemplateInputsElement = element } className={styles.inputs}>
-                            <AutoComplete openOnFocus={true} hintText="Tarefa do Workflow" ref={element => this.taskTemplateTaskInput = element } fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.workflowTemplateInput && "O workflow non existe"} />
+                            <AutoComplete openOnFocus={true} hintText="Tarefa do Workflow" ref={element => this.taskTemplateTaskInput = element } fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} style={{flex: 2, marginRight: '10px'}} errorText={codewizard.errors.taskTemplateTaskInput && "A tarefa non existe"} />
 
                             <SelectField style={{flex: 1}} hintText="Estado"  value={codewizard.taskWorkflowState} onChange={this.changeTaskWorkflowState}>
                                 <MenuItem value="active" primaryText="Activo" />
@@ -426,7 +493,7 @@ class CodeWizard extends Component {
 
                         <div>
                             <FlatButton label="Limpar" onTouchTap={this.cleanTaskTemplate}/>
-                            <FlatButton label="Xerar Código" onTouchTap={() => { this.templateType(3) }}/>
+                            <FlatButton label="Xerar Código" onTouchTap={() => { this.taskTemplateCodeGenerate() }}/>
                         </div>
                     </div>
                 )
