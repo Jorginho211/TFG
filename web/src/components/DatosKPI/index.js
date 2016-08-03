@@ -169,8 +169,41 @@ class DatosKPI extends Component {
     }
 
     @autobind addRepresentationToKPI(){
-      this.props.KPIActions.DatosKPIActions.addRepresentationToKPI(this.props.kpi.datoskpi.kpi, this.props.kpi.datoskpi.representation)
-      this.toggleRepresentationNewOrEdit()
+      let errors = {
+        ...this.props.kpi.datoskpi.errors,
+        selectFieldGraphicType: false,
+        mapXAxis: false,
+        mapYAxis: false,
+      }
+
+      if(this.props.kpi.datoskpi.kpi.representation !== undefined){
+        this.props.kpi.datoskpi.kpi.representation.map( repr => {
+          if(repr.type === this.props.kpi.datoskpi.representation.type){
+            errors.selectFieldGraphicType =true
+          }
+        })
+      }
+
+      switch(this.props.kpi.datoskpi.representation.type){
+        case "line":
+        case "pie":
+        case "bar":
+
+          if(this.props.kpi.datoskpi.representation.mapXAxis === undefined || this.props.kpi.datoskpi.representation.mapXAxis.length === 0) { errors.mapXAxis = true}
+          if(this.props.kpi.datoskpi.representation.mapYAxis === undefined || this.props.kpi.datoskpi.representation.mapYAxis.length === 0) { errors.mapYAxis = true}
+          console.log(errors)
+          break
+        case "number":
+          if(this.props.kpi.datoskpi.representation.mapXAxis === undefined || this.props.kpi.datoskpi.representation.mapXAxis.length === 0) { errors.mapXAxis = true}
+          break   
+      }
+
+      if(!errors.selectFieldGraphicType && !errors.mapXAxis && !errors.mapYAxis){
+        this.props.KPIActions.DatosKPIActions.addRepresentationToKPI(this.props.kpi.datoskpi.kpi, this.props.kpi.datoskpi.representation)
+        this.toggleRepresentationNewOrEdit()
+      }
+
+      this.props.KPIActions.DatosKPIActions.modifyErrors(errors)
     }
 
     @autobind deleteRepresentation(index){
@@ -262,7 +295,7 @@ class DatosKPI extends Component {
               {this.props.kpi.datoskpi.kpi.variables ? (
                 <div className={styles.mappingVariables}>
                   <div className={styles.variables}>
-                    <SelectField style={{width: '100%'}} value={this.props.kpi.datoskpi.representation.mapXAxis} floatingLabelText="Mapeo Eixo X" onChange={this.mapXAxisChange}>    
+                    <SelectField style={{width: '100%'}} value={this.props.kpi.datoskpi.representation.mapXAxis} floatingLabelText="Mapeo Eixo X" onChange={this.mapXAxisChange} errorText={ this.props.kpi.datoskpi.errors.mapXAxis && "Ten que haber unha variable de Mapeo para o eixo X" }>    
                       {this.props.kpi.datoskpi.kpi.variables.map((variable,index) => {
                         return (
                           <MenuItem key={index} value={variable} primaryText={variable} />
@@ -271,7 +304,7 @@ class DatosKPI extends Component {
                     </SelectField>
                   </div>
                   <div className={styles.variables}>
-                    <SelectField style={{width: '100%'}} value={this.props.kpi.datoskpi.representation.mapYAxis} floatingLabelText="Mapeo Eixo Y" onChange={this.mapYAxisChange}>
+                    <SelectField style={{width: '100%'}} value={this.props.kpi.datoskpi.representation.mapYAxis} floatingLabelText="Mapeo Eixo Y" onChange={this.mapYAxisChange} errorText={this.props.kpi.datoskpi.errors.mapYAxis && "Ten que haber unha variable de Mapeo para o eixo Y" }>
                       {this.props.kpi.datoskpi.kpi.variables.map((variable,index) => {
                         return (
                           <MenuItem key={index} value={variable} primaryText={variable} />
@@ -283,10 +316,10 @@ class DatosKPI extends Component {
                 ): (
                   <div className={styles.mappingVariables}>
                     <div className={styles.variables}>
-                      <TextField floatingLabelText="Variable Mapeo Eixo X" defaultValue={this.props.kpi.datoskpi.representation.mapXAxis} className={styles.textField} onBlur={(evt) => this.mapXAxisChange(null, null, evt.target.value)}/>
+                      <TextField floatingLabelText="Variable Mapeo Eixo X" defaultValue={this.props.kpi.datoskpi.representation.mapXAxis} className={styles.textField} onBlur={(evt) => this.mapXAxisChange(null, null, evt.target.value)} errorText={ this.props.kpi.datoskpi.errors.mapXAxis && "Ten que haber unha variable de Mapeo para o eixo X" }/>
                     </div>
                     <div className={styles.variables}>
-                      <TextField floatingLabelText="Variable Mapeo Eixo Y" defaultValue={this.props.kpi.datoskpi.representation.mapYAxis} className={styles.textField} onBlur={(evt) => this.mapYAxisChange(null, null, evt.target.value)}/>
+                      <TextField floatingLabelText="Variable Mapeo Eixo Y" defaultValue={this.props.kpi.datoskpi.representation.mapYAxis} className={styles.textField} onBlur={(evt) => this.mapYAxisChange(null, null, evt.target.value)} errorText={this.props.kpi.datoskpi.errors.mapYAxis && "Ten que haber unha variable de Mapeo para o eixo Y" }/>
                     </div>
                   </div>                  
                 )}
@@ -307,7 +340,7 @@ class DatosKPI extends Component {
               {this.props.kpi.datoskpi.kpi.variables ? (
                 <div className={styles.mappingVariables}>
                   <div className={styles.variables}>
-                    <SelectField style={{width: '100%'}} value={this.props.kpi.datoskpi.representation.mapXAxis} onChange={this.mapXAxisChange} floatingLabelText="Mapeo Nome do Sectores">    
+                    <SelectField style={{width: '100%'}} value={this.props.kpi.datoskpi.representation.mapXAxis} onChange={this.mapXAxisChange} floatingLabelText="Mapeo Nome do Sectores" errorText={this.props.kpi.datoskpi.errors.mapXAxis && "Ten que haber unha variable de Mapeo para o eixo X" }>    
                       {this.props.kpi.datoskpi.kpi.variables.map((variable,index) => {
                         return (
                           <MenuItem key={index} value={variable} primaryText={variable} />
@@ -316,7 +349,7 @@ class DatosKPI extends Component {
                     </SelectField>
                   </div>
                   <div className={styles.variables}>
-                    <SelectField style={{width: '100%'}} value={this.props.kpi.datoskpi.representation.mapYAxis} onChange={this.mapYAxisChange} floatingLabelText="Mapeo Porcentaxe">
+                    <SelectField style={{width: '100%'}} value={this.props.kpi.datoskpi.representation.mapYAxis} onChange={this.mapYAxisChange} floatingLabelText="Mapeo Porcentaxe" errorText={this.props.kpi.datoskpi.errors.mapYAxis && "Ten que haber unha variable de Mapeo para o eixo Y" }>
                       {this.props.kpi.datoskpi.kpi.variables.map((variable,index) => {
                         return (
                           <MenuItem key={index} value={variable} primaryText={variable} />
@@ -328,10 +361,10 @@ class DatosKPI extends Component {
                 ): (
                   <div className={styles.mappingVariables}>
                     <div className={styles.variables}>
-                      <TextField floatingLabelText="Variable Mapeo Nome Sectores" defaultValue={this.props.kpi.datoskpi.representation.mapXAxis} className={styles.textField} onBlur={(evt) => this.mapXAxisChange(null, null, evt.target.value)}/>
+                      <TextField floatingLabelText="Variable Mapeo Nome Sectores" defaultValue={this.props.kpi.datoskpi.representation.mapXAxis} className={styles.textField} onBlur={(evt) => this.mapXAxisChange(null, null, evt.target.value)} errorText={this.props.kpi.datoskpi.errors.mapXAxis && "Ten que haber unha variable de Mapeo para o eixo X" } />
                     </div>
                     <div className={styles.variables}>
-                      <TextField floatingLabelText="Variable Mapeo Porcentaxes" defaultValue={this.props.kpi.datoskpi.representation.mapYAxis} className={styles.textField} onBlur={(evt) => this.mapYAxisChange(null, null, evt.target.value)}/>
+                      <TextField floatingLabelText="Variable Mapeo Porcentaxes" defaultValue={this.props.kpi.datoskpi.representation.mapYAxis} className={styles.textField} onBlur={(evt) => this.mapYAxisChange(null, null, evt.target.value)} errorText={this.props.kpi.datoskpi.errors.mapYAxis && "Ten que haber unha variable de Mapeo para o eixo Y" }/>
                     </div>
                   </div>   
                 )}
@@ -344,7 +377,7 @@ class DatosKPI extends Component {
               {this.props.kpi.datoskpi.kpi.variables ? (
                 <div className={styles.mappingVariables}>
                   <div className={styles.variables}>
-                    <SelectField style={{width: '100%'}} value={this.props.kpi.datoskpi.representation.mapXAxis} onChange={this.mapXAxisChange} floatingLabelText="Variable de Mapeo">    
+                    <SelectField style={{width: '100%'}} value={this.props.kpi.datoskpi.representation.mapXAxis} onChange={this.mapXAxisChange} floatingLabelText="Variable de Mapeo" errorText={this.props.kpi.datoskpi.errors.mapXAxis && "Ten que haber unha variable de mapeo" }>    
                       {this.props.kpi.datoskpi.kpi.variables.map((variable,index) => {
                         return (
                           <MenuItem key={index} value={variable} primaryText={variable} />
@@ -359,7 +392,7 @@ class DatosKPI extends Component {
                 ): (
                   <div className={styles.mappingVariables}>
                     <div className={styles.variables}>
-                      <TextField floatingLabelText="Variable de Mapeo" className={styles.textField} onBlur={(evt) => this.mapXAxisChange(null, null, evt.target.value)} defaultValue={this.props.kpi.datoskpi.representation.mapXAxis}/>
+                      <TextField floatingLabelText="Variable de Mapeo" className={styles.textField} onBlur={(evt) => this.mapXAxisChange(null, null, evt.target.value)} defaultValue={this.props.kpi.datoskpi.representation.mapXAxis} errorText={this.props.kpi.datoskpi.errors.mapXAxis && "Ten que haber unha variable de Mapeo" }/>
                     </div>
                     <div className={styles.variables}>
                       <TextField floatingLabelText="Etiqueta" onBlur={this.labelXAxisChange} defaultValue={this.props.kpi.datoskpi.representation.labelXAxis} ref={element => this.labelXAxisInput = element } className={styles.textField}/>
@@ -422,7 +455,7 @@ class DatosKPI extends Component {
                               <div>
                                 <div className={styles.center}>
                                   <div className={styles.selectFieldImg}>
-                                    <SelectField value={this.props.kpi.datoskpi.representation.type} onChange={this.representationTypeChange}>
+                                    <SelectField value={this.props.kpi.datoskpi.representation.type} onChange={this.representationTypeChange} errorText={ this.props.kpi.datoskpi.errors.selectFieldGraphicType && "A grafica xa estaba engadida"}>
                                       <MenuItem value="line" primaryText="Lineas" />
                                       <MenuItem value="pie" primaryText="Sectores" />
                                       <MenuItem value="bar" primaryText="Barras" />

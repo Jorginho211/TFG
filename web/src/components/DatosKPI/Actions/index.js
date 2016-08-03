@@ -91,9 +91,10 @@ export function addRepresentationToNew(){
 export function addRepresentationToKPI(kpi, representation){
 	if(kpi.representation !== undefined){
 		let exist = false
-		kpi.representation.map( repr => {
+		kpi.representation.map( (repr, index) => {
 			if(repr.type === representation.type){
-				exist=true
+				kpi.representation[index] = representation
+				exist = true
 			}
 		})
 

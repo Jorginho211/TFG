@@ -15,6 +15,7 @@ const InitialState = {
         descriptionInput : false,
         keywordsInput: false,
         timeInput: false, 
+        selectFieldGraphicType: false,
     },
     isNewOrEditRepresentation: false,
     iframeOnceLoad: false,

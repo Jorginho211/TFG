@@ -1,8 +1,5 @@
-package MongoDBServices.ws;
+package ExtraServices.ws;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.mongodb.Block;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
@@ -20,7 +17,7 @@ import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
 @Path("/taskName/")
-public class Probas {
+public class Tasks {
 
     public String data(HttpURLConnection conn) throws IOException, JSONException{
         if (conn.getResponseCode() != 200) {
