@@ -84,6 +84,8 @@ class RepresentationHandler extends Component {
             })
 
             for(var key in elementsRepeats){
+                
+
                 series.push({
                     name: key,
                     data: elementsRepeats[key]
@@ -94,9 +96,11 @@ class RepresentationHandler extends Component {
             lineObject.title.text = kpi.name
             lineObject.xAxis.title.text = lineRepr.labelXAxis
             lineObject.yAxis.title.text = lineRepr.labelYAxis
+
+
         }
 
-        return lineObject
+        return JSON.parse(JSON.stringify(lineObject))
     }
 
     bar(chart){
@@ -142,7 +146,7 @@ class RepresentationHandler extends Component {
             barObject.yAxis.title.text = barRepr.labelYAxis
         }
 
-        return barObject
+        return JSON.parse(JSON.stringify(barObject))
     }
 
     pie(chart){
@@ -175,7 +179,7 @@ class RepresentationHandler extends Component {
 
         }
 
-        return pieObject
+        return JSON.parse(JSON.stringify(pieObject))
 
     }
 
@@ -230,7 +234,6 @@ class RepresentationHandler extends Component {
                 return null;
         }
     }
-    
 
     render() {
     	const {dashboard} = this.props;

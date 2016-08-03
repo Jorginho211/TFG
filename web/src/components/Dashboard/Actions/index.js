@@ -3,6 +3,11 @@
  */
 import DASHBOARD_ACTION_TYPES from './types/'
 
+export function toggleLoading(){
+	return {type: DASHBOARD_ACTION_TYPES.TOGGLE_LOADING}
+}
+
+
 export function addRemoveElement(dashboard){
     return {type: DASHBOARD_ACTION_TYPES.ADD_REMOVE_ELEMENT_LAYOUT, payload: { dashboard }}
 }
@@ -54,7 +59,7 @@ export function requestDataKPI(idKPI, dashboard){
 }
 
 export function requestDashboard(token){
-	return dispatch => {
+	return dispatch => {		
 		fetch('http://localhost:8080/MongoDBServices/api/v1/usuarios/dashboard/',{
 			method: 'GET', 
 			mode: 'cors',

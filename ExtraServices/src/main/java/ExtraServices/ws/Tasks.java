@@ -76,7 +76,7 @@ public class Tasks {
                 data = jArrayWf.getJSONObject(j);
                 
                 if(data.getString("uri").equals(uri)){
-                    return data.getString("wfontology_Name");
+                    return "{ \"taskName\": \"" + data.getString("wfontology_Name") + "\" }";
                 }
             }
         }

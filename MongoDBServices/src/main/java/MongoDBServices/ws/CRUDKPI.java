@@ -47,6 +47,7 @@ public class CRUDKPI {
     @Produces(MediaType.APPLICATION_JSON)
     public Response removeKPI(@PathParam("id") String id){
         db.getCollection(collection).deleteOne(new Document("_id", id));
+        db.getCollection("hadoop").deleteMany(new Document("idKPI", id));
         
         return Response.noContent().build();
     }
@@ -74,6 +75,7 @@ public class CRUDKPI {
         documentKPI.remove("id");
         
         db.getCollection(collection).replaceOne(new Document("_id", id), documentKPI); 
+        db.getCollection("hadoop").deleteMany(new Document("idKPI", id));
         
         return Response.ok().build();
     }

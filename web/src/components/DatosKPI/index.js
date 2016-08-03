@@ -191,7 +191,6 @@ class DatosKPI extends Component {
 
           if(this.props.kpi.datoskpi.representation.mapXAxis === undefined || this.props.kpi.datoskpi.representation.mapXAxis.length === 0) { errors.mapXAxis = true}
           if(this.props.kpi.datoskpi.representation.mapYAxis === undefined || this.props.kpi.datoskpi.representation.mapYAxis.length === 0) { errors.mapYAxis = true}
-          console.log(errors)
           break
         case "number":
           if(this.props.kpi.datoskpi.representation.mapXAxis === undefined || this.props.kpi.datoskpi.representation.mapXAxis.length === 0) { errors.mapXAxis = true}

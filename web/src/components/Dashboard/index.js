@@ -46,7 +46,6 @@ class Dashboard extends Component {
 
         this.props.DashboardActions.addRemoveElement(dashboard)
         this.props.DashboardActions.requestDataKPI(idKpiAux, dashboard)
-        
 
         this.toggleDialog()
     }
@@ -75,7 +74,9 @@ class Dashboard extends Component {
         let dashboard = []
         let layoutAux
 
-        this.props.dashboard.layoutSave.map(l => {
+        let dashboardAux = JSON.parse(JSON.stringify(this.props.dashboard))
+
+        dashboardAux.layoutSave.map(l => {
             layoutAux = {
                 ...l
             }
@@ -84,7 +85,7 @@ class Dashboard extends Component {
             idkpi = layoutAux.i.split("||")[0]
             chartType = layoutAux.i.split("||")[1]
 
-            this.props.dashboard.dashboard.map(d => {
+            dashboardAux.dashboard.map(d => {
                 if(d.idkpi === idkpi && d.chartType === chartType){
                     dashboard.push({
                         ...d,
@@ -105,7 +106,7 @@ class Dashboard extends Component {
             return 0
         })
         
-        this.props.DashboardActions.addRemoveElement(dashboard)
+        this.props.DashboardActions.addRemoveElement(this.props.dashboard.dashboard)
         this.props.DashboardActions.putDashboard("aKxOyCoyl7ENwD8ipdRhOUo82WO50UZYdKdyelZi", dashboard)
     }
 
@@ -136,22 +137,22 @@ class Dashboard extends Component {
     }
 
     componentWillMount(){
-        window.addEventListener('beforeunload', () => {
+        /*window.addEventListener('beforeunload', () => {
             this.saveDashboard()
-        })
+        })*/
 
         this.props.DashboardActions.requestDashboard("aKxOyCoyl7ENwD8ipdRhOUo82WO50UZYdKdyelZi")
         this.props.KPIActions.requestKpis();
     }
 
     componentDidMount(){
-        window.addEventListener('beforeunload', () => {
+        /*window.addEventListener('beforeunload', () => {
             this.saveDashboard()
-        })
+        })*/
     }
 
     componentWillUnmount() {
-        this.saveDashboard()
+        //this.saveDashboard()
     }
 
     getGrapthicImg(type, idKPI){
@@ -227,7 +228,7 @@ class Dashboard extends Component {
 
     	return (
             <div>
-                {kpi.isLoading ? (
+                {(kpi.isLoading || dashboard.isLoading) ? (
                     <div className={styles.refreshIndicator}>
                         <RefreshIndicator
                             size={100}
@@ -241,6 +242,8 @@ class Dashboard extends Component {
                 ) : (
                     <div>
                         <RepresentationHandler kpi={this.props.kpi} dashboard={this.props.dashboard} DashboardActions={this.props.DashboardActions} /> 
+
+                        <RaisedButton label="Gardar" labelPosition="before" primary={true} onTouchTap={() => this.saveDashboard()} icon={<SaveIcon />} className={styles.btnGardar} />
 
                         <FloatingActionButton onTouchTap={() =>  { this.suggestionListKPIName(); this.toggleDialog() }} className={styles.floatingButton} mini={true}>
                             <ContentAdd />

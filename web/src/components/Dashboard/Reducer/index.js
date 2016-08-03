@@ -12,11 +12,18 @@ const InitialState = {
     layoutSave: [],
     dashboard: [],
     isDialogOpened: false,
+    isLoading: false,
     suggestionList: [],
 }
 
 export default function DashboardReducer(state = InitialState, {type = '', payload = {}} = {type : '', payload : { }}){
     switch (type){
+        case TYPES.TOGGLE_LOADING:
+            return {
+                ...state,
+                isLoading: !state.isLoading,
+            }
+            
     	case TYPES.ADD_REMOVE_ELEMENT_LAYOUT:
     		return {
     			...state,
