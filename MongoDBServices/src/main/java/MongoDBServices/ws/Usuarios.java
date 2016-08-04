@@ -1,5 +1,6 @@
 package MongoDBServices.ws;
 
+import MongoDBServices.ws.Helpers.TasksHelper;
 import com.mongodb.Block;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
@@ -10,6 +11,8 @@ import javax.ws.rs.core.UriInfo;
 import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoDatabase;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
@@ -19,6 +22,7 @@ import java.util.logging.Logger;
 import org.bson.BSON;
 import org.bson.Document;
 import org.bson.types.ObjectId;
+import org.codehaus.jettison.json.JSONException;
 import sun.security.util.Password;
 
 @Path("/usuarios/")
@@ -80,11 +84,30 @@ public class Usuarios {
     @GET
     @Path("/dashboard")
     @Produces(MediaType.APPLICATION_JSON)
-    public ArrayList<Document> Dashboard(@HeaderParam("X-Auth-Token") String token) {
+    public ArrayList<Document> Dashboard(@HeaderParam("X-Auth-Token") String token) throws IOException, MalformedURLException, JSONException {
+        TasksHelper taskHelper = new TasksHelper();
+        
         ArrayList<Document> users = db.getCollection(collection).find(new Document("token", token)).into(new ArrayList<Document>());
         
         if(users.isEmpty()){
             throw new WebApplicationException(Response.Status.UNAUTHORIZED);
+        }
+        else {
+            ArrayList <Document> dashboard = (ArrayList <Document>) users.get(0).get("dashboard");
+            
+            System.out.println(dashboard);
+            for(Document dashboardElement : dashboard){
+                ArrayList<Document> data = db.getCollection("hadoop").find(new Document("idKPI", dashboardElement.getString("idkpi"))).into(new ArrayList<Document>());
+                
+                for(Document d:  data){
+                    data.get(0).remove("_id");
+                    data.get(0).remove("idKPI");
+                    
+                    //taskHelper.getTaskName(d);
+                }
+                
+                dashboardElement.append("data", data);
+            }
         }
         
         return (ArrayList<Document>) users.get(0).get("dashboard");        
@@ -94,7 +117,6 @@ public class Usuarios {
     @Path("/dashboard")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response Dashboard(@HeaderParam("X-Auth-Token") String token, String dashboardJson){
-        System.out.println(dashboardJson);
         ArrayList<Document> users = db.getCollection(collection).find(new Document("token", token)).into(new ArrayList<Document>());
         
         if(users.isEmpty()){
