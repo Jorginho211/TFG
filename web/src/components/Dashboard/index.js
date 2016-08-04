@@ -137,22 +137,19 @@ class Dashboard extends Component {
     }
 
     componentWillMount(){
-        /*window.addEventListener('beforeunload', () => {
+        window.addEventListener('beforeunload', () => {
             this.saveDashboard()
-        })*/
+        })
 
         this.props.DashboardActions.requestDashboard("aKxOyCoyl7ENwD8ipdRhOUo82WO50UZYdKdyelZi")
         this.props.KPIActions.requestKpis();
     }
 
     componentDidMount(){
-        /*window.addEventListener('beforeunload', () => {
-            this.saveDashboard()
-        })*/
     }
 
     componentWillUnmount() {
-        //this.saveDashboard()
+        this.saveDashboard()
     }
 
     getGrapthicImg(type, idKPI){
