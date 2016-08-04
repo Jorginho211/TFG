@@ -126,24 +126,18 @@ class RepresentationHandler extends Component {
             })
 
             for(var key in elementsRepeats){
-                series.push({ name: key, data: []})
+                series.push({
+                    name: key,
+                    data: elementsRepeats[key]
+                })
             }
-
-            let numberElements = 0
-            series.map( serie => {
-                for(var key in elementsRepeats){
-                    if(numberElements < elementsRepeats[key].length){
-                        serie.data.push(elementsRepeats[key][numberElements])
-                    }
-                }
-
-                numberElements += 1
-            })
 
             barObject.series = series
             barObject.title.text = kpi.name
             barObject.xAxis.title.text = barRepr.labelXAxis
             barObject.yAxis.title.text = barRepr.labelYAxis
+
+            console.log(barObject)
         }
 
         return JSON.parse(JSON.stringify(barObject))
