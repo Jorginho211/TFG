@@ -136,8 +136,6 @@ class RepresentationHandler extends Component {
             barObject.title.text = kpi.name
             barObject.xAxis.title.text = barRepr.labelXAxis
             barObject.yAxis.title.text = barRepr.labelYAxis
-
-            console.log(barObject)
         }
 
         return JSON.parse(JSON.stringify(barObject))

@@ -176,12 +176,14 @@ class DatosKPI extends Component {
         mapYAxis: false,
       }
 
-      if(this.props.kpi.datoskpi.kpi.representation !== undefined){
-        this.props.kpi.datoskpi.kpi.representation.map( repr => {
-          if(repr.type === this.props.kpi.datoskpi.representation.type){
-            errors.selectFieldGraphicType =true
-          }
-        })
+      if(this.refs.selectFieldGraphic !== undefined){
+        if(this.props.kpi.datoskpi.kpi.representation !== undefined){
+          this.props.kpi.datoskpi.kpi.representation.map( repr => {
+            if(repr.type === this.props.kpi.datoskpi.representation.type){
+              errors.selectFieldGraphicType =true
+            }
+          })
+        }
       }
 
       switch(this.props.kpi.datoskpi.representation.type){
@@ -454,7 +456,7 @@ class DatosKPI extends Component {
                               <div>
                                 <div className={styles.center}>
                                   <div className={styles.selectFieldImg}>
-                                    <SelectField value={this.props.kpi.datoskpi.representation.type} onChange={this.representationTypeChange} errorText={ this.props.kpi.datoskpi.errors.selectFieldGraphicType && "A grafica xa estaba engadida"}>
+                                    <SelectField value={this.props.kpi.datoskpi.representation.type} ref="selectFieldGraphic" onChange={this.representationTypeChange} errorText={ this.props.kpi.datoskpi.errors.selectFieldGraphicType && "A grafica xa estaba engadida"}>
                                       <MenuItem value="line" primaryText="Lineas" />
                                       <MenuItem value="pie" primaryText="Sectores" />
                                       <MenuItem value="bar" primaryText="Barras" />

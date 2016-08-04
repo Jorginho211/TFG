@@ -7,7 +7,7 @@
 		revision="1.1.3"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, phantom-js-jetty"
-		date="20160727163353"/>
+		date="20160804150736"/>
 	<dependencies>
 		<module organisation="com.lihaoyi" name="autowire_sjs0.6_2.11">
 			<revision name="0.2.5" status="release" pubdate="20150309015635" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lihaoyi/ajax" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="103">
@@ -71,7 +71,7 @@
 			</revision>
 		</module>
 		<module organisation="com.scalakata" name="model_sjs0.6_2.11">
-			<revision name="1.1.3" status="integration" pubdate="20160727163353" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="5">
+			<revision name="1.1.3" status="integration" pubdate="20160804150735" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="5">
 				<license name="MIT" url="http://www.opensource.org/licenses/mit-license.html"/>
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="com.scalakata" name="client_sjs0.6_2.11" conf="compile" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="1.1.3"/>
@@ -1420,7 +1420,7 @@
 			</revision>
 		</module>
 		<module organisation="com.scalakata" name="codemirror_sjs0.6_2.11">
-			<revision name="1.1.3" status="integration" pubdate="20160727163353" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
+			<revision name="1.1.3" status="integration" pubdate="20160804150735" resolver="inter-project" artresolver="inter-project" homepage="http://scalakata.com" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
 				<license name="MIT" url="http://www.opensource.org/licenses/mit-license.html"/>
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="com.scalakata" name="client_sjs0.6_2.11" conf="compile" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="1.1.3"/>
