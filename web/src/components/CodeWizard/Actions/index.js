@@ -144,6 +144,7 @@ export function authenticationCITIUS(){
 		}).then(json => {
 			dispatch(tokenAutentication(json.content))
 			dispatch(requestListWorkflows(json.content))
+			dispatch(requestListProperties(json.content))
 		}).catch( msg => 
 			console.log(msg)
 		)
@@ -191,7 +192,6 @@ export function requestTaskWorkflows(workflows, token){
 		fetch('https://tec.citius.usc.es/cuestionarios/backend/HMBOntologyRESTAPI/api/admin/v3/workflow/' + wf.URI,{
 			method: 'GET', 
 			mode: 'cors',
-			async: false,
 			headers: { 
     			'X-Auth-Token': token 
     		}
@@ -229,5 +229,115 @@ export function requestTaskWorkflows(workflows, token){
 		dispatch(setWorkflows(workflowsState)),
 		dispatch(changeSuggestionList(suggestionList))
 		dispatch(toggleLoading())
+	}
+}
+
+function isPrimitiveType(type){
+	switch(type){
+		case "IntegerType":
+		case "StringType":
+		case "BooleanType":
+			return true
+
+		default:
+			return false
+	}
+}
+
+export function requestListProperties(token){
+	return dispatch => {
+		var properties = []
+
+		fetch('https://tec.citius.usc.es/cuestionarios/backend/HMBOntologyRESTAPI/api/admin/v3/globalproperties',{
+			method: 'GET', 
+			mode: 'cors',
+    		headers: { 
+    			'X-Auth-Token': token 
+    		}
+		}).then(response => {
+			return response.ok ? 
+				response.json() :
+				Promise.reject("Erro")
+		}).then(globalProps => {
+			globalProps.content.map(prop => {
+				properties.push({
+					name: prop.wfontology_Name,
+					type: prop.wfontology_Type.split("#")[1]
+				})
+			})
+		}).then(() => {
+			fetch('https://tec.citius.usc.es/cuestionarios/backend/HMBOntologyRESTAPI/api/admin/v3/globalresourceproperties',{
+				method: 'GET', 
+				mode: 'cors',
+	    		headers: { 
+	    			'X-Auth-Token': token 
+	    		}
+				}).then(response => {
+					return response.ok ? 
+						response.json() :
+						Promise.reject("Erro")
+				}).then(globalResourceProps => {
+					globalResourceProps.content.map(prop => {
+						if(isPrimitiveType(prop.wfontology_Type.split("#")[1])){
+							properties.push({
+								name: prop.wfontology_Name,
+								type: prop.wfontology_Type.split("#")[1]
+							})
+						}
+					})
+
+					fetch('https://tec.citius.usc.es/cuestionarios/backend/HMBOntologyRESTAPI/api/admin/v3/localcaseproperties',{
+						method: 'GET', 
+						mode: 'cors',
+			    		headers: { 
+			    			'X-Auth-Token': token 
+			    		}
+						}).then(response => {
+							return response.ok ? 
+								response.json() :
+								Promise.reject("Erro")
+						}).then(localCaseProps => {
+							localCaseProps.content.map(prop => {
+								if(isPrimitiveType(prop.wfontology_Type.split("#")[1])){
+									properties.push({
+										name: prop.wfontology_Name,
+										type: prop.wfontology_Type.split("#")[1]
+									})
+								}
+							})
+
+							fetch('https://tec.citius.usc.es/cuestionarios/backend/HMBOntologyRESTAPI/api/admin/v3/localproperties',{
+								method: 'GET', 
+								mode: 'cors',
+					    		headers: { 
+					    			'X-Auth-Token': token 
+					    		}
+								}).then(response => {
+									return response.ok ? 
+										response.json() :
+										Promise.reject("Erro")
+								}).then(localProps => {
+									localProps.content.map(prop => {
+										if(isPrimitiveType(prop.wfontology_Type.split("#")[1])){
+											properties.push({
+												name: prop.wfontology_Name,
+												type: prop.wfontology_Type.split("#")[1]
+											})
+										}
+									})
+
+									console.log(properties)
+								}).catch( msg => 
+									console.log(msg)
+								)
+						}).catch( msg => 
+							console.log(msg)
+						)
+				}).catch( msg => 
+					console.log(msg)
+				)
+		}).catch( msg => 
+			console.log(msg)
+		)
 	}
 }

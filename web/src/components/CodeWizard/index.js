@@ -506,6 +506,7 @@ class CodeWizard extends Component {
                                 <MenuItem value="max" primaryText="Maximo" />
                                 <MenuItem value="min" primaryText="Minimo" />
                                 <MenuItem value="count" primaryText="Contar" />
+                                <MenuItem value="average" primaryText="Media" />
                             </SelectField>
                         </div>
 

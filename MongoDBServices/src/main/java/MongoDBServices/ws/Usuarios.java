@@ -100,8 +100,8 @@ public class Usuarios {
                 ArrayList<Document> data = db.getCollection("hadoop").find(new Document("idKPI", dashboardElement.getString("idkpi"))).into(new ArrayList<Document>());
                 
                 for(Document d:  data){
-                    data.get(0).remove("_id");
-                    data.get(0).remove("idKPI");
+                    d.remove("_id");
+                    d.remove("idKPI");
                     
                     //taskHelper.getTaskName(d);
                 }
