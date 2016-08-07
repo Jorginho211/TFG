@@ -184,8 +184,6 @@ export function requestTaskWorkflows(workflows, token){
 			name: wf.name,
 			URI: wf.URI
 		})
-
-		suggestionList.push(wf.name)
 	})
 
 	workflowsState.map( wf => {
@@ -227,7 +225,6 @@ export function requestTaskWorkflows(workflows, token){
 
 	return dispatch => {
 		dispatch(setWorkflows(workflowsState)),
-		dispatch(changeSuggestionList(suggestionList))
 		dispatch(toggleLoading())
 	}
 }

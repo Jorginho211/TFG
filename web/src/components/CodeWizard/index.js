@@ -33,13 +33,17 @@ class CodeWizard extends Component {
 
         switch(codeTemplate.type){
             case "workflowTemplate":
+                this.setWorkflowSuggestionList()
                 type = 1
                 break
+
             case "taskTemplate":
+                this.setWorkflowSuggestionList()
                 type = 2
                 break
 
             case "propertyTemplate":
+                this.setPropertiesSuggestionList()
                 type = 3
                 break
         }
@@ -309,6 +313,20 @@ class CodeWizard extends Component {
         }
 
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
+    }
+
+    @autobind setWorkflowSuggestionList(){
+        let suggestionList = []
+
+        this.props.kpi.datoskpi.codewizard.workflows.map( wf => {
+            suggestionList.push(wf.name)
+        })
+
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeSuggestionList(suggestionList)
+    }
+
+    @autobind setPropertiesSuggestionList(){
+        let suggestionList = []
     }
 
     componentWillMount(){
