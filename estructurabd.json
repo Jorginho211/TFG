@@ -85,5 +85,15 @@
 			"description": "Conta dentro dun Workflow determinado, se unhas tarefas concretas estan ou estiveron iniciadas/paradas/finalizadas",
 			"codeBase": "MultipleTsvFiles( files, ('ExecutionID, 'CaseID, 'TaskID, 'NuevoEstado, 'Timestamp))\r\n      .filter( 'TaskID, 'NuevoEstado ) {\r\n        fields : (String, String) => {\r\n          val (taskID, nuevoEstado) = fields\r\n          \r\n          %%REPEAT%%\r\n        }\r\n      }\r\n      .groupBy( 'TaskID ){ _.size('Count)}\r\n      .rename(('TaskID, 'Count) -> (('TaskID, 'Count)))\r\n      .write(output)",
 			"codeRepeat": "taskID == %%TASKID%% && nuevoEstado == %%STATE%% || %%ADDOTHER%%"
+		},
+
+		{
+			"type": "propertyTemplate",
+			"name": "Plantilla para properties",
+			"description": "",
+			"codeBase": "",
+			"codeRepeat": ""
 		}
 ]
+
+propertyTemplate

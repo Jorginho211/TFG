@@ -64,6 +64,10 @@ export function setWorkflows(workflows){
 	return {type: CODEWIZARD_ACTION_TYPES.SET_WORKFLOWS, payload: {workflows} }
 }
 
+export function setProperties(properties){
+	return {type: CODEWIZARD_ACTION_TYPES.SET_PROPERTIES, payload: {properties} }
+}
+
 export function addTaskToTaskTemplate(workflow, task, taskTemplate){
 	let exist = false
 
@@ -323,7 +327,7 @@ export function requestListProperties(token){
 										}
 									})
 
-									console.log(properties)
+									dispatch(setProperties(properties))
 								}).catch( msg => 
 									console.log(msg)
 								)

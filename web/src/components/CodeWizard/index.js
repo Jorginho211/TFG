@@ -327,6 +327,12 @@ class CodeWizard extends Component {
 
     @autobind setPropertiesSuggestionList(){
         let suggestionList = []
+
+        this.props.kpi.datoskpi.codewizard.properties.map(prop => {
+            suggestionList.push(prop.name)
+        })
+
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeSuggestionList(suggestionList)
     }
 
     componentWillMount(){

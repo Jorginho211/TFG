@@ -103,6 +103,12 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
                 workflows: payload.workflows,
             }
 
+        case TYPES.SET_PROPERTIES:
+            return {
+                ...state,
+                properties: payload.properties,
+            }
+
         case TYPES.TOGGLE_LOADING:
             return {
                 ...state,
