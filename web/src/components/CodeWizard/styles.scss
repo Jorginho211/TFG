@@ -131,13 +131,57 @@
 }
 
 .propertyTemplate{
-	.operatorSelect{
-		text-align: center;
+	.reduxOperatorProperty{
+		display: flex;
+
+		.property{
+			flex: 1;
+			margin-right: 20px;
+		}
+
+		.reduxOperatorSelect{
+			flex: 1;
+		}
 	}
 
 	.divider {
 		margin-top: 10px!important;
 		margin-bottom: 15px!important;
+	}
+
+	.otherProperties {
+		display: flex;
+
+		.propertyName {
+			flex: 1;
+			margin-right: 10px!important;
+		}
+
+		.atributes {
+			flex: 1;
+
+			.primitiveType{
+				display: flex;
+
+				.operator {
+					flex: 1;
+				}
+
+				.value {
+					margin-left: 10px;
+					flex: 1;
+				}
+			}
+		}
+	}
+
+	.propertyActions {
+		text-align: right;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		.button {
+			margin-left: 10px!important;
+		}
 	}
 }
 

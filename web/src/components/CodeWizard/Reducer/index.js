@@ -9,6 +9,10 @@ const InitialState = {
 	typeTemplate: 0,
     suggestionList: [],
     taskWorkflowState: "active",
+    propertyTemplate: {
+        reduxOperator: "average",
+        renderProperty: false,
+    },
     errors : {
         workflowTemplateInput : false,
         timeWindowInput : false,
@@ -52,6 +56,10 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
                 taskWorkflowState: "active",
                 workflowTemplate: undefined,
                 taskTemplate: undefined,
+                propertyTemplate: {
+                    reduxOperator: "average",
+                    renderProperty: false,
+                },
                 errors : {
                     workflowTemplateInput : false,
                     tempWindowInput : false,
@@ -107,6 +115,21 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
             return {
                 ...state,
                 properties: payload.properties,
+            }
+
+        case TYPES.CHANGE_REDUX_OPERATOR_PROPERTY_TEMPLATE:
+            return {
+                ...state,
+                propertyTemplate: {
+                    ...state.propertyTemplate,
+                    reduxOperator: payload.reduxOperator,
+                }
+            }
+
+        case TYPES.SET_PROPERTY_TEMPLATE:
+            return {
+                ...state,
+                propertyTemplate: payload.propertyTemplate,
             }
 
         case TYPES.TOGGLE_LOADING:

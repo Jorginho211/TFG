@@ -4,6 +4,8 @@
 
 import CODEWIZARD_ACTION_TYPES from './types/'
 
+import * as model from'./model.js'
+
 export function templateType(templateType, codeTemplate){
 	return {type: CODEWIZARD_ACTION_TYPES.TEMPLATE_TYPE, payload: {templateType, codeTemplate}}
 }
@@ -66,6 +68,14 @@ export function setWorkflows(workflows){
 
 export function setProperties(properties){
 	return {type: CODEWIZARD_ACTION_TYPES.SET_PROPERTIES, payload: {properties} }
+}
+
+export function setPropertyTemplate(propertyTemplate){
+	return {type: CODEWIZARD_ACTION_TYPES.SET_PROPERTY_TEMPLATE, payload: {propertyTemplate} }
+}
+
+export function changeReduxOperatorPropertyTemplate(reduxOperator){
+	return {type: CODEWIZARD_ACTION_TYPES.CHANGE_REDUX_OPERATOR_PROPERTY_TEMPLATE, payload: {reduxOperator} }
 }
 
 export function addTaskToTaskTemplate(workflow, task, taskTemplate){
@@ -228,8 +238,7 @@ export function requestTaskWorkflows(workflows, token){
 	})
 
 	return dispatch => {
-		dispatch(setWorkflows(workflowsState)),
-		dispatch(toggleLoading())
+		dispatch(setWorkflows(workflowsState))
 	}
 }
 
@@ -243,6 +252,19 @@ function isPrimitiveType(type){
 		default:
 			return false
 	}
+}
+
+function getFirstLevelAtributePrimitive(prop){
+	let propObject = new model[prop["@class"].split("model.")[1]]();
+	let primitiveAtributes = []
+
+	for(let key in propObject){
+		if(key !== "@class" && typeof(propObject[key]) !== "object") {
+			primitiveAtributes.push(key)
+		}
+	}
+
+	return primitiveAtributes
 }
 
 export function requestListProperties(token){
@@ -261,10 +283,19 @@ export function requestListProperties(token){
 				Promise.reject("Erro")
 		}).then(globalProps => {
 			globalProps.content.map(prop => {
-				properties.push({
-					name: prop.wfontology_Name,
-					type: prop.wfontology_Type.split("#")[1]
-				})
+				if(isPrimitiveType(prop.wfontology_Type.split("#")[1])){
+					properties.push({
+						name: prop.wfontology_Name,
+						type: prop.wfontology_Type.split("#")[1]
+					})
+				}
+				else {
+					properties.push({
+						name: prop.wfontology_Name,
+						type: "object",
+						primitiveAtributes: getFirstLevelAtributePrimitive(prop)
+					})
+				}
 			})
 		}).then(() => {
 			fetch('https://tec.citius.usc.es/cuestionarios/backend/HMBOntologyRESTAPI/api/admin/v3/globalresourceproperties',{
@@ -283,6 +314,13 @@ export function requestListProperties(token){
 							properties.push({
 								name: prop.wfontology_Name,
 								type: prop.wfontology_Type.split("#")[1]
+							})
+						}
+						else {
+							properties.push({
+								name: prop.wfontology_Name,
+								type: "object",
+								primitiveAtributes: getFirstLevelAtributePrimitive(prop)
 							})
 						}
 					})
@@ -305,6 +343,13 @@ export function requestListProperties(token){
 										type: prop.wfontology_Type.split("#")[1]
 									})
 								}
+								else {
+									properties.push({
+										name: prop.wfontology_Name,
+										type: "object",
+										primitiveAtributes: getFirstLevelAtributePrimitive(prop)
+									})
+								}
 							})
 
 							fetch('https://tec.citius.usc.es/cuestionarios/backend/HMBOntologyRESTAPI/api/admin/v3/localproperties',{
@@ -325,9 +370,17 @@ export function requestListProperties(token){
 												type: prop.wfontology_Type.split("#")[1]
 											})
 										}
+										else {
+											properties.push({
+												name: prop.wfontology_Name,
+												type: "object",
+												primitiveAtributes: getFirstLevelAtributePrimitive(prop)
+											})
+										}
 									})
 
 									dispatch(setProperties(properties))
+									dispatch(toggleLoading())
 								}).catch( msg => 
 									console.log(msg)
 								)
