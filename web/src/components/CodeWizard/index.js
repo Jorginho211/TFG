@@ -544,6 +544,8 @@ class CodeWizard extends Component {
         if(this.props.kpi.datoskpi.codewizard.token === undefined){
             this.props.KPIActions.DatosKPIActions.CodeWizardActions.authenticationCITIUS();
         }
+
+        this.templateType(0)
     }
 
     getStateGalego(state){
