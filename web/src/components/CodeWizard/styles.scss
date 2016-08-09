@@ -149,6 +149,47 @@
 		margin-bottom: 15px!important;
 	}
 
+	.table {
+		margin-top: 10px;
+		overflow-y: auto;
+		max-height: 200px;
+
+		.propLine {
+			margin-top: -10px;
+			display: flex;
+			align-items: center;
+
+			.prop {
+				flex: 1;
+			}
+
+			.state {
+				margin-left: 20px;
+				flex: 2;
+
+				display: flex;
+
+				.comparisonOperator{
+					flex: 1;
+				}
+
+				.value{
+					flex: 1;
+				}
+
+				.logicalOperator {
+					flex: 1;
+				}
+			}
+
+			.actions {
+				flex: 0;
+			}
+		}
+
+		margin-bottom: 5px;
+	}
+
 	.otherProperties {
 		display: flex;
 
@@ -158,7 +199,7 @@
 		}
 
 		.atributes {
-			flex: 1;
+			flex: 2;
 
 			.primitiveType{
 				display: flex;
@@ -169,7 +210,7 @@
 
 				.value {
 					margin-left: 10px;
-					flex: 1;
+					flex: 2;
 				}
 			}
 		}

@@ -320,8 +320,12 @@ class CodeWizard extends Component {
     }
 
     @autobind changeReduxPropertyPropertyTemplate(value, index){
-        let exist
+        let exist = false
         let propertyTemplate = this.props.kpi.datoskpi.codewizard.propertyTemplate
+        let errors = {
+            ...this.props.kpi.datoskpi.codewizard.errors,
+            reduxProperty: false,
+        }
 
         this.props.kpi.datoskpi.codewizard.properties.map(prop => {
             if(value == prop.name){
@@ -335,8 +339,17 @@ class CodeWizard extends Component {
                 reduxProperty: value,
             }
         }
+        else {
+            propertyTemplate = {
+                ...propertyTemplate,
+                reduxProperty: undefined,
+            }
+
+            errors.reduxProperty = true
+        }
 
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.setPropertyTemplate(propertyTemplate)
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
     }
 
     @autobind propertySelected(value,index){
@@ -358,10 +371,10 @@ class CodeWizard extends Component {
                 renderProperty: true,
             }
         }
-        else {
+        else{
             propertyTemplate = {
                 ...propertyTemplate,
-                propertySelected: undefined,
+                tempProperty: undefined,
                 renderProperty: false,
             }
         }
@@ -383,14 +396,18 @@ class CodeWizard extends Component {
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.setPropertyTemplate(propertyTemplate)
     }
 
-    @autobind setPropertyValue(evt){
+    @autobind setPropertyValue(evt, index, val){
         let propertyTemplate = this.props.kpi.datoskpi.codewizard.propertyTemplate
+
+        if(val === undefined){
+            val = evt.target.value
+        }
 
         propertyTemplate = {
             ...propertyTemplate,
             tempProperty : {
                 ...propertyTemplate.tempProperty,
-                value: evt.target.value,
+                value: val,
             }
         }
 
@@ -398,6 +415,13 @@ class CodeWizard extends Component {
     }
 
     @autobind addPropertyToListPropertyTemplate(op){
+        let errors = {
+            ...this.props.kpi.datoskpi.codewizard.errors,
+            propConditionInput: false,
+            comparisonOperator: false,
+            valueMessage: undefined,
+        }
+
         let propertyTemplate = this.props.kpi.datoskpi.codewizard.propertyTemplate
         let list = propertyTemplate.properties
 
@@ -413,17 +437,87 @@ class CodeWizard extends Component {
             }
         }
 
-        list.push(propertyTemplate.tempProperty)
+        let existProp = false
+        this.props.kpi.datoskpi.codewizard.properties.map( prop => {
+            if(prop.name === propertyTemplate.tempProperty.name){
+                existProp = true
+            }
+        })
+
+        if(!existProp) { errors.propConditionInput = true }
+        if(!errors.propConditionInput && propertyTemplate.tempProperty.comparisonOperator === undefined) { errors.comparisonOperator = true }
+        if(!errors.propConditionInput && propertyTemplate.tempProperty.value !== undefined) {
+            switch(propertyTemplate.tempProperty.type){
+                case "IntegerType":
+                    if(propertyTemplate.tempProperty.value === undefined || isNaN(parseInt(propertyTemplate.tempProperty.value))) { errors.valueMessage = "O valor ten que ser un numero enteiro"}
+                    break;
+
+                case "StringType":
+                    if(propertyTemplate.tempProperty.value === undefined) { errors.valueMessage = "O valor ten que ser unha cadea de texto"} 
+                    break;
+
+                case "BooleanType":
+                    if(propertyTemplate.tempProperty.value === undefined) { errors.valueMessage = "Ten que escoller un valor" }
+                        break;
+            }
+        }
+        else if(!errors.propConditionInput && propertyTemplate.tempProperty.value === undefined){ errors.valueMessage = "Ten que introducir algun valor" }
+
+        if(!errors.propConditionInput && !errors.comparisonOperator && !errors.valueMessage){
+            list.push(propertyTemplate.tempProperty)
+
+            propertyTemplate = {
+                ...propertyTemplate,
+                tempProperty: undefined,
+                properties: list,
+                renderProperty: false,
+            }
+
+            this.props.KPIActions.DatosKPIActions.CodeWizardActions.setPropertyTemplate(propertyTemplate)
+            this.propertyTemplateInput.setValue("")
+        }
+
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
+    }
+
+    @autobind deletePropToPropertyTemplate(indexProp){
+        let propertyTemplate = this.props.kpi.datoskpi.codewizard.propertyTemplate
+        let listProps = []
+
+        propertyTemplate.properties.map( (prop, index) => {
+            if(index !== indexProp){
+                listProps.push(prop)
+            }
+        })
 
         propertyTemplate = {
             ...propertyTemplate,
-            tempProperty: undefined,
-            properties: list,
-            renderProperty: false,
+            properties: listProps,
         }
 
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.setPropertyTemplate(propertyTemplate)
-        this.propertyTemplateInput.setValue("")
+    }
+
+    @autobind propertyTemplateCodeGenerate(){
+        let errors = {
+            ...this.props.kpi.datoskpi.codewizard.errors,
+            timeWindowInput: false,
+            reduxOperator: false,
+            reduxProperty: false,
+        }
+
+        let propertyTemplate = this.props.kpi.datoskpi.codewizard.propertyTemplate
+        let timeWindow = this.props.kpi.datoskpi.codewizard.timeWindow
+
+        if(timeWindow === undefined || isNaN(parseInt(timeWindow))) { errors.timeWindowInput = true }
+        if(propertyTemplate.reduxOperator === undefined) { errors.reduxOperator = true }
+        if(propertyTemplate.reduxProperty === undefined) { errors.reduxProperty = true }
+
+        if(!errors.timeWindowInput && !errors.reduxOperator && propertyTemplate.properties !== undefined && propertyTemplate.properties.length > 0){
+            console.log("AQUI")
+        }
+
+        this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)
     }
 
     @autobind setWorkflowSuggestionList(){
@@ -486,12 +580,13 @@ class CodeWizard extends Component {
     }
 
     getRenderPropertyTemplate(prop){
+        let errors = this.props.kpi.datoskpi.codewizard.errors
         if(prop.primitiveAtributes === undefined){
             return (
                 <div className={styles.atributes}>
                     <div className={styles.primitiveType}>
                         <div className={styles.operator}>
-                            <SelectField hintText="Operador" value={this.props.kpi.datoskpi.codewizard.propertyTemplate.tempProperty.comparisonOperator} onChange={this.setTempPropertyComparisonOperator}>
+                            <SelectField hintText="Operador" value={this.props.kpi.datoskpi.codewizard.propertyTemplate.tempProperty.comparisonOperator} onChange={this.setTempPropertyComparisonOperator} style={{width: "100%"}} errorText={errors.comparisonOperator && "Debe escoller un operador"}>
                                 <MenuItem value="==" primaryText="==" />
                                 <MenuItem value=">" primaryText=">" />
                                 <MenuItem value="<" primaryText="<" />
@@ -501,7 +596,14 @@ class CodeWizard extends Component {
                         </div>
 
                         <div className={styles.value}>
-                            <TextField hintText="Valor" onBlur={this.setPropertyValue}/>
+                            {prop.type === "BooleanType" ? (
+                                <SelectField hintText="Valor" value={this.props.kpi.datoskpi.codewizard.propertyTemplate.tempProperty.value} onChange={this.setPropertyValue} style={{width: "100%"}} errorText={errors.valueMessage}>
+                                    <MenuItem value="true" primaryText="True" />
+                                    <MenuItem value="false" primaryText="False" />
+                                </SelectField>
+                            ):(
+                                <TextField hintText="Valor" onBlur={this.setPropertyValue} className={styles.textFieldwidthAll} errorText={errors.valueMessage}/>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -674,11 +776,11 @@ class CodeWizard extends Component {
                     <div className={styles.propertyTemplate}>
                         <div className={styles.reduxOperatorProperty}>
                             <div className={styles.property}>
-                                <AutoComplete openOnFocus={true} hintText="Propiedade" onNewRequest={this.changeReduxPropertyPropertyTemplate} fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} />
+                                <AutoComplete openOnFocus={true} hintText="Propiedade" onNewRequest={this.changeReduxPropertyPropertyTemplate} fullWidth={true} dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} errorText={codewizard.errors.reduxProperty && "Non existe a propiedade"}/>
                             </div>
                             
                             <div className={styles.reduxOperatorSelect}>
-                                <SelectField hintText="Operador Reducción" value={codewizard.propertyTemplate.reduxOperator} onChange={this.changeReduxOperatorPropertyTemplate} style={{width:"100%"}}>
+                                <SelectField hintText="Operador Reducción" value={codewizard.propertyTemplate.reduxOperator} onChange={this.changeReduxOperatorPropertyTemplate} style={{width:"100%"}} errorText={codewizard.errors.reduxOperator && "Escolla unha operacion"}>
                                     <MenuItem value="max" primaryText="Maximo" />
                                     <MenuItem value="min" primaryText="Minimo" />
                                     <MenuItem value="count" primaryText="Contar" />
@@ -690,9 +792,35 @@ class CodeWizard extends Component {
                         <Divider className={styles.divider}/> 
 
                         <div>
+                            {codewizard.propertyTemplate !== undefined && codewizard.propertyTemplate.properties !== undefined && codewizard.propertyTemplate.properties.length > 0 ? (
+                                <div className={styles.table}>
+                                    {codewizard.propertyTemplate.properties.map((prop, index) => {
+                                        return (
+                                            <div key={index} className={styles.propLine}>
+                                                <div className={styles.prop}>{prop.name}</div>
+                                                <div className={styles.state}>
+                                                    <div className={styles.comparisonOperator}>{prop.comparisonOperator}</div>
+                                                    <div className={styles.value}>{prop.value}</div>
+                                                    <div className={styles.logicalOperator}>{prop.logicalOperator}</div>
+                                                </div>
+                                                <div className={styles.actions}>
+                                                    <IconButton onTouchTap={() => this.deletePropToPropertyTemplate(index)}> 
+                                                        <DeleteIcon />
+                                                    </IconButton>
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
+
+                                    <Divider className={styles.divider}/> 
+                                </div>
+                            ): (
+                                null
+                            )}
+
                             <div className={styles.otherProperties}>
                                 <div className={styles.propertyName}>
-                                    <AutoComplete openOnFocus={true} ref={element => this.propertyTemplateInput = element } hintText="Propiedade" dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} onNewRequest={this.propertySelected} fullWidth={true}/>
+                                    <AutoComplete openOnFocus={true} ref={element => this.propertyTemplateInput = element } hintText="Propiedade" dataSource={codewizard.suggestionList} filter={AutoComplete.caseInsensitiveFilter} onNewRequest={this.propertySelected} fullWidth={true} errorText={codewizard.errors.propConditionInput && "A propiedade non existe"}/>
                                 </div>
 
                                 {codewizard.propertyTemplate.renderProperty ? (
@@ -715,12 +843,11 @@ class CodeWizard extends Component {
                         </div>
 
                         <div>
-                            <TextField hintText="Ventá Temporal (horas)" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow}/>
+                            <TextField hintText="Ventá Temporal (horas)" className={styles.textFieldwidthAll} onBlur={this.changeTimeWindow} errorText={codewizard.errors.timeWindowInput && "Valor Incorrecto, debe ser enteiro en horas"}/>
                         </div>
 
                         <div>
-                            <FlatButton label="Limpar"/>
-                            <FlatButton label="Xerar Código" />
+                            <FlatButton label="Xerar Código" onTouchTap={() => this.propertyTemplateCodeGenerate()}/>
                         </div>
                     </div>
                 )

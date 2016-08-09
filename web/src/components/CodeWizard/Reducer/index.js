@@ -10,7 +10,6 @@ const InitialState = {
     suggestionList: [],
     taskWorkflowState: "active",
     propertyTemplate: {
-        reduxOperator: "average",
         renderProperty: false,
     },
     errors : {
@@ -57,7 +56,6 @@ export default function CodeWizardReducer(state = InitialState, {type = '', payl
                 workflowTemplate: undefined,
                 taskTemplate: undefined,
                 propertyTemplate: {
-                    reduxOperator: "average",
                     renderProperty: false,
                 },
                 errors : {

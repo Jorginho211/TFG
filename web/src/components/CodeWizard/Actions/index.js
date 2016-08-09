@@ -290,11 +290,11 @@ export function requestListProperties(token){
 					})
 				}
 				else {
-					properties.push({
-						name: prop.wfontology_Name,
-						type: "object",
-						primitiveAtributes: getFirstLevelAtributePrimitive(prop)
-					})
+					//properties.push({
+					//	name: prop.wfontology_Name,
+					//	type: "object",
+					//	primitiveAtributes: getFirstLevelAtributePrimitive(prop)
+					//})
 				}
 			})
 		}).then(() => {
@@ -317,11 +317,11 @@ export function requestListProperties(token){
 							})
 						}
 						else {
-							properties.push({
-								name: prop.wfontology_Name,
-								type: "object",
-								primitiveAtributes: getFirstLevelAtributePrimitive(prop)
-							})
+							//properties.push({
+							//	name: prop.wfontology_Name,
+							//	type: "object",
+							//	primitiveAtributes: getFirstLevelAtributePrimitive(prop)
+							//})
 						}
 					})
 
@@ -344,11 +344,11 @@ export function requestListProperties(token){
 									})
 								}
 								else {
-									properties.push({
-										name: prop.wfontology_Name,
-										type: "object",
-										primitiveAtributes: getFirstLevelAtributePrimitive(prop)
-									})
+									//properties.push({
+									//	name: prop.wfontology_Name,
+									//	type: "object",
+									//	primitiveAtributes: getFirstLevelAtributePrimitive(prop)
+									//})
 								}
 							})
 
@@ -371,11 +371,11 @@ export function requestListProperties(token){
 											})
 										}
 										else {
-											properties.push({
-												name: prop.wfontology_Name,
-												type: "object",
-												primitiveAtributes: getFirstLevelAtributePrimitive(prop)
-											})
+											//properties.push({
+											//	name: prop.wfontology_Name,
+											//	type: "object",
+											//	primitiveAtributes: getFirstLevelAtributePrimitive(prop)
+											//})
 										}
 									})
 
