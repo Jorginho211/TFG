@@ -4,3 +4,5 @@ project webappJVM
 clean
 compile
 project webappJVM
+sbt
+project webappJVM

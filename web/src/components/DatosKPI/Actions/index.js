@@ -36,14 +36,14 @@ export function timeChange(time){
 }
 
 export function codeChange(code){
-	let reg = /.rename(\(|\s)+('[a-zA-Z0-9]+|\s*,\s*)+(\)|\s)+->(\s|\()+('[a-zA-Z0-9]+|\s*,\s*)+(\)|\s)+/;
+	let reg = /.rename(\(|\s)+('[_a-zA-Z0-9]+|\s*,\s*)+(\)|\s)+->(\s|\()+('[_a-zA-Z0-9]+|\s*,\s*)+(\)|\s)+/;
 	let columns = reg.exec(code);
 
 	if(columns !== null){
 		let variables = []
 		let column = columns[0].split("->")[1].split(",");
 
-		reg = reg = /[A-Za-z0-9]+/;
+		reg = reg = /[_A-Za-z0-9]+/;
 
 		column.map(el => {
 			variables.push(reg.exec(el)[0])

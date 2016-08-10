@@ -514,7 +514,69 @@ class CodeWizard extends Component {
         if(propertyTemplate.reduxProperty === undefined) { errors.reduxProperty = true }
 
         if(!errors.timeWindowInput && !errors.reduxOperator && propertyTemplate.properties !== undefined && propertyTemplate.properties.length > 0){
-            console.log("AQUI")
+            let code = this.props.kpi.datoskpi.codewizard.code
+            let codeBaseTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codeBase
+            let codePropFilterTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codePropFilter
+            let codeAndPropTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codeAndProp
+            let propertyTemplate = this.props.kpi.datoskpi.codewizard.propertyTemplate
+
+            code = code.replace(/%%IDKPI%%/g, this.props.kpi.datoskpi.kpi.id)
+            code = code.replace("%%TIMEWINDOW%%", timeWindow * 3600000)
+            code = code.replace("%%TYPEFILE%%", "\"pvcev\"")
+            code = code.replace("%%CODEBASE%%", codeBaseTemplate)
+
+            code = code.replace(/%%PROPNAME%%/g, propertyTemplate.reduxProperty)
+
+
+            if(propertyTemplate.reduxOperator == "count"){
+                code = code.replace("%%OPREDUX%%","")
+                code = code.replace("%%NAMEOPREDUX%%", "Count")
+            }
+            else {
+                code = code.replace("%%OPREDUX%%", "." + propertyTemplate.reduxOperator)
+                code = code.replace("%%NAMEOPREDUX%%", propertyTemplate.reduxOperator)
+            }
+
+            code = code.replace("%%PROPFILTER%%", codePropFilterTemplate)
+
+            propertyTemplate.properties.map( (prop, index) => {
+                code = code.replace(/%%PROPNAME%%/g, prop.name)
+                code = code.replace("%%VALUETYPE%%", prop.type.replace("Type", ""))
+                code = code.replace("%%OP%%", prop.comparisonOperator)
+
+                if(prop.type === "StringType"){
+                    code = code.replace("%%VALUE%%", "\"" + prop.value + "\"")
+                }
+                else {
+                    code = code.replace("%%VALUE%%", prop.value)
+                }
+
+                if(index + 1 < propertyTemplate.properties.length){
+                    code = code.replace("%%OTHERPROPFILTER%%", codePropFilterTemplate)
+                }              
+            })
+            code = code.replace("%%OTHERPROPFILTER%%", "")
+
+            if(propertyTemplate.properties.length > 1){
+                propertyTemplate.properties.map( (prop, index) => {
+                    if(index === 0){
+                        code = code.replace("%%OTHERREPEAT%%", codeAndPropTemplate)
+                    }
+
+                    if( prop.name !== propertyTemplate.reduxProperty){
+                        code = code.replace(/%%PROPNAME%%/g, propertyTemplate.reduxProperty)
+                        code = code.replace(/%%PROPITER%%/g, prop.name)
+
+                        if(index + 1 < propertyTemplate.properties.length){
+                            code = code.replace("%%OTHERREPEAT%%", codeAndPropTemplate)
+                        }
+                    }
+                })
+            }
+            code = code.replace("%%OTHERREPEAT%%", "")
+
+            this.props.KPIActions.DatosKPIActions.codeChange(code)
+            this.props.KPIActions.DatosKPIActions.continueSteper()
         }
 
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.modifyErrors(errors)

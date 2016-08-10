@@ -90,8 +90,10 @@
 		{
 			"type": "propertyTemplate",
 			"name": "Plantilla para properties",
-			"description": "",
-			"codeBase": "",
-			"codeRepeat": ""
+			"description": "Permite agrupar por unha propiedade e realizar unha operacion de contar/maximo/minimo/media",
+			"codeBase": "%%PROPFILTER%%\r\n\r\nvar result:cascading.pipe.Pipe = null\r\nresult = %%PROPNAME%%\r\n\r\n%%OTHERREPEAT%%\r\n\r\nresult = result.groupBy('%%PROPNAME%%PropertyName) { _.size%%OPREDUX%%('%%PROPNAME%%Value) }.rename(('%%PROPNAME%%PropertyName, '%%PROPNAME%%Value) -> (('Property, '%%NAMEOPREDUX%%)))\r\nresult.write(output)",
+			"codePropFilter": "val %%PROPNAME%% = MultipleTsvFiles( files, ('%%PROPNAME%%ExecutionID, '%%PROPNAME%%PropertyName, '%%PROPNAME%%PropertyContext, '%%PROPNAME%%Agent, '%%PROPNAME%%CaseID, '%%PROPNAME%%IsCommited, '%%PROPNAME%%Timestamp, '%%PROPNAME%%Value))\r\n      .filter( '%%PROPNAME%%PropertyName, '%%PROPNAME%%Value ) {\r\n        fields : (String, %%VALUETYPE%%) => {\r\n          val (propertyName, value) = fields\r\n          propertyName == \"%%PROPNAME%%\" && value %%OP%% %%VALUE%%\r\n        }\r\n      }\r\n\r\n      %%OTHERPROPFILTER%%",
+			"codeAndProp":"result = result.joinWithSmaller(('%%PROPNAME%%ExecutionID, '%%PROPNAME%%CaseID) -> ('%%PROPITER%%ExecutionID, '%%PROPITER%%CaseID), %%PROPITER%%)\r\n%%OTHERREPEAT%%",
+			"codeOrProp":"",
 		}
 ]

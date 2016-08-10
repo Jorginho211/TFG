@@ -133,3 +133,34 @@ MultipleTsvFiles( files, ('ExecutionID, 'CaseID, 'TaskID, 'NuevoEstado, 'Timesta
   taskID == %%TASKID%% && nuevoEstado == %%STATE%% || %%ADDOTHER%%
 
 
+//PropertyTemplate
+%%PROPFILTER%%
+
+var result:cascading.pipe.Pipe = null
+result = %%PROPNAME%%
+
+%%OTHERREPEAT%%
+
+result = result.groupBy('%%PROPNAME%%PropertyName) { _.size%%OPREDUX%%('%%PROPNAME%%Value) }.rename(('%%PROPNAME%%PropertyName, '%%PROPNAME%%Value) -> (('Property, '%%NAMEOPREDUX%%)))
+result.write(output)
+
+
+//PROPFILTER
+val %%PROPNAME%% = MultipleTsvFiles( files, ('%%PROPNAME%%ExecutionID, '%%PROPNAME%%PropertyName, '%%PROPNAME%%PropertyContext, '%%PROPNAME%%Agent, '%%PROPNAME%%CaseID, '%%PROPNAME%%IsCommited, '%%PROPNAME%%Timestamp, '%%PROPNAME%%Value))
+      .filter( '%%PROPNAME%%PropertyName, '%%PROPNAME%%Value ) {
+        fields : (String, %%VALUETYPE%%) => {
+          val (propertyName, value) = fields
+          propertyName == "%%PROPNAME%%" && value %%OP%% %%VALUE%%
+        }
+      }
+
+      %%OTHERPROPFILTER%%
+
+//AND
+result = result.joinWithSmaller(('%%PROPNAME%%ExecutionID, '%%PROPNAME%%CaseID) -> ('%%PROPITER%%ExecutionID, '%%PROPITER%%CaseID), %%PROPITER%%)
+%%OTHERREPEAT%%
+
+
+
+
+
