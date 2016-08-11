@@ -95,7 +95,6 @@ public class Usuarios {
         else {
             ArrayList <Document> dashboard = (ArrayList <Document>) users.get(0).get("dashboard");
             
-            System.out.println(dashboard);
             for(Document dashboardElement : dashboard){
                 ArrayList<Document> data = db.getCollection("hadoop").find(new Document("idKPI", dashboardElement.getString("idkpi"))).into(new ArrayList<Document>());
                 
@@ -103,7 +102,7 @@ public class Usuarios {
                     d.remove("_id");
                     d.remove("idKPI");
                     
-                    //taskHelper.getTaskName(d);
+                    taskHelper.getTaskName(d);
                 }
                 
                 dashboardElement.append("data", data);

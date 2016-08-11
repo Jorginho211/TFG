@@ -44,6 +44,7 @@ class Dashboard extends Component {
             layout: {h: 8, w: 4, x: 0, y: 0, i: idKpiAux + "||" + chartTypeAux},
         })
 
+        this.props.DashboardActions.toggleLoading()
         this.props.DashboardActions.addRemoveElement(dashboard)
         this.props.DashboardActions.requestDataKPI(idKpiAux, dashboard)
 
@@ -150,6 +151,7 @@ class Dashboard extends Component {
 
     componentWillUnmount() {
         this.saveDashboard()
+        this.props.DashboardActions.toggleLoading()
     }
 
     getGrapthicImg(type, idKPI){

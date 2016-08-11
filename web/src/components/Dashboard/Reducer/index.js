@@ -12,7 +12,7 @@ const InitialState = {
     layoutSave: [],
     dashboard: [],
     isDialogOpened: false,
-    isLoading: false,
+    isLoading: true,
     suggestionList: [],
 }
 

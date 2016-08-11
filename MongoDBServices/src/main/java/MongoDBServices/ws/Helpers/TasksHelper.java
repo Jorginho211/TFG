@@ -86,6 +86,7 @@ public class TasksHelper {
     
     public void getTaskName(Document doc) throws IOException, MalformedURLException, JSONException{
         for (String key : doc.keySet()) {
+            System.out.println("AQUI");
             if (doc.getString(key).matches("[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}")) {
                 String taskName = GetTaskName(doc.getString(key));
 

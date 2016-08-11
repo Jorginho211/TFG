@@ -29,7 +29,6 @@ export function setKPI(kpi){
 
 export function requestDataKPI(idKPI, dashboard){
 	return dispatch => {
-		dispatch(toggleLoading())
 		fetch('http://localhost:8080/MongoDBServices/api/v1/kpi/hadoopdata/' + idKPI,{
 			method: 'GET', 
 			mode: 'cors',
@@ -60,8 +59,7 @@ export function requestDataKPI(idKPI, dashboard){
 }
 
 export function requestDashboard(token){
-	return dispatch => {
-		dispatch(toggleLoading())		
+	return dispatch => {	
 		fetch('http://localhost:8080/MongoDBServices/api/v1/usuarios/dashboard/',{
 			method: 'GET', 
 			mode: 'cors',

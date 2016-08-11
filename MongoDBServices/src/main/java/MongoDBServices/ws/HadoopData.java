@@ -49,7 +49,7 @@ public class HadoopData {
             d.remove("_id");
             d.remove("idKPI");
             
-            //tasksHelper.getTaskName(d);
+            tasksHelper.getTaskName(d);
         }
         
         return listHadoopResults;
