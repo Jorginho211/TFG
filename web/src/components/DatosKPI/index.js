@@ -244,7 +244,6 @@ class DatosKPI extends Component {
     }
 
     componentDidMount(){
-        this.props.KPIActions.DatosKPIActions.getPropertiesBD();
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.requestCodeTemplates();
     }
 
@@ -435,7 +434,7 @@ class DatosKPI extends Component {
                 return (
                     <div className={styles.scalakata}>
                       <iframe ref="iframe" src="http://localhost:7331" className={styles.iframe} onLoad={this.loadDataIframe}></iframe>
-                      <div className={styles.list}>
+                      {/*<div className={styles.list}>
                         <Menu onItemTouchTap={this.addPropertyCode}>
                           {this.props.kpi.datoskpi.properties.map( (property, index) => {
                             return (
@@ -443,7 +442,7 @@ class DatosKPI extends Component {
                             )
                           })}
                         </Menu>
-                      </div>
+                      </div>*/}
                     </div>
                 );
 

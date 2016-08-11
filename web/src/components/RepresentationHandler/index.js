@@ -42,6 +42,7 @@ class RepresentationHandler extends Component {
     }
 
     getKPIAndRepresentation(idKPI, typeChart){
+        console.log(idKPI)
         let kpi;
         let representation;
 

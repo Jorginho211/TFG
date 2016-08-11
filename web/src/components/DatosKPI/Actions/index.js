@@ -139,10 +139,6 @@ export function deleteRepresentation(kpi,index){
 	return {type: DATOSKPI_ACTION_TYPES.ADD_DELETE_REPRESENTATION_TO_KPI, payload: {kpi}}
 }
 
-export function setProperties(properties){
-	return {type: DATOSKPI_ACTION_TYPES.SET_PROPERTIES, payload: {properties}}
-}
-
 //AÑADIR/ELIMINAR ESTADO KPI CONCRETA
 export function deleteData(){
 	return {type: DATOSKPI_ACTION_TYPES.DELETE_DATA}
@@ -184,23 +180,6 @@ export function sendJobHadoop(code){
 			body: code,
 		}).then(response => {
 			return response.ok
-		}).catch( msg => 
-			console.log(msg)
-		)
-	}
-}
-
-export function getPropertiesBD(){
-	return dispatch => {
-		fetch('http://localhost:8080/MongoDBServices/api/v1/properties',{
-			method: 'GET', 
-			mode: 'cors'
-		}).then(response => {
-			return response.ok ? 
-				response.json() :
-				Promise.reject("Erro")
-		}).then(json => {
-			dispatch(setProperties(json.properties))
 		}).catch( msg => 
 			console.log(msg)
 		)

@@ -190,12 +190,6 @@ export default function DatosKPIReducer(state = InitialState, {type = '', payloa
                 iframeOnceLoad: payload.iframeOnceLoad,
             }
 
-        case TYPES.SET_PROPERTIES:
-            return {
-                ...state,
-                properties : payload.properties,
-            }
-
         default:
             return state
     }

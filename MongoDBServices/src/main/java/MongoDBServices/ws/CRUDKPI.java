@@ -49,6 +49,24 @@ public class CRUDKPI {
         db.getCollection(collection).deleteOne(new Document("_id", id));
         db.getCollection("hadoop").deleteMany(new Document("idKPI", id));
         
+        /*ArrayList<Document> users = db.getCollection("usuarios").find(new Document("dashboard.idkpi", id)).into(new ArrayList<Document>());
+        ArrayList<Document> dashboards;
+        
+        for(Document user : users){
+            dashboards = new ArrayList<>();
+            for(Document dashboard : (ArrayList<Document>) user.get("dashboard")){
+                System.out.println(dashboard);
+                if(!dashboard.getString("idkpi").equals(id)){
+                    dashboards.add(dashboard);
+                }
+            }
+            
+            user.append("dashboard", dashboards);
+        }
+        
+        db.getCollection("usuarios").deleteMany(new Document("dashboard.idkpi", id));
+        db.getCollection("usuarios").insertMany(users);*/
+        
         return Response.noContent().build();
     }
     

@@ -7,7 +7,6 @@ export function toggleLoading(){
 	return {type: DASHBOARD_ACTION_TYPES.TOGGLE_LOADING}
 }
 
-
 export function addRemoveElement(dashboard){
     return {type: DASHBOARD_ACTION_TYPES.ADD_REMOVE_ELEMENT_LAYOUT, payload: { dashboard }}
 }
