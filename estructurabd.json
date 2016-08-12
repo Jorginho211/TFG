@@ -64,10 +64,6 @@
 	"code" : null,
 }
 
-{
-	"properties" : ["usuario", "conexions", "tempo", "probas", "datos", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1", "proba1",]
-}
-
 
 //PLANTILLAS
 [
@@ -91,9 +87,10 @@
 			"type": "propertyTemplate",
 			"name": "Plantilla para properties",
 			"description": "Permite agrupar por unha propiedade e realizar unha operacion de contar/maximo/minimo/media",
-			"codeBase": "%%PROPFILTER%%\r\n\r\nvar result:cascading.pipe.Pipe = null\r\nresult = %%PROPNAME%%\r\n\r\n%%OTHERREPEAT%%\r\n\r\nresult = result.groupBy('%%PROPNAME%%PropertyName) { _.size%%OPREDUX%%('%%PROPNAME%%Value) }.rename(('%%PROPNAME%%PropertyName, '%%PROPNAME%%Value) -> (('Property, '%%NAMEOPREDUX%%)))\r\nresult.write(output)",
-			"codePropFilter": "val %%PROPNAME%% = MultipleTsvFiles( files, ('%%PROPNAME%%ExecutionID, '%%PROPNAME%%PropertyName, '%%PROPNAME%%PropertyContext, '%%PROPNAME%%Agent, '%%PROPNAME%%CaseID, '%%PROPNAME%%IsCommited, '%%PROPNAME%%Timestamp, '%%PROPNAME%%Value))\r\n      .filter( '%%PROPNAME%%PropertyName, '%%PROPNAME%%Value ) {\r\n        fields : (String, %%VALUETYPE%%) => {\r\n          val (propertyName, value) = fields\r\n          propertyName == \"%%PROPNAME%%\" && value %%OP%% %%VALUE%%\r\n        }\r\n      }\r\n\r\n      %%OTHERPROPFILTER%%",
-			"codeAndProp":"result = result.joinWithSmaller(('%%PROPNAME%%ExecutionID, '%%PROPNAME%%CaseID) -> ('%%PROPITER%%ExecutionID, '%%PROPITER%%CaseID), %%PROPITER%%)\r\n%%OTHERREPEAT%%",
-			"codeOrProp":"",
+			"codeBase": "val pipe = MultipleTsvFiles( files, ('ExecutionID, 'PropertyName, 'PropertyContext, 'Agent, 'CaseID, 'IsCommited, 'Timestamp, 'Value))\r\n\r\n      %%PROPFILTER%%\r\n\r\n      var result = %%PROPNAME%%\r\n\r\n      %%OTHERREPEAT%%\r\n\r\n      result = result.project('ExecutionID, 'CaseID).joinWithSmaller(('ExecutionID, 'CaseID) -> ('ExecutionID, 'CaseID), propRedux)\r\n      result = result.groupBy('PropertyName){_.size%%OPREDUX%%('Value)}.rename(('PropertyName, 'Value) -> (('Property, '%%NAMEOPREDUX%%)))\r\n      result.write(output)",
+			"codePipePropFilter": "val %%PROPITERNAME%% = pipe.filter( 'PropertyName, 'Value ) {\r\n        fields : (String, %%VALUETYPE%%) => {\r\n          val (propertyName, value) = fields\r\n          propertyName == \"%%PROPITERNAME%%\" && value %%OP%% %%VALUE%%\r\n        }\r\n      }.unique('ExecutionID, 'CaseID, 'PropertyName, 'Value)\r\n\r\n      %%OTHERPROPFILTER%%",
+			"codePipeReduxProp" : "val propRedux = pipe.filter( 'PropertyName ) {\r\n        fields : (String) => {\r\n          val (propertyName) = fields\r\n          propertyName == \"%%PROPREDUXNAME%%\"\r\n        }\r\n      }.unique('ExecutionID, 'CaseID, 'PropertyName, 'Value)",
+			"codeAndProp":"result = result.project('ExecutionID, 'CaseID).joinWithSmaller(('ExecutionID, 'CaseID) -> ('ExecutionID, 'CaseID), %%PROPITERNAME%%)\r\n      %%OTHERREPEAT%%",
+			"codeOrProp":"result = result ++ %%PROPITERNAME%%\r\n      %%OTHERREPEAT%%",
 		}
 ]

@@ -516,17 +516,16 @@ class CodeWizard extends Component {
         if(!errors.timeWindowInput && !errors.reduxOperator && propertyTemplate.properties !== undefined && propertyTemplate.properties.length > 0){
             let code = this.props.kpi.datoskpi.codewizard.code
             let codeBaseTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codeBase
-            let codePropFilterTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codePropFilter
+            let codePipePropFilterTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codePipePropFilter
+            let codePipeReduxPropTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codePipeReduxProp
             let codeAndPropTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codeAndProp
+            let codeOrPropTemplate = this.props.kpi.datoskpi.codewizard.codeTemplate.codeOrProp
             let propertyTemplate = this.props.kpi.datoskpi.codewizard.propertyTemplate
 
             code = code.replace(/%%IDKPI%%/g, this.props.kpi.datoskpi.kpi.id)
             code = code.replace("%%TIMEWINDOW%%", timeWindow * 3600000)
             code = code.replace("%%TYPEFILE%%", "\"pvcev\"")
             code = code.replace("%%CODEBASE%%", codeBaseTemplate)
-
-            code = code.replace(/%%PROPNAME%%/g, propertyTemplate.reduxProperty)
-
 
             if(propertyTemplate.reduxOperator == "count"){
                 code = code.replace("%%OPREDUX%%","")
@@ -537,10 +536,10 @@ class CodeWizard extends Component {
                 code = code.replace("%%NAMEOPREDUX%%", propertyTemplate.reduxOperator)
             }
 
-            code = code.replace("%%PROPFILTER%%", codePropFilterTemplate)
+            code = code.replace("%%PROPFILTER%%", codePipePropFilterTemplate)
 
             propertyTemplate.properties.map( (prop, index) => {
-                code = code.replace(/%%PROPNAME%%/g, prop.name)
+                code = code.replace(/%%PROPITERNAME%%/g, prop.name)
                 code = code.replace("%%VALUETYPE%%", prop.type.replace("Type", ""))
                 code = code.replace("%%OP%%", prop.comparisonOperator)
 
@@ -552,27 +551,38 @@ class CodeWizard extends Component {
                 }
 
                 if(index + 1 < propertyTemplate.properties.length){
-                    code = code.replace("%%OTHERPROPFILTER%%", codePropFilterTemplate)
+                    code = code.replace("%%OTHERPROPFILTER%%", codePipePropFilterTemplate)
                 }              
             })
-            code = code.replace("%%OTHERPROPFILTER%%", "")
+            code = code.replace("%%OTHERPROPFILTER%%", codePipeReduxPropTemplate)
+            code = code.replace("%%PROPREDUXNAME%%", propertyTemplate.reduxProperty)
 
-            if(propertyTemplate.properties.length > 1){
-                propertyTemplate.properties.map( (prop, index) => {
-                    if(index === 0){
+
+            propertyTemplate.properties.map( (prop, index) => {
+                if(index === 0){
+                    code = code.replace("%%PROPNAME%%", prop.name)
+
+                    if(prop.logicalOperator == "&&"){
                         code = code.replace("%%OTHERREPEAT%%", codeAndPropTemplate)
                     }
+                    else if (prop.logicalOperator == "||") {
+                        code = code.replace("%%OTHERREPEAT%%", codeOrPropTemplate)
+                    }
+                }
+                else {
+                    code = code.replace("%%PROPITERNAME%%", prop.name);
 
-                    if( prop.name !== propertyTemplate.reduxProperty){
-                        code = code.replace(/%%PROPNAME%%/g, propertyTemplate.reduxProperty)
-                        code = code.replace(/%%PROPITER%%/g, prop.name)
-
-                        if(index + 1 < propertyTemplate.properties.length){
+                    if(index + 1 < propertyTemplate.properties.length){
+                        if(prop.logicalOperator == "&&"){
                             code = code.replace("%%OTHERREPEAT%%", codeAndPropTemplate)
                         }
+                        else if (prop.logicalOperator == "||") {
+                            code = code.replace("%%OTHERREPEAT%%", codeOrPropTemplate)
+                        }
                     }
-                })
-            }
+                }
+            })
+
             code = code.replace("%%OTHERREPEAT%%", "")
 
             this.props.KPIActions.DatosKPIActions.codeChange(code)

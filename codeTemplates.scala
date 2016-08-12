@@ -52,6 +52,8 @@ import java.io.File
 import com.github.nscala_time.time.Imports._
 import com.mongodb.{BasicDBObject}
 import cascading.tuple.{Fields, TupleEntry}
+import cascading.pipe.joiner._
+import cascading.pipe._
 import scala.collection.JavaConversions._
 import es.usc.citius.scalding2mongo._
 
@@ -134,31 +136,46 @@ MultipleTsvFiles( files, ('ExecutionID, 'CaseID, 'TaskID, 'NuevoEstado, 'Timesta
 
 
 //PropertyTemplate
-%%PROPFILTER%%
+val pipe = MultipleTsvFiles( files, ('ExecutionID, 'PropertyName, 'PropertyContext, 'Agent, 'CaseID, 'IsCommited, 'Timestamp, 'Value))
 
-var result:cascading.pipe.Pipe = null
-result = %%PROPNAME%%
+      %%PROPFILTER%%
 
-%%OTHERREPEAT%%
+      var result = %%PROPNAME%%
 
-result = result.groupBy('%%PROPNAME%%PropertyName) { _.size%%OPREDUX%%('%%PROPNAME%%Value) }.rename(('%%PROPNAME%%PropertyName, '%%PROPNAME%%Value) -> (('Property, '%%NAMEOPREDUX%%)))
-result.write(output)
+      %%OTHERREPEAT%%
+
+      result = result.project('ExecutionID, 'CaseID).joinWithSmaller(('ExecutionID, 'CaseID) -> ('ExecutionID, 'CaseID), propRedux)
+      result = result.groupBy('PropertyName){_.size%%OPREDUX%%('Value)}.rename(('PropertyName, 'Value) -> (('Property, '%%NAMEOPREDUX%%)))
+      result.write(output)
 
 
-//PROPFILTER
-val %%PROPNAME%% = MultipleTsvFiles( files, ('%%PROPNAME%%ExecutionID, '%%PROPNAME%%PropertyName, '%%PROPNAME%%PropertyContext, '%%PROPNAME%%Agent, '%%PROPNAME%%CaseID, '%%PROPNAME%%IsCommited, '%%PROPNAME%%Timestamp, '%%PROPNAME%%Value))
-      .filter( '%%PROPNAME%%PropertyName, '%%PROPNAME%%Value ) {
+//PIPEPROPFILTER
+val %%PROPITERNAME%% = pipe.filter( 'PropertyName, 'Value ) {
         fields : (String, %%VALUETYPE%%) => {
           val (propertyName, value) = fields
-          propertyName == "%%PROPNAME%%" && value %%OP%% %%VALUE%%
+          propertyName == "%%PROPITERNAME%%" && value %%OP%% %%VALUE%%
         }
-      }
+      }.unique('ExecutionID, 'CaseID, 'PropertyName, 'Value)
 
       %%OTHERPROPFILTER%%
 
+//PIPEREDUXPROPERTY
+val propRedux = pipe.filter( 'PropertyName ) {
+        fields : (String) => {
+          val (propertyName) = fields
+          propertyName == "%%PROPREDUXNAME%%"
+        }
+      }.unique('ExecutionID, 'CaseID, 'PropertyName, 'Value)
+
 //AND
-result = result.joinWithSmaller(('%%PROPNAME%%ExecutionID, '%%PROPNAME%%CaseID) -> ('%%PROPITER%%ExecutionID, '%%PROPITER%%CaseID), %%PROPITER%%)
-%%OTHERREPEAT%%
+result = result.project('ExecutionID, 'CaseID).joinWithSmaller(('ExecutionID, 'CaseID) -> ('ExecutionID, 'CaseID), %%PROPITERNAME%%)
+      %%OTHERREPEAT%%
+
+//OR
+result = result ++ %%PROPITERNAME%%
+      %%OTHERREPEAT%%
+
+
 
 
 
