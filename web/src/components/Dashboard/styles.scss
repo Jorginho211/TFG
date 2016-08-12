@@ -1,19 +1,20 @@
-.floatingButton {
-  position: fixed;
-  top: 10%;
-  left: 96%;
-}
-
-.btnGardar {
-   position: fixed;
-   top: 92%;
-   left: 92%;
-}
-
 .refreshIndicator {
   position: fixed;
   top: 50%;
   left: 50%;
+}
+
+.actions {
+  position: fixed;
+  display: inline-block;
+
+  top: 90%;
+  left: 93%;
+
+  .button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .graphicsGroupKPI{
