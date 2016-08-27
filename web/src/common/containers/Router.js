@@ -12,7 +12,7 @@ import Dashboard from '../../components/Dashboard'
 export default (
     //Add routes here. ATTENTION: the 404 redirect should be the last defined route
     <Route path='/' component={App}>
-        <IndexRoute component={Home}/>
+        <IndexRoute component={KPI}/>
         <Route path='kpi' component={KPI} />
         <Route path='dashboard' component={Dashboard} />
         <Route path='about' component={About} />

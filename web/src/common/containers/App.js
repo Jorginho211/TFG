@@ -17,6 +17,8 @@ import Divider from 'material-ui/Divider'
 
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu'
 import Home from 'material-ui/svg-icons/action/home'
+import Equalizer from 'material-ui/svg-icons/av/equalizer'
+import Build from 'material-ui/svg-icons/action/build'
 import Info from 'material-ui/svg-icons/action/info'
 import MenuItem from 'material-ui/MenuItem/MenuItem'
 import DeveloperBoard from 'material-ui/svg-icons/hardware/developer-board.js'
@@ -69,7 +71,7 @@ class App extends Component {
                     open={(containerWidth < Breakpoints.large && isMenuOpened) || (containerWidth >= Breakpoints.medium)}
                     docked={ containerWidth >= Breakpoints.large }
                 >
-                    <Link to='/' onClick={this.toggleMenu}>
+                    {/*<Link to='/' onClick={this.toggleMenu}>
                         <MenuItem leftIcon={<Home />}>
                             <FormattedMessage
                                 id='main.menu.home'
@@ -77,15 +79,15 @@ class App extends Component {
                                 defaultMessage='Home'
                             />
                         </MenuItem>
-                    </ Link>
+                    </ Link>*/}
 
                     <Link to='/kpi' onClick={ this.toggleMenu }>
-                        <MenuItem>
+                        <MenuItem leftIcon={<Build /> }>
                             Administración
                         </MenuItem>
                     </ Link>
                     <Link to='/dashboard' onClick={ this.toggleMenu }>
-                        <MenuItem>
+                        <MenuItem leftIcon={<Equalizer />}>
                             Dashboard
                         </MenuItem>
                     </Link>
