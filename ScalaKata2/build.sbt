@@ -1,3 +1,5 @@
+val pathScalding2Mongo = "/home/xurxo/Documentos/TFG/Repositorio/TFG/datos/scalding2mongo/target/scala-2.11/scalding2mongo_2.11-0.1-SNAPSHOT.jar"
+
 lazy val commonSettings = Seq(
   commands += Command.command("cls") { state =>
     println("\033c") // xterm clear
@@ -69,7 +71,7 @@ lazy val model = project
       "cascading" % "cascading-local" % "2.5.4",
       "org.mongodb" % "mongo-java-driver" % "3.0.4"
     ),
-    unmanagedJars in Compile += file("/home/xurxo/Documentos/TFG/Repositorio/TFG/datos/proba/target/scala-2.11/scalding2mongo_2.11-0.1-SNAPSHOT.jar")
+    unmanagedJars in Compile += file(pathScalding2Mongo)
   )
   .enablePlugins(ScalaJSPlugin)
 

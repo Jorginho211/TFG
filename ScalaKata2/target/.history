@@ -6,3 +6,11 @@ compile
 project webappJVM
 sbt
 project webappJVM
+clean
+compile
+project webappJVM
+clean
+compile
+project webappJVM
+compile
+project webappJVM

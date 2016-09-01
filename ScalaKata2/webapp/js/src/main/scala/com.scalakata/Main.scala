@@ -189,7 +189,10 @@ object Main {
             Rendering.run(editor)
           }
           else {
-            CodeMirror.commands.help(editor)
+            //CodeMirror.commands.help(editor)
+
+            doc.setValue("import com.twitter.scalding._\r\nimport java.io.File\r\nimport com.github.nscala_time.time.Imports._\r\nimport com.mongodb.{BasicDBObject}\r\nimport cascading.tuple.{Fields, TupleEntry}\r\nimport cascading.pipe.joiner._\r\nimport cascading.pipe._\r\nimport scala.collection.JavaConversions._\r\nimport es.usc.citius.scalding2mongo._\r\n\r\nclass KPI {\r\n  (args: Args) => {\r\n    new Job(args) {\r\n    \t\r\n    }\r\n  }\r\n}")
+            Rendering.run(editor)
             ()
           }
         }

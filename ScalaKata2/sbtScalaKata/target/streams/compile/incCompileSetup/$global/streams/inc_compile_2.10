@@ -1,0 +1,551 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes
+compile options:
+5 items
+0 -> -deprecation
+1 -> -encoding
+2 -> UTF-8
+3 -> -feature
+4 -> -unchecked
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.10.6
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+41 items
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$1.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$1.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$2.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$3.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$4.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$5.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$1.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$10.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$11.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$12.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$13.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$14.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$15.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$16.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$17$$anonfun$apply$5.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$17$$anonfun$apply$6.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$17.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$18.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$2.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$3.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$4.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$5.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$6$$anonfun$apply$2.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$6.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$7.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$8.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$9$$anonfun$apply$3$$anonfun$apply$1.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$9$$anonfun$apply$3$$anonfun$apply$4.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$9$$anonfun$apply$3.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$9.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$StartArgs$$anonfun$toArgs$1.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$StartArgs$$anonfun$toArgs$2.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$StartArgs$.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$StartArgs.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/build/BuildInfo$.class
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/build/BuildInfo.class
+binary dependencies:
+16 items
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/.ivy2/cache/org.scala-sbt/collections/jars/collections-0.13.11.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/.ivy2/cache/org.scala-sbt/command/jars/command-0.13.11.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/.ivy2/cache/org.scala-sbt/io/jars/io-0.13.11.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/.ivy2/cache/org.scala-sbt/ivy/jars/ivy-0.13.11.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/.ivy2/cache/org.scala-sbt/main-settings/jars/main-settings-0.13.11.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/.ivy2/cache/org.scala-sbt/main/jars/main-0.13.11.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/.ivy2/cache/org.scala-sbt/process/jars/process-0.13.11.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/.ivy2/cache/org.scala-sbt/run/jars/run-0.13.11.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/.ivy2/cache/org.scala-sbt/sbt/jars/sbt-0.13.11.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/.ivy2/cache/org.scala-sbt/task-system/jars/task-system-0.13.11.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/.ivy2/cache/scala_2.10/sbt_0.13/io.spray/sbt-revolver/jars/sbt-revolver-0.8.0.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/.ivy2/cache/scala_2.10/sbt_0.13/se.marcuslonnberg/sbt-docker/jars/sbt-docker-1.3.0.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/.sbt/boot/scala-2.10.6/lib/scala-library.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> /home/xurxo/.sbt/boot/scala-2.10.6/lib/scala-library.jar
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> /usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+1 items
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+41 items
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$1
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$1
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$2
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$3
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$4
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$5
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$1
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$10
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$11
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$12
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$13
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$14
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$15
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$16
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$17
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$17$$anonfun$apply$5
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$17$$anonfun$apply$6
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$18
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$2
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$3
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$4
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$5
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$6
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$6$$anonfun$apply$2
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$7
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$8
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$9
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$9$$anonfun$apply$3
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$9$$anonfun$apply$3$$anonfun$apply$1
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$9$$anonfun$apply$3$$anonfun$apply$4
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$StartArgs
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$StartArgs$
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$StartArgs$$anonfun$toArgs$1
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com.scalakata.ScalaKataPlugin$autoImport$StartArgs$$anonfun$toArgs$2
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> com.scalakata.build.BuildInfo
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> com.scalakata.build.BuildInfo$
+used names:
+307 items
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> !
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> $anon
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> $p1
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> $p2
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> $p3
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> $p4
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> $p5
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> %
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> %%
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> &&
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> +
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> ++
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> ++=
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> +:
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> +=
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> /
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> :=
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> <<=
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> <init>
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> ==
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> AList
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> AbstractFunction6
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Actions
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Any
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> AnyRef
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Append
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> AutoPlugin
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Backend
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Boolean
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> BuildInfo
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Classpaths
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Compile
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> ConfigKey
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> CrossVersion
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Def
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Defaults
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Desktop
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> DockerKeys
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> DockerPlugin
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> DockerSettings
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Dockerfile
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Duration
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> File
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> FullInstance
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> ImageName
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> InitializeInstance
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> InputTask
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> InputWrapper
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Int
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> JvmPlugin
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Kata
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Keys
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> ManifestFactory
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> None
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Nothing
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Option
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Path
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Paths
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Predef
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Product
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> RevolverPlugin
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Runtime
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> ScalaKataPlugin
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> ScalaRunTime
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Scoped
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Seq
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Serializable
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> ServerSocket
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Setting
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> SettingKey
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> StartArgs
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Statics
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Stream
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> String
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> StringContext
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> TaskKey
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Test
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> URI
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> Unit
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> _1
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> _2
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> _3
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> _4
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> _5
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> _6
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> _root_
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> _toString
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> accept
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> addCommandAlias
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> addRaw
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> allRequirements
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> anyHash
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> app
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> append1
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> appendN
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> appendSeq
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> apply
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> args
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> asInstanceOf
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> at
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> augmentString
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> autoImport
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> awt
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> b
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> backendProject
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> backendScalaVersion
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> baseDockerSettings
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> browse
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> build
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> canBuildFrom
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> classPath
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> classType
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> classpath
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> close
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> collection
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> com
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> compileBase
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> compilerPlugin
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> concurrent
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> config
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> configSettings
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> configTasks
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> configurationToKey
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> contains
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> cross
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> data
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> dep
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> dependencyClasspath
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> dependsOn
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> docker
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> dockerfile
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> duration
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> entryPoint
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> eq
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> evalScalaVersion
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> evalScalacOptions
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> expose
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> extend
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> file
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> files
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> finalizeHash
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> find
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> foreach
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> from
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> full
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> fullClasspath
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> get
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> getAbsoluteFile
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> getAbsolutePath
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> getDesktop
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> getHost
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> getOrElse
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> getPort
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> getScheme
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> imageNames
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> immutable
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> in
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> inConfig
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> io
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> isDesktopSupported
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> isInstanceOf
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> ivyBaseSettings
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> java
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> jvmBaseSettings
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> kataClasspath
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> kataUri
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> katas
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> length
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> libraryDependencies
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> libs
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> macroProject
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> macroValueI
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> macroValueIT
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> main
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> mainClass
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> managedClasspath
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> map
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> mix
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> mkString
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> mutable
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> name
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> net
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> nio
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> openBrowser
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> organization
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> p
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> package
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> packageBin
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> paradiseVersion
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> pathSeparator
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> plugin
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> pluginArg
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> plugins
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> products
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> projectSettings
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> props
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> pure
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> reForkOptions
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> reLogTag
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> reStart
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> readyPort
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> reflect
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> resolvers
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> restartApp
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> revolver
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> richAttributed
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> richFile
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> richInitializeTask
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> runtime
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> s
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> sbt
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> sbtdocker
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> scala
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> scalaKataDockerSettings
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> scalaKataOrganization
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> scalaKataSettings
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> scalaKataVersion
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> scalaVersion
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> scalacOptions
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> scalakata
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> seconds
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> security
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> securityManager
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> serverUri
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> set
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> slice
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> socket
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> sourceDirectory
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> spray
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> stageFile
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> startArgs
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> startArgs2
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> startArgsParser
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> startsWith
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> streams
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> stringToProcess
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> sys
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> t
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> t8ToTable8
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> target
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> thisProjectRef
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> timeout
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> toAbsolutePath
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> toArgs
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> toGroupID
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> toITask
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> toLowerCase
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> toRepositoryName
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> toString
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> toURI
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> tuple2
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> tuple3
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> tuple4
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> tuple6
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> typedProductIterator
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> unchecked
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> unmanagedResourceDirectories
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> v
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> value
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> version
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> wrapInitTask_☃☃
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> wrapInit_☃☃
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> x
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> x$10
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> x$11
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> x$12
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> x$13
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> x$14
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> x$15
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> x$16
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> x$17
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> x$8
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> x$9
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> ||
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> <init>
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> BuildInfo
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> File
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> Predef
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> Product
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> ScalaRunTime
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> Seq
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> Serializable
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> String
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> URL
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> apply
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> augmentString
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> backendProject
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> backendScalaVersion
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> build
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> collection
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> com
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> evalScalaVersion
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> evalScalacOptions
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> format
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> io
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> java
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> lang
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> macroProject
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> net
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> paradiseVersion
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> runtime
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> scala
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> scalaKataOrganization
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> scalaKataVersion
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> scalakata
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> toString
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> typedProductIterator
+product stamps:
+41 items
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$1.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$1.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$2.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$3.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$4.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1$$anonfun$5.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2$$anon$1.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataDockerSettings$2.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$1.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$10.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$11.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$12.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$13.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$14.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$15.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$16.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$17$$anonfun$apply$5.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$17$$anonfun$apply$6.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$17.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$18.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$2.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$3.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$4.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$5.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$6$$anonfun$apply$2.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$6.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$7.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$8.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$9$$anonfun$apply$3$$anonfun$apply$1.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$9$$anonfun$apply$3$$anonfun$apply$4.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$9$$anonfun$apply$3.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$$anonfun$scalaKataSettings$9.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$StartArgs$$anonfun$toArgs$1.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$StartArgs$$anonfun$toArgs$2.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$StartArgs$.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin$autoImport$StartArgs.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/ScalaKataPlugin.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/build/BuildInfo$.class -> lastModified(1472760483000)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/classes/com/scalakata/build/BuildInfo.class -> lastModified(1472760483000)
+source stamps:
+2 items
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> hash(67856794e72c27791d2e1f05128daaf2541d95d6)
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> hash(ff60b305a294170ca3d083fe5848c43e47ca1e94)
+binary stamps:
+14 items
+/home/xurxo/.ivy2/cache/org.scala-sbt/collections/jars/collections-0.13.11.jar -> lastModified(1456100090000)
+/home/xurxo/.ivy2/cache/org.scala-sbt/command/jars/command-0.13.11.jar -> lastModified(1456100128000)
+/home/xurxo/.ivy2/cache/org.scala-sbt/io/jars/io-0.13.11.jar -> lastModified(1456100062000)
+/home/xurxo/.ivy2/cache/org.scala-sbt/ivy/jars/ivy-0.13.11.jar -> lastModified(1456100124000)
+/home/xurxo/.ivy2/cache/org.scala-sbt/main-settings/jars/main-settings-0.13.11.jar -> lastModified(1456100137000)
+/home/xurxo/.ivy2/cache/org.scala-sbt/main/jars/main-0.13.11.jar -> lastModified(1456100157000)
+/home/xurxo/.ivy2/cache/org.scala-sbt/process/jars/process-0.13.11.jar -> lastModified(1456100071000)
+/home/xurxo/.ivy2/cache/org.scala-sbt/run/jars/run-0.13.11.jar -> lastModified(1456100114000)
+/home/xurxo/.ivy2/cache/org.scala-sbt/sbt/jars/sbt-0.13.11.jar -> lastModified(1456100154000)
+/home/xurxo/.ivy2/cache/org.scala-sbt/task-system/jars/task-system-0.13.11.jar -> lastModified(1456100110000)
+/home/xurxo/.ivy2/cache/scala_2.10/sbt_0.13/io.spray/sbt-revolver/jars/sbt-revolver-0.8.0.jar -> lastModified(1449237117000)
+/home/xurxo/.ivy2/cache/scala_2.10/sbt_0.13/se.marcuslonnberg/sbt-docker/jars/sbt-docker-1.3.0.jar -> lastModified(1454873005000)
+/home/xurxo/.sbt/boot/scala-2.10.6/lib/scala-library.jar -> lastModified(1442568926000)
+/usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar -> lastModified(1461718051000)
+class names:
+14 items
+/home/xurxo/.ivy2/cache/org.scala-sbt/collections/jars/collections-0.13.11.jar -> sbt.Init
+/home/xurxo/.ivy2/cache/org.scala-sbt/command/jars/command-0.13.11.jar -> sbt.State
+/home/xurxo/.ivy2/cache/org.scala-sbt/io/jars/io-0.13.11.jar -> sbt.RichFile
+/home/xurxo/.ivy2/cache/org.scala-sbt/ivy/jars/ivy-0.13.11.jar -> sbt.impl.RepositoryName
+/home/xurxo/.ivy2/cache/org.scala-sbt/main-settings/jars/main-settings-0.13.11.jar -> sbt.Append$
+/home/xurxo/.ivy2/cache/org.scala-sbt/main/jars/main-0.13.11.jar -> sbt.AutoPlugin
+/home/xurxo/.ivy2/cache/org.scala-sbt/process/jars/process-0.13.11.jar -> sbt.ProcessExtra
+/home/xurxo/.ivy2/cache/org.scala-sbt/run/jars/run-0.13.11.jar -> sbt.ForkOptions
+/home/xurxo/.ivy2/cache/org.scala-sbt/sbt/jars/sbt-0.13.11.jar -> sbt.package$
+/home/xurxo/.ivy2/cache/org.scala-sbt/task-system/jars/task-system-0.13.11.jar -> sbt.Task
+/home/xurxo/.ivy2/cache/scala_2.10/sbt_0.13/io.spray/sbt-revolver/jars/sbt-revolver-0.8.0.jar -> spray.revolver.RevolverPlugin$
+/home/xurxo/.ivy2/cache/scala_2.10/sbt_0.13/se.marcuslonnberg/sbt-docker/jars/sbt-docker-1.3.0.jar -> sbtdocker.mutable.Dockerfile
+/home/xurxo/.sbt/boot/scala-2.10.6/lib/scala-library.jar -> scala.Product
+/usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar -> java.lang.Object
+internal apis:
+2 items
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHDpGwVtAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAARnNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cFQ1D710AAZpc1Jvb3RzcQB+AAzIaXPEdAAGbm90aWZ5c3EAfgAMm4g0x3QAFXByb2plY3RDb25maWd1cmF0aW9uc3NxAH4ADLvN+g50AAd1bmFwcGx5c3EAfgAM5S+P53QAB2N1cnJpZWRzcQB+AAxVqwRFdAAJY2xhc3NQYXRoc3EAfgAMrBMpnnQABHdhaXRzcQB+AAxD8bWVdAAES2F0YXNxAH4ADCLhqNh0AA5jb3B5JGRlZmF1bHQkMnNxAH4ADLtDDZB0AA0kYXNJbnN0YW5jZU9mc3EAfgAMo6wuQnQABWVtcHR5c3EAfgAM6V6f0HQACXN0YXJ0QXJnc3NxAH4ADPBXBu50AA5jb3B5JGRlZmF1bHQkNXNxAH4ADLwJ5gt0AAxwcm9kdWN0QXJpdHlzcQB+AAxPYRhadAAIc2VjdXJpdHlzcQB+AAyLGPoydAAGZXF1YWxzc3EAfgAMHhpcMnQACW5vVHJpZ2dlcnNxAH4ADGnNzEd0AAxhc0luc3RhbmNlT2ZzcQB+AAx2e7sSdAARc2NhbGFLYXRhU2V0dGluZ3NzcQB+AAzEiskVdAAHa2F0YVVyaXNxAH4ADJpegQB0AAxzeW5jaHJvbml6ZWRzcQB+AAzTsjK9dAAHdW5hcnlfIXNxAH4ADHZsS0p0AAVsYWJlbHNxAH4ADOw/DSd0AA9TY2FsYUthdGFQbHVnaW5zcQB+AAy/QaCEdAANJGlzSW5zdGFuY2VPZnNxAH4ADCTWH4p0AAZ0dXBsZWRzcQB+AAwBiD9odAAPYWxsUmVxdWlyZW1lbnRzc3EAfgAMh4eCZXQACGNhbkVxdWFsc3EAfgAM8iqvPnQADmNvcHkkZGVmYXVsdCQ0c3EAfgAMw8nl7XQAD2lzQWx3YXlzRW5hYmxlZHNxAH4ADGo57d90AA1wcm9kdWN0UHJlZml4c3EAfgAMpTFrlHQADXNjYWxhY09wdGlvbnNzcQB+AAyX/Qi1dAAJbm90aWZ5QWxsc3EAfgAMZKwHWnQADGlzSW5zdGFuY2VPZnNxAH4ADK0krr90AA5nbG9iYWxTZXR0aW5nc3NxAH4ADI20xlN0AA9wcm9qZWN0U2V0dGluZ3NzcQB+AAzlRil7dAAGPGluaXQ+c3EAfgAMInQbCnQAF3NjYWxhS2F0YURvY2tlclNldHRpbmdzc3EAfgAMY+h81nQABWFwcGx5c3EAfgAM3ILghHQAAj09c3EAfgAMy0VBsnQABWNsb25lc3EAfgAM1QMPl3QACXNlcnZlclVyaXNxAH4ADAXRZrR0AAZ0b0FyZ3NzcQB+AAxne80xdAAPc2VjdXJpdHlNYW5hZ2Vyc3EAfgAM4sElYHQABiRpbml0JHNxAH4ADEBStCF0AA5jb3B5JGRlZmF1bHQkM3NxAH4ADF1gMJR0AARjb3B5c3EAfgAMLInwlXQACHRvU3RyaW5nc3EAfgAM1qoDHXQACHJlcXVpcmVzc3EAfgAMYOrxwXQAAiE9c3EAfgAMjq/NknQAAiYmc3EAfgAMXPLuMXQACGdldENsYXNzc3EAfgAM4it6SHQADmNvcHkkZGVmYXVsdCQxc3EAfgAM4nfMUHQACXJlYWR5UG9ydHNxAH4ADCdUUB90AA5jb3B5JGRlZmF1bHQkNnNxAH4ADOJ30iF0AAJuZXNxAH4ADGQU3sV0AAd0aW1lb3V0c3EAfgAMylrqeXQACmF1dG9JbXBvcnRzcQB+AAza0jY4dAANYnVpbGRTZXR0aW5nc3NxAH4ADEhw+0x0AApzdGFydEFyZ3Myc3EAfgAMygqHgXQAAmVxc3EAfgAMn37hpXQAD3Byb2R1Y3RJdGVyYXRvcnNxAH4ADO1VjwZ0AAtvcGVuQnJvd3NlcnNxAH4ADHmAWoJ0AAlTdGFydEFyZ3NzcQB+AAzd0jjtdAACIyNzcQB+AAx/D5krdAAIZmluYWxpemVzcQB+AAzZjYdmdAAHQmFja2VuZHNxAH4ADKWUj7t0AA5wcm9kdWN0RWxlbWVudHNxAH4ADDd40p10AAhoYXNoQ29kZXNxAH4ADBoimlt0AAd0cmlnZ2Vyc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4Ao3hyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAHQAHWNvbS5zY2FsYWthdGEuU2NhbGFLYXRhUGx1Z2ludXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgC7c3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AKNMAAlpbmhlcml0ZWRxAH4Ao0wAB3BhcmVudHNxAH4Ao3hxAH4AwHNxAH4Au3VxAH4AngAAAABzcQB+ALt1cQB+AJ4AAAAAc3EAfgC7dXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAZzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgC/dAAKQXV0b1BsdWdpbnNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4Av3NyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAADc2J0c3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+ANlzcQB+AMx0ABBQbHVnaW5zRnVuY3Rpb25zcQB+ANJzcQB+AMx0AAVCYXNpY3NxAH4AzHQAB1BsdWdpbnNxAH4A0nNxAH4AzHQAB1BsdWdpbnNxAH4A0nNxAH4AzHQABk9iamVjdHNxAH4A0HNxAH4A03VxAH4A1gAAAANzcQB+ANh0AARqYXZhc3EAfgDYdAAEbGFuZ3EAfgDdc3EAfgDMdAADQW55c3EAfgDQc3EAfgDTdXEAfgDWAAAAAnNxAH4A2HQABXNjYWxhcQB+AN11cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAnNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0AANjb21zcQB+APh0AA1jb20uc2NhbGFrYXRhc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFW5110fHVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0AFovaG9tZS94dXJ4by9Eb2N1bWVudG9zL1RGRy9SZXBvL1NjYWxhS2F0YTIvc2J0U2NhbGFLYXRhL3RhcmdldC9zY2FsYS0yLjEwL3NidC0wLjEzL2NsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABRnhWeU5ywneR0uHwUSjaryVB2V1g==
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHBd6xWYAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAInNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cOp8Ag50AAZub3RpZnlzcQB+AAyPi6c4dAAEd2FpdHNxAH4ADESyvAh0AA0kYXNJbnN0YW5jZU9mc3EAfgAMi99POnQAD3BhcmFkaXNlVmVyc2lvbnNxAH4ADMPq1il0AAxwcm9kdWN0QXJpdHlzcQB+AAwbbIGBdAAGZXF1YWxzc3EAfgAM4gt5u3QAFXNjYWxhS2F0YU9yZ2FuaXphdGlvbnNxAH4ADCQ4KZl0AAxhc0luc3RhbmNlT2ZzcQB+AAy4BeExdAAMc3luY2hyb25pemVkc3EAfgAMytHdBnQADSRpc0luc3RhbmNlT2ZzcQB+AAwGDJXddAAIY2FuRXF1YWxzcQB+AAy7GmXbdAAJQnVpbGRJbmZvc3EAfgAMreakM3QADXByb2R1Y3RQcmVmaXhzcQB+AAwrN1hndAAJbm90aWZ5QWxsc3EAfgAMFkHOKXQAE2JhY2tlbmRTY2FsYVZlcnNpb25zcQB+AAzvfHMQdAAMaXNJbnN0YW5jZU9mc3EAfgAMzzDjmHQADmJhY2tlbmRQcm9qZWN0c3EAfgAMiFTlqHQAAj09c3EAfgAMn1TdVXQABWNsb25lc3EAfgAMmyCkOHQABiRpbml0JHNxAH4ADH8pMa90ABBldmFsU2NhbGFWZXJzaW9uc3EAfgAM9iVDU3QACHRvU3RyaW5nc3EAfgAMj+/HEHQAAiE9c3EAfgAMWUQiPnQADG1hY3JvUHJvamVjdHNxAH4ADKjrDv50AAhnZXRDbGFzc3NxAH4ADN/nmtZ0ABFldmFsU2NhbGFjT3B0aW9uc3NxAH4ADCLYnih0AAJuZXNxAH4ADBLMtqV0ABBzY2FsYUthdGFWZXJzaW9uc3EAfgAMstCFP3QAAmVxc3EAfgAMEYJfTXQAD3Byb2R1Y3RJdGVyYXRvcnNxAH4ADHp4QqZ0AAIjI3NxAH4ADAsimYx0AAhmaW5hbGl6ZXNxAH4ADH3OeMZ0AA5wcm9kdWN0RWxlbWVudHNxAH4ADHH1p8l0AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AFt4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cAB0AB1jb20uc2NhbGFrYXRhLmJ1aWxkLkJ1aWxkSW5mb3VyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4Ac3NyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBbTAAJaW5oZXJpdGVkcQB+AFtMAAdwYXJlbnRzcQB+AFt4cQB+AHhzcQB+AHN1cQB+AFYAAAAAc3EAfgBzdXEAfgBWAAAAAHNxAH4Ac3VyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAAGc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4Ad3QADFNlcmlhbGl6YWJsZXNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4Ad3NyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AkXNxAH4AhHEAfgCHc3EAfgCIc3EAfgCLdXEAfgCOAAAAA3NxAH4AkHQABGphdmFzcQB+AJB0AAJpb3EAfgCVc3EAfgCEdAAHUHJvZHVjdHEAfgCKc3EAfgCEdAAGRXF1YWxzcQB+AIpzcQB+AIR0AAZPYmplY3RzcQB+AIhzcQB+AIt1cQB+AI4AAAADc3EAfgCQcQB+AJtzcQB+AJB0AARsYW5ncQB+AJVzcQB+AIR0AANBbnlxAH4AinVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAADc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQAA2NvbXNxAH4ArnQAE2NvbS5zY2FsYWthdGEuYnVpbGRzcQB+AK50AA1jb20uc2NhbGFrYXRhc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFW5110fHVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0AFovaG9tZS94dXJ4by9Eb2N1bWVudG9zL1RGRy9SZXBvL1NjYWxhS2F0YTIvc2J0U2NhbGFLYXRhL3RhcmdldC9zY2FsYS0yLjEwL3NidC0wLjEzL2NsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABT/YLMFopQXDKPQg/5YSMQ+R8oelA==
+external apis:
+0 items
+source infos:
+2 items
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/src/main/scala/com.scalakata/ScalaKataPlugin.scala -> 
+AAAAAQAAAQAAAEkAQyAgICAgICAgICByZVN0YXJ0IDw8PSBJbnB1dFRhc2soQWN0aW9ucy5zdGFydEFyZ3NQYXJzZXIpIHsgYXJncyDih5IBAAAKFAEAAAAWAQAWICAgICAgICAgICAgICAgICAgICAgIAEAai9ob21lL3h1cnhvL0RvY3VtZW50b3MvVEZHL1JlcG8vU2NhbGFLYXRhMi9zYnRTY2FsYUthdGEvc3JjL21haW4vc2NhbGEvY29tLnNjYWxha2F0YS9TY2FsYUthdGFQbHVnaW4uc2NhbGEBAGovaG9tZS94dXJ4by9Eb2N1bWVudG9zL1RGRy9SZXBvL1NjYWxhS2F0YTIvc2J0U2NhbGFLYXRhL3NyYy9tYWluL3NjYWxhL2NvbS5zY2FsYWthdGEvU2NhbGFLYXRhUGx1Z2luLnNjYWxhAG9tZXRob2QgYXBwbHkgaW4gb2JqZWN0IElucHV0VGFzayBpcyBkZXByZWNhdGVkOiBVc2UgYW5vdGhlciBJbnB1dFRhc2sgY29uc3RydWN0b3Igb3IgdGhlIGBEZWYuaW5wdXRUYXNrYCBtYWNyby4BAAAAAA==
+/home/xurxo/Documentos/TFG/Repo/ScalaKata2/sbtScalaKata/target/scala-2.10/sbt-0.13/src_managed/main/sbt-buildinfo/BuildInfo.scala -> 
+AAAAAAAAAAA=
+compilations:
+1 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVudddHx1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAWi9ob21lL3h1cnhvL0RvY3VtZW50b3MvVEZHL1JlcG8vU2NhbGFLYXRhMi9zYnRTY2FsYUthdGEvdGFyZ2V0L3NjYWxhLTIuMTAvc2J0LTAuMTMvY2xhc3Nlc3QAAS8=
