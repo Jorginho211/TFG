@@ -44,8 +44,10 @@ public class HadoopData {
     public ArrayList<Document> getKPIData(@PathParam("id") String id) throws IOException, MalformedURLException, JSONException {
         TasksHelper tasksHelper = new TasksHelper();
         ArrayList<Document> listHadoopResults = db.getCollection(collection).find(new Document("idKPI", id)).into(new ArrayList<Document>());
+        ArrayList<Document> finalListHadoopData = new ArrayList<>();
         
         for(Document d : listHadoopResults){
+            
             d.remove("_id");
             d.remove("idKPI");
             

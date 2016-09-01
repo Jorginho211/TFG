@@ -7735,8 +7735,8 @@ $c_Lcom_scalakata_Rendering$.prototype.run__Lorg_denigma_codemirror_Editor__V = 
   };
   var this$16 = jsx$2.doCall__Lautowire_Core$Request__s_concurrent_Future(new $c_Lautowire_Core$Request().init___sc_Seq__sci_Map(jsx$1, $as_sci_Map(this$10.elems$1)));
   var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this) {
-    return (function(x$1$2) {
-      var x$1 = $as_T(x$1$2);
+    return (function(x$11$2) {
+      var x$11 = $as_T(x$11$2);
       var this$11 = $m_Lcom_scalakata_Client$();
       new $c_Lautowire_ClientProxy().init___Lautowire_Client(this$11);
       var this$13 = $m_Lupickle_default$().Internal__Lupickle_Implicits$Internal$();
@@ -7748,7 +7748,7 @@ $c_Lcom_scalakata_Rendering$.prototype.run__Lorg_denigma_codemirror_Editor__V = 
       })($this));
       var evidence$1 = new $c_Lupickle_Implicits$Internal$$anon$3().init___Lupickle_Implicits$Internal$__T__F0(this$13, "Tagged Object com.scalakata.EvalResponse", r$1);
       var this$15 = $m_Lupickle_default$();
-      return $as_Lcom_scalakata_EvalResponse($s_Lupickle_Types$class__read__Lupickle_Types__T__Lupickle_Types$Reader__O(this$15, x$1, evidence$1))
+      return $as_Lcom_scalakata_EvalResponse($s_Lupickle_Types$class__read__Lupickle_Types__T__Lupickle_Types$Reader__O(this$15, x$11, evidence$1))
     })
   })(this));
   var executor = $m_sjs_concurrent_JSExecutionContext$Implicits$().queue$1;
@@ -7891,9 +7891,9 @@ $c_Lcom_scalakata_Rendering$$anon$1.prototype.derive$macro$1$lzycompute__p1__Lup
       return (function() {
         var this$11 = $m_Lupickle_default$();
         var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1) {
-          return (function(x$2$2) {
-            var x$2 = $as_Lcom_scalakata_EvalRequest(x$2$2);
-            var this$1 = $m_Lcom_scalakata_EvalRequest$().unapply__Lcom_scalakata_EvalRequest__s_Option(x$2);
+          return (function(x$12$2) {
+            var x$12 = $as_Lcom_scalakata_EvalRequest(x$12$2);
+            var this$1 = $m_Lcom_scalakata_EvalRequest$().unapply__Lcom_scalakata_EvalRequest__s_Option(x$12);
             if (this$1.isEmpty__Z()) {
               return $m_s_None$()
             } else {

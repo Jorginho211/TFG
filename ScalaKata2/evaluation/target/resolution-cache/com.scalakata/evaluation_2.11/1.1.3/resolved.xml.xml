@@ -4,7 +4,7 @@
 		module="evaluation_2.11"
 		revision="1.1.3"
 		status="integration"
-		publication="20160804150704"
+		publication="20160827173328"
 	>
 		<license name="MIT" url="http://www.opensource.org/licenses/mit-license.html" />
 		<description homepage="http://scalakata.com">

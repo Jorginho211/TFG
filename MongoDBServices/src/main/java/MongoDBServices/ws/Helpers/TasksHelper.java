@@ -42,7 +42,8 @@ public class TasksHelper {
         return sb.toString();
     }
     
-    public String GetTaskName(String uri) throws MalformedURLException, IOException, JSONException {        
+    public String GetTaskName(String uri) throws MalformedURLException, IOException, JSONException {
+        
         URL url = new URL("https://tec.citius.usc.es/cuestionarios/backend/HMBAuthenticationRESTAPI/auth/login?username=root&password=rootcuestionarios");
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         
@@ -56,6 +57,7 @@ public class TasksHelper {
         
         data = new JSONObject(data(conn));
         data = new JSONObject(data.getString("content"));
+        
         
         JSONArray jArray = new JSONArray(data.getString("result"));
         
@@ -84,14 +86,15 @@ public class TasksHelper {
         return null;
     }
     
-    public void getTaskName(Document doc) throws IOException, MalformedURLException, JSONException{
+    public void getTaskName(Document doc) throws IOException, MalformedURLException, JSONException{      
         for (String key : doc.keySet()) {
-            System.out.println("AQUI");
-            if (doc.getString(key).matches("[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}")) {
-                String taskName = GetTaskName(doc.getString(key));
+            if(doc.get(key).getClass() == String.class){
+                if (doc.getString(key).matches("[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}")) {
+                    String taskName = GetTaskName(doc.getString(key));
 
-                if (taskName != null) {
-                    doc.append(key, taskName);
+                    if (taskName != null) {
+                        doc.append(key, taskName);
+                    }
                 }
             }
         }

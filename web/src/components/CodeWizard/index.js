@@ -648,7 +648,7 @@ class CodeWizard extends Component {
                 return "Plantilla de tarefas"
 
             case "propertyTemplate":
-                return "Plantilla de propiedes"
+                return "Plantilla de propiedades"
         }
 
     }
