@@ -612,6 +612,16 @@ class CodeWizard extends Component {
         this.props.KPIActions.DatosKPIActions.CodeWizardActions.changeSuggestionList(suggestionList)
     }
 
+    @autobind writeCodeManual(){
+        let code = this.props.kpi.datoskpi.codewizard.code
+        code = code.replace(/%%IDKPI%%/g, this.props.kpi.datoskpi.kpi.id)
+        code = code.replace(/^.*val files = getFilesType.*$/mg, "");
+        code = code.replace("%%CODEBASE%%", "");
+
+        this.props.KPIActions.DatosKPIActions.codeChange(code)
+        this.props.KPIActions.DatosKPIActions.continueSteper()
+    }
+
     componentWillMount(){
         if(this.props.kpi.datoskpi.codewizard.token === undefined){
             this.props.KPIActions.DatosKPIActions.CodeWizardActions.authenticationCITIUS();
@@ -738,7 +748,7 @@ class CodeWizard extends Component {
                         )}
 
                         <div className={styles.addCode}>
-                            <FloatingActionButton onTouchTap={() => this.selectStepSteper(2)}>
+                            <FloatingActionButton onTouchTap={() => this.writeCodeManual()}>
                               <ContentAdd />
                             </FloatingActionButton>
                         </div>
