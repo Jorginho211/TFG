@@ -3,6 +3,8 @@
  */
 import KPI_ACTION_TYPES from './types/'
 
+import config from '../../../../config.json'
+
 export function toggleDialog(){
     return {type: KPI_ACTION_TYPES.TOGGLE_DIALOG}
 }
@@ -36,7 +38,7 @@ export function requestKpis(){
 	return dispatch => {
 		dispatch(toggleLoading())
 
-		fetch('http://localhost:8080/MongoDBServices/api/v1/kpis/',{
+		fetch('http://' + config.host + ':8080/MongoDBServices/api/v1/kpis/',{
 			method: 'GET', 
 			mode: 'cors'
 		}).then(response => {
@@ -56,7 +58,7 @@ export function deleteKPI(id){
 	return dispatch => {
 		dispatch(toggleLoading())
 
-		fetch('http://localhost:8080/MongoDBServices/api/v1/kpis/kpi/' + id,{
+		fetch('http://' + config.host + ':8080/MongoDBServices/api/v1/kpis/kpi/' + id,{
 			method: 'DELETE', 
 			mode: 'cors'
 		}).then(response => {

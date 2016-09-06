@@ -33,6 +33,7 @@ import * as DatosKPIActions from '../../components/DatosKPI/Actions'
 import * as CodeWizardActions from '../../components/CodeWizard/Actions'
 import * as DashboardActions from '../../components/Dashboard/Actions'
 import * as RepresentationHandlerActions from '../../components/RepresentationHandler/Actions'
+import * as LoginActions from '../../components/Login/Actions'
 
 import { Breakpoints } from '../styles/Breakpoints'
 
@@ -56,46 +57,54 @@ class App extends Component {
         const { title, isMenuOpened, children, containerWidth, kpi} = this.props;
 
         return (
-            <div className='div1' styleName='app-container'>
-                <AppBar
-                    styleName = 'appbar-container'
-                    title = {title}
-                    iconElementLeft = {
-                        <IconButton onClick={ this.handleNavigationButtonClick }>
-                            <NavigationMenu />
-                        </IconButton>
-                    }
-                    showMenuIconButton = { containerWidth < Breakpoints.large } />
-                <LeftNav
-                    styleName='leftbar-container'
-                    open={(containerWidth < Breakpoints.large && isMenuOpened) || (containerWidth >= Breakpoints.medium)}
-                    docked={ containerWidth >= Breakpoints.large }
-                >
-                    {/*<Link to='/' onClick={this.toggleMenu}>
-                        <MenuItem leftIcon={<Home />}>
-                            <FormattedMessage
-                                id='main.menu.home'
-                                description='Main menu home link'
-                                defaultMessage='Home'
-                            />
-                        </MenuItem>
-                    </ Link>*/}
+            this.props.login.isAuthenticated ? ( 
+                <div className='div1' styleName='app-container'>
+                    <AppBar
+                        styleName = 'appbar-container'
+                        title = {title}
+                        iconElementLeft = {
+                            <IconButton onClick={ this.handleNavigationButtonClick }>
+                                <NavigationMenu />
+                            </IconButton>
+                        }
+                        showMenuIconButton = { containerWidth < Breakpoints.large } />
+                    <LeftNav
+                        styleName='leftbar-container'
+                        open={(containerWidth < Breakpoints.large && isMenuOpened) || (containerWidth >= Breakpoints.medium)}
+                        docked={ containerWidth >= Breakpoints.large }
+                    >
+                        {/*<Link to='/' onClick={this.toggleMenu}>
+                            <MenuItem leftIcon={<Home />}>
+                                <FormattedMessage
+                                    id='main.menu.home'
+                                    description='Main menu home link'
+                                    defaultMessage='Home'
+                                />
+                            </MenuItem>
+                        </ Link> */}
 
-                    <Link to='/kpi' onClick={ this.toggleMenu }>
-                        <MenuItem leftIcon={<Build /> }>
-                            Administración
-                        </MenuItem>
-                    </ Link>
-                    <Link to='/dashboard' onClick={ this.toggleMenu }>
-                        <MenuItem leftIcon={<Equalizer />}>
-                            Dashboard
-                        </MenuItem>
-                    </Link>
-                </LeftNav>
-                <div styleName='main-container'>
-                    { children && React.cloneElement(children, {...this.props, style: undefined})}
-                </div>
-            </div>
+                        <Link to='/app/kpi' onClick={ this.toggleMenu }>
+                            <MenuItem leftIcon={<Build /> }>
+                                Administración
+                            </MenuItem>
+                        </ Link>
+                        <Link to='/app/dashboard' onClick={ this.toggleMenu }>
+                            <MenuItem leftIcon={<Equalizer />}>
+                                Dashboard
+                            </MenuItem>
+                        </Link>
+                        
+                    </LeftNav>
+                    <div styleName='main-container'>
+                        { children && React.cloneElement(children, {...this.props, style: undefined})}
+                    </div>
+                </div> 
+                
+                ):(
+                    <div styleName='app-container'>
+                        { children && React.cloneElement(children, {...this.props, style: undefined})}
+                    </div>
+                )
         )
     };
 
@@ -110,6 +119,9 @@ function mapStateToProps(state) {
     return {
         title: state.UIState.title,
         isMenuOpened: state.UIState.isMenuOpened,
+        login: {
+            ...state.LoginState,
+        },
         kpi: {
                 ...state.KPIState,
                 datoskpi: {
@@ -129,6 +141,9 @@ function mapDispatchToProps(dispatch) {
         UIActions: bindActionCreators(UIActions, dispatch),
         //Add here the binding for the different actions
         //      XXActions: bindActionCreators(XXActions, dispatch)
+        LoginActions: {
+            ...bindActionCreators(LoginActions, dispatch),
+        },
         KPIActions: {
             ...bindActionCreators(KPIActions, dispatch),
             DatosKPIActions : {

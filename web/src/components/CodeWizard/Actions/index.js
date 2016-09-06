@@ -6,6 +6,8 @@ import CODEWIZARD_ACTION_TYPES from './types/'
 
 import * as model from'./model.js'
 
+import config from '../../../../config.json'
+
 export function templateType(templateType, codeTemplate){
 	return {type: CODEWIZARD_ACTION_TYPES.TEMPLATE_TYPE, payload: {templateType, codeTemplate}}
 }
@@ -123,7 +125,7 @@ export function setCodeTemplates(codeTemplates){
 
 export function requestCodeTemplates(){
 	return dispatch => {
-		fetch('http://localhost:8080/MongoDBServices/api/v1/codetemplates',{
+		fetch('http://' + config.host + ':8080/MongoDBServices/api/v1/codetemplates',{
 			method: 'GET', 
 			mode: 'cors'
 		}).then(response => {

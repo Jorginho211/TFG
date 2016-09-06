@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 
+import config from '../../../config.json'
+
 import TextField from 'material-ui/TextField';
 import Dialog from 'material-ui/Dialog';
 import {
@@ -78,7 +80,7 @@ class DatosKPI extends Component {
             break;
 
           case 2:
-            this.refs.iframe.contentWindow.postMessage("requestData", "http://localhost:7331")
+            this.refs.iframe.contentWindow.postMessage("requestData", "http://" + config.host + ":7331")
             break;
 
           default:
@@ -93,7 +95,7 @@ class DatosKPI extends Component {
     @autobind toggleDialog(force = false){
         if(this.props.kpi.isDialogOpened || force){
             if( this.refs.iframe !== undefined){
-              this.refs.iframe.contentWindow.postMessage("removeData", "http://localhost:7331");
+              this.refs.iframe.contentWindow.postMessage("removeData", "http://" + config.host + ":7331");
             }
             window.removeEventListener("message", this.iframeManage)
             this.props.KPIActions.DatosKPIActions.deleteData()
@@ -119,7 +121,7 @@ class DatosKPI extends Component {
     }
 
     @autobind iframeManage(evt){
-      if(evt.origin === "http://localhost:7331"){
+      if(evt.origin === "http://" + config.host + ":7331"){
         if(!(evt.data === "removeOK" || evt.data === "saveOK")){
           if(evt.data !== null){
             this.props.KPIActions.DatosKPIActions.codeChange(evt.data)
@@ -128,7 +130,7 @@ class DatosKPI extends Component {
             this.props.KPIActions.DatosKPIActions.codeChange(undefined)
           }
 
-          this.refs.iframe.contentWindow.postMessage("removeData", "http://localhost:7331");
+          this.refs.iframe.contentWindow.postMessage("removeData", "http://" + config.host + ":7331");
           setTimeout(() => { this.props.KPIActions.DatosKPIActions.iframeOnceLoad(false); this.props.KPIActions.DatosKPIActions.continueSteper() }, 5)             
         }
       }
@@ -234,13 +236,13 @@ class DatosKPI extends Component {
       if(!this.props.kpi.datoskpi.iframeOnceLoad){
         this.props.KPIActions.DatosKPIActions.iframeOnceLoad(true)
         if(this.props.kpi.datoskpi.kpi.code !== undefined && this.props.kpi.datoskpi.kpi.code !== null){
-          setTimeout(() => { this.refs.iframe.contentWindow.postMessage("code/;/" + this.props.kpi.datoskpi.kpi.code, "http://localhost:7331"); }, 300)
+          setTimeout(() => { this.refs.iframe.contentWindow.postMessage("code/;/" + this.props.kpi.datoskpi.kpi.code, "http://" + config.host + ":7331"); }, 300)
         }
       }
     }
 
     @autobind addPropertyCode(evt, menuItem, index){
-      this.refs.iframe.contentWindow.postMessage("property/;/" + menuItem.props.value, "http://localhost:7331")
+      this.refs.iframe.contentWindow.postMessage("property/;/" + menuItem.props.value, "http://" + config.host + ":7331")
     }
 
     componentDidMount(){
@@ -405,6 +407,8 @@ class DatosKPI extends Component {
     }
 
     getStepContent(step){
+        const iframeHost = "http://" + config.host + ":7331"
+
         switch(step){
             case 0:
                 return (
@@ -433,7 +437,7 @@ class DatosKPI extends Component {
             case 2:
                 return (
                     <div className={styles.scalakata}>
-                      <iframe ref="iframe" src="http://localhost:7331" className={styles.iframe} onLoad={this.loadDataIframe}></iframe>
+                      <iframe ref="iframe" src={iframeHost} className={styles.iframe} onLoad={this.loadDataIframe}></iframe>
                       {/*<div className={styles.list}>
                         <Menu onItemTouchTap={this.addPropertyCode}>
                           {this.props.kpi.datoskpi.properties.map( (property, index) => {

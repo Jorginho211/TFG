@@ -37,6 +37,10 @@ class KPI extends Component {
         super();
     }
 
+    componentWillMount(){
+        this.props.UIActions.setTitle("Editor KPI")
+    }
+    
     componentDidMount(){
         this.props.KPIActions.requestKpis();
     }

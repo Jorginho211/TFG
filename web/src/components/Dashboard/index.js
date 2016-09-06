@@ -108,7 +108,7 @@ class Dashboard extends Component {
         })
         
         this.props.DashboardActions.addRemoveElement(this.props.dashboard.dashboard)
-        this.props.DashboardActions.putDashboard("aKxOyCoyl7ENwD8ipdRhOUo82WO50UZYdKdyelZi", dashboard)
+        this.props.DashboardActions.putDashboard(this.props.login.token, dashboard)
     }
 
     @autobind suggestionListKPIName(){
@@ -142,7 +142,7 @@ class Dashboard extends Component {
         //    this.saveDashboard()
         //})
 
-        this.props.DashboardActions.requestDashboard("aKxOyCoyl7ENwD8ipdRhOUo82WO50UZYdKdyelZi")
+        this.props.DashboardActions.requestDashboard(this.props.login.token)
         this.props.KPIActions.requestKpis();
     }
 

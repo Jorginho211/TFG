@@ -29,5 +29,7 @@ public class DemoRequestFilter implements ContainerRequestFilter, ContainerRespo
         headers.add("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT");
         headers.add("Access-Control-Allow-Headers", "Content-Type");
         headers.add("Access-Control-Allow-Headers", "X-Auth-Token");
+        headers.add("Access-Control-Allow-Headers", "user");
+        headers.add("Access-Control-Allow-Headers", "password");
     }
 }

@@ -3,6 +3,8 @@
  */
 import DASHBOARD_ACTION_TYPES from './types/'
 
+import config from '../../../../config.json'
+
 export function toggleLoading(){
 	return {type: DASHBOARD_ACTION_TYPES.TOGGLE_LOADING}
 }
@@ -29,7 +31,7 @@ export function setKPI(kpi){
 
 export function requestDataKPI(idKPI, dashboard){
 	return dispatch => {
-		fetch('http://localhost:8080/MongoDBServices/api/v1/kpi/hadoopdata/' + idKPI,{
+		fetch('http://' + config.host + ':8080/MongoDBServices/api/v1/kpi/hadoopdata/' + idKPI,{
 			method: 'GET', 
 			mode: 'cors',
 		}).then(response => {
@@ -60,7 +62,7 @@ export function requestDataKPI(idKPI, dashboard){
 
 export function requestDashboard(token){
 	return dispatch => {	
-		fetch('http://localhost:8080/MongoDBServices/api/v1/usuarios/dashboard/',{
+		fetch('http://' + config.host + ':8080/MongoDBServices/api/v1/usuarios/dashboard/',{
 			method: 'GET', 
 			mode: 'cors',
     		headers: { 
@@ -81,7 +83,7 @@ export function requestDashboard(token){
 
 export function putDashboard(token, dashboard){
 	return dispatch => {
-		fetch('http://localhost:8080/MongoDBServices/api/v1/usuarios/dashboard/',{
+		fetch('http://' + config.host + ':8080/MongoDBServices/api/v1/usuarios/dashboard/',{
 			method: 'PUT', 
 			mode: 'cors',
     		headers: { 

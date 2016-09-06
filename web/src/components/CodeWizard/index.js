@@ -557,22 +557,11 @@ class CodeWizard extends Component {
             code = code.replace("%%OTHERPROPFILTER%%", codePipeReduxPropTemplate)
             code = code.replace("%%PROPREDUXNAME%%", propertyTemplate.reduxProperty)
 
+            if(propertyTemplate.properties.length > 1){
+                propertyTemplate.properties.map( (prop, index) => {
+                    if(index === 0){
+                        code = code.replace("%%PROPNAME%%", prop.name)
 
-            propertyTemplate.properties.map( (prop, index) => {
-                if(index === 0){
-                    code = code.replace("%%PROPNAME%%", prop.name)
-
-                    if(prop.logicalOperator == "&&"){
-                        code = code.replace("%%OTHERREPEAT%%", codeAndPropTemplate)
-                    }
-                    else if (prop.logicalOperator == "||") {
-                        code = code.replace("%%OTHERREPEAT%%", codeOrPropTemplate)
-                    }
-                }
-                else {
-                    code = code.replace("%%PROPITERNAME%%", prop.name);
-
-                    if(index + 1 < propertyTemplate.properties.length){
                         if(prop.logicalOperator == "&&"){
                             code = code.replace("%%OTHERREPEAT%%", codeAndPropTemplate)
                         }
@@ -580,8 +569,23 @@ class CodeWizard extends Component {
                             code = code.replace("%%OTHERREPEAT%%", codeOrPropTemplate)
                         }
                     }
-                }
-            })
+                    else {
+                        code = code.replace("%%PROPITERNAME%%", prop.name);
+
+                        if(index + 1 < propertyTemplate.properties.length){
+                            if(prop.logicalOperator == "&&"){
+                                code = code.replace("%%OTHERREPEAT%%", codeAndPropTemplate)
+                            }
+                            else if (prop.logicalOperator == "||") {
+                                code = code.replace("%%OTHERREPEAT%%", codeOrPropTemplate)
+                            }
+                        }
+                    }
+                }) 
+            }
+            else {
+                code = code.replace("%%PROPNAME%%", propertyTemplate.properties[0].name)
+            }
 
             code = code.replace("%%OTHERREPEAT%%", "")
 

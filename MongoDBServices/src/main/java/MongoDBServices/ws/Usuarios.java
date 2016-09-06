@@ -57,16 +57,16 @@ public class Usuarios {
     @GET
     @Path("/login")
     @Produces(MediaType.APPLICATION_JSON)
-    public String Login(@HeaderParam("user") String user, @HeaderParam("password") String password) {
+    public Document Login(@HeaderParam("user") String user, @HeaderParam("password") String password) {
         Document document = new Document();
         document.append("user", user);
         document.append("password", password);
-        ArrayList<Document> users = db.getCollection(collection).find().into(new ArrayList<Document>());
-
+        ArrayList<Document> users = db.getCollection(collection).find(document).into(new ArrayList<Document>());
+        
         if (!users.isEmpty()) {
             String token = generateToken();
             db.getCollection(collection).updateOne(document, new Document("$set", new Document("token", token)));
-            return token;
+            return new Document("token", token);
         }
 
         throw new WebApplicationException(Response.Status.UNAUTHORIZED);

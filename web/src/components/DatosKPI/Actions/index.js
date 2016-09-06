@@ -8,6 +8,8 @@ import { toggleDialog } from '../../KPI/Actions/index.js'
 import { toggleLoading } from '../../KPI/Actions/index.js'
 import { requestKpis } from '../../KPI/Actions/index.js'
 
+import config from '../../../../config.json'
+
 //STEEPER
 export function continueSteper(){
 	return {type: DATOSKPI_ACTION_TYPES.CONTINUE_STEP}
@@ -153,7 +155,7 @@ export function storeKPIBD(kpi, methodType){
 	kpi.visibility = undefined;
 
 	return dispatch => {
-		fetch('http://localhost:8080/MongoDBServices/api/v1/kpis/',{
+		fetch('http://' + config.host + ':8080/MongoDBServices/api/v1/kpis/',{
 			method: methodType, 
 			mode: 'cors',
 			headers: new Headers({'Content-Type': 'application/json',}),
@@ -173,7 +175,7 @@ export function storeKPIBD(kpi, methodType){
 
 export function sendJobHadoop(code){
 	return dispatch => {
-		fetch('http://localhost:8080/HadoopServices/api/v1/sendjob/',{
+		fetch('http://' + config.host + ':8080/HadoopServices/api/v1/sendjob/',{
 			method: 'POST', 
 			mode: 'cors',
 			headers: new Headers({'Content-Type': 'application/json',}),
