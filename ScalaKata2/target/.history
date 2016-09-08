@@ -16,3 +16,5 @@ compile
 project webappJVM
 sbt
 project webappJVM
+sbt
+project webappJVM
