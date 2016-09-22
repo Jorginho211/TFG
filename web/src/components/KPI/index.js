@@ -112,8 +112,8 @@ class KPI extends Component {
                                   <TableRow>
                                     <TableHeaderColumn>Nombre</TableHeaderColumn>
                                     <TableHeaderColumn>Descripción</TableHeaderColumn>
-                                    <TableHeaderColumn>Palabras Clave</TableHeaderColumn>
-                                    <TableHeaderColumn>Accións</TableHeaderColumn>
+                                    <TableHeaderColumn style={{width:"170px", textAlign:"center"}}>Palabras Clave</TableHeaderColumn>
+                                    <TableHeaderColumn style={{width:"140px", textAlign:"center"}}>Accións</TableHeaderColumn>
                                   </TableRow>
                                 </TableHeader>
                                 <TableBody
@@ -126,8 +126,8 @@ class KPI extends Component {
                                                 <TableRow key={kpi.id}>
                                                     <TableRowColumn>{kpi.name}</TableRowColumn>
                                                     <TableRowColumn>{kpi.description}</TableRowColumn>
-                                                    <TableRowColumn>{kpi.keywords}</TableRowColumn>
-                                                    <TableRowColumn>
+                                                    <TableRowColumn style={{width:"170px", textAlign:"center"}}>{kpi.keywords}</TableRowColumn>
+                                                    <TableRowColumn style={{width:"140px", textAlign:"center"}}>
                                                         <IconButton onTouchTap={ () => {this.newKPI(false); this.toggleDialogKPIEspecified(true, JSON.parse(JSON.stringify(kpi)), 0)} }>
                                                             <EditorModeEdit />
                                                         </IconButton>

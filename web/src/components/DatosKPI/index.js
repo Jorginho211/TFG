@@ -561,7 +561,7 @@ class DatosKPI extends Component {
               <StepButton onTouchTap={ () => this.selectStepSteper(0) }>Datos</StepButton>
             </Step>
             <Step active={ this.props.kpi.datoskpi.stepIndex === 1 } >
-              <StepButton>Wizard Código</StepButton>
+              <StepButton>Asistente de xeración da fórmula</StepButton>
             </Step>
             <Step active={ this.props.kpi.datoskpi.stepIndex === 2 }>
               <StepButton onTouchTap={ () => { this.selectStepSteper(2); } }>Formulación</StepButton>

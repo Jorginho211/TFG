@@ -6,6 +6,10 @@ import Paper from 'material-ui/Paper';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 
+import WorkflowImg from './Images/workflow.png'
+import TaskImg from './Images/task.png'
+import PropertyImg from './Images/property.png'
+
 import AutoComplete from 'material-ui/AutoComplete';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
@@ -664,7 +668,19 @@ class CodeWizard extends Component {
             case "propertyTemplate":
                 return "Plantilla de propiedades"
         }
+    }
 
+    getTypeTemplateImg(typeTemplate){
+        switch(typeTemplate){
+            case "workflowTemplate":
+                return WorkflowImg
+                
+            case "taskTemplate":
+                return TaskImg
+
+            case "propertyTemplate":
+                return PropertyImg
+        }
     }
 
     getRenderPropertyTemplate(prop){
@@ -735,13 +751,15 @@ class CodeWizard extends Component {
                                     {codewizard.codeTemplates.map((codeTemplate, index) => {
                                         return (
                                             <div key={index} className={styles.template} onTouchTap={() => { this.templateType(codeTemplate) }}>
-                                                <div className={styles.name}>{codeTemplate.name}</div>
-                                                <Paper style={{width: '100%', height: '100%'}} zDepth={2}>
+                                                <Paper style={{width: '100%', height: '100%'}} zDepth={2}>        
                                                     <div className={styles.text}>
-                                                        <h4>Tipo:</h4>
-                                                        <p>{this.getTypeTemplateGalego(codeTemplate.type)}</p>
-                                                        <h4>Descripción:</h4>
-                                                        <p>{codeTemplate.description}</p>
+                                                        <div className={styles.icon}>
+                                                            <img src={this.getTypeTemplateImg(codeTemplate.type)} />
+                                                        </div>
+                                                        {/*<h4>Nome:</h4>*/}
+                                                        <p className={styles.name}>{codeTemplate.name}</p>
+                                                        {/*<h4>Descripción:</h4>*/}
+                                                        <p className={styles.description}>{codeTemplate.description}</p>
                                                     </div>
                                                 </Paper>
                                             </div>

@@ -213,11 +213,13 @@ class RepresentationHandler extends Component {
                 let data = this.number(chart)
 
                 return (
-                    <div>
+                    <div className={styles.numberContainer}>
                       <div className={styles.numberGraph}>
-                        <h3>{data[0]}</h3>
-                        <h4>{data[1]}</h4>
-                        <p>{data[2]}</p>
+                        <h3 className={styles.title}>{data[0]}</h3>
+                        <div className={styles.resultRepr}>
+                            <div className={styles.result}>{data[2]}</div>
+                        </div>
+                        <h4 className={styles.description}>{data[1]}</h4>
                       </div>
                     </div>
                 )

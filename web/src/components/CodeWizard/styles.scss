@@ -9,7 +9,8 @@
 	}
 
 	.scroll {
-		overflow-x: scroll;
+		//overflow-x: scroll;
+		text-align: center;
 		height: 310px;
 		
 		.templates {
@@ -27,11 +28,33 @@
 				margin-right: 10px;
 
 				.text {
+					text-align: justify;
+					text-justify: inter-word;
 					padding: 15px;
 					font-size: 14px;
 
+					.icon {
+						img {
+							height: 42px;
+							width: 42px;
+							position: absolute;
+							right: 0
+						}
+						position: relative;
+					}
+
 					p {
 						margin-top: 0;
+					}
+
+					.name {
+						text-align: left;
+						font-weight: bold;
+						margin-top: 13px;
+					}
+
+					.description {
+						margin-top: 30px;
 					}
 
 					h4 {

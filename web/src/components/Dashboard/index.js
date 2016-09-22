@@ -150,7 +150,7 @@ class Dashboard extends Component {
     }
 
     componentWillUnmount() {
-        this.saveDashboard()
+        //this.saveDashboard()
         this.props.DashboardActions.toggleLoading()
     }
 
